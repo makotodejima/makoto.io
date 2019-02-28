@@ -13,18 +13,10 @@ function IndexPage() {
       />
 
       <div className="text-center">
-        <img
-          src={catAndHumanIllustration}
-          className="block mx-auto w-1/2"
-          alt="Cat and human sitting on a couch"
-        />
+        <h1 className="inline-block my-8 p-3">Makoto Dejima</h1>
 
-        <h2 className="bg-yellow inline-block my-8 p-3">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
-
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{" "}
+        <p className="">
+          Front-end Developer / Graphic Designer{" "}
           <a
             href="https://tailwindcss.com/"
             className="font-bold no-underline text-grey-darkest"
