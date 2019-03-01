@@ -2,7 +2,9 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import tpcsq from "../images/tpc-sq.jpg";
+import tpcsq from "../images/tpcsq.jpg";
+import merasq from "../images/merasq.jpg";
+import mpsq from "../images/mpsq.jpg";
 import { Link } from "gatsby";
 
 function IndexPage() {
@@ -31,17 +33,13 @@ function IndexPage() {
             className="align-middle"
           />
         </Link>
-        <Link to="/work/tokyo-postcard" className="w-2/5 my-8">
-          <img
-            src={tpcsq}
-            alt="Postcard, The light of Tokyo"
-            className="align-middle"
-          />
+        <Link to="/work/mera" className="w-2/5 my-8">
+          <img src={merasq} alt="Logo design, Mera" className="align-middle" />
         </Link>
-        <Link to="/work/tokyo-postcard" className="w-2/5 my-8">
+        <Link to="/work/manhattan-portage" className="w-2/5 my-8">
           <img
-            src={tpcsq}
-            alt="Postcard, The light of Tokyo"
+            src={mpsq}
+            alt="Messenger bag design, Manhattan Portage"
             className="align-middle"
           />
         </Link>
