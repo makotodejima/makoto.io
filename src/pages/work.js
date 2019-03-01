@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-function works() {
+function work() {
   return (
     <Layout>
       <SEO
@@ -11,7 +11,7 @@ function works() {
       />
 
       <div className="text-center">
-        <p className="text-2xl bg-red my-8 p-3">Works</p>
+        <p className="text-2xl bg-red my-8 p-3">Work</p>
       </div>
 
       <div className="boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
@@ -44,4 +44,4 @@ function works() {
   );
 }
 
-export default works;
+export default work;
