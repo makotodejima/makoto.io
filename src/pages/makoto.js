@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import tpcsq from "../images/tpc-sq.jpg";
+import { Link } from "gatsby";
 
 function IndexPage() {
   return (
@@ -23,19 +24,34 @@ function IndexPage() {
         <p>View more...</p>
       </div>
       <div className="boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
-        <div className="box w-2/5 m-4 bg-grey">
-          <img src={tpcsq} alt="Postcard, The light of Tokyo" />
-          <p className="bg-grey-darker text-lg text-center">1</p>
-        </div>
-        <div className="box w-2/5 m-4 p-4 bg-grey">
-          <p className="text-lg text-center">2</p>
-        </div>
-        <div className="box w-2/5 m-4 p-4 bg-grey">
-          <p className="text-lg text-center">3</p>
-        </div>
-        <div className="box w-2/5 m-4 p-4 bg-grey">
-          <p className="text-lg text-center">4</p>
-        </div>
+        <Link to="/work/tokyo-postcard" className="w-2/5 my-8">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            className="align-middle"
+          />
+        </Link>
+        <Link to="/work/tokyo-postcard" className="w-2/5 my-8">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            className="align-middle"
+          />
+        </Link>
+        <Link to="/work/tokyo-postcard" className="w-2/5 my-8">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            className="align-middle"
+          />
+        </Link>
+        <Link to="/work/tokyo-postcard" className="w-2/5 my-8">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            className="align-middle"
+          />
+        </Link>
       </div>
 
       <div className="label bg-yellow flex justify-between">
