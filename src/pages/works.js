@@ -1,9 +1,8 @@
 import React from "react";
-
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-function IndexPage() {
+function works() {
   return (
     <Layout>
       <SEO
@@ -12,15 +11,9 @@ function IndexPage() {
       />
 
       <div className="text-center">
-        <p className="text-2xl bg-red my-8 p-3">Makoto Dejima</p>
-        <p className="bg-blue-light mb-8">
-          Front-end Developer / Graphic Designer
-        </p>
+        <p className="text-2xl bg-red my-8 p-3">Works</p>
       </div>
-      <div className="label bg-yellow flex justify-between">
-        <p>Latest works</p>
-        <p>View more...</p>
-      </div>
+
       <div className="boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
         <div className="box relative w-2/5 h-20rem m-4 p-4 bg-grey">
           <p className="absolute pin-b bg-grey-darker text-lg text-center">1</p>
@@ -34,22 +27,21 @@ function IndexPage() {
         <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
           <p className="text-lg text-center">4</p>
         </div>
-      </div>
-
-      <div className="label bg-yellow flex justify-between">
-        <p>Writings</p>
-        <p>View more...</p>
-      </div>
-      <div className="half-boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
-        <div className="half-box w-2/5 h-48 m-4 p-4 bg-grey">
-          <p className="text-lg text-center">1</p>
+        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
+          <p className="text-lg text-center">4</p>
         </div>
-        <div className="half-box w-2/5 h-48 m-4 p-4 bg-grey">
-          <p className="text-lg text-center">1</p>
+        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
+          <p className="text-lg text-center">4</p>
+        </div>
+        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
+          <p className="text-lg text-center">4</p>
+        </div>
+        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
+          <p className="text-lg text-center">4</p>
         </div>
       </div>
     </Layout>
   );
 }
 
-export default IndexPage;
+export default works;
