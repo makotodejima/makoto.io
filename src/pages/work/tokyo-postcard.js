@@ -2,6 +2,7 @@ import React from "react";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
+import postcard from "../../images/post-card.jpg";
 
 function IndexPage() {
   return (
@@ -15,9 +16,9 @@ function IndexPage() {
         <p className="text-2xl bg-red my-8 p-3">Tokyo Post Card Award</p>
       </div>
 
-      <div className="work flex flex-col p-4 bg-grey">
+      <div className="work flex flex-col">
         <p className="bg-grey-darker text-lg text-center">1</p>
-        <img src="#" />
+        <img src={postcard} />
         <p>gmlfdkgjaidfsjglsdkajgflkndsnfkls</p>
       </div>
     </Layout>
