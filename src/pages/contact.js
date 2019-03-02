@@ -12,16 +12,7 @@ function ContactPage() {
       />
 
       <form className="mx-auto md:w-1/2">
-        <p className="leading-loose mb-8">
-          何かお気軽にメッセージをください. Click{" "}
-          <a
-            href="https://tailwindcss.com/docs/examples/forms"
-            className="font-bold no-underline text-grey-darkest"
-          >
-            here
-          </a>{" "}
-          to see more examples.
-        </p>
+        <p className="leading-loose mb-8">何かお気軽にメッセージをください.</p>
 
         <label
           className="block font-bold mb-2 text-xs uppercase"
@@ -34,7 +25,7 @@ function ContactPage() {
           className="appearance-none block bg-grey-lighter mb-6 p-3 rounded-md text-grey-darker w-full"
           id="first-name"
           type="text"
-          placeholder="Makoto"
+          placeholder="まこと"
         />
 
         <label
@@ -48,7 +39,7 @@ function ContactPage() {
           className="appearance-none block bg-grey-lighter mb-6 p-3 rounded-md text-grey-darker w-full"
           id="last-name"
           type="text"
-          placeholder="Dejima"
+          placeholder="でじま"
         />
 
         <label
