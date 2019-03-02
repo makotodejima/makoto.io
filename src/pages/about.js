@@ -4,6 +4,16 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import me from "../images/me.jpg";
 
+// FontAwesome
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faDribbble,
+  faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
+library.add(faInstagram, faDribbble, faLinkedin);
+
 function AboutPage() {
   return (
     <Layout>
@@ -31,11 +41,19 @@ function AboutPage() {
             <img src={me} alt="me" />
           </div>
         </div>
+
         <div className="links flex justify-between w-full bg-blue">
           <a href="#">Resume</a>
-          <div className="social ">
-            <a href="#">Dribbble</a>
-            <a href="#">Instagram</a>
+          <div className="socials">
+            <a href="#">
+              <FontAwesomeIcon icon={["fab", "dribbble"]} />
+            </a>
+            <a href="#" className="mx-8">
+              <FontAwesomeIcon icon={["fab", "instagram"]} />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            </a>
           </div>
         </div>
       </div>
