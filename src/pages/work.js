@@ -1,6 +1,16 @@
 import React from "react";
-import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Layout from "../components/layout";
+import CardLayout from "../components/cardLayout";
+import Card from "../components/card";
+
+import tpcsq from "../images/tpcsq.jpg";
+import merasq from "../images/merasq.jpg";
+import mpsq from "../images/mpsq.jpg";
+import jasms from "../images/jasmssq.jpg";
+import sattesq from "../images/sattesq.jpg";
+import soreikesq from "../images/soreikesq.jpg";
+import BottomLink from "../components/bottomLink";
 
 function work() {
   return (
@@ -11,35 +21,59 @@ function work() {
       />
 
       <div className="text-center">
-        <p className="text-2xl bg-red my-8 p-3">Work</p>
+        <h3 className="font-light my-8 p-3">Work</h3>
       </div>
 
-      <div className="boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
-        <div className="box relative w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="absolute pin-b bg-grey-darker text-lg text-center">1</p>
-        </div>
-        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="text-lg text-center">2</p>
-        </div>
-        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="text-lg text-center">3</p>
-        </div>
-        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="text-lg text-center">4</p>
-        </div>
-        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="text-lg text-center">4</p>
-        </div>
-        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="text-lg text-center">4</p>
-        </div>
-        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="text-lg text-center">4</p>
-        </div>
-        <div className="box w-2/5 h-20rem m-4 p-4 bg-grey">
-          <p className="text-lg text-center">4</p>
-        </div>
-      </div>
+      <CardLayout>
+        <Card path="the-light-of-tokyo">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            // Remove wierd 1px on the bottom of imgs
+            className="align-middle"
+          />
+        </Card>
+
+        <Card path="mera">
+          <img
+            src={merasq}
+            alt="Logo design for indoor faming, 808Mera"
+            className="align-middle"
+          />
+        </Card>
+
+        <Card path="jasms">
+          <img
+            src={jasms}
+            alt="Logo design, Japan Society of Mountain Research"
+            className="align-middle"
+          />
+        </Card>
+
+        <Card path="manhattan-portage">
+          <img
+            src={mpsq}
+            alt="Messenger Bag, Manhattan Portage"
+            className="align-middle"
+          />
+        </Card>
+        <Card path="satte">
+          <img
+            src={sattesq}
+            alt="Logo Design, Satte City"
+            className="align-middle"
+          />
+        </Card>
+        <Card path="soreike">
+          <img
+            src={soreikesq}
+            alt="T-shirt Design, Soreike San Francisco Tee"
+            className="align-middle"
+          />
+        </Card>
+      </CardLayout>
+
+      <BottomLink path="" linkText="Back" />
     </Layout>
   );
 }
