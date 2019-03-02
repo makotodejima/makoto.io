@@ -61,7 +61,7 @@ function IndexPage() {
         </Card>
       </CardLayout>
 
-      <BottomLink path="/work/" linkText="Show more..." />
+      <BottomLink path="/work/" linkText="Show more" />
 
       <div className="label">
         <p>Writings</p>
