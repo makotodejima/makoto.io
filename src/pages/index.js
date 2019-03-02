@@ -9,6 +9,7 @@ import tpcsq from "../images/tpcsq.jpg";
 import merasq from "../images/merasq.jpg";
 import mpsq from "../images/mpsq.jpg";
 import { Link } from "gatsby";
+import Label from "../components/label";
 
 function IndexPage() {
   return (
@@ -20,12 +21,11 @@ function IndexPage() {
 
       <Hero />
 
-      <div className="label bg-yellow flex justify-between">
-        <p>Latest works</p>
-        <p>View more...</p>
-      </div>
+      <Label />
 
-      <div className="boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
+      {/* Card section starts here */}
+
+      <CardLayout>
         <Card path="tokyo-postcard">
           <img
             src={tpcsq}
@@ -66,7 +66,7 @@ function IndexPage() {
             className="w-full h-full align-middle"
           />
         </Card>
-      </div>
+      </CardLayout>
 
       <div className="label bg-yellow flex justify-between">
         <p>Writings</p>
