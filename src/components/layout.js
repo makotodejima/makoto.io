@@ -26,31 +26,31 @@ function Layout({ children }) {
 
           {/* FOTTER */}
           <footer className="bg-blue-darker">
-            <div className="flex justify-around max-w-xs mx-auto p-4 md:p-6 text-sm">
-              <p className="work">
-                <a
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-xl mx-auto mx-auto p-4 md:p-6 text-sm">
+              <div className="copyright text-white">
+                &copy; 2019 Makoto Dejima
+              </div>
+              <div className="contacts w-32 mb-4 md:m-0 flex justify-between">
+                {/* <a
                   href="https://taylorbryant.blog"
-                  className="font-bold no-underline text-white"
+                  className="no-underline text-white"
                 >
                   Work
-                </a>
-              </p>
-              <p className="about">
+                </a> */}
                 <a
                   href="https://taylorbryant.blog"
-                  className="font-bold no-underline text-white"
+                  className="md:no-underline text-white"
                 >
                   About
                 </a>
-              </p>
-              <p className="contact">
+
                 <a
                   href="https://taylorbryant.blog"
-                  className="font-bold no-underline text-white"
+                  className="md:no-underline text-white"
                 >
                   Contact
                 </a>
-              </p>
+              </div>
             </div>
           </footer>
         </div>

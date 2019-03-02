@@ -27,7 +27,7 @@ function IndexPage() {
       <Label />
 
       <CardLayout>
-        <Card path="tokyo-postcard">
+        <Card path="the-light-of-tokyo">
           <img
             src={tpcsq}
             alt="Postcard, The light of Tokyo"
@@ -63,7 +63,7 @@ function IndexPage() {
 
       <BottomLink path="/work/" linkText="Show more..." />
 
-      <div className="label font-black">
+      <div className="label">
         <p>Writings</p>
       </div>
       <CardLayout>

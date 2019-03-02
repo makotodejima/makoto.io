@@ -15,12 +15,14 @@ function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
 
-      <div className="text-center">
-        <p className="text-2xl bg-red my-8 p-3">MERA808</p>
+      <div className="hero flex flex-col justify-center text-center align-middle">
+        <h3 className="font-light tracking-wide">
+          Logo Design for Indoor Farming System
+        </h3>
+        <h2 className="font-light my-4">808 MERA</h2>
       </div>
 
       <div className="work flex flex-col">
-        <p className="bg-grey-darker text-lg text-center">Won an award</p>
         <img src={mera01} alt="" className="my-16" />
         <img src={mera02} alt="" className="my-16" />
         <img src={mera03} alt="" className="my-16" />

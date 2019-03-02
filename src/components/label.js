@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const Label = () => {
   return (
-    <div className="label font-black">
+    <div className="label">
       <p>Latest work</p>
     </div>
   );
