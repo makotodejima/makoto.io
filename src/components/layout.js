@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 
 import Header from "./header";
 
@@ -37,19 +38,13 @@ function Layout({ children }) {
                 >
                   Work
                 </a> */}
-                <a
-                  href="https://taylorbryant.blog"
-                  className="md:no-underline text-white"
-                >
+                <Link to="/about/" className="md:no-underline text-white">
                   About
-                </a>
+                </Link>
 
-                <a
-                  href="https://taylorbryant.blog"
-                  className="md:no-underline text-white"
-                >
+                <Link to="/contact/" className="md:no-underline text-white">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </footer>
