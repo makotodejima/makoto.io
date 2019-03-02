@@ -2,7 +2,13 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import Hero from "../components/hero";
+import Card from "../components/card";
+
+import tpcsq from "../images/tpcsq.jpg";
+import merasq from "../images/merasq.jpg";
+import mpsq from "../images/mpsq.jpg";
+import { Link } from "gatsby";
 
 function IndexPage() {
   return (
@@ -12,27 +18,73 @@ function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
 
-      <div className="text-center">
-        <img
-          src={catAndHumanIllustration}
-          className="block mx-auto w-1/2"
-          alt="Cat and human sitting on a couch"
-        />
+      <Hero />
 
-        <h2 className="bg-yellow inline-block my-8 p-3">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
+      <div className="label bg-yellow flex justify-between">
+        <p>Latest works</p>
+        <p>View more...</p>
+      </div>
 
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{" "}
-          <a
-            href="https://tailwindcss.com/"
-            className="font-bold no-underline text-grey-darkest"
-          >
-            Tailwind
+      <div className="boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
+        <Card path="tokyo-postcard">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            // Remove wierd 1px on the bottom of imgs
+            className="align-middle"
+          />
+        </Card>
+
+        <Card path="mera">
+          <img
+            src={merasq}
+            alt="Logo design for indoor faming, 808Mera"
+            className="align-middle"
+          />
+        </Card>
+
+        <Card path="tokyo-postcard">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            className="align-middle"
+          />
+        </Card>
+
+        <Card path="manhattan-portage">
+          <img
+            src={mpsq}
+            alt="Messenger bag design, Manhattan Portage"
+            className="align-middle"
+          />
+        </Card>
+
+        <Card path="tokyo-postcard">
+          <img
+            src={tpcsq}
+            alt="Postcard, The light of Tokyo"
+            className="w-full h-full align-middle"
+          />
+        </Card>
+      </div>
+
+      <div className="label bg-yellow flex justify-between">
+        <p>Writings</p>
+      </div>
+      <div className="half-boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
+        <div className="half-box w-2/5 h-48 m-4 p-4 bg-grey">
+          <a href="https://medium.com/this-week-in-america" target="_blank">
+            <p className="text-lg text-center">1</p>
           </a>
-          , a utility-first CSS framework.
-        </p>
+        </div>
+        <div className="half-box w-2/5 h-48 m-4 p-4 bg-grey">
+          <a
+            href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
+            target="_blank"
+          >
+            <p className="text-lg text-center">2</p>
+          </a>
+        </div>
       </div>
     </Layout>
   );

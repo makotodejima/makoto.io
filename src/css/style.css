@@ -62,3 +62,7 @@
  */
 
 /* Additional CSS */
+
+.hero {
+  height: 60vh;
+}
