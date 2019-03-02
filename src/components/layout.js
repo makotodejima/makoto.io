@@ -24,8 +24,9 @@ function Layout({ children }) {
             {children}
           </div>
 
+          {/* FOTTER */}
           <footer className="bg-blue-darker">
-            <div className="flex justify-around max-w-xs mx-auto p-4 md:p-8 text-sm">
+            <div className="flex justify-around max-w-xs mx-auto p-4 md:p-6 text-sm">
               <p className="work">
                 <a
                   href="https://taylorbryant.blog"

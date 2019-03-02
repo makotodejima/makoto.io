@@ -21,10 +21,10 @@ function IndexPage() {
 
       <div className="work flex flex-col">
         <p className="bg-grey-darker text-lg text-center">Won an award</p>
-        <img src={mp01} className="my-16" />
-        <img src={mp02} className="my-16" />
-        <img src={mp03} className="my-16" />
-        <img src={mp04} className="my-16" />
+        <img src={mp01} alt="" className="my-16" />
+        <img src={mp02} alt="" className="my-16" />
+        <img src={mp03} alt="" className="my-16" />
+        <img src={mp04} alt="" className="my-16" />
       </div>
     </Layout>
   );

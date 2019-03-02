@@ -10,7 +10,13 @@ function Header({ siteTitle }) {
     <nav className="bg-grey-lighter">
       <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto p-4 md:p-8">
         <Link to="/" className="flex items-center no-underline text-black">
-          <img className="h-8 mr-2 w-16" src={md} alt="md" />
+          <img
+            className="h-8 mr-2 w-16"
+            src={md}
+            alt="md"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          />
           {/* <svg
             className="fill-current h-8 mr-2 w-8"
             width="54"

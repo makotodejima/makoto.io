@@ -22,11 +22,11 @@ function IndexPage() {
 
       <div className="work flex flex-col">
         <p className="bg-grey-darker text-lg text-center">Won an award</p>
-        <img src={tpc01} className="my-16" />
-        <img src={tpc02} className="my-16" />
-        <img src={tpc03} className="my-16" />
-        <img src={tpc04} className="my-16" />
-        <img src={tpc05} className="my-16" />
+        <img src={tpc01} alt="" className="my-16" />
+        <img src={tpc02} alt="" className="my-16" />
+        <img src={tpc03} alt="" className="my-16" />
+        <img src={tpc04} alt="" className="my-16" />
+        <img src={tpc05} alt="" className="my-16" />
       </div>
     </Layout>
   );

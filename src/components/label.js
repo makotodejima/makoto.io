@@ -3,9 +3,8 @@ import { Link } from "gatsby";
 
 const Label = () => {
   return (
-    <div className="label flex justify-between">
+    <div className="label font-black">
       <p>Latest work</p>
-      <Link to="/work/">More</Link>
     </div>
   );
 };
