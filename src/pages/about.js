@@ -43,15 +43,21 @@ function AboutPage() {
         </div>
 
         <div className="links flex justify-between w-full bg-blue">
-          <a href="#">Resume</a>
+          <a href="#" target="_blank">
+            Resume
+          </a>
           <div className="socials">
-            <a href="#">
+            <a href="https://dribbble.com/mak84sasami" target="_blank">
               <FontAwesomeIcon icon={["fab", "dribbble"]} />
             </a>
-            <a href="#" className="mx-8">
+            <a
+              className="mx-8"
+              href="https://www.instagram.com/dejimako/"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={["fab", "instagram"]} />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/mak84sasami/" target="_blank">
               <FontAwesomeIcon icon={["fab", "linkedin"]} />
             </a>
           </div>
