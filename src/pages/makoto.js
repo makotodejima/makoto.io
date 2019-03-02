@@ -21,10 +21,12 @@ function IndexPage() {
           Front-end Developer / Graphic Designer
         </p>
       </div>
+
       <div className="label bg-yellow flex justify-between">
         <p>Latest works</p>
         <p>View more...</p>
       </div>
+
       <div className="boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
         <Link to="/work/tokyo-postcard" className="w-2/5 my-8">
           <img
@@ -54,14 +56,20 @@ function IndexPage() {
 
       <div className="label bg-yellow flex justify-between">
         <p>Writings</p>
-        <p>View more...</p>
       </div>
       <div className="half-boxes flex mb-10 flex-wrap justify-around bg-grey-lighter">
         <div className="half-box w-2/5 h-48 m-4 p-4 bg-grey">
-          <p className="text-lg text-center">1</p>
+          <a href="https://medium.com/this-week-in-america" target="_blank">
+            <p className="text-lg text-center">1</p>
+          </a>
         </div>
         <div className="half-box w-2/5 h-48 m-4 p-4 bg-grey">
-          <p className="text-lg text-center">1</p>
+          <a
+            href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
+            target="_blank"
+          >
+            <p className="text-lg text-center">2</p>
+          </a>
         </div>
       </div>
     </Layout>
