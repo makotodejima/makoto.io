@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP|Open+Sans:400,700&subset=japanese");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300|Open+Sans:400,700&subset=japanese");
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.

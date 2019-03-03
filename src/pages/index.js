@@ -73,7 +73,7 @@ function IndexPage() {
           rel="noopener noreferrer"
           className="no-underline text-blue"
         >
-          テクノロジーと政治 / Tech and politics
+          Tech and politics / テクノロジーと政治
         </a>
         <br />I am writing about technology and politics.
       </p>

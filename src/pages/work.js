@@ -73,7 +73,7 @@ function WorkPage() {
         </Card>
       </CardLayout>
 
-      <BottomLink path="/" linkText="Back" />
+      <BottomLink path="/" linkText="Home" />
     </Layout>
   );
 }
