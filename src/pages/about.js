@@ -44,14 +44,14 @@ function AboutPage() {
         </div>
 
         <div className="links flex justify-between w-full mt-16 text-xl ">
-          <a
+          {/* <a
             href="https://drive.google.com"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline text-blue-darker"
           >
             Background
-          </a>
+          </a> */}
           <div className="socials">
             <a
               href="https://dribbble.com/mak84sasami"
