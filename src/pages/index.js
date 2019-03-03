@@ -62,25 +62,34 @@ function IndexPage() {
 
       <BottomLink path="/work/" linkText="Show more" />
 
-      <div className="label">
-        <p>Writings</p>
+      <div className="label text-xl mt-12 mb-8">
+        <p>Writing</p>
       </div>
-      <a
-        href="https://medium.com/this-week-in-america"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-8 no-underline text-blue-darker"
-      >
-        <p>テクノロジーと政治 / Tech and politics</p>
-      </a>
-      <a
-        href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="my-8 no-underline text-blue-darker"
-      >
-        WeQ Japanese PR <img className="h-3 mx-2" src={weq} alt="WeQ" />
-      </a>
+
+      <p className="leading-loose">
+        <a
+          href="https://medium.com/this-week-in-america"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="no-underline text-blue"
+        >
+          テクノロジーと政治 / Tech and politics
+        </a>
+        <br />I am writing about technology and politics.
+      </p>
+      <p className="my-12  leading-loose">
+        <a
+          href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="no-underline text-blue"
+        >
+          WeQ Japanese PR <img className="h-3 mx-2" src={weq} alt="WeQ" />
+        </a>
+        <br />
+        I'm working with German global ad-tech company to accelerate the growth
+        in Japan.
+      </p>
     </Layout>
   );
 }

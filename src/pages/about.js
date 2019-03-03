@@ -43,7 +43,7 @@ function AboutPage() {
           </div>
         </div>
 
-        <div className="links flex justify-between w-full mt-16 text-xl ">
+        <div className="links flex justify-center w-full mt-16 text-xl ">
           {/* <a
             href="https://drive.google.com"
             target="_blank"
