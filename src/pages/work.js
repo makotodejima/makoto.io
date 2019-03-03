@@ -12,7 +12,7 @@ import sattesq from "../images/sattesq.jpg";
 import soreikesq from "../images/soreikesq.jpg";
 import BottomLink from "../components/bottomLink";
 
-function work() {
+function WorkPage() {
   return (
     <Layout>
       <SEO
@@ -78,4 +78,4 @@ function work() {
   );
 }
 
-export default work;
+export default WorkPage;

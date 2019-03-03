@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactTypeformEmbed } from "react-typeform-embed";
+// import { ReactTypeformEmbed } from "react-typeform-embed";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -13,11 +13,12 @@ function ContactPage() {
       />
       <h3 className="m-auto mb-4">どうぞお気軽にご連絡ください。</h3>
       <div className="typeform w-4/5 h-64 relative m-auto">
-        <ReactTypeformEmbed
+        {/* <ReactTypeformEmbed
           url="https://makotodejima.typeform.com/to/o0WY9t"
           opacity={0}
           hideFooter={true}
-        />
+        /> */}
+        <p className="m-auto text-center">makotodejima@gmail.com</p>
       </div>
       {/* <form className="mx-auto md:w-1/2">
         <p className="leading-loose mb-8">何かお気軽にメッセージをください.</p>
