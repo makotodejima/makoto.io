@@ -25,19 +25,12 @@ function Layout({ children }) {
             {children}
           </div>
 
-          {/* FOTTER */}
           <footer className="bg-blue-darker">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-xl mx-auto mx-auto p-4 md:p-6 text-sm">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-xl mx-auto mx-auto p-6 md:p-8 text-sm">
               <div className="copyright text-white">
                 &copy; 2019 Makoto Dejima
               </div>
               <div className="contacts w-48 mb-4 md:m-0 flex justify-between">
-                {/* <a
-                  href="https://taylorbryant.blog"
-                  className="no-underline text-white"
-                >
-                  Work
-                </a> */}
                 <Link to="/" className="md:no-underline text-white">
                   Home
                 </Link>
