@@ -9,6 +9,8 @@ import jasms03 from "../../images/jasms03.jpg";
 import jasms04 from "../../images/jasms04.jpg";
 import jasms05 from "../../images/jasms05.jpg";
 
+import HomeWorkBtns from "../../components/homeWorkBtns";
+
 function Jasms() {
   return (
     <Layout>
@@ -29,6 +31,8 @@ function Jasms() {
         <img src={jasms04} alt="" className="my-16" />
         <img src={jasms05} alt="" className="my-16" />
       </div>
+
+      <HomeWorkBtns />
     </Layout>
   );
 }

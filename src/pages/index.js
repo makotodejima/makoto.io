@@ -66,18 +66,22 @@ function IndexPage() {
       <div className="label">
         <p>Writings</p>
       </div>
-      <CardLayout>
-        <HalfCard url="https://medium.com/this-week-in-america">
-          <h3>
-            テクノロジーと政治
-            <br />
-            Tech and politics
-          </h3>
-        </HalfCard>
-        <HalfCard url="https://weq.com/category/%E6%97%A5%E6%9C%AC/">
-          <img src={weq} alt="WeQ" />
-        </HalfCard>
-      </CardLayout>
+      <a
+        href="https://medium.com/this-week-in-america"
+        className="mt-8 no-underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>テクノロジーと政治 / Tech and politics</p>
+      </a>
+      <a
+        href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
+        className="my-8 no-underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WeQ Japanese PR <img className="h-4" src={weq} alt="WeQ" />
+      </a>
     </Layout>
   );
 }

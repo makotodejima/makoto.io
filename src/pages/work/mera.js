@@ -7,6 +7,8 @@ import mera02 from "../../images/mera02.jpg";
 import mera03 from "../../images/mera03.jpg";
 import mera04 from "../../images/mera04.jpg";
 
+import HomeWorkBtns from "../../components/homeWorkBtns";
+
 function IndexPage() {
   return (
     <Layout>
@@ -28,6 +30,7 @@ function IndexPage() {
         <img src={mera03} alt="" className="my-16" />
         <img src={mera04} alt="" className="my-16" />
       </div>
+      <HomeWorkBtns />
     </Layout>
   );
 }

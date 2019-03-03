@@ -1,6 +1,8 @@
 import React from "react";
 
 import Layout from "../../components/layout";
+import HomeWorkBtns from "../../components/homeWorkBtns";
+
 import SEO from "../../components/seo";
 
 import tpc01 from "../../images/tpc01.jpg";
@@ -31,6 +33,7 @@ function TheLightOfTokyo() {
         <img src={tpc04} alt="" className="my-16" />
         <img src={tpc05} alt="" className="my-16" />
       </div>
+      <HomeWorkBtns />
     </Layout>
   );
 }

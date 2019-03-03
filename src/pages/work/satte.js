@@ -8,6 +8,8 @@ import satte02 from "../../images/satte02.jpg";
 import satte03 from "../../images/satte03.jpg";
 import satte04 from "../../images/satte04.jpg";
 
+import HomeWorkBtns from "../../components/homeWorkBtns";
+
 function TheLightOfTokyo() {
   return (
     <Layout>
@@ -27,6 +29,7 @@ function TheLightOfTokyo() {
         <img src={satte03} alt="" className="my-16" />
         <img src={satte04} alt="" className="my-16" />
       </div>
+      <HomeWorkBtns />
     </Layout>
   );
 }

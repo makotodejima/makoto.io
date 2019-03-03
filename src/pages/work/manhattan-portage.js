@@ -2,6 +2,9 @@ import React from "react";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
+
+import HomeWorkBtns from "../../components/homeWorkBtns";
+
 import mp01 from "../../images/mp01.jpg";
 import mp02 from "../../images/mp02.jpg";
 import mp03 from "../../images/mp03.jpg";
@@ -26,6 +29,7 @@ function IndexPage() {
         <img src={mp03} alt="" className="my-16" />
         <img src={mp04} alt="" className="my-16" />
       </div>
+      <HomeWorkBtns />
     </Layout>
   );
 }

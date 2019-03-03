@@ -9,6 +9,8 @@ import soreike03 from "../../images/soreike03.jpg";
 import soreike04 from "../../images/soreike04.jpg";
 import soreike05 from "../../images/soreike05.jpg";
 
+import HomeWorkBtns from "../../components/homeWorkBtns";
+
 function Soreike() {
   return (
     <Layout>
@@ -29,6 +31,7 @@ function Soreike() {
         <img src={soreike04} alt="" className="my-16" />
         <img src={soreike05} alt="" className="my-16" />
       </div>
+      <HomeWorkBtns />
     </Layout>
   );
 }
