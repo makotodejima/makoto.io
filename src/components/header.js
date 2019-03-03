@@ -17,7 +17,7 @@ function Header({ siteTitle }) {
             width="20"
             xmlns="http://www.w3.org/2000/svg"
           />
-          <span className="font-bold text-xl tracking-tight">{siteTitle}</span>
+          {/* <span className="font-bold text-xl tracking-tight">{siteTitle}</span> */}
         </Link>
 
         <button

@@ -31,13 +31,17 @@ function Layout({ children }) {
               <div className="copyright text-white">
                 &copy; 2019 Makoto Dejima
               </div>
-              <div className="contacts w-32 mb-4 md:m-0 flex justify-between">
+              <div className="contacts w-48 mb-4 md:m-0 flex justify-between">
                 {/* <a
                   href="https://taylorbryant.blog"
                   className="no-underline text-white"
                 >
                   Work
                 </a> */}
+                <Link to="/" className="md:no-underline text-white">
+                  Home
+                </Link>
+
                 <Link to="/about/" className="md:no-underline text-white">
                   About
                 </Link>

@@ -7,7 +7,6 @@ import Card from "../components/card";
 import CardLayout from "../components/cardLayout";
 import Label from "../components/label";
 import BottomLink from "../components/bottomLink";
-import HalfCard from "../components/halfCard";
 
 import tpcsq from "../images/tpcsq.jpg";
 import merasq from "../images/merasq.jpg";
