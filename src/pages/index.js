@@ -68,19 +68,19 @@ function IndexPage() {
       </div>
       <a
         href="https://medium.com/this-week-in-america"
-        className="mt-8 no-underline"
         target="_blank"
         rel="noopener noreferrer"
+        className="mt-8 no-underline text-blue-darker"
       >
         <p>テクノロジーと政治 / Tech and politics</p>
       </a>
       <a
         href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
-        className="my-8 no-underline"
         target="_blank"
         rel="noopener noreferrer"
+        className="my-8 no-underline text-blue-darker"
       >
-        WeQ Japanese PR <img className="h-4" src={weq} alt="WeQ" />
+        WeQ Japanese PR <img className="h-3 mx-2" src={weq} alt="WeQ" />
       </a>
     </Layout>
   );

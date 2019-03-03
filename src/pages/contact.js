@@ -11,10 +11,15 @@ function ContactPage() {
         title="Contact"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
-      <div className="typeform w-4/5 h-64 relative">
-        <ReactTypeformEmbed url="https://makotodejima.typeform.com/to/o0WY9t" />
+      <h3 className="m-auto mb-4">どうぞお気軽にご連絡ください。</h3>
+      <div className="typeform w-4/5 h-64 relative m-auto">
+        <ReactTypeformEmbed
+          url="https://makotodejima.typeform.com/to/o0WY9t"
+          opacity={0}
+          hideFooter={true}
+        />
       </div>
-      <form className="mx-auto md:w-1/2">
+      {/* <form className="mx-auto md:w-1/2">
         <p className="leading-loose mb-8">何かお気軽にメッセージをください.</p>
 
         <label
@@ -61,7 +66,7 @@ function ContactPage() {
         <button className="border-b-4 border-grey-darker hover:border-grey-dark bg-grey-dark hover:bg-grey font-bold px-6 py-3 rounded text-sm text-white">
           Send
         </button>
-      </form>
+      </form> */}
     </Layout>
   );
 }
