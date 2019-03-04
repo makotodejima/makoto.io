@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@typeform/embed": "^0.7.0",
     "gatsby": "^2.1.4",
+    "gatsby-plugin-google-analytics": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-postcss": "^2.0.5",
     "gatsby-plugin-purgecss": "^3.1.0",
