@@ -75,7 +75,7 @@ function IndexPage() {
         >
           Tech and politics / テクノロジーと政治
         </a>
-        <br />I am writing about technology and politics.
+        <br />I am writing about technology, startups, and politics.
       </p>
       <p className="my-12  leading-loose">
         <a
@@ -87,8 +87,8 @@ function IndexPage() {
           WeQ Japanese PR <img className="h-3 mx-2" src={weq} alt="WeQ" />
         </a>
         <br />
-        I'm working with German global ad-tech company to accelerate the growth
-        in Japan.
+        I'm working with German global ad-tech company to accelerate their
+        growth in Japanese market.
       </p>
     </Layout>
   );
