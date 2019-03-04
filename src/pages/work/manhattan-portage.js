@@ -14,7 +14,7 @@ function IndexPage() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Manhattan Portage"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
 

@@ -15,7 +15,7 @@ function Soreike() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Soreike SF Tee"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
 

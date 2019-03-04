@@ -15,7 +15,7 @@ function Jasms() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="JASMS"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
 

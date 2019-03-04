@@ -14,7 +14,7 @@ function TheLightOfTokyo() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Satte City"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
 

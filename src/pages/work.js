@@ -16,7 +16,7 @@ function WorkPage() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Work"
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
 
