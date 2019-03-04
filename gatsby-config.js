@@ -15,7 +15,8 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#4dc0b5`,
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`
+        icon: `src/images/mdicon.svg`,
+        include_favicon: true
       }
     },
     `gatsby-plugin-postcss`,
