@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
+        name: `makotodejima-portfolio`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#ffffff`,
