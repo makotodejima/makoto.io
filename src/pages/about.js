@@ -52,7 +52,7 @@ function AboutPage() {
           </div>
 
           <div className="relative w-1/2 mt-12 md:m-auto md:w-1/3">
-            <img src={me} alt="me" />
+            <img src={me} alt="me" className="w-full" />
             <animated.img
               {...bind()}
               style={{
