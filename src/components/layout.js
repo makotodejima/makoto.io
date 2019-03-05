@@ -10,7 +10,13 @@ function Layout({ children }) {
   const props = useSpring({
     year: 2019,
     from: { year: 1990 },
-    config: { mass: 1, tension: 100, friction: 380, precision: 1 }
+    config: { mass: 1, tension: 100, friction: 200 }
+  });
+
+  const opacity = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: config.slow
   });
 
   return (
@@ -25,12 +31,18 @@ function Layout({ children }) {
         }
       `}
       render={data => (
-        <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
+        <div
+          style={opacity}
+          className="flex flex-col font-sans min-h-screen text-grey-darkest"
+        >
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <div className="flex flex-col flex-1 md:justify-center max-w-xl mx-auto px-4 py-8 md:p-8 w-full">
+          <animated.div
+            style={opacity}
+            className="flex flex-col flex-1 md:justify-center max-w-xl mx-auto px-4 py-8 md:p-8 w-full"
+          >
             {children}
-          </div>
+          </animated.div>
 
           <footer className="bg-blue-darker">
             <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-xl mx-auto mx-auto p-6 md:p-8 text-sm">

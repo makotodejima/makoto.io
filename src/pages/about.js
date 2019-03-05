@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import me from "../images/me.jpg";
+import poco from "../images/poco.png";
 
 // FontAwesome
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -38,8 +39,18 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="w-1/2 mt-12 md:m-auto md:w-1/3">
+          <div className="relative w-1/2 mt-12 md:m-auto md:w-1/3">
             <img src={me} alt="me" />
+            <img
+              src={poco}
+              alt="Cute dog's face"
+              className="w-2/5 absolute"
+              style={{
+                left: "50%",
+                top: "50%",
+                transform: "translate(-47%, -43%)"
+              }}
+            />
           </div>
         </div>
 
