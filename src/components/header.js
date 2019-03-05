@@ -1,13 +1,23 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
+import { useSpring, animated } from "react-spring";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
+  const props = useSpring({
+    opacity: 1,
+    year: 100,
+    from: { opacity: 0, year: 0 }
+  });
+
   return (
     <nav className="bg-white">
-      <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto p-4 md:p-8">
+      <animated.div
+        style={props}
+        className="flex flex-wrap items-center justify-between max-w-xl mx-auto p-4 md:p-8"
+      >
         <Link to="/" className="w-16 h-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +78,7 @@ function Header({ siteTitle }) {
             </Link>
           </div>
         </div>
-      </div>
+      </animated.div>
     </nav>
   );
 }
