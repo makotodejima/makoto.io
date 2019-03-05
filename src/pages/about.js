@@ -71,7 +71,7 @@ function AboutPage() {
           </div>
         </div>
 
-        <div className="links flex justify-center w-full my-8 md:mt-16 text-2xl">
+        <div className="links flex justify-center w-full my-8 md:mt-16">
           {/* <a
             href="https://drive.google.com"
             target="_blank"
@@ -80,7 +80,7 @@ function AboutPage() {
           >
             Background
           </a> */}
-          <div className="socials">
+          <div className="socials text-2xl">
             <a
               href="https://dribbble.com/mak84sasami"
               target="_blank"
