@@ -4,6 +4,8 @@ import Layout from "../components/layout";
 import CardLayout from "../components/cardLayout";
 import Card from "../components/card";
 
+import BackToTopBtn from "../components/backToTopBtn";
+
 import tpcsq from "../images/tpcsq.jpg";
 import merasq from "../images/merasq.jpg";
 import mpsq from "../images/mpsq.jpg";
