@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Makoto Dejima`,
     description: `Makoto Dejima's Portfolio Website`,
+    url: "https://www.madmak.me",
     author: `@mak84sasami`
   },
   plugins: [
