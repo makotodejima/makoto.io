@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Makoto Dejima`,
-    description: `Makoto Dejima's Portfolio Website`,
+    description: `Makoto Dejima - Portfolio`,
     url: "https://www.madmak.me",
     author: `@mak84sasami`
   },
@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `MakotoDejimaPortfolio`,
+        name: `Makoto Dejima - Portfolio`,
         short_name: `Madmak`,
         start_url: `/`,
         background_color: `#ffffff`,

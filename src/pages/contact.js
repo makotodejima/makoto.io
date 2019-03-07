@@ -19,7 +19,16 @@ class ContactPage extends React.Component {
       <Layout>
         <SEO
           title="Contact"
-          keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+          keywords={[
+            `Makoto Dejima`,
+            `Designer`,
+            `Front-End Developer`,
+            `Design`,
+            `Graphic Design`,
+            `JavaScript`,
+            `React`,
+            `Motion`
+          ]}
         />
         <div className="text-center leading-loose">
           <p className="m-4">

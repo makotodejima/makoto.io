@@ -70,7 +70,16 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: []
+  keywords: [
+    `Makoto Dejima`,
+    `Designer`,
+    `Front-End Developer`,
+    `Design`,
+    `Graphic Design`,
+    `JavaScript`,
+    `React`,
+    `Motion`
+  ]
 };
 
 SEO.propTypes = {

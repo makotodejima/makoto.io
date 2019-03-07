@@ -15,7 +15,16 @@ function IndexPage() {
     <Layout>
       <SEO
         title="Manhattan Portage"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `Makoto Dejima`,
+          `Designer`,
+          `Front-End Developer`,
+          `Design`,
+          `Graphic Design`,
+          `JavaScript`,
+          `React`,
+          `Motion`
+        ]}
       />
 
       <div className="hero flex flex-col justify-center text-center align-middle">

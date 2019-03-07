@@ -32,7 +32,16 @@ function AboutPage() {
     <Layout>
       <SEO
         title="About"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `Makoto Dejima`,
+          `Designer`,
+          `Front-End Developer`,
+          `Design`,
+          `Graphic Design`,
+          `JavaScript`,
+          `React`,
+          `Motion`
+        ]}
       />
 
       <div className="flex flex-col">

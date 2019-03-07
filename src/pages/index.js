@@ -19,7 +19,16 @@ function IndexPage() {
     <Layout>
       <SEO
         title="Home"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `Makoto Dejima`,
+          `Designer`,
+          `Front-End Developer`,
+          `Design`,
+          `Graphic Design`,
+          `JavaScript`,
+          `React`,
+          `Motion`
+        ]}
       />
 
       <Hero />
