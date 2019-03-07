@@ -18,7 +18,7 @@ function IndexPage() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Makoto Dejima"
         keywords={[
           `Makoto Dejima`,
           `Designer`,
