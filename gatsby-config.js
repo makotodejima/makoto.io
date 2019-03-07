@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Makoto Dejima`,
     description: `Makoto Dejima's Portfolio Website`,
+    url: "https://www.madmak.me",
     author: `@mak84sasami`
   },
   plugins: [
@@ -9,14 +10,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `makotodejima-portfolio`,
-        short_name: `starter`,
+        name: `MakotoDejimaPortfolio`,
+        short_name: `Madmak`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#4dc0b5`,
+        theme_color: `#1C3D5A`,
         display: `minimal-ui`,
         icon: `src/images/mdicon.svg`,
-        include_favicon: true
+        icons: [
+          {
+            src: `/icons/icon-192x192.png`,
+            sizes: `192x192`,
+            type: `image/svg`
+          },
+          {
+            src: `/icons/icon-512x512.png`,
+            sizes: `512x512`,
+            type: `image/svg`
+          }
+        ]
       }
     },
     `gatsby-plugin-postcss`,
