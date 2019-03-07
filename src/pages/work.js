@@ -19,7 +19,16 @@ function WorkPage() {
     <Layout>
       <SEO
         title="Work"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `Makoto Dejima`,
+          `Designer`,
+          `Front-End Developer`,
+          `Design`,
+          `Graphic Design`,
+          `JavaScript`,
+          `React`,
+          `Motion`
+        ]}
       />
 
       <div className="text-center">
