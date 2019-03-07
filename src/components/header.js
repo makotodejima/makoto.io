@@ -55,24 +55,24 @@ function Header({ siteTitle }) {
             isExpanded ? `block` : `hidden`
           } md:block md:flex md:items-center w-full md:w-auto text-center`}
         >
-          <div className="text-sm">
+          <div className="header-link text-sm">
             <Link
               to="/work/"
-              className="block mt-4 md:inline-block md:mt-0 md:mr-8 no-underline text-black"
+              className="relative block mt-4 md:inline-block md:mt-0 md:mr-8 no-underline text-grey-darkest"
             >
               Work
             </Link>
 
             <Link
               to="/about/"
-              className="block md:inline-block mt-4 md:mt-0 md:mr-8 no-underline text-black"
+              className="relative block md:inline-block mt-4 md:mt-0 md:mr-8 no-underline text-grey-darkest"
             >
               About
             </Link>
 
             <Link
               to="/contact/"
-              className="block md:inline-block mt-4 md:mt-0 no-underline text-black"
+              className="relative block md:inline-block mt-4 md:mt-0 no-underline text-grey-darkest"
             >
               Contact
             </Link>

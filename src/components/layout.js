@@ -53,16 +53,22 @@ function Layout({ children }) {
                 </animated.span>{" "}
                 Makoto Dejima
               </div>
-              <div className="contacts w-48 mb-4 md:m-0 flex justify-between">
-                <Link to="/" className="md:no-underline text-white">
+              <div className="footer-link contacts w-48 mb-4 md:m-0 flex justify-between">
+                <Link to="/" className="relative md:no-underline text-white">
                   Home
                 </Link>
 
-                <Link to="/about/" className="md:no-underline text-white">
+                <Link
+                  to="/about/"
+                  className="relative md:no-underline text-white"
+                >
                   About
                 </Link>
 
-                <Link to="/contact/" className="md:no-underline text-white">
+                <Link
+                  to="/contact/"
+                  className="relative md:no-underline text-white"
+                >
                   Contact
                 </Link>
               </div>

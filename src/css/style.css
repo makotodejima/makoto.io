@@ -62,8 +62,49 @@
  * @import "utilities/skew-transforms";
  */
 
-/* Additional CSS */
+/* Additional CSS written by me */
 
+/* Hero height */
 .hero {
   height: 60vh;
+}
+
+/* Header links underline animation */
+
+.header-link > a::before {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 1px;
+  background-color: #3d4852;
+  bottom: -1px;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.header-link > a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Footer links underline animation */
+
+.footer-link > a::before {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  bottom: -1px;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.footer-link > a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
