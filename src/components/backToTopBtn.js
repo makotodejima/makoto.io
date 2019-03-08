@@ -9,11 +9,11 @@ class BackToTopBtn extends React.Component {
       clearInterval(this.state.intervalId);
     }
     // Scroll up by 50px eachtime this is called
-    window.scroll(0, window.pageYOffset - 50);
+    window.scroll(0, window.pageYOffset - 30);
   };
 
   scrollToTop = () => {
-    let intervalId = setInterval(this.scrollUp, 20); // 20 ms
+    let intervalId = setInterval(this.scrollUp, 10); // 20 ms
     this.setState({ intervalId });
   };
 
