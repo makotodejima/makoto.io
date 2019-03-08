@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import { useSpring, animated } from "react-spring";
+import React from "react";
+// import { useSpring, animated } from "react-spring";
 
-function BackToTopBtn() {
-  const [props, set, stop] = useSpring(() => ({ y: 0 }));
+class BackToTopBtn extends React.Component {
+  state = { intervalId: 0 };
 
-  const scroll = () => {
-    set({ y: 150 });
+  scrollUp = () => {
+    if (window.pageYOffset === 0) {
+      clearInterval(this.state.intervalId);
+    }
+    // Scroll up by 50px eachtime this is called
+    window.scroll(0, window.pageYOffset - 50);
   };
 
-  //   const reachToTop = callback => {
-  //     if (window.pageYOffset === 0) {
-  //       console.log("It's 0 up here.");
-  //     }
-  //     callback();
-  //   };
+  scrollToTop = () => {
+    let intervalId = setInterval(this.scrollUp, 20); // 20 ms
+    this.setState({ intervalId });
+  };
 
-  return (
-    <animated.button
-      className="toTop"
-      scrollTop={props.scroll}
-      onClick={scroll}
-    >
-      Press to top
-    </animated.button>
-  );
+  render() {
+    return (
+      <button className="toTop" onClick={this.scrollToTop}>
+        Press to top
+      </button>
+    );
+  }
 }
 
 export default BackToTopBtn;

@@ -85,6 +85,8 @@ function WorkPage() {
       </CardLayout>
 
       <BottomLink path="/" linkText="Home" />
+
+      <BackToTopBtn />
     </Layout>
   );
 }
