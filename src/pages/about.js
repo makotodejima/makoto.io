@@ -74,9 +74,12 @@ function AboutPage() {
               // Prevent drag. without this, 'down' is not captured corrctly
               draggable="false"
               src={poco}
-              alt="Cute dog's face"
-              className="w-2/5 absolute"
+              alt="Cute dog face"
+              className="w-2/5 absolute z-10"
             />
+            <p className="absolute text-xs text-grey-lighter pb-2 pl-16 pin-b">
+              Yes, dog face is draggable.
+            </p>
           </div>
         </div>
 
