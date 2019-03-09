@@ -3,7 +3,6 @@ import SEO from "../components/seo";
 import Layout from "../components/layout";
 import CardLayout from "../components/cardLayout";
 import Card from "../components/card";
-
 import BackToTopBtn from "../components/backToTopBtn";
 
 import tpcsq from "../images/tpcsq.jpg";
