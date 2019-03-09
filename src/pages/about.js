@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { useGesture } from "react-with-gesture";
 import clamp from "lodash-es/clamp";
@@ -27,6 +27,8 @@ function AboutPage() {
       config: { mass: velocity, tension: 500 * velocity, friction: 10 }
     });
   });
+
+  const [mouseOnImage, toggle] = useState(false);
 
   return (
     <Layout>
@@ -60,7 +62,11 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="relative w-1/2 mt-12 md:m-auto md:w-1/3">
+          <div
+            className="image-container relative w-1/2 mt-12 md:m-auto md:w-1/3"
+            onMouseEnter={() => toggle(true)}
+            onMouseLeave={() => toggle(false)}
+          >
             <img src={me} alt="me" className="w-full" />
             <animated.img
               {...bind()}
@@ -77,7 +83,11 @@ function AboutPage() {
               alt="Cute dog face"
               className="w-2/5 absolute z-10"
             />
-            <p className="absolute tracking-tight sm:tracking-normal text-xs w-full text-grey-lighter pb-2 pin-b text-center">
+            <p
+              className={`${
+                mouseOnImage ? `opacity-0` : `opacity-100`
+              } absolute tracking-tight sm:tracking-normal text-xs w-full text-grey-lighter pb-2 pin-b text-center`}
+            >
               Yes, dog face is draggable.
             </p>
           </div>

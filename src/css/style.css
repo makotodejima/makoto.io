@@ -108,3 +108,7 @@
   visibility: visible;
   transform: scaleX(1);
 }
+
+.image-container > p {
+  transition: opacity 1500ms;
+}
