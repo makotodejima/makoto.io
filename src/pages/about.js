@@ -77,7 +77,7 @@ function AboutPage() {
               alt="Cute dog face"
               className="w-2/5 absolute z-10"
             />
-            <p className="absolute text-xs text-grey-lighter pb-2 pl-16 pin-b">
+            <p className="absolute tracking-tight sm:tracking-normal text-xs w-full text-grey-lighter pb-2 pin-b text-center">
               Yes, dog face is draggable.
             </p>
           </div>
