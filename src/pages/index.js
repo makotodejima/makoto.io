@@ -87,7 +87,7 @@ function IndexPage() {
         </Card>
       </CardsContainer>
 
-      <BottomLink path="/work/" linkText="Show more" />
+      <BottomLink path="/work/" linkText="More" />
 
       <div className="label text-xl mt-12 mb-8">
         <p>Writing</p>
