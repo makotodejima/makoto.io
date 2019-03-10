@@ -4,15 +4,22 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import Card from "../components/card";
-import CardLayout from "../components/cardLayout";
 import Label from "../components/label";
 import BottomLink from "../components/bottomLink";
+
+import styled from "styled-components";
 
 import tpcsq from "../images/tpcsq.jpg";
 import merasq from "../images/merasq.jpg";
 import mpsq from "../images/mpsq.jpg";
 import jasms from "../images/jasmssq.jpg";
 import weq from "../images/weq.jpg";
+
+const CardsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 
 function IndexPage() {
   return (
@@ -33,8 +40,12 @@ function IndexPage() {
       <Hero />
       <Label />
 
-      <CardLayout>
-        <Card path="the-light-of-tokyo">
+      <CardsContainer>
+        <Card
+          title="The Light of Tokyo"
+          desc="Tokyo Postcard Award"
+          path="the-light-of-tokyo"
+        >
           <img
             src={tpcsq}
             alt="Postcard, The light of Tokyo"
@@ -43,7 +54,7 @@ function IndexPage() {
           />
         </Card>
 
-        <Card path="mera">
+        <Card title="808 MERA Farming System" desc="Logo Design" path="mera">
           <img
             src={merasq}
             alt="Logo design for indoor faming, 808Mera"
@@ -51,7 +62,11 @@ function IndexPage() {
           />
         </Card>
 
-        <Card path="jasms">
+        <Card
+          title="Japan Society of Mountain Research"
+          desc="Logo Design"
+          path="jasms"
+        >
           <img
             src={jasms}
             alt="Logo design, Japan Society of Mountain Research"
@@ -59,14 +74,18 @@ function IndexPage() {
           />
         </Card>
 
-        <Card path="manhattan-portage">
+        <Card
+          title="Manhattan Portage Art Collection"
+          desc="Messenger Bag Design"
+          path="manhattan-portage"
+        >
           <img
             src={mpsq}
             alt="Messenger Bag, Manhattan Portage"
             className="align-middle"
           />
         </Card>
-      </CardLayout>
+      </CardsContainer>
 
       <BottomLink path="/work/" linkText="Show more" />
 

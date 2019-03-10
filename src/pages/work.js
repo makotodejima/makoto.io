@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
-import CardLayout from "../components/cardLayout";
 import Card from "../components/card";
-import BackToTopBtn from "../components/backToTopBtn";
+
+import styled from "styled-components";
 
 import tpcsq from "../images/tpcsq.jpg";
 import merasq from "../images/merasq.jpg";
@@ -13,7 +13,15 @@ import sattesq from "../images/sattesq.jpg";
 import soreikesq from "../images/soreikesq.jpg";
 import BottomLink from "../components/bottomLink";
 
+const CardsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
 function WorkPage() {
+  const [mouseOn, setMouseOn] = useState(false);
+
   return (
     <Layout>
       <SEO
@@ -34,25 +42,33 @@ function WorkPage() {
         <h3 className="font-light my-8 p-3">Work</h3>
       </div>
 
-      <CardLayout>
-        <Card path="the-light-of-tokyo">
+      <CardsContainer>
+        <Card
+          title="The Light of Tokyo"
+          desc="Tokyo Postcard Award"
+          path="the-light-of-tokyo"
+        >
           <img
             src={tpcsq}
             alt="Postcard, The light of Tokyo"
-            // Remove wierd 1px on the bottom of imgs
             className="align-middle"
           />
+          {/* <CardOverlay mouseOn={mouseOn} /> */}
         </Card>
 
-        <Card path="mera">
+        <Card title="808 MERA Farming System" desc="Logo Design" path="mera">
           <img
             src={merasq}
-            alt="Logo design for indoor faming, 808Mera"
+            alt="Logo design for indoor farming system, 808Mera"
             className="align-middle"
           />
         </Card>
 
-        <Card path="jasms">
+        <Card
+          title="Japan Society of Mountain Research"
+          desc="Logo Design"
+          path="jasms"
+        >
           <img
             src={jasms}
             alt="Logo design, Japan Society of Mountain Research"
@@ -60,28 +76,40 @@ function WorkPage() {
           />
         </Card>
 
-        <Card path="manhattan-portage">
+        <Card
+          title="Manhattan Portage Art Collection"
+          desc="Messenger Bag Design"
+          path="manhattan-portage"
+        >
           <img
             src={mpsq}
             alt="Messenger Bag, Manhattan Portage"
             className="align-middle"
           />
         </Card>
-        <Card path="satte">
+        <Card
+          title="Satte City, Saitama Pref."
+          desc="Promotion Logo Design"
+          path="satte"
+        >
           <img
             src={sattesq}
             alt="Logo Design, Satte City"
             className="align-middle"
           />
         </Card>
-        <Card path="soreike">
+        <Card
+          title="Soreike San Francisco Tee"
+          desc="T-shirt Design"
+          path="soreike"
+        >
           <img
             src={soreikesq}
             alt="T-shirt Design, Soreike San Francisco Tee"
             className="align-middle"
           />
         </Card>
-      </CardLayout>
+      </CardsContainer>
 
       <BottomLink path="/" linkText="Home" />
     </Layout>
