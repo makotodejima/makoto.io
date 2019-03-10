@@ -93,41 +93,31 @@ function AboutPage() {
           </div>
         </div>
 
-        <div className="links flex justify-center w-full my-8 md:mt-16">
-          {/* <a
-            href="https://drive.google.com"
+        <div className="social-links flex justify-center text-2xl z-10 w-full mt-8 md:mt-16">
+          <a
+            href="https://dribbble.com/mak84sasami"
             target="_blank"
             rel="noopener noreferrer"
-            className="no-underline text-blue-darker"
+            className="text-blue-darker relative"
           >
-            Background
-          </a> */}
-          <div className="socials text-2xl">
-            <a
-              href="https://dribbble.com/mak84sasami"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-darker"
-            >
-              <FontAwesomeIcon icon={["fab", "dribbble"]} />
-            </a>
-            <a
-              href="https://www.instagram.com/dejimako/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-darker mx-8"
-            >
-              <FontAwesomeIcon icon={["fab", "instagram"]} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mak84sasami/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-darker"
-            >
-              <FontAwesomeIcon icon={["fab", "linkedin"]} />
-            </a>
-          </div>
+            <FontAwesomeIcon icon={["fab", "dribbble"]} />
+          </a>
+          <a
+            href="https://www.instagram.com/dejimako/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-darker mx-8 relative"
+          >
+            <FontAwesomeIcon icon={["fab", "instagram"]} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mak84sasami/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-darker relative"
+          >
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+          </a>
         </div>
       </div>
     </Layout>
