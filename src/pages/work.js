@@ -20,8 +20,6 @@ const CardsContainer = styled.div`
 `;
 
 function WorkPage() {
-  const [mouseOn, setMouseOn] = useState(false);
-
   return (
     <Layout>
       <SEO
@@ -53,7 +51,6 @@ function WorkPage() {
             alt="Postcard, The light of Tokyo"
             className="align-middle"
           />
-          {/* <CardOverlay mouseOn={mouseOn} /> */}
         </Card>
 
         <Card title="808 MERA Farming System" desc="Logo Design" path="mera">

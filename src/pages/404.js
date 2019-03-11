@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import abductionIllustration from "../images/abduction-illustration.svg";
+import poco from "../images/poco.png";
 
 function NotFoundPage() {
   return (
@@ -10,12 +10,12 @@ function NotFoundPage() {
       <SEO title="404: Not found" />
       <div>
         <img
-          src={abductionIllustration}
-          className="block mx-auto w-1/2"
-          alt="Ghost getting abducted by aliens"
+          src={poco}
+          className="block mx-auto w-1/6"
+          alt="Poco's cute face"
         />
-        <h2 className="bg-yellow inline-block my-8 p-3">
-          Looks like this page is a ghost that got abducted by aliens...
+        <h2 className="block my-8 p-3 text-center">
+          Looks like you came to wrong place...
         </h2>
       </div>
     </Layout>
