@@ -5,7 +5,6 @@ import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import poco from "../images/poco.png";
 
 const NotFoundPage = () => (
   <StaticQuery

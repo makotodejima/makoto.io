@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import Card from "../components/card";

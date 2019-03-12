@@ -1,4 +1,6 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -9,10 +11,6 @@ import BottomLink from "../components/bottomLink";
 
 import styled from "styled-components";
 
-import tpcsq from "../images/tpcsq.jpg";
-import merasq from "../images/merasq.jpg";
-import mpsq from "../images/mpsq.jpg";
-import jasms from "../images/jasmssq.jpg";
 import weq from "../images/weq.jpg";
 
 const CardsContainer = styled.div`
@@ -21,104 +19,139 @@ const CardsContainer = styled.div`
   justify-content: space-between;
 `;
 
-function IndexPage() {
-  return (
-    <Layout>
-      <SEO
-        title="Home"
-        keywords={[
-          `Makoto Dejima`,
-          `Designer`,
-          `Front-End Developer`,
-          `Graphic Design`,
-          `JavaScript`,
-          `React`,
-          `Motion`
-        ]}
-      />
+const IndexPage = () => (
+  <StaticQuery
+    query={query}
+    render={data => (
+      <Layout>
+        <SEO
+          title="Home"
+          keywords={[
+            `Makoto Dejima`,
+            `Designer`,
+            `Front-End Developer`,
+            `Graphic Design`,
+            `JavaScript`,
+            `React`,
+            `Motion`
+          ]}
+        />
 
-      <Hero />
-      <Label />
+        <Hero />
+        <Label />
 
-      <CardsContainer>
-        <Card
-          title="The Light of Tokyo"
-          desc="Tokyo Postcard Award"
-          path="the-light-of-tokyo"
-        >
-          <img
-            src={tpcsq}
-            alt="Postcard, The light of Tokyo"
-            // Remove wierd 1px on the bottom of imgs
-            className="align-middle"
-          />
-        </Card>
+        <CardsContainer>
+          <Card
+            title="The Light of Tokyo"
+            desc="Tokyo Postcard Award"
+            path="the-light-of-tokyo"
+          >
+            <Img
+              fluid={data.tpcsq.childImageSharp.fluid}
+              alt="Postcard, The light of Tokyo"
+              className="align-middle" // Remove wierd 1px on the bottom of imgs
+            />
+          </Card>
 
-        <Card title="808 MERA Farming System" desc="Logo Design" path="mera">
-          <img
-            src={merasq}
-            alt="Logo design for indoor faming, 808Mera"
-            className="align-middle"
-          />
-        </Card>
+          <Card title="808 MERA Farming System" desc="Logo Design" path="mera">
+            <Img
+              fluid={data.merasq.childImageSharp.fluid}
+              className="align-middle"
+              alt="Logo design for indoor faming, 808Mera"
+            />
+          </Card>
 
-        <Card
-          title="Japan Society of Mountain Research"
-          desc="Logo Design"
-          path="jasms"
-        >
-          <img
-            src={jasms}
-            alt="Logo design, Japan Society of Mountain Research"
-            className="align-middle"
-          />
-        </Card>
+          <Card
+            title="Japan Society of Mountain Research"
+            desc="Logo Design"
+            path="jasms"
+          >
+            <Img
+              fluid={data.jasmssq.childImageSharp.fluid}
+              className="align-middle"
+              alt="Logo design, Japan Society of Mountain Research"
+            />
+          </Card>
 
-        <Card
-          title="Manhattan Portage Art Collection"
-          desc="Messenger Bag Design"
-          path="manhattan-portage"
-        >
-          <img
-            src={mpsq}
-            alt="Messenger Bag, Manhattan Portage"
-            className="align-middle"
-          />
-        </Card>
-      </CardsContainer>
+          <Card
+            title="Manhattan Portage Art Collection"
+            desc="Messenger Bag Design"
+            path="manhattan-portage"
+          >
+            <Img
+              fluid={data.mpsq.childImageSharp.fluid}
+              alt="Messenger Bag, Manhattan Portage"
+              className="align-middle"
+            />
+          </Card>
+        </CardsContainer>
 
-      <BottomLink path="/work/" linkText="More" />
+        <BottomLink path="/work/" linkText="More" />
 
-      <div className="label text-xl mt-12 mb-8">
-        <p>Writing</p>
-      </div>
+        <div className="label text-xl mt-12 mb-8">
+          <p>Writing</p>
+        </div>
 
-      <p className="leading-loose">
-        <a
-          href="https://medium.com/this-week-in-america"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="no-underline text-blue"
-        >
-          Tech and politics / テクノロジーと政治
-        </a>
-        <br />I am writing about technology, startups, and politics.
-      </p>
-      <p className="my-12  leading-loose">
-        <a
-          href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="no-underline text-blue"
-        >
-          WeQ Japanese PR <img className="h-3 mx-2" src={weq} alt="WeQ" />
-        </a>
-        <br />
-        I'm working with German global ad-tech company to accelerate their
-        growth in Japanese market.
-      </p>
-    </Layout>
-  );
-}
+        <p className="leading-loose">
+          <a
+            href="https://medium.com/this-week-in-america"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline text-blue"
+          >
+            Tech and politics / テクノロジーと政治
+          </a>
+          <br />I am writing about technology, startups, and politics.
+        </p>
+        <p className="my-12  leading-loose">
+          <a
+            href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline text-blue"
+          >
+            WeQ Japanese PR <img className="h-3 mx-2" src={weq} alt="WeQ" />
+          </a>
+          <br />
+          I'm working with German global ad-tech company to accelerate their
+          growth in Japanese market.
+        </p>
+      </Layout>
+    )}
+  />
+);
 
 export default IndexPage;
+
+const query = graphql`
+  query {
+    tpcsq: file(relativePath: { eq: "tpcsq.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 750) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    merasq: file(relativePath: { eq: "merasq.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 750) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    jasmssq: file(relativePath: { eq: "jasmssq.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 750) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mpsq: file(relativePath: { eq: "mpsq.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 750) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
+// this component works as image conteainer with animated overlay.
+// Parent comp should pass in {children(image), path, title, desc }.
+
 const Overlay = styled.div`
   position: absolute;
   top: 0;
