@@ -1,47 +1,99 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import mera01 from "../../images/mera01.jpg";
-import mera02 from "../../images/mera02.jpg";
-import mera03 from "../../images/mera03.jpg";
-import mera04 from "../../images/mera04.jpg";
 
 import HomeWorkBtns from "../../components/homeWorkBtns";
 
 function IndexPage() {
   return (
-    <Layout>
-      <SEO
-        title="808MERA"
-        keywords={[
-          `Makoto Dejima`,
-          `Designer`,
-          `Front-End Developer`,
-          `Design`,
-          `Graphic Design`,
-          `JavaScript`,
-          `React`,
-          `Motion`
-        ]}
-      />
+    <StaticQuery
+      query={query}
+      render={data => (
+        <Layout>
+          <SEO
+            title="808MERA"
+            keywords={[
+              `Makoto Dejima`,
+              `Designer`,
+              `Front-End Developer`,
+              `Design`,
+              `Graphic Design`,
+              `JavaScript`,
+              `React`,
+              `Motion`
+            ]}
+          />
 
-      <div className="hero flex flex-col justify-center text-center align-middle">
-        <h3 className="font-light tracking-wide">
-          Logo Design for Indoor Farming System
-        </h3>
-        <h2 className="font-light my-4">808 MERA</h2>
-      </div>
+          <div className="hero flex flex-col justify-center text-center align-middle">
+            <h3 className="font-light tracking-wide">
+              Logo Design for Indoor Farming System
+            </h3>
+            <h2 className="font-light my-4">808 MERA</h2>
+          </div>
 
-      <div className="work flex flex-col">
-        <img src={mera01} alt="" className="my-16" />
-        <img src={mera02} alt="" className="my-16" />
-        <img src={mera03} alt="" className="my-16" />
-        <img src={mera04} alt="" className="my-16" />
-      </div>
-      <HomeWorkBtns />
-    </Layout>
+          <div className="work flex flex-col">
+            <Img
+              fluid={data.mera01.childImageSharp.fluid}
+              alt="808 MERA - 01"
+              className="my-16"
+            />
+            <Img
+              fluid={data.mera02.childImageSharp.fluid}
+              alt="808 MERA - 02"
+              className="my-16"
+            />
+            <Img
+              fluid={data.mera03.childImageSharp.fluid}
+              alt="808 MERA - 03"
+              className="my-16"
+            />
+            <Img
+              fluid={data.mera04.childImageSharp.fluid}
+              alt="808 MERA - 04"
+              className="my-16"
+            />
+          </div>
+          <HomeWorkBtns />
+        </Layout>
+      )}
+    />
   );
 }
 
 export default IndexPage;
+
+const query = graphql`
+  query {
+    mera01: file(relativePath: { eq: "mera01.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mera02: file(relativePath: { eq: "mera02.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mera03: file(relativePath: { eq: "mera03.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mera04: file(relativePath: { eq: "mera04.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
