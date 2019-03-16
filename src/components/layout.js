@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { Link } from "gatsby";
-import { useSpring, animated, config } from "react-spring";
+import { useSpring, animated } from "react-spring";
 
 import Header from "./header";
 
@@ -15,8 +15,7 @@ function Layout({ children }) {
 
   const opacity = useSpring({
     opacity: 1,
-    from: { opacity: 0 },
-    config: config.slow
+    from: { opacity: 0 }
   });
 
   return (
@@ -31,7 +30,7 @@ function Layout({ children }) {
         }
       `}
       render={data => (
-        <div
+        <animated.div
           style={opacity}
           className="flex flex-col font-sans min-h-screen text-grey-darkest"
         >
@@ -74,7 +73,7 @@ function Layout({ children }) {
               </div>
             </div>
           </footer>
-        </div>
+        </animated.div>
       )}
     />
   );
