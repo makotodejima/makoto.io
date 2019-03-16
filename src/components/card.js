@@ -15,11 +15,11 @@ const Overlay = styled.div`
   color: #1c3d5a;
   opacity: 0;
   transition: all 0.4s ease-out;
-  transform: translate3d(0, 3px, 0);
+  transform: translate3d(0, 3px, 0) scale(0.9);
 
   :hover {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1.02);
   }
 `;
 
