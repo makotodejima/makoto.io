@@ -14,12 +14,20 @@ const Overlay = styled.div`
   background-color: rgba(246, 246, 246, 0.65);
   color: #1c3d5a;
   opacity: 0;
-  transition: all 0.4s ease-out;
-  transform: translate3d(0, 3px, 0) scale(0.9);
+  transition: all 0.5s ease-out;
+
+  h3,
+  h5 {
+    transform: translate3d(0, 7px, 0) scale(0.97);
+    transition: all 0.5s ease-out;
+  }
 
   :hover {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1.02);
+    h3,
+    h5 {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
   }
 `;
 
