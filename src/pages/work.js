@@ -8,6 +8,8 @@ import Layout from "../components/layout";
 import Card from "../components/card";
 import BottomLink from "../components/bottomLink";
 
+// Issue: This container lose style after reloaded.
+// For now, writing as CSS-in-JS
 const CardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +40,13 @@ function WorkPage() {
             <h3 className="font-light my-8 p-3">Work</h3>
           </div>
 
-          <CardsContainer>
+          <div
+            style={{
+              display: `flex`,
+              flexWrap: "wrap",
+              justifyContent: "space-between"
+            }}
+          >
             <Card
               title="The Light of Tokyo"
               desc="Tokyo Postcard Award"
@@ -108,7 +116,7 @@ function WorkPage() {
                 className="align-middle"
               />
             </Card>
-          </CardsContainer>
+          </div>
 
           <BottomLink path="/" linkText="Home" />
         </Layout>
