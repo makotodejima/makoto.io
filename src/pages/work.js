@@ -123,42 +123,42 @@ const query = graphql`
   query {
     tpcsq: file(relativePath: { eq: "tpcsq.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 750, quality: 70) {
+        fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     merasq: file(relativePath: { eq: "merasq.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 750, quality: 70) {
+        fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     jasmssq: file(relativePath: { eq: "jasmssq.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 750, quality: 70) {
+        fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mpsq: file(relativePath: { eq: "mpsq.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 750, quality: 70) {
+        fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     sattesq: file(relativePath: { eq: "sattesq.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 750, quality: 70) {
+        fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     soreikesq: file(relativePath: { eq: "soreikesq.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 750, quality: 70) {
+        fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
