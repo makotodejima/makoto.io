@@ -5,6 +5,7 @@ import { useSpring, animated, config } from "react-spring";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
+  const [logoHover, toggleLogoHover] = useState(false);
 
   const opacity = useSpring({
     opacity: 1,
@@ -22,8 +23,11 @@ function Header({ siteTitle }) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 25"
-            fill="#3d4852"
+            fill={logoHover ? "#5c778e" : "#3d4852"}
             width="64px"
+            onMouseEnter={() => toggleLogoHover(true)}
+            onMouseLeave={() => toggleLogoHover(false)}
+            style={{ transition: `all 0.3s` }}
           >
             <title>md</title>
             <g id="Layer_2" data-name="Layer 2">
