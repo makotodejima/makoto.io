@@ -16,7 +16,19 @@ const Overlay = styled.div`
   opacity: 0;
   transition: all 0.5s ease-out;
 
-  h3,
+  .divider {
+    margin: 12px auto 20px auto;
+    height: 1px;
+    width: 15%;
+    background-color: #1c3d5a;
+    transform: scaleX(0);
+    transition: all 0.5s ease-out;
+  }
+
+  h3 {
+    transform: translate3d(0, -7px, 0) scale(0.97);
+    transition: all 0.5s ease-out;
+  }
   h5 {
     transform: translate3d(0, 7px, 0) scale(0.97);
     transition: all 0.5s ease-out;
@@ -24,6 +36,9 @@ const Overlay = styled.div`
 
   :hover {
     opacity: 1;
+    .divider {
+      transform: scaleX(1);
+    }
     h3,
     h5 {
       transform: translate3d(0, 0, 0) scale(1);
@@ -39,6 +54,7 @@ const Card = props => {
         <Overlay>
           <div className="card-overlay flex flex-col justify-center h-full">
             <h3 className="text-center my-2">{props.title}</h3>
+            <div className="divider" />
             <h5 className="text-center">{props.desc}</h5>
           </div>
         </Overlay>
