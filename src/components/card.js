@@ -36,6 +36,7 @@ const Overlay = styled.div`
 
   :hover {
     opacity: 1;
+    box-shadow: 0px 5px 40px -15px rgba(0, 0, 0, 0.5);
     .divider {
       transform: scaleX(1);
     }

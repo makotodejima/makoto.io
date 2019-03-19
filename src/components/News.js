@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "gatsby";
 
 const wiggle = keyframes`
@@ -16,6 +16,15 @@ const wiggle = keyframes`
   100% { transform: translate(0, 0); }
 `;
 
+const Emoji = styled.span`
+  display: inline-block;
+  animation: ${wiggle} 1s linear 6;
+  @media (max-width: 767px) {
+    margin-top: 30px;
+    visibility: hidden;
+  }
+`;
+
 const Balloon = styled.div`
   opacity: ${props => (props.hover ? 1 : 0)};
   visibility: ${props => (props.hover ? "visible" : "hidden")};
@@ -23,9 +32,9 @@ const Balloon = styled.div`
   position: absolute;
   line-height: 1.8;
   font-size: 0.9rem;
-  /* left: 50%;
-  transform: translateX(-50%); */
-  margin-top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
   padding: 10px 20px;
   border-radius: 0.5rem;
   ::before {
@@ -39,11 +48,13 @@ const Balloon = styled.div`
     box-shadow: 0px 2px 50px -15px rgba(0, 0, 0, 0.5);
   }
   box-shadow: 0px 2px 40px -15px rgba(0, 0, 0, 0.5);
-`;
-
-const Emoji = styled.span`
-  display: inline-block;
-  animation: ${wiggle} 1s linear 6;
+  @media (max-width: 767px) {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    box-shadow: none;
+    font-size: 0.8rem;
+  }
 `;
 
 const News = () => {
@@ -59,28 +70,25 @@ const News = () => {
       <span
         onMouseEnter={() => toggleHover(true)}
         onMouseLeave={() => toggleHover(false)}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: `center`
-        }}
       >
         <h3 style={{ display: "inline" }}>
-          <Emoji>📣 🙌 🎉</Emoji>
+          <Emoji role="img" aria-label="recent news">
+            📣 🙌 🎉
+          </Emoji>
         </h3>
 
         <Balloon hover={hover}>
           <p>
-            <span className="text-grey-dark">2019.4 </span>
+            <span className="text-grey-dark">2019.3 </span>
             <Link to="/work/the-light-of-tokyo" className="text-red-light">
-              Tokyo Post Card Awardを受賞しました
+              Won "Tokyo Post Card Award 2019"
             </Link>
           </p>
 
           <p>
-            <span className="text-grey-dark">2019.5 </span>
+            <span className="text-grey-dark">2019.4 </span>
             <Link to="/work/manhattan-portage" className="text-red-light">
-              Manhattan Portage Art Collection Finalistに選ばれました
+              Nominated "Manhattan Portage Art Award 2019"
             </Link>
           </p>
         </Balloon>

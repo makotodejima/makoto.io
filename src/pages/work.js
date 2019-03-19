@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 import Layout from "../components/layout";
 import Card from "../components/card";
@@ -10,11 +10,11 @@ import BottomLink from "../components/bottomLink";
 
 // Issue: This container lose style after reloaded.
 // For now, writing as CSS-in-JS
-const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
+// const CardsContainer = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// `;
 
 function WorkPage() {
   return (
