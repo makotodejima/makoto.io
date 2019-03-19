@@ -23,7 +23,7 @@ function Header({ siteTitle }) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 25"
-            fill={logoHover ? "#5c778e" : "#3d4852"}
+            fill={logoHover ? "#56595e" : "#3d4852"}
             width="64px"
             onMouseEnter={() => toggleLogoHover(true)}
             onMouseLeave={() => toggleLogoHover(false)}
