@@ -6,6 +6,7 @@ import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
 import HomeWorkBtns from "../../components/homeWorkBtns";
+import WorkHeader from "../../components/workHeader";
 
 function Soreike() {
   return (
@@ -27,10 +28,7 @@ function Soreike() {
             ]}
           />
 
-          <div className="hero flex flex-col justify-center text-center align-middle">
-            <h3 className="font-light tracking-wide">T-shirt Design</h3>
-            <h2 className="font-light my-4">Soreike San Francisco Tee</h2>
-          </div>
+          <WorkHeader title="Soreike San Francisco Tee" desc="T-shirt Design" />
 
           <div className="work flex flex-col">
             <Img
