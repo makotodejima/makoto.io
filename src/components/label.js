@@ -3,7 +3,7 @@ import React from "react";
 const Label = () => {
   return (
     <div className="label text-xl">
-      <p>Latest work</p>
+      <h4>Latest work</h4>
     </div>
   );
 };

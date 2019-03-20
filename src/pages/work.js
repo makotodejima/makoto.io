@@ -37,7 +37,7 @@ function WorkPage() {
           />
 
           <div className="text-center">
-            <h3 className="font-light my-8 p-3">Work</h3>
+            <h2 className="my-8 p-3">Work</h2>
           </div>
 
           <div

@@ -89,7 +89,7 @@ const IndexPage = () => (
         <BottomLink path="/work/" linkText="More" />
 
         <div className="label text-xl mt-12 mb-8">
-          <p>Writing</p>
+          <h4>Writing</h4>
         </div>
 
         <p className="leading-loose">
