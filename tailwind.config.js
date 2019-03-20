@@ -208,7 +208,6 @@ module.exports = {
       "sans-serif"
     ],
     serif: [
-      "poynter-oldstyle-display",
       "Constantia",
       "Lucida Bright",
       "Lucidabright",
