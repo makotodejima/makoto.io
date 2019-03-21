@@ -20,8 +20,9 @@ const Emoji = styled.span`
   display: inline-block;
   animation: ${wiggle} 1s linear 6;
   @media (max-width: 767px) {
-    margin-top: 30px;
-    visibility: hidden;
+    visibility: visible;
+    margin-top: 10px;
+    font-size: 0.85rem;
   }
 `;
 
@@ -46,9 +47,14 @@ const Balloon = styled.div`
     border-right: 10px solid transparent;
     transform: translate(-50%, -100%);
     box-shadow: 0px 2px 50px -15px rgba(0, 0, 0, 0.5);
+    @media (max-width: 767px) {
+      visibility: hidden;
+    }
   }
   box-shadow: 0px 2px 40px -15px rgba(0, 0, 0, 0.5);
   @media (max-width: 767px) {
+    margin-top: 0px;
+    margin-bottom: 20px;
     opacity: 1;
     visibility: visible;
     position: relative;
@@ -88,7 +94,7 @@ const News = () => {
           <p>
             <span className="text-grey-dark">2019.4 </span>
             <Link to="/work/manhattan-portage" className="text-red-light">
-              Nominated "Manhattan Portage Art Award 2019"
+              Finalist "Manhattan Portage Art Award"
             </Link>
           </p>
         </Balloon>

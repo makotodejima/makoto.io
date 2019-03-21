@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { useSpring, animated, config } from "react-spring";
 
-function Header({ siteTitle }) {
+function Header({ currentPath }) {
   const [isExpanded, toggleExpansion] = useState(false);
   const [logoHover, toggleLogoHover] = useState(false);
 
@@ -37,7 +37,6 @@ function Header({ siteTitle }) {
               </g>
             </g>
           </svg>
-          {/* <span className="font-bold text-xl tracking-tight">{siteTitle}</span> */}
         </Link>
 
         <button
@@ -62,21 +61,27 @@ function Header({ siteTitle }) {
           <div className="header-link text-sm">
             <Link
               to="/work/"
-              className="relative block mt-4 md:inline-block md:mt-0 md:mr-8 no-underline text-grey-darkest"
+              className={`relative block mt-4 md:inline-block md:mt-0 md:mr-8 no-underline ${
+                currentPath === "/work/" ? `text-grey` : `text-grey-darkest`
+              } `}
             >
               Work
             </Link>
 
             <Link
               to="/about/"
-              className="relative block md:inline-block mt-4 md:mt-0 md:mr-8 no-underline text-grey-darkest"
+              className={`relative block md:inline-block mt-4 md:mt-0 md:mr-8 no-underline ${
+                currentPath === "/about/" ? `text-grey` : `text-grey-darkest`
+              } `}
             >
               About
             </Link>
 
             <Link
               to="/contact/"
-              className="relative block md:inline-block mt-4 md:mt-0 no-underline text-grey-darkest"
+              className={`relative block md:inline-block mt-4 md:mt-0 no-underline ${
+                currentPath === "/contact/" ? `text-grey` : `text-grey-darkest`
+              }`}
             >
               Contact
             </Link>

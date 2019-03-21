@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 library.add(faInstagram, faDribbble, faLinkedin);
 
-function AboutPage() {
+function AboutPage(props) {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
   const bind = useGesture(({ down, delta, velocity }) => {
     velocity = clamp(velocity, 1, 8);
@@ -31,7 +31,7 @@ function AboutPage() {
   const [mouseOnImage, toggle] = useState(false);
 
   return (
-    <Layout>
+    <Layout currentPath={props.location.pathname}>
       <SEO
         title="About"
         keywords={[

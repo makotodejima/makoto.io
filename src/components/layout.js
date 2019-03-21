@@ -6,7 +6,7 @@ import { useSpring, animated } from "react-spring";
 
 import Header from "./header";
 
-function Layout({ children }) {
+function Layout({ children, currentPath }) {
   const props = useSpring({
     year: 2019,
     from: { year: 1990 },
@@ -34,7 +34,10 @@ function Layout({ children }) {
           style={opacity}
           className="flex flex-col font-sans min-h-screen text-grey-darkest"
         >
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            currentPath={currentPath}
+          />
 
           <animated.div
             style={opacity}
@@ -56,7 +59,6 @@ function Layout({ children }) {
                 <Link to="/" className="relative md:no-underline text-white">
                   Home
                 </Link>
-
                 <Link
                   to="/about/"
                   className="relative md:no-underline text-white"

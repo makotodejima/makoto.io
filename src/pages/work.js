@@ -9,19 +9,19 @@ import Card from "../components/card";
 import BottomLink from "../components/bottomLink";
 
 // Issue: This container lose style after reloaded.
-// For now, writing as CSS-in-JS
+// For now, writing as CSS-in-JS instead of styled-component
 // const CardsContainer = styled.div`
 //   display: flex;
 //   flex-wrap: wrap;
 //   justify-content: space-between;
 // `;
 
-function WorkPage() {
+function WorkPage(props) {
   return (
     <StaticQuery
       query={query}
       render={data => (
-        <Layout>
+        <Layout currentPath={props.location.pathname}>
           <SEO
             title="Work"
             keywords={[
