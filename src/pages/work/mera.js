@@ -6,7 +6,6 @@ import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
 import HomeWorkBtns from "../../components/homeWorkBtns";
-import WorkHeader from "../../components/workHeader";
 
 function IndexPage() {
   return (
@@ -28,10 +27,12 @@ function IndexPage() {
             ]}
           />
 
-          <WorkHeader
-            title="808MERA"
-            desc="Logo Design for Indoor Farming System"
-          />
+          <div className="hero flex flex-col justify-center text-center align-middle">
+            <h3 className="font-light tracking-wide">
+              Logo Design for Indoor Farming System
+            </h3>
+            <h2 className="font-light my-4">808 MERA</h2>
+          </div>
 
           <div className="work flex flex-col">
             <Img

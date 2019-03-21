@@ -6,7 +6,6 @@ import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
 import HomeWorkBtns from "../../components/homeWorkBtns";
-import WorkHeader from "../../components/workHeader";
 
 function Jasms() {
   return (
@@ -28,10 +27,12 @@ function Jasms() {
             ]}
           />
 
-          <WorkHeader
-            title="Japan Society of Mountain Reseach"
-            desc="Logo Design"
-          />
+          <div className="hero flex flex-col justify-center text-center align-middle">
+            <h3 className="font-light tracking-wide">Logo Design</h3>
+            <h2 className="font-light my-4">
+              Japan Society of Mountain Reseach
+            </h2>
+          </div>
 
           <div className="work flex flex-col">
             <Img

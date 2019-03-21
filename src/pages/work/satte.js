@@ -6,7 +6,6 @@ import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
 import HomeWorkBtns from "../../components/homeWorkBtns";
-import WorkHeader from "../../components/workHeader";
 
 function TheLightOfTokyo() {
   return (
@@ -28,7 +27,10 @@ function TheLightOfTokyo() {
             ]}
           />
 
-          <WorkHeader title="Satte City Promotion Logo" desc="Brand Design" />
+          <div className="hero flex flex-col justify-center text-center align-middle">
+            <h3 className="font-light tracking-wide">Logo Design</h3>
+            <h2 className="font-light my-4">Satte City Promotion Logo</h2>
+          </div>
 
           <div className="work flex flex-col">
             <Img

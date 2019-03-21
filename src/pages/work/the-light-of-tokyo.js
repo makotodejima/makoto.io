@@ -4,7 +4,6 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import HomeWorkBtns from "../../components/homeWorkBtns";
-import WorkHeader from "../../components/workHeader";
 
 import SEO from "../../components/seo";
 
@@ -28,10 +27,12 @@ function TheLightOfTokyo() {
             ]}
           />
 
-          <WorkHeader
-            title="The Light of Tokyo"
-            desc="Tokyo Postcard Award 2019 by Hotel Ryumeikan"
-          />
+          <div className="hero flex flex-col justify-center text-center align-middle">
+            <h3 className="font-light tracking-wide">
+              Tokyo Postcard Award 2019 by Hotel Ryumeikan
+            </h3>
+            <h2 className="font-light my-4">The Light of Tokyo</h2>
+          </div>
 
           <div className="work flex flex-col">
             <Img
