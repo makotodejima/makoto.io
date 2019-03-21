@@ -6,6 +6,7 @@ import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
 import HomeWorkBtns from "../../components/homeWorkBtns";
+import WorkHeader from "../../components/workHeader";
 
 function ManhattanPortage() {
   return (
@@ -27,12 +28,10 @@ function ManhattanPortage() {
             ]}
           />
 
-          <div className="hero flex flex-col justify-center text-center align-middle">
-            <h3 className="font-light tracking-wide">Messenger Bag Design</h3>
-            <h2 className="font-light my-4">
-              Manhattan Portage Art Collection
-            </h2>
-          </div>
+          <WorkHeader
+            title="Manhattan Portage Art Collection"
+            desc="Messenger Bag Design"
+          />
 
           <div className="work flex flex-col">
             <Img
