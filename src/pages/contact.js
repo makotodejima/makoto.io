@@ -1,19 +1,83 @@
 import React from "react";
-import * as typeformEmbed from "@typeform/embed";
-
+import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-class ContactPage extends React.Component {
-  componentDidMount() {
-    const el = document.querySelector(".typeform");
-    typeformEmbed.makeWidget(
-      el,
-      "https://makotodejima.typeform.com/to/o0WY9t",
-      { hideFooter: true, opacity: 0 }
-    );
+const StyledForm = styled.div`
+  padding: 0;
+  margin: 0 auto;
+  width: 40%;
+  form {
+    display: flex;
+    flex-direction: column;
+    .name {
+      display: flex;
+      span {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+      }
+      input {
+        width: 100%;
+        margin: 1rem 0 0 0;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      outline: 0;
+      -webkit-appearance: none;
+      margin: 1rem auto 1rem;
+      transition: 0.3s;
+      &:focus {
+        border-bottom: 1px solid grey;
+        background: whitesmoke;
+      }
+    }
+    textarea {
+      height: 100px;
+      vertical-align: middle;
+      width: 100%;
+      padding: 20px;
+      border: 0;
+      outline: 0;
+      -webkit-appearance: none;
+      margin: 1rem 0 1rem;
+      transition: 0.3s;
+      &:focus {
+        border-bottom: 1px solid grey;
+        background: whitesmoke;
+      }
+    }
+    button {
+      display: inline-block;
+      padding: 0.6rem 2rem;
+      margin: 0 8rem;
+      background: grey;
+      color: #ffffff;
+      cursor: pointer;
+      transition: 250ms ease-in-out, transform 150ms ease;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      &:hover,
+      &:focus {
+        background: grey;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
   }
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 567px) {
+    width: 80%;
+  }
+`;
 
+class ContactPage extends React.Component {
   render() {
     return (
       <Layout currentPath={this.props.location.pathname}>
@@ -43,7 +107,52 @@ class ContactPage extends React.Component {
           </p>
           <h4 className="m-8">makotodejima@gmail.com</h4>
         </div>
-        <div className="typeform w-2/3 h-64 mx-auto" />
+        <StyledForm className="form-container">
+          <form name="contact" method="post" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div className="name">
+              <span className="fname">
+                <label htmlFor="fname">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your first name.."
+                  required
+                />
+              </span>
+              <span className="lname">
+                <label htmlFor="lname">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Your last name.."
+                  required
+                />
+              </span>
+            </div>
+            <label htmlFor="email">Your email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your email.."
+              required
+            />
+
+            <label htmlFor="message">Message</label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message.."
+              required
+            />
+            <button type="submit">Send</button>
+          </form>
+        </StyledForm>
       </Layout>
     );
   }

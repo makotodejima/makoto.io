@@ -191,7 +191,8 @@ module.exports = {
 
   fonts: {
     sans: [
-      "poynter-oldstyle-display",
+      "ivystyle-sans",
+      "ivymode",
       "Open Sans",
       "Noto Sans JP",
       "system-ui",
@@ -208,7 +209,6 @@ module.exports = {
       "sans-serif"
     ],
     serif: [
-      "poynter-oldstyle-display",
       "Constantia",
       "Lucida Bright",
       "Lucidabright",

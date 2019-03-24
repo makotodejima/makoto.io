@@ -8,7 +8,7 @@ class BackToTopBtn extends React.Component {
     if (window.pageYOffset === 0) {
       clearInterval(this.state.intervalId);
     }
-    // Scroll up by 50px eachtime this is called
+    // Scroll up by 50px each time this is called
     window.scroll(0, window.pageYOffset - 30);
   };
 
