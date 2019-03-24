@@ -2,10 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Makoto Dejima`,
     description: `Makoto Dejima | Designer and Front-End Developer`,
-    url: "https://www.madmak.me",
+    url: "madmak.me",
     author: `@mak84sasami`
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
