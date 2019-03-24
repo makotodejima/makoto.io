@@ -1,15 +1,14 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
+  "name": "Makoto Dejima",
+  "description": "Makoto Dejima | Designer and Front-End Developer",
   "version": "2.1.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@typeform/embed": "^0.7.0",
-    "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.2.9",
+    "babel-plugin-styled-components": "^1.10.0",
     "gatsby-image": "^2.0.32",
     "gatsby-plugin-google-analytics": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.17",
@@ -33,12 +32,6 @@
     "react-with-gesture": "^4.0.5",
     "styled-components": "^4.2.0"
   },
-  "keywords": [
-    "gatsby",
-    "tailwind",
-    "tailwindcss",
-    "purgecss"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -53,9 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind"
-  },
-  "bugs": {
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind/issues"
+    "url": "https://github.com/makotodejima/portfolio-gatsby.git"
   }
 }
