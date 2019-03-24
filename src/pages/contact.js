@@ -4,12 +4,13 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const StyledForm = styled.div`
-  padding: 0;
+  padding: 2rem;
   margin: 0 auto;
-  width: 40%;
+  width: 50%;
   form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     .name {
       display: flex;
       span {
@@ -53,7 +54,8 @@ const StyledForm = styled.div`
     button {
       display: inline-block;
       padding: 0.6rem 2rem;
-      margin: 0 8rem;
+      margin: 0 auto;
+      text-align: center;
       background: grey;
       color: #ffffff;
       cursor: pointer;
@@ -69,11 +71,19 @@ const StyledForm = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 768px) {
-    width: 50%;
+  @media only screen and (max-width: 767px) {
+    width: 70%;
+    form {
+      .name {
+        flex-direction: column;
+        span {
+          margin: 0.6rem 0;
+        }
+      }
+    }
   }
-  @media only screen and (max-width: 567px) {
-    width: 80%;
+  @media only screen and (max-width: 460px) {
+    width: 100%;
   }
 `;
 
