@@ -9,7 +9,7 @@ const Hero = () => {
       <h2 className="my-4" style={{ letterSpacing: `0.03em` }}>
         Designer / Front-End Developer
       </h2>
-      <News />
+      {/* <News /> */}
     </div>
   );
 };
