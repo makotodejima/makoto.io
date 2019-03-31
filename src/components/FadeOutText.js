@@ -10,6 +10,7 @@ const StyledP = styled.p`
   color: lightgray;
   padding-bottom: 0.5rem;
   bottom: 0;
+  transition: opacity 1500ms;
   opacity: ${props => (props.mouseOnImage ? 0 : 1)};
 
   @media (max-width: 576px) {

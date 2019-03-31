@@ -42,14 +42,12 @@ const IndexPage = () => (
             <Img
               fluid={data.tpcsq.childImageSharp.fluid}
               alt="Postcard, The light of Tokyo"
-              className="align-middle" // Remove wierd 1px on the bottom of imgs
             />
           </Card>
 
           <Card title="808 MERA Farming System" desc="Logo Design" path="mera">
             <Img
               fluid={data.merasq.childImageSharp.fluid}
-              className="align-middle"
               alt="Logo design for indoor faming, 808Mera"
             />
           </Card>
@@ -61,7 +59,6 @@ const IndexPage = () => (
           >
             <Img
               fluid={data.jasmssq.childImageSharp.fluid}
-              className="align-middle"
               alt="Logo design, Japan Society of Mountain Research"
             />
           </Card>
@@ -74,7 +71,6 @@ const IndexPage = () => (
             <Img
               fluid={data.mpsq.childImageSharp.fluid}
               alt="Messenger Bag, Manhattan Portage"
-              className="align-middle"
             />
           </Card>
         </CardGridContainer>

@@ -50,7 +50,6 @@ const Overlay = styled.div`
 
 const StyledCard = styled.div`
   width: 100%;
-  height: 100%;
   position: relative;
   overflow: hidden;
   @media (max-width: 576px) {
