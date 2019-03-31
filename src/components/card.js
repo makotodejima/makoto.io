@@ -40,6 +40,7 @@ const Overlay = styled.div`
     .divider {
       transform: scaleX(1);
     }
+
     h3,
     h5 {
       transform: translate3d(0, 0, 0) scale(1);
