@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import me from "../images/me.jpg";
 import poco from "../images/poco.png";
+import FadeOutText from "../components/FadeOutText";
 
 // FontAwesome
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -16,6 +17,7 @@ import {
   faDribbble,
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
+import fadeOutText from "../components/FadeOutText";
 library.add(faInstagram, faDribbble, faLinkedin);
 
 function AboutPage(props) {
@@ -77,19 +79,12 @@ function AboutPage(props) {
                 left: "31%",
                 top: "26%"
               }}
-              // Prevent drag. without this, 'down' is not captured corrctly
-              draggable="false"
+              draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
               src={poco}
               alt="Cute dog face"
               className="w-2/5 absolute z-10"
             />
-            <p
-              className={`${
-                mouseOnImage ? `opacity-0` : `opacity-100`
-              } absolute tracking-tight sm:tracking-normal text-xs w-full text-grey-lighter pb-2 pin-b text-center`}
-            >
-              Yes, dog face is draggable.
-            </p>
+            <FadeOutText mouseOnImage={mouseOnImage} />
           </div>
         </div>
 
