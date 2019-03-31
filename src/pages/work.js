@@ -2,16 +2,10 @@ import React from "react";
 import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import styled from "styled-components";
 import Layout from "../components/layout";
 import Card from "../components/card";
 import BottomLink from "../components/bottomLink";
-
-const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
+import CardGridContainer from "../components/CardGridContainer";
 
 function WorkPage(props) {
   return (
@@ -37,7 +31,7 @@ function WorkPage(props) {
             <h2 className="my-8 p-3">Work</h2>
           </div>
 
-          <CardsContainer>
+          <CardGridContainer>
             <Card
               title="The Light of Tokyo"
               desc="Tokyo Postcard Award"
@@ -104,7 +98,7 @@ function WorkPage(props) {
                 className="align-middle"
               />
             </Card>
-          </CardsContainer>
+          </CardGridContainer>
 
           <BottomLink path="/" linkText="Home" />
         </Layout>

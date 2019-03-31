@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledP = styled.p`
   position: absolute;
   text-align: center;
-  letter-spacing: -0.05em;
+  letter-spacing: normal;
   font-size: 0.75rem;
   width: 100%;
   color: lightgray;
@@ -13,7 +13,7 @@ const StyledP = styled.p`
   opacity: ${props => (props.mouseOnImage ? 0 : 1)};
 
   @media (max-width: 576px) {
-    letter-spacing: normal;
+    letter-spacing: -0.05em;
   }
 `;
 

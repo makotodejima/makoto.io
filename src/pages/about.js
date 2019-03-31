@@ -17,7 +17,6 @@ import {
   faDribbble,
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
-import fadeOutText from "../components/FadeOutText";
 library.add(faInstagram, faDribbble, faLinkedin);
 
 function AboutPage(props) {
