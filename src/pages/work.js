@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import Layout from "../components/layout";
 import Card from "../components/card";
 import BottomLink from "../components/bottomLink";
+import PageTitle from "../components/PageTitle";
 import CardGridContainer from "../components/CardGridContainer";
 
 function WorkPage(props) {
@@ -27,9 +28,7 @@ function WorkPage(props) {
             ]}
           />
 
-          <div className="text-center">
-            <h2 className="my-8 p-3">Work</h2>
-          </div>
+          <PageTitle>Work</PageTitle>
 
           <CardGridContainer>
             <Card
@@ -40,7 +39,6 @@ function WorkPage(props) {
               <Img
                 fluid={data.tpcsq.childImageSharp.fluid}
                 alt="Postcard, The light of Tokyo"
-                className="align-middle" // Remove wierd 1px on the bottom of imgs
               />
             </Card>
             <Card
@@ -50,7 +48,6 @@ function WorkPage(props) {
             >
               <Img
                 fluid={data.merasq.childImageSharp.fluid}
-                className="align-middle"
                 alt="Logo design for indoor faming, 808Mera"
               />
             </Card>
@@ -61,7 +58,6 @@ function WorkPage(props) {
             >
               <Img
                 fluid={data.jasmssq.childImageSharp.fluid}
-                className="align-middle"
                 alt="Logo design, Japan Society of Mountain Research"
               />
             </Card>
@@ -73,7 +69,6 @@ function WorkPage(props) {
               <Img
                 fluid={data.mpsq.childImageSharp.fluid}
                 alt="Messenger Bag, Manhattan Portage"
-                className="align-middle"
               />
             </Card>
             <Card
@@ -84,7 +79,6 @@ function WorkPage(props) {
               <Img
                 fluid={data.sattesq.childImageSharp.fluid}
                 alt="Satte City, Saitama - Promotion Logo"
-                className="align-middle"
               />
             </Card>
             <Card
@@ -95,7 +89,6 @@ function WorkPage(props) {
               <Img
                 fluid={data.soreikesq.childImageSharp.fluid}
                 alt="Soreike San Francisco Tee"
-                className="align-middle"
               />
             </Card>
           </CardGridContainer>
