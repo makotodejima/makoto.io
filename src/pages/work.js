@@ -38,7 +38,6 @@ function WorkPage(props) {
           </div>
 
           <CardsContainer>
-            >
             <Card
               title="The Light of Tokyo"
               desc="Tokyo Postcard Award"
