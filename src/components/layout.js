@@ -3,19 +3,29 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { Link } from "gatsby";
 import { useSpring, animated } from "react-spring";
+import styled from "styled-components";
 
 import Header from "./header";
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  width: 100%;
+  justify-content: center;
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+`;
 
 function Layout({ children, currentPath }) {
   const props = useSpring({
     year: 2019,
     from: { year: 1990 },
     config: { mass: 1, tension: 100, friction: 200 }
-  });
-
-  const opacity = useSpring({
-    opacity: 1,
-    from: { opacity: 0 }
   });
 
   return (
@@ -30,21 +40,13 @@ function Layout({ children, currentPath }) {
         }
       `}
       render={data => (
-        <animated.div
-          style={opacity}
-          className="flex flex-col font-sans min-h-screen text-grey-darkest"
-        >
+        <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
           <Header
             siteTitle={data.site.siteMetadata.title}
             currentPath={currentPath}
           />
 
-          <animated.div
-            style={opacity}
-            className="flex flex-col flex-1 md:justify-center max-w-xl mx-auto px-4 py-8 md:p-8 w-full"
-          >
-            {children}
-          </animated.div>
+          <Main>{children}</Main>
 
           <footer className="bg-blue-darker">
             <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-xl mx-auto mx-auto p-6 md:p-8 text-sm">
@@ -75,7 +77,7 @@ function Layout({ children, currentPath }) {
               </div>
             </div>
           </footer>
-        </animated.div>
+        </div>
       )}
     />
   );

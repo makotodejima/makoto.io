@@ -8,16 +8,9 @@ import Hero from "../components/hero";
 import Card from "../components/card";
 import Label from "../components/label";
 import BottomLink from "../components/bottomLink";
-
-import styled from "styled-components";
+import CardGridContainer from "../components/CardGridContainer";
 
 import weq from "../images/weq.jpg";
-
-const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
 
 const IndexPage = () => (
   <StaticQuery
@@ -40,7 +33,7 @@ const IndexPage = () => (
         <Hero />
         <Label />
 
-        <CardsContainer>
+        <CardGridContainer>
           <Card
             title="The Light of Tokyo"
             desc="Tokyo Postcard Award"
@@ -84,7 +77,7 @@ const IndexPage = () => (
               className="align-middle"
             />
           </Card>
-        </CardsContainer>
+        </CardGridContainer>
 
         <BottomLink path="/work/" linkText="More" />
 

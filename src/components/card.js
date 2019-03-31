@@ -48,9 +48,18 @@ const Overlay = styled.div`
   }
 `;
 
+const StyledCard = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 576px) {
+  }
+`;
+
 const Card = props => {
   return (
-    <div className="w-full md:w-9/20 my-8 relative">
+    <StyledCard>
       <Link to={`/work/${props.path}/`}>
         {props.children}
         <Overlay>
@@ -61,7 +70,7 @@ const Card = props => {
           </div>
         </Overlay>
       </Link>
-    </div>
+    </StyledCard>
   );
 };
 
