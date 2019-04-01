@@ -50,7 +50,7 @@ function TheLightOfTokyo() {
               className="my-16"
             />
           </div>
-          <BottomLink />;
+          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />

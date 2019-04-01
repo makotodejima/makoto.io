@@ -27,12 +27,10 @@ function Jasms() {
               `Motion`
             ]}
           />
-
           <WorkHeader
             title="Japan Society of Mountain Reseach"
             desc="Logo Design"
           />
-
           <div className="work flex flex-col">
             <Img
               fluid={data.jasms01.childImageSharp.fluid}
@@ -60,8 +58,7 @@ function Jasms() {
               className="my-16"
             />
           </div>
-
-          <BottomLink />
+          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />

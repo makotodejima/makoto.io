@@ -8,6 +8,9 @@ import styled from "styled-components";
 import Header from "./header";
 import Footer from "./Footer";
 
+// GLOBAL CSS
+import "./layout.scss";
+
 const Main = styled.div`
   display: flex;
   flex-direction: column;

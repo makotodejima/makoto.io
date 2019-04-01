@@ -6,16 +6,6 @@ import SEO from "../components/seo";
 import AboutImage from "../components/AboutImage";
 import SocialLinks from "../components/SocialLinks";
 
-// FontAwesome
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faInstagram,
-//   faDribbble,
-//   faLinkedin
-// } from "@fortawesome/free-brands-svg-icons";
-// library.add(faInstagram, faDribbble, faLinkedin);
-
 const AboutContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -61,34 +51,7 @@ function AboutPage(props) {
 
         <AboutImage />
       </AboutContainer>
-
       <SocialLinks />
-      {/* <div className="social-links flex justify-center text-2xl z-10 w-full mt-8 md:mt-16">
-        <a
-          href="https://dribbble.com/mak84sasami"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-darker relative"
-        >
-          <FontAwesomeIcon icon={["fab", "dribbble"]} />
-        </a>
-        <a
-          href="https://www.instagram.com/dejimako/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-darker mx-8 relative"
-        >
-          <FontAwesomeIcon icon={["fab", "instagram"]} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mak84sasami/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-darker relative"
-        >
-          <FontAwesomeIcon icon={["fab", "linkedin"]} />
-        </a>
-      </div> */}
     </Layout>
   );
 }

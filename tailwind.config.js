@@ -191,9 +191,8 @@ module.exports = {
 
   fonts: {
     sans: [
-      "freight-neo-pro",
-      "ivymode",
-      "ivystyle-sans",
+      "aller",
+      "macho",
       "Open Sans",
       "Noto Sans JP",
       "system-ui",

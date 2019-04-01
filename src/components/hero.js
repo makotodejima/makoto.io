@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 const Hero = () => {
   return (
     <Wrapper>
-      <h3>Makoto Dejima</h3>
+      <h3>MAKOTO DEJIMA</h3>
       <h2>Designer / Front-End Developer</h2>
       {/* <News /> */}
     </Wrapper>
