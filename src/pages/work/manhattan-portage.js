@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
-import HomeWorkBtns from "../../components/homeWorkBtns";
+import BottomLink from "../../components/bottomLink";
 import WorkHeader from "../../components/workHeader";
 
 function ManhattanPortage() {
@@ -27,12 +27,10 @@ function ManhattanPortage() {
               `Motion`
             ]}
           />
-
           <WorkHeader
             title="Manhattan Portage Art Collection"
             desc="Messenger Bag Design"
           />
-
           <div className="work flex flex-col">
             <Img
               fluid={data.mp01.childImageSharp.fluid}
@@ -55,7 +53,7 @@ function ManhattanPortage() {
               className="my-16"
             />
           </div>
-          <HomeWorkBtns />
+          <BottomLink />;
         </Layout>
       )}
     />

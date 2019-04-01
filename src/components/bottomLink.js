@@ -2,34 +2,37 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const StyledSpan = styled.span`
-  ::after {
-    content: "";
-    position: absolute;
-    left: 20%;
-    bottom: 10px;
-    width: 60%;
-    height: 1px;
-    background-color: #3d4852;
-    transform: scaleX(0);
-    transition: all 0.25s;
-  }
+const StyledDiv = styled.div`
+  text-align: center;
+  margin: 8rem auto;
+  a {
+    position: relative;
 
-  :hover::after {
-    transform: scaleX(1);
+    color: grey;
+    font-weight: lighter;
+    text-decoration: none;
+    ::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 1px;
+      background-color: grey;
+      transform: scaleX(0);
+      transition: all 0.25s;
+    }
+    :hover::before {
+      transform: scaleX(1);
+    }
   }
 `;
 
 const BottomLink = props => {
   return (
-    <div className="text-center my-20 mx-4">
-      <Link
-        to={props.path}
-        className="relative border border-grey-darkest text-grey-darkest font-hairline py-2 px-4 no-underline"
-      >
-        <StyledSpan>{props.linkText}</StyledSpan>
-      </Link>
-    </div>
+    <StyledDiv>
+      <Link to={props.path}>{props.linkText}</Link>
+    </StyledDiv>
   );
 };
 

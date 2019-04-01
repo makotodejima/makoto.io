@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
-import HomeWorkBtns from "../../components/homeWorkBtns";
+import BottomLink from "../../components/bottomLink";
 import WorkHeader from "../../components/workHeader";
 
 function IndexPage() {
@@ -27,12 +27,10 @@ function IndexPage() {
               `Motion`
             ]}
           />
-
           <WorkHeader
             title="808 MERA"
             desc="Logo Design for Indoor Farming System"
           />
-
           <div className="work flex flex-col">
             <Img
               fluid={data.mera01.childImageSharp.fluid}
@@ -55,7 +53,7 @@ function IndexPage() {
               className="my-16"
             />
           </div>
-          <HomeWorkBtns />
+          <BottomLink />
         </Layout>
       )}
     />

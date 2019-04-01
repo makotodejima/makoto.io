@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
-import HomeWorkBtns from "../../components/homeWorkBtns";
+import BottomLink from "../../components/bottomLink";
 
 import SEO from "../../components/seo";
 import WorkHeader from "../../components/workHeader";
@@ -27,12 +27,10 @@ function TheLightOfTokyo() {
               `Motion`
             ]}
           />
-
           <WorkHeader
             title="The Light of Tokyo"
             desc="Tokyo Postcard Award 2019 by Hotel Ryumeikan"
           />
-
           <div className="work flex flex-col">
             <Img
               fluid={data.tpc01.childImageSharp.fluid}
@@ -60,7 +58,7 @@ function TheLightOfTokyo() {
               className="my-16"
             />
           </div>
-          <HomeWorkBtns />
+          <BottomLink />;
         </Layout>
       )}
     />

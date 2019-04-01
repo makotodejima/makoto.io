@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
-import HomeWorkBtns from "../../components/homeWorkBtns";
+import BottomLink from "../../components/bottomLink";
 import WorkHeader from "../../components/workHeader";
 
 function Soreike() {
@@ -27,9 +27,7 @@ function Soreike() {
               `Motion`
             ]}
           />
-
           <WorkHeader title="Soreike San Francisco Tee" desc="T-shirt Design" />
-
           <div className="work flex flex-col">
             <Img
               fluid={data.soreike01.childImageSharp.fluid}
@@ -57,7 +55,7 @@ function Soreike() {
               className="my-16"
             />
           </div>
-          <HomeWorkBtns />
+          <BottomLink />;
         </Layout>
       )}
     />

@@ -5,8 +5,8 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
-import HomeWorkBtns from "../../components/homeWorkBtns";
 import WorkHeader from "../../components/workHeader";
+import BottomLink from "../../components/bottomLink";
 
 function Jasms() {
   return (
@@ -61,7 +61,7 @@ function Jasms() {
             />
           </div>
 
-          <HomeWorkBtns />
+          <BottomLink />
         </Layout>
       )}
     />
