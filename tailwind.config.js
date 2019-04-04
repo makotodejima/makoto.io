@@ -191,13 +191,12 @@ module.exports = {
 
   fonts: {
     sans: [
-      "aller",
-      "macho",
+      "proxima-nova",
+      "-apple-system",
       "Open Sans",
       "Noto Sans JP",
       "system-ui",
       "BlinkMacSystemFont",
-      "-apple-system",
       "Segoe UI",
       "Roboto",
       "Oxygen",
