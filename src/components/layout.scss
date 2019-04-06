@@ -2,6 +2,16 @@
 @import url("https://use.typekit.net/str3lfu.css");
 
 body {
-  font-family: "aller";
+  font-family: "proxima-nova";
   color: black;
+}
+
+#logo {
+  width: 90px;
+  .line {
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+  }
 }
