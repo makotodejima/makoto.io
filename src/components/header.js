@@ -132,6 +132,22 @@ const HeaderLinks = styled.div`
     &.current {
       color: magenta;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      visibility: hidden;
+      width: 100%;
+      height: 1px;
+      background-color: #3d4852;
+      bottom: -1px;
+      left: 0;
+      transform: scaleX(0);
+      transition: all 0.25s ease-in-out 0s;
+    }
+    &:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
   }
 
   @media (max-width: 768px) {

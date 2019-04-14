@@ -41,7 +41,10 @@ export default ({ children, currentPath }) => {
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", "proxima-nova", "-apple-system", "Open Sans",
+    "Noto Sans JP", "system-ui", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "sans-serif";
   min-height: 100vh;
   color: black;
   align-items: stretch;

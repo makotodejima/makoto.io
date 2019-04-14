@@ -6,4 +6,3 @@
 
 - [React](https://reactjs.org)
 - [Gatsby](https://www.gatsbyjs.org/)
-- [Tailwind documentation](https://tailwindcss.com/)
