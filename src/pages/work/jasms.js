@@ -4,7 +4,11 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import { WorkTitle, WorkDescription } from "../../components/StyledComps";
+import {
+  WorkTitle,
+  WorkDescription,
+  WorkPageWrapper
+} from "../../components/StyledComps";
 
 import BottomLink from "../../components/bottomLink";
 
@@ -30,33 +34,13 @@ function Jasms() {
           <WorkTitle>Japan Society of Mountain Reseach</WorkTitle>
           <WorkDescription>Logo Design</WorkDescription>
 
-          <div className="work flex flex-col">
-            <Img
-              fluid={data.jasms01.childImageSharp.fluid}
-              alt="JASMS - 01"
-              className="my-16"
-            />
-            <Img
-              fluid={data.jasms02.childImageSharp.fluid}
-              alt="JASMS - 02"
-              className="my-16"
-            />
-            <Img
-              fluid={data.jasms03.childImageSharp.fluid}
-              alt="JASMS - 03"
-              className="my-16"
-            />
-            <Img
-              fluid={data.jasms04.childImageSharp.fluid}
-              alt="JASMS - 04"
-              className="my-16"
-            />
-            <Img
-              fluid={data.jasms05.childImageSharp.fluid}
-              alt="JASMS - 05"
-              className="my-16"
-            />
-          </div>
+          <WorkPageWrapper>
+            <Img fluid={data.jasms01.childImageSharp.fluid} alt="JASMS - 01" />
+            <Img fluid={data.jasms02.childImageSharp.fluid} alt="JASMS - 02" />
+            <Img fluid={data.jasms03.childImageSharp.fluid} alt="JASMS - 03" />
+            <Img fluid={data.jasms04.childImageSharp.fluid} alt="JASMS - 04" />
+            <Img fluid={data.jasms05.childImageSharp.fluid} alt="JASMS - 05" />
+          </WorkPageWrapper>
           <BottomLink path="/" linkText="Home" />
         </Layout>
       )}

@@ -4,7 +4,11 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import { WorkTitle, WorkDescription } from "../../components/StyledComps";
+import {
+  WorkTitle,
+  WorkDescription,
+  WorkPageWrapper
+} from "../../components/StyledComps";
 
 import BottomLink from "../../components/bottomLink";
 
@@ -30,33 +34,28 @@ function Soreike() {
           <WorkTitle>Soreike San Francisco Tee</WorkTitle>
           <WorkDescription>T-shirt Design</WorkDescription>
 
-          <div className="work flex flex-col">
+          <WorkPageWrapper>
             <Img
               fluid={data.soreike01.childImageSharp.fluid}
               alt="Soreike SF Tee - 01"
-              className="my-16"
             />
             <Img
               fluid={data.soreike02.childImageSharp.fluid}
               alt="Soreike SF Tee - 02"
-              className="my-16"
             />
             <Img
               fluid={data.soreike03.childImageSharp.fluid}
               alt="Soreike SF Tee - 03"
-              className="my-16"
             />
             <Img
               fluid={data.soreike04.childImageSharp.fluid}
               alt="Soreike SF Tee - 04"
-              className="my-16"
             />
             <Img
               fluid={data.soreike05.childImageSharp.fluid}
               alt="Soreike SF Tee - 05"
-              className="my-16"
             />
-          </div>
+          </WorkPageWrapper>
           <BottomLink path="/" linkText="Home" />
         </Layout>
       )}

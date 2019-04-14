@@ -4,7 +4,11 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import { WorkTitle, WorkDescription } from "../../components/StyledComps";
+import {
+  WorkTitle,
+  WorkDescription,
+  WorkPageWrapper
+} from "../../components/StyledComps";
 
 import BottomLink from "../../components/bottomLink";
 
@@ -31,28 +35,24 @@ function TheLightOfTokyo() {
           <WorkTitle>Satte City Promotion Logo</WorkTitle>
           <WorkDescription>Logo Design</WorkDescription>
 
-          <div className="work flex flex-col">
+          <WorkPageWrapper>
             <Img
               fluid={data.satte01.childImageSharp.fluid}
               alt="Satte City - 01"
-              className="my-16"
             />
             <Img
               fluid={data.satte02.childImageSharp.fluid}
               alt="Satte City - 02"
-              className="my-16"
             />
             <Img
               fluid={data.satte03.childImageSharp.fluid}
               alt="Satte City - 03"
-              className="my-16"
             />
             <Img
               fluid={data.satte04.childImageSharp.fluid}
               alt="Satte City - 04"
-              className="my-16"
             />
-          </div>
+          </WorkPageWrapper>
           <BottomLink path="/" linkText="Home" />
         </Layout>
       )}

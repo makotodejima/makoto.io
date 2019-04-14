@@ -47,6 +47,14 @@ export const WorkDescription = styled.div`
   font-weight: lighter;
 `;
 
+export const WorkPageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  img {
+    margin: 2rem auto;
+  }
+`;
+
 // About Page
 export const MeImageContainer = styled.div`
   position: relative;

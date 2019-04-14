@@ -4,7 +4,11 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import { WorkTitle, WorkDescription } from "../../components/StyledComps";
+import {
+  WorkTitle,
+  WorkDescription,
+  WorkPageWrapper
+} from "../../components/StyledComps";
 
 import BottomLink from "../../components/bottomLink";
 
@@ -31,28 +35,24 @@ function IndexPage() {
           <WorkDescription>
             Logo Design for Indoor Farming System
           </WorkDescription>
-          <div className="work flex flex-col">
+          <WorkPageWrapper>
             <Img
               fluid={data.mera01.childImageSharp.fluid}
               alt="808 MERA - 01"
-              className="my-16"
             />
             <Img
               fluid={data.mera02.childImageSharp.fluid}
               alt="808 MERA - 02"
-              className="my-16"
             />
             <Img
               fluid={data.mera03.childImageSharp.fluid}
               alt="808 MERA - 03"
-              className="my-16"
             />
             <Img
               fluid={data.mera04.childImageSharp.fluid}
               alt="808 MERA - 04"
-              className="my-16"
             />
-          </div>
+          </WorkPageWrapper>
           <BottomLink path="/" linkText="Home" />
         </Layout>
       )}

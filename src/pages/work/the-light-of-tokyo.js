@@ -4,7 +4,11 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import BottomLink from "../../components/bottomLink";
-import { WorkTitle, WorkDescription } from "../../components/StyledComps";
+import {
+  WorkTitle,
+  WorkDescription,
+  WorkPageWrapper
+} from "../../components/StyledComps";
 
 import SEO from "../../components/seo";
 
@@ -33,33 +37,28 @@ function TheLightOfTokyo() {
             Tokyo Postcard Award 2019 by Hotel Ryumeikan
           </WorkDescription>
 
-          <div className="work flex flex-col">
+          <WorkPageWrapper>
             <Img
               fluid={data.tpc01.childImageSharp.fluid}
               alt="The Light of Tokyo - 01"
-              className="my-16"
             />
             <Img
               fluid={data.tpc02.childImageSharp.fluid}
               alt="The Light of Tokyo - 02"
-              className="my-16"
             />
             <Img
               fluid={data.tpc03.childImageSharp.fluid}
               alt="The Light of Tokyo - 03"
-              className="my-16"
             />
             <Img
               fluid={data.tpc04.childImageSharp.fluid}
               alt="The Light of Tokyo - 04"
-              className="my-16"
             />
             <Img
               fluid={data.tpc05.childImageSharp.fluid}
               alt="The Light of Tokyo - 05"
-              className="my-16"
             />
-          </div>
+          </WorkPageWrapper>
           <BottomLink path="/" linkText="Home" />
         </Layout>
       )}

@@ -4,7 +4,11 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import { WorkTitle, WorkDescription } from "../../components/StyledComps";
+import {
+  WorkTitle,
+  WorkDescription,
+  WorkPageWrapper
+} from "../../components/StyledComps";
 
 import BottomLink from "../../components/bottomLink";
 
@@ -31,28 +35,24 @@ function ManhattanPortage() {
           <WorkTitle>Manhattan Portage Art Collection</WorkTitle>
           <WorkDescription>Messenger Bag Design</WorkDescription>
 
-          <div className="work flex flex-col">
+          <WorkPageWrapper>
             <Img
               fluid={data.mp01.childImageSharp.fluid}
               alt="Manhattan Portage - 01"
-              className="my-16"
             />
             <Img
               fluid={data.mp02.childImageSharp.fluid}
               alt="Manhattan Portage - 02"
-              className="my-16"
             />
             <Img
               fluid={data.mp03.childImageSharp.fluid}
               alt="Manhattan Portage - 03"
-              className="my-16"
             />
             <Img
               fluid={data.mp04.childImageSharp.fluid}
               alt="Manhattan Portage - 04"
-              className="my-16"
             />
-          </div>
+          </WorkPageWrapper>
           <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
