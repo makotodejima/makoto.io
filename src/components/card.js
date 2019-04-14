@@ -5,6 +5,25 @@ import styled from "styled-components";
 // this component works as image container with animated overlay.
 // Parent comp should pass in {children(image), path, title, desc }.
 
+const Card = props => {
+  return (
+    <StyledCard>
+      <Link to={`/work/${props.path}/`}>
+        {props.children}
+        <Overlay>
+          <div className="card-overlay flex flex-col justify-center h-full">
+            <h3 className="text-center my-2">{props.title}</h3>
+            <div className="divider" />
+            <h5 className="text-center">{props.desc}</h5>
+          </div>
+        </Overlay>
+      </Link>
+    </StyledCard>
+  );
+};
+
+export default Card;
+
 const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -55,22 +74,3 @@ const StyledCard = styled.div`
   @media (max-width: 576px) {
   }
 `;
-
-const Card = props => {
-  return (
-    <StyledCard>
-      <Link to={`/work/${props.path}/`}>
-        {props.children}
-        <Overlay>
-          <div className="card-overlay flex flex-col justify-center h-full">
-            <h3 className="text-center my-2">{props.title}</h3>
-            <div className="divider" />
-            <h5 className="text-center">{props.desc}</h5>
-          </div>
-        </Overlay>
-      </Link>
-    </StyledCard>
-  );
-};
-
-export default Card;

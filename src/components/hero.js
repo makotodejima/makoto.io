@@ -2,6 +2,18 @@ import React from "react";
 import News from "./News";
 import styled from "styled-components";
 
+const Hero = () => {
+  return (
+    <Wrapper>
+      <h3>MAKOTO DEJIMA</h3>
+      <h2>Designer / Front-End Developer</h2>
+      {/* <News /> */}
+    </Wrapper>
+  );
+};
+
+export default Hero;
+
 const Wrapper = styled.div`
   height: 50vh;
   display: flex;
@@ -19,15 +31,3 @@ const Wrapper = styled.div`
     margin: 1rem auto;
   }
 `;
-
-const Hero = () => {
-  return (
-    <Wrapper>
-      <h3>MAKOTO DEJIMA</h3>
-      <h2>Designer / Front-End Developer</h2>
-      {/* <News /> */}
-    </Wrapper>
-  );
-};
-
-export default Hero;
