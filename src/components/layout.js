@@ -41,7 +41,7 @@ export default ({ children, currentPath }) => {
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: "Ubuntu-Bold";
+  font-family: "Ubuntu";
   min-height: 100vh;
   color: black;
   align-items: stretch;

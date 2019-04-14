@@ -57,40 +57,25 @@ function Header({ currentPath }) {
         </svg>
       </Hamburger>
 
-      <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } md:block md:flex md:items-center w-full md:w-auto text-center`}
-      >
-        <div className="header-link text-sm">
-          <Link
-            to="/work/"
-            className={`relative block mt-4 md:inline-block md:mt-0 md:mr-8 no-underline ${
-              currentPath === "/work/" ? `text-grey` : `text-grey-darkest`
-            } `}
-          >
-            Work
-          </Link>
+      <HeaderLinks isExpanded={isExpanded}>
+        <Link to="/work/" className={currentPath === "/work/" ? `current` : ""}>
+          Work
+        </Link>
 
-          <Link
-            to="/about/"
-            className={`relative block md:inline-block mt-4 md:mt-0 md:mr-8 no-underline ${
-              currentPath === "/about/" ? `text-grey` : `text-grey-darkest`
-            } `}
-          >
-            About
-          </Link>
+        <Link
+          to="/about/"
+          className={currentPath === "/about/" ? `current` : ``}
+        >
+          About
+        </Link>
 
-          <Link
-            to="/contact/"
-            className={`relative block md:inline-block mt-4 md:mt-0 no-underline ${
-              currentPath === "/contact/" ? `text-grey` : `text-grey-darkest`
-            }`}
-          >
-            Contact
-          </Link>
-        </div>
-      </div>
+        <Link
+          to="/contact/"
+          className={currentPath === "/contact/" ? `current` : ``}
+        >
+          Contact
+        </Link>
+      </HeaderLinks>
     </StyledNav>
   );
 }
@@ -132,6 +117,31 @@ const Hamburger = styled.button`
   @media (max-width: 768px) {
     display: block;
   }
+`;
 
-  /* className="block md:hidden border border-black flex items-center px-3 py-2 rounded text-black" */
+const HeaderLinks = styled.div`
+  align-items: center;
+  font-size: 0.8rem;
+
+  a {
+    display: inline-block;
+    position: relative;
+    color: black;
+    margin-left: 2rem;
+    text-decoration: none;
+    &.current {
+      color: magenta;
+    }
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    width: 100%;
+    display: ${props => (props.isExpanded ? `block` : `none`)};
+    a {
+      display: block;
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
 `;

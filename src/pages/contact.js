@@ -20,19 +20,19 @@ class ContactPage extends React.Component {
             `Motion`
           ]}
         />
-        <div className="text-center leading-loose">
-          <p className="m-4">
+        <Intro>
+          <p>
             I love to design, develop, and write. <br />
             Please feel free to contact me at makotodejima@gmail.com. or using
             the form below.
           </p>
-          <p className="m-4">
+          <p>
             デザイン、開発、執筆が好きです。
             <br />
             Eメール、または下記のフォームからどうぞお気軽にご連絡ください。
           </p>
-          <h4 className="m-8">makotodejima@gmail.com</h4>
-        </div>
+          <h4>makotodejima@gmail.com</h4>
+        </Intro>
         <StyledForm className="form-container">
           <form name="contact" method="post" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
@@ -84,6 +84,14 @@ class ContactPage extends React.Component {
   }
 }
 export default ContactPage;
+
+const Intro = styled.div`
+  text-align: center;
+  line-height: 2;
+  p {
+    margin: 1rem;
+  }
+`;
 
 const StyledForm = styled.div`
   padding: 2rem;
@@ -138,7 +146,7 @@ const StyledForm = styled.div`
       padding: 0.6rem 2rem;
       margin: 0 auto;
       text-align: center;
-      background: grey;
+      background: black;
       color: #ffffff;
       cursor: pointer;
       transition: 250ms ease-in-out, transform 150ms ease;
