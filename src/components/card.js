@@ -11,11 +11,9 @@ const Card = props => {
       <Link to={`/work/${props.path}/`}>
         {props.children}
         <Overlay>
-          <div className="card-overlay flex flex-col justify-center h-full">
-            <h3 className="text-center my-2">{props.title}</h3>
-            <div className="divider" />
-            <h5 className="text-center">{props.desc}</h5>
-          </div>
+          <h3>{props.title}</h3>
+          <div className="divider" />
+          <h5>{props.desc}</h5>
         </Overlay>
       </Link>
     </StyledCard>
@@ -25,6 +23,9 @@ const Card = props => {
 export default Card;
 
 const Overlay = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -45,10 +46,14 @@ const Overlay = styled.div`
   }
 
   h3 {
+    text-align: center;
+    margin: 0.5rem auto;
     transform: translate3d(0, -7px, 0) scale(0.97);
     transition: all 0.5s ease-out;
   }
+
   h5 {
+    text-align: center;
     transform: translate3d(0, 7px, 0) scale(0.97);
     transition: all 0.5s ease-out;
   }
