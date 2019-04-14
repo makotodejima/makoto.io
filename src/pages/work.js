@@ -3,11 +3,10 @@ import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import { GridCardContainer } from "../components/StyledComps";
+import { GridCardContainer, PageTitle } from "../components/StyledComps";
 import Layout from "../components/layout";
 import Card from "../components/card";
 import BottomLink from "../components/BottomLink";
-import PageTitle from "../components/PageTitle";
 
 function WorkPage(props) {
   return (

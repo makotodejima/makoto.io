@@ -32,6 +32,11 @@ export const GridCardContainer = styled.div`
   }
 `;
 
+export const PageTitle = styled.h2`
+  text-align: center;
+  margin: 2rem auto;
+`;
+
 // Work
 export const WorkTitle = styled.h2`
   margin: 1rem auto;
