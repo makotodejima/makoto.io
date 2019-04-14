@@ -8,7 +8,7 @@ import Footer from "./Footer";
 // GLOBAL CSS
 import "./layout.scss";
 
-function Layout({ children, currentPath }) {
+export default ({ children, currentPath }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -21,31 +21,29 @@ function Layout({ children, currentPath }) {
         }
       `}
       render={data => (
-        <LayoutDiv>
+        <Layout>
           <Header
             siteTitle={data.site.siteMetadata.title}
             currentPath={currentPath}
           />
           <Main>{children}</Main>
           <Footer />
-        </LayoutDiv>
+        </Layout>
       )}
     />
   );
-}
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default Layout;
-
-const LayoutDiv = styled.div`
+const Layout = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Ubuntu-Bold";
   min-height: 100vh;
-  color: blue;
+  color: black;
   align-items: stretch;
 `;
 
