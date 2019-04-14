@@ -3,6 +3,88 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+class ContactPage extends React.Component {
+  render() {
+    return (
+      <Layout currentPath={this.props.location.pathname}>
+        <SEO
+          title="Contact"
+          keywords={[
+            `Makoto Dejima`,
+            `Designer`,
+            `Front-End Developer`,
+            `Design`,
+            `Graphic Design`,
+            `JavaScript`,
+            `React`,
+            `Motion`
+          ]}
+        />
+        <div className="text-center leading-loose">
+          <p className="m-4">
+            I love to design, develop, and write. <br />
+            Please feel free to contact me at makotodejima@gmail.com. or using
+            the form below.
+          </p>
+          <p className="m-4">
+            デザイン、開発、執筆が好きです。
+            <br />
+            Eメール、または下記のフォームからどうぞお気軽にご連絡ください。
+          </p>
+          <h4 className="m-8">makotodejima@gmail.com</h4>
+        </div>
+        <StyledForm className="form-container">
+          <form name="contact" method="post" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div className="name">
+              <span className="fname">
+                <label htmlFor="fname">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your first name.."
+                  required
+                />
+              </span>
+              <span className="lname">
+                <label htmlFor="lname">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Your last name.."
+                  required
+                />
+              </span>
+            </div>
+            <label htmlFor="email">Your email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your email.."
+              required
+            />
+
+            <label htmlFor="message">Message</label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message.."
+              required
+            />
+            <button type="submit">Send</button>
+          </form>
+        </StyledForm>
+      </Layout>
+    );
+  }
+}
+export default ContactPage;
+
 const StyledForm = styled.div`
   padding: 2rem;
   margin: 0 auto;
@@ -86,85 +168,3 @@ const StyledForm = styled.div`
     width: 100%;
   }
 `;
-
-class ContactPage extends React.Component {
-  render() {
-    return (
-      <Layout currentPath={this.props.location.pathname}>
-        <SEO
-          title="Contact"
-          keywords={[
-            `Makoto Dejima`,
-            `Designer`,
-            `Front-End Developer`,
-            `Design`,
-            `Graphic Design`,
-            `JavaScript`,
-            `React`,
-            `Motion`
-          ]}
-        />
-        <div className="text-center leading-loose">
-          <p className="m-4">
-            I love to design, develop, and write. <br />
-            Please feel free to contact me at makotodejima@gmail.com. or using
-            the form below.
-          </p>
-          <p className="m-4">
-            デザイン、開発、執筆が好きです。
-            <br />
-            Eメール、または下記のフォームからどうぞお気軽にご連絡ください。
-          </p>
-          <h4 className="m-8">makotodejima@gmail.com</h4>
-        </div>
-        <StyledForm className="form-container">
-          <form name="contact" method="post" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
-
-            <div className="name">
-              <span className="fname">
-                <label htmlFor="fname">First Name</label>
-                <input
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="Your first name.."
-                  required
-                />
-              </span>
-              <span className="lname">
-                <label htmlFor="lname">Last Name</label>
-                <input
-                  type="text"
-                  id="lname"
-                  name="lastname"
-                  placeholder="Your last name.."
-                  required
-                />
-              </span>
-            </div>
-            <label htmlFor="email">Your email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Your email.."
-              required
-            />
-
-            <label htmlFor="message">Message</label>
-
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your message.."
-              required
-            />
-            <button type="submit">Send</button>
-          </form>
-        </StyledForm>
-      </Layout>
-    );
-  }
-}
-export default ContactPage;
