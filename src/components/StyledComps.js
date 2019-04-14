@@ -18,18 +18,10 @@ export const WritingLink = styled.p`
 
 // Index and Works
 export const GridCardContainer = styled.div`
-  display: grid;
   /* This card wrapper is using CSS Grid
   do not set gap with relative value (%), it refers to window and screw up */
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
-  grid-row-gap: 30px;
-  grid-column-gap: 20px;
-  margin: 1rem 0;
-
-  @media (max-width: 375spx) {
-    grid-template-columns: 1fr;
-  }
+  ${"" /* display: flex;
+  flex-wrap: wrap; */}
 `;
 
 export const PageTitle = styled.h2`
@@ -41,6 +33,7 @@ export const PageTitle = styled.h2`
 export const WorkTitle = styled.h2`
   margin: 1rem auto;
 `;
+
 export const WorkDescription = styled.div`
   margin: 1rem auto;
   letter-spacing: 0.05em;

@@ -110,7 +110,10 @@ const Hamburger = styled.button`
   align-items: center;
   padding: 0.3rem 0.75rem;
   width: 50px;
-
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  cursor: pointer;
   :focus {
     outline: 0;
   }

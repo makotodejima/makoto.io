@@ -41,26 +41,24 @@ export default ({ children, currentPath }) => {
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   font-family: "Ubuntu", "proxima-nova", "-apple-system", "Open Sans",
     "Noto Sans JP", "system-ui", "BlinkMacSystemFont", "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     "sans-serif";
-  min-height: 100vh;
   color: black;
-  align-items: stretch;
 `;
 
 const Main = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 2rem 4rem;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
   width: 100%;
-  justify-content: center;
+  max-width: 960px;
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     padding: 1rem;
-  }
+  } */
 `;

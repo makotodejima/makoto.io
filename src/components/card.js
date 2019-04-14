@@ -22,6 +22,15 @@ const Card = props => {
 
 export default Card;
 
+const StyledCard = styled.div`
+  width: 70%;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 576px) {
+  }
+`;
+
 const Overlay = styled.div`
   display: flex;
   flex-direction: column;
@@ -69,13 +78,5 @@ const Overlay = styled.div`
     h5 {
       transform: translate3d(0, 0, 0) scale(1);
     }
-  }
-`;
-
-const StyledCard = styled.div`
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  @media (max-width: 576px) {
   }
 `;
