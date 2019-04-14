@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 
-const Footer = () => {
+export default () => {
   const props = useSpring({
     year: 2019,
     from: { year: 1990 },
@@ -19,23 +19,14 @@ const Footer = () => {
         </animated.span>{" "}
         Makoto Dejima
       </div>
-      <div className="footer-link contacts w-48 mb-4 md:m-0 flex justify-between">
-        <Link to="/" className="relative md:no-underline">
-          Home
-        </Link>
-        <Link to="/about/" className="relative md:no-underline">
-          About
-        </Link>
-
-        <Link to="/contact/" className="relative md:no-underline">
-          Contact
-        </Link>
-      </div>
+      <FooterLinks>
+        <Link to="/">Home</Link>
+        <Link to="/about/">About</Link>
+        <Link to="/contact/">Contact</Link>
+      </FooterLinks>
     </StyledFooter>
   );
 };
-
-export default Footer;
 
 const StyledFooter = styled.div`
   display: flex;
@@ -46,12 +37,25 @@ const StyledFooter = styled.div`
   width: 90%;
   margin: 0 auto;
 
-  a {
-    color: grey;
-  }
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     padding: 2.5rem;
+  }
+`;
+
+const FooterLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 12rem;
+
+  @media (max-width: 576px) {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: grey;
+    position: relative;
+    text-decoration: none;
   }
 
   a::before {

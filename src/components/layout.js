@@ -34,9 +34,9 @@ export default ({ children, currentPath }) => {
   );
 };
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired
+// };
 
 const Layout = styled.div`
   display: flex;
