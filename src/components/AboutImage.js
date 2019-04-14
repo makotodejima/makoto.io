@@ -1,20 +1,11 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { useGesture } from "react-with-gesture";
-import styled from "styled-components";
+import { MeImageContainer } from "../components/StyledComps";
 import clamp from "lodash-es/clamp";
 import me from "../images/me.jpg";
 import poco from "../images/poco.png";
 import FadeOutText from "../components/FadeOutText";
-
-const ImageContainer = styled.div`
-  position: relative;
-  margin: auto;
-
-  @media (max-width: 768px) {
-    margin-top: 3rem;
-  }
-`;
 
 const AboutImage = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
@@ -28,7 +19,7 @@ const AboutImage = () => {
   const [mouseOnImage, toggle] = useState(false);
 
   return (
-    <ImageContainer
+    <MeImageContainer
       onMouseEnter={() => toggle(true)}
       onMouseLeave={() => toggle(false)}
     >
@@ -39,7 +30,7 @@ const AboutImage = () => {
           transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`),
           left: "31%",
           top: "26%",
-          width: `40%`,
+          width: "40%",
           position: "absolute"
         }}
         draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
@@ -47,7 +38,7 @@ const AboutImage = () => {
         alt="Cute dog face"
       />
       <FadeOutText mouseOnImage={mouseOnImage} />
-    </ImageContainer>
+    </MeImageContainer>
   );
 };
 

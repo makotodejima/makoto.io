@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+const FadeOutText = props => (
+  <StyledP mouseOnImage={props.mouseOnImage}>
+    Yes, dog face is draggable.
+  </StyledP>
+);
+
+export default FadeOutText;
+
 const StyledP = styled.p`
   position: absolute;
   text-align: center;
@@ -17,11 +25,3 @@ const StyledP = styled.p`
     letter-spacing: -0.05em;
   }
 `;
-
-const FadeOutText = props => (
-  <StyledP mouseOnImage={props.mouseOnImage}>
-    Yes, dog face is draggable.
-  </StyledP>
-);
-
-export default FadeOutText;

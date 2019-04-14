@@ -2,14 +2,17 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import {
+  GridCardContainer,
+  Label,
+  WritingHeader
+} from "../components/StyledComps";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import Card from "../components/card";
-import Label from "../components/label";
-import BottomLink from "../components/bottomLink";
-import CardGridContainer from "../components/CardGridContainer";
 
+import BottomLink from "../components/BottomLink";
 import weq from "../images/weq.jpg";
 
 const IndexPage = () => (
@@ -31,9 +34,9 @@ const IndexPage = () => (
         />
 
         <Hero />
-        <Label />
+        <Label>Latest</Label>
 
-        <CardGridContainer>
+        <GridCardContainer>
           <Card
             title="The Light of Tokyo"
             desc="Tokyo Postcard Award"
@@ -73,13 +76,11 @@ const IndexPage = () => (
               alt="Messenger Bag, Manhattan Portage"
             />
           </Card>
-        </CardGridContainer>
+        </GridCardContainer>
 
         <BottomLink path="/work/" linkText="More" />
 
-        <div className="label text-xl mt-12 mb-8">
-          <h4>Writing</h4>
-        </div>
+        <Label>Writing</Label>
 
         <p className="leading-loose">
           <a

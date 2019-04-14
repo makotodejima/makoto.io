@@ -2,11 +2,12 @@ import React from "react";
 import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+
+import { GridCardContainer } from "../components/StyledComps";
 import Layout from "../components/layout";
 import Card from "../components/card";
-import BottomLink from "../components/bottomLink";
+import BottomLink from "../components/BottomLink";
 import PageTitle from "../components/PageTitle";
-import CardGridContainer from "../components/CardGridContainer";
 
 function WorkPage(props) {
   return (
@@ -30,7 +31,7 @@ function WorkPage(props) {
 
           <PageTitle>Work</PageTitle>
 
-          <CardGridContainer>
+          <GridCardContainer>
             <Card
               title="The Light of Tokyo"
               desc="Tokyo Postcard Award"
@@ -91,7 +92,7 @@ function WorkPage(props) {
                 alt="Soreike San Francisco Tee"
               />
             </Card>
-          </CardGridContainer>
+          </GridCardContainer>
 
           <BottomLink path="/" linkText="Home" />
         </Layout>

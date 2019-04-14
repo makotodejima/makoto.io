@@ -2,6 +2,16 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
+const BottomLink = props => {
+  return (
+    <StyledDiv>
+      <Link to={props.path}>{props.linkText}</Link>
+    </StyledDiv>
+  );
+};
+
+export default BottomLink;
+
 const StyledDiv = styled.div`
   text-align: center;
   margin: 8rem auto;
@@ -27,13 +37,3 @@ const StyledDiv = styled.div`
     }
   }
 `;
-
-const BottomLink = props => {
-  return (
-    <StyledDiv>
-      <Link to={props.path}>{props.linkText}</Link>
-    </StyledDiv>
-  );
-};
-
-export default BottomLink;

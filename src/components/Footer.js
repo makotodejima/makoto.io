@@ -3,6 +3,40 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 
+const Footer = () => {
+  const props = useSpring({
+    year: 2019,
+    from: { year: 1990 },
+    config: { mass: 1, tension: 100, friction: 200 }
+  });
+
+  return (
+    <StyledFooter>
+      <div className="copyright">
+        &copy;{" "}
+        <animated.span>
+          {props.year.interpolate(val => val.toFixed(0))}
+        </animated.span>{" "}
+        Makoto Dejima
+      </div>
+      <div className="footer-link contacts w-48 mb-4 md:m-0 flex justify-between">
+        <Link to="/" className="relative md:no-underline">
+          Home
+        </Link>
+        <Link to="/about/" className="relative md:no-underline">
+          About
+        </Link>
+
+        <Link to="/contact/" className="relative md:no-underline">
+          Contact
+        </Link>
+      </div>
+    </StyledFooter>
+  );
+};
+
+export default Footer;
+
 const StyledFooter = styled.div`
   display: flex;
   align-items: center;
@@ -38,39 +72,3 @@ const StyledFooter = styled.div`
     transform: scaleX(1);
   }
 `;
-//  items-center justify-between max-w-xl mx-auto mx-auto p-6 md:p-8 text-sm"> */
-
-const Footer = () => {
-  const props = useSpring({
-    year: 2019,
-    from: { year: 1990 },
-    config: { mass: 1, tension: 100, friction: 200 }
-  });
-
-  return (
-    <StyledFooter>
-      {/* <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-xl mx-auto mx-auto p-6 md:p-8 text-sm"> */}
-      <div className="copyright">
-        &copy;{" "}
-        <animated.span>
-          {props.year.interpolate(val => val.toFixed(0))}
-        </animated.span>{" "}
-        Makoto Dejima
-      </div>
-      <div className="footer-link contacts w-48 mb-4 md:m-0 flex justify-between">
-        <Link to="/" className="relative md:no-underline">
-          Home
-        </Link>
-        <Link to="/about/" className="relative md:no-underline">
-          About
-        </Link>
-
-        <Link to="/contact/" className="relative md:no-underline">
-          Contact
-        </Link>
-      </div>
-    </StyledFooter>
-  );
-};
-
-export default Footer;
