@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import {
   GridCardContainer,
   Label,
-  WritingHeader
+  WritingLink
 } from "../components/StyledComps";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -27,9 +27,8 @@ const IndexPage = () => (
             `Designer`,
             `Front-End Developer`,
             `Graphic Design`,
-            `JavaScript`,
             `React`,
-            `Motion`
+            `JavaScript`
           ]}
         />
 
@@ -82,30 +81,28 @@ const IndexPage = () => (
 
         <Label>Writing</Label>
 
-        <p className="leading-loose">
+        <WritingLink>
           <a
             href="https://medium.com/this-week-in-america"
             target="_blank"
             rel="noopener noreferrer"
-            className="no-underline text-blue"
           >
             Tech and politics / テクノロジーと政治
           </a>
           <br />I am writing about technology, startups, and politics.
-        </p>
-        <p className="my-12  leading-loose">
+        </WritingLink>
+        <WritingLink>
           <a
             href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
             target="_blank"
             rel="noopener noreferrer"
-            className="no-underline text-blue"
           >
-            WeQ Japanese PR <img className="h-3 mx-2" src={weq} alt="WeQ" />
+            WeQ Japanese PR <img src={weq} alt="WeQ" />
           </a>
           <br />
           I'm working with German global ad-tech company to accelerate their
           growth in Japanese market.
-        </p>
+        </WritingLink>
       </Layout>
     )}
   />

@@ -5,6 +5,17 @@ export const Label = styled.div`
   font-size: 1.25rem;
 `;
 
+export const WritingLink = styled.p`
+  line-height: 2;
+  a {
+    color: navy;
+    img {
+      height: 0.8rem;
+      margin-left: 0.5rem;
+    }
+  }
+`;
+
 // Index and Works
 export const GridCardContainer = styled.div`
   display: grid;
