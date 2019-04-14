@@ -11,12 +11,42 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 library.add(faInstagram, faDribbble, faLinkedin);
 
+const SocialLinks = () => (
+  <SocialLinksContainer>
+    <a
+      href="https://dribbble.com/mak84sasami"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FontAwesomeIcon icon={["fab", "dribbble"]} />
+    </a>
+    <a
+      href="https://www.instagram.com/dejimako/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FontAwesomeIcon icon={["fab", "instagram"]} />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/mak84sasami/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FontAwesomeIcon icon={["fab", "linkedin"]} />
+    </a>
+  </SocialLinksContainer>
+);
+
+export default SocialLinks;
+
 const SocialLinksContainer = styled.div`
   display: flex;
   justify-content: center;
   font-size: 1.8rem;
   a {
     transition: all 0.25s ease-in-out;
+    color: #1c3d5a;
+    margin: 0 1rem;
   }
   a:hover {
     transform: scale(1.1);
@@ -38,34 +68,3 @@ const SocialLinksContainer = styled.div`
     transform: scaleX(1);
   }
 `;
-
-const SocialLinks = () => (
-  <SocialLinksContainer>
-    <a
-      href="https://dribbble.com/mak84sasami"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-darker relative"
-    >
-      <FontAwesomeIcon icon={["fab", "dribbble"]} />
-    </a>
-    <a
-      href="https://www.instagram.com/dejimako/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-darker mx-8 relative"
-    >
-      <FontAwesomeIcon icon={["fab", "instagram"]} />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/mak84sasami/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-darker relative"
-    >
-      <FontAwesomeIcon icon={["fab", "linkedin"]} />
-    </a>
-  </SocialLinksContainer>
-);
-
-export default SocialLinks;

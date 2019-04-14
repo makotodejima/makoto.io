@@ -4,9 +4,9 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
+import { WorkTitle, WorkDescription } from "../../components/StyledComps";
 
 import BottomLink from "../../components/bottomLink";
-import WorkHeader from "../../components/workHeader";
 
 function TheLightOfTokyo() {
   return (
@@ -27,7 +27,10 @@ function TheLightOfTokyo() {
               `Motion`
             ]}
           />
-          <WorkHeader title="Satte City Promotion Logo" desc="Logo Design" />
+
+          <WorkTitle>Satte City Promotion Logo</WorkTitle>
+          <WorkDescription>Logo Design</WorkDescription>
+
           <div className="work flex flex-col">
             <Img
               fluid={data.satte01.childImageSharp.fluid}

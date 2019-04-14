@@ -4,9 +4,9 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import BottomLink from "../../components/bottomLink";
+import { WorkTitle, WorkDescription } from "../../components/StyledComps";
 
 import SEO from "../../components/seo";
-import WorkHeader from "../../components/workHeader";
 
 function TheLightOfTokyo() {
   return (
@@ -27,10 +27,12 @@ function TheLightOfTokyo() {
               `Motion`
             ]}
           />
-          <WorkHeader
-            title="The Light of Tokyo"
-            desc="Tokyo Postcard Award 2019 by Hotel Ryumeikan"
-          />
+
+          <WorkTitle>The Light of Tokyo</WorkTitle>
+          <WorkDescription>
+            Tokyo Postcard Award 2019 by Hotel Ryumeikan
+          </WorkDescription>
+
           <div className="work flex flex-col">
             <Img
               fluid={data.tpc01.childImageSharp.fluid}

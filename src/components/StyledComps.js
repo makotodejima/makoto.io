@@ -32,6 +32,16 @@ export const GridCardContainer = styled.div`
   }
 `;
 
+// Work
+export const WorkTitle = styled.h2`
+  margin: 1rem auto;
+`;
+export const WorkDescription = styled.div`
+  margin: 1rem auto;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+`;
+
 // About Page
 export const MeImageContainer = styled.div`
   position: relative;
@@ -39,5 +49,22 @@ export const MeImageContainer = styled.div`
 
   @media (max-width: 768px) {
     margin-top: 3rem;
+  }
+`;
+
+export const FadeOutText = styled.p`
+  position: absolute;
+  text-align: center;
+  letter-spacing: normal;
+  font-size: 0.75rem;
+  width: 100%;
+  color: lightgray;
+  padding-bottom: 0.5rem;
+  bottom: 0;
+  transition: opacity 1500ms;
+  opacity: ${props => (props.mouseOnImage ? 0 : 1)};
+
+  @media (max-width: 576px) {
+    letter-spacing: -0.05em;
   }
 `;

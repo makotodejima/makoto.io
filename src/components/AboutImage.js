@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { useGesture } from "react-with-gesture";
-import { MeImageContainer } from "../components/StyledComps";
+import { MeImageContainer, FadeOutText } from "../components/StyledComps";
 import clamp from "lodash-es/clamp";
 import me from "../images/me.jpg";
 import poco from "../images/poco.png";
-import FadeOutText from "../components/FadeOutText";
 
 const AboutImage = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
@@ -37,7 +36,9 @@ const AboutImage = () => {
         src={poco}
         alt="Cute dog face"
       />
-      <FadeOutText mouseOnImage={mouseOnImage} />
+      <FadeOutText mouseOnImage={mouseOnImage}>
+        Yes, dog face is draggable.
+      </FadeOutText>
     </MeImageContainer>
   );
 };

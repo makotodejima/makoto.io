@@ -4,8 +4,8 @@ import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
+import { WorkTitle, WorkDescription } from "../../components/StyledComps";
 
-import WorkHeader from "../../components/workHeader";
 import BottomLink from "../../components/bottomLink";
 
 function Jasms() {
@@ -27,10 +27,9 @@ function Jasms() {
               `Motion`
             ]}
           />
-          <WorkHeader
-            title="Japan Society of Mountain Reseach"
-            desc="Logo Design"
-          />
+          <WorkTitle>Japan Society of Mountain Reseach</WorkTitle>
+          <WorkDescription>Logo Design</WorkDescription>
+
           <div className="work flex flex-col">
             <Img
               fluid={data.jasms01.childImageSharp.fluid}
