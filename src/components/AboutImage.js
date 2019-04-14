@@ -37,7 +37,7 @@ const AboutImage = () => {
         alt="Cute dog face"
       />
       <FadeOutText mouseOnImage={mouseOnImage}>
-        Yes, dog face is draggable.
+        Yes, you can drag my face.
       </FadeOutText>
     </MeImageContainer>
   );

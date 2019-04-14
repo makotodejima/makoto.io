@@ -6,17 +6,6 @@ import SEO from "../components/seo";
 import AboutImage from "../components/AboutImage";
 import SocialLinks from "../components/SocialLinks";
 
-const AboutContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-`;
-
 function AboutPage(props) {
   return (
     <Layout currentPath={props.location.pathname}>
@@ -29,14 +18,12 @@ function AboutPage(props) {
           `Design`,
           `Graphic Design`,
           `JavaScript`,
-          `React`,
-          `Motion`
+          `React`
         ]}
       />
-
       <AboutContainer>
-        <div className="md:w-1/2 md:mr-8">
-          <p className="md:border-l-4 border-grey-darkest leading-loose md:pl-4 text-justify">
+        <div className="wrapper">
+          <p className="intro">
             Tokyo-born designer / front-end developer. Also experienced in
             ad-tech, Japanese writing and editing. Currently working with
             several companies to achieve their goals in Japanese market.
@@ -44,9 +31,7 @@ function AboutPage(props) {
             ウェブ広告、記事執筆・編集にも経験があります。現在はヨーロッパの会社を中心にマーケティングの仕事をしています。
           </p>
 
-          <p className="font-bold mt-8 text-right text-xs uppercase">
-            Makoto Dejima | 出島 誠
-          </p>
+          <p className="name">Makoto Dejima | 出島 誠</p>
         </div>
 
         <AboutImage />
@@ -57,3 +42,40 @@ function AboutPage(props) {
 }
 
 export default AboutPage;
+
+const AboutContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .wrapper {
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: auto;
+    }
+
+    .intro {
+      line-height: 2;
+      border-left: 4px solid black;
+      padding-left: 1rem;
+      text-align: justify;
+      @media (max-width: 768px) {
+        border: none;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+
+    .name {
+      margin-top: 2rem;
+      text-align: right;
+    }
+  }
+`;
+
+// font-bold mt-8 text-right text-xs uppercase
