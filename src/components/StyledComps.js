@@ -3,6 +3,7 @@ import styled from "styled-components";
 // Index
 export const Label = styled.div`
   font-size: 1.25rem;
+  margin: 2rem 0 2rem;
 `;
 
 export const WritingLink = styled.p`
