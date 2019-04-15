@@ -15,7 +15,7 @@ const Hero = () => {
 export default Hero;
 
 const Wrapper = styled.div`
-  height: 50vh;
+  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,10 +24,11 @@ const Wrapper = styled.div`
 
   h3 {
     letter-spacing: 0.2rem;
+    margin-top: 3rem;
   }
 
   h2 {
     letter-spacing: 0.05rem;
-    margin: 1rem auto;
+    margin-bottom: 5rem;
   }
 `;
