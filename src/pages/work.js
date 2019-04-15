@@ -6,7 +6,6 @@ import Img from "gatsby-image";
 import { GridCardContainer, PageTitle } from "../components/StyledComps";
 import Layout from "../components/layout";
 import Card from "../components/card";
-import BottomLink from "../components/BottomLink";
 
 function WorkPage(props) {
   return (
@@ -92,8 +91,6 @@ function WorkPage(props) {
               />
             </Card>
           </GridCardContainer>
-
-          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />
