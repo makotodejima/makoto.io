@@ -6,21 +6,19 @@ const typography = new Typography({
       name: "Noto Sans JP",
       styles: ["400"]
     }
-    // {
-    //   name: "Merriweather",
-    //   styles: ["400", "400i", "700", "700i"]
-    // }
   ],
-  baseFontSize: "14px",
+  baseFontSize: "16px",
   baseLineHeight: 1.5,
   headerFontFamily: [
-    "Helvetica Neue",
-    "Segoe UI",
+    "aller",
     "Helvetica",
+    "Helvetica Neue",
     "Arial",
     "sans-serif"
   ],
-  bodyFontFamily: ["Ubuntu", "Noto Sans JP", "serif"]
+  bodyFontFamily: ["aller", "Noto Sans JP", "serif"],
+  headerWeight: "300",
+  bodyWeight: "400"
 });
 
 // Export helper functions
