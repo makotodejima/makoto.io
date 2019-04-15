@@ -20,7 +20,7 @@ export const WritingLink = styled.p`
 export const GridCardContainer = styled.div`
   display: grid;
   /* This card wrapper is using CSS Grid
-	  do not set gap with relative value (%), it refers to window and screw up */
+	  do not set gap with relative value (%), it refers to window and screws up */
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   grid-row-gap: 30px;
