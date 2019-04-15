@@ -10,8 +10,6 @@ import {
   WorkPageWrapper
 } from "../../components/StyledComps";
 
-import BottomLink from "../../components/BottomLink";
-
 function ManhattanPortage() {
   return (
     <StaticQuery
@@ -53,7 +51,6 @@ function ManhattanPortage() {
               alt="Manhattan Portage - 04"
             />
           </WorkPageWrapper>
-          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />

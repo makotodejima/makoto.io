@@ -10,8 +10,6 @@ import {
   WorkPageWrapper
 } from "../../components/StyledComps";
 
-import BottomLink from "../../components/BottomLink";
-
 function IndexPage() {
   return (
     <StaticQuery
@@ -53,7 +51,6 @@ function IndexPage() {
               alt="808 MERA - 04"
             />
           </WorkPageWrapper>
-          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />

@@ -59,7 +59,6 @@ function TheLightOfTokyo() {
               alt="The Light of Tokyo - 05"
             />
           </WorkPageWrapper>
-          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />

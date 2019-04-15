@@ -10,8 +10,6 @@ import {
   WorkPageWrapper
 } from "../../components/StyledComps";
 
-import BottomLink from "../../components/BottomLink";
-
 function Soreike() {
   return (
     <StaticQuery
@@ -56,7 +54,6 @@ function Soreike() {
               alt="Soreike SF Tee - 05"
             />
           </WorkPageWrapper>
-          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />

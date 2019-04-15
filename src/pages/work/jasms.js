@@ -10,8 +10,6 @@ import {
   WorkPageWrapper
 } from "../../components/StyledComps";
 
-import BottomLink from "../../components/BottomLink";
-
 function Jasms() {
   return (
     <StaticQuery
@@ -41,7 +39,6 @@ function Jasms() {
             <Img fluid={data.jasms04.childImageSharp.fluid} alt="JASMS - 04" />
             <Img fluid={data.jasms05.childImageSharp.fluid} alt="JASMS - 05" />
           </WorkPageWrapper>
-          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />

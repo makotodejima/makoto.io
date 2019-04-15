@@ -10,8 +10,6 @@ import {
   WorkPageWrapper
 } from "../../components/StyledComps";
 
-import BottomLink from "../../components/BottomLink";
-
 function TheLightOfTokyo() {
   return (
     <StaticQuery
@@ -53,7 +51,6 @@ function TheLightOfTokyo() {
               alt="Satte City - 04"
             />
           </WorkPageWrapper>
-          <BottomLink path="/" linkText="Home" />
         </Layout>
       )}
     />
