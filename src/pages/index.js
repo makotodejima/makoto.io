@@ -12,7 +12,6 @@ import SEO from "../components/seo";
 import Hero from "../components/hero";
 import Card from "../components/card";
 
-import BottomLink from "../components/BottomLink";
 import weq from "../images/weq.jpg";
 
 const IndexPage = () => (
@@ -76,8 +75,6 @@ const IndexPage = () => (
             />
           </Card>
         </GridCardContainer>
-
-        <BottomLink path="/work/" linkText="More" />
 
         <Label>Writing</Label>
 

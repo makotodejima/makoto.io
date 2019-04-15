@@ -2,15 +2,13 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import SEO from "../../components/seo";
 import Layout from "../../components/layout";
-import BottomLink from "../../components/BottomLink";
 import {
   WorkTitle,
   WorkDescription,
   WorkPageWrapper
 } from "../../components/StyledComps";
-
-import SEO from "../../components/seo";
 
 function TheLightOfTokyo() {
   return (
