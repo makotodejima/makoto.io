@@ -30,8 +30,7 @@
     "react-typography": "^0.16.19",
     "react-with-gesture": "^4.0.5",
     "styled-components": "^4.2.0",
-    "typography": "^0.16.19",
-    "typography-theme-grand-view": "^0.16.19"
+    "typography": "^0.16.19"
   },
   "license": "MIT",
   "scripts": {

@@ -42,10 +42,10 @@ const Layout = styled.div`
   flex-direction: column;
   align-items: stretch;
   min-height: 100vh;
-  font-family: "Ubuntu", "proxima-nova", "-apple-system", "Open Sans",
+  ${"" /* font-family: "Ubuntu", "proxima-nova", "-apple-system", "Open Sans",
     "Noto Sans JP", "system-ui", "BlinkMacSystemFont", "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "sans-serif";
+    "sans-serif"; */}
   color: black;
 `;
 
