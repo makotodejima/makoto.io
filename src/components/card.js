@@ -23,8 +23,7 @@ const Card = props => {
 export default Card;
 
 const StyledCard = styled.div`
-  width: 70%;
-  margin: 2rem auto;
+  width: 100%;
   position: relative;
   overflow: hidden;
   @media (max-width: 576px) {

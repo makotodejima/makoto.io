@@ -41,6 +41,7 @@ export default ({ children, currentPath }) => {
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   min-height: 100vh;
   font-family: "Ubuntu", "proxima-nova", "-apple-system", "Open Sans",
     "Noto Sans JP", "system-ui", "BlinkMacSystemFont", "Segoe UI", "Roboto",
@@ -52,13 +53,14 @@ const Layout = styled.div`
 const Main = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex: 1;
-  margin: 2rem auto;
-  padding: 2rem 2rem;
+  margin: 0 auto;
+  padding: 2rem 4rem;
   width: 100%;
   max-width: 960px;
 
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 1rem;
-  } */
+  }
 `;
