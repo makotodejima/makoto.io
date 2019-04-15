@@ -10,7 +10,7 @@ import {
   WorkPageWrapper
 } from "../../components/StyledComps";
 
-import BottomLink from "../../components/bottomLink";
+import BottomLink from "../../components/BottomLink";
 
 function IndexPage() {
   return (

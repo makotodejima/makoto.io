@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import Layout from "../../components/layout";
-import BottomLink from "../../components/bottomLink";
+import BottomLink from "../../components/BottomLink";
 import {
   WorkTitle,
   WorkDescription,
