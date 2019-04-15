@@ -27,7 +27,7 @@ export const GridCardContainer = styled.div`
   grid-column-gap: 20px;
   margin-bottom: 6rem;
 
-  @media (max-width: 375spx) {
+  @media (max-width: 375px) {
     grid-template-columns: 1fr;
   }
 `;
