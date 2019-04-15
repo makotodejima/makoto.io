@@ -55,9 +55,9 @@ const Main = styled.div`
   justify-content: center;
   flex: 1;
   margin: 0 auto;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   width: 100%;
-  max-width: 960px;
+  max-width: 60rem;
 
   @media (max-width: 768px) {
     padding: 1rem;

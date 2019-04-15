@@ -124,13 +124,13 @@ const Hamburger = styled.button`
 
 const HeaderLinks = styled.div`
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
 
   a {
     display: inline-block;
     position: relative;
     color: black;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     text-decoration: none;
     &.current {
       color: magenta;
