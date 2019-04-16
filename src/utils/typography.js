@@ -7,7 +7,7 @@ const typography = new Typography({
       styles: ["400"]
     }
   ],
-  baseFontSize: "16px",
+  baseFontSize: "15px",
   baseLineHeight: 1.5,
   headerFontFamily: [
     "aller",
@@ -17,7 +17,7 @@ const typography = new Typography({
     "sans-serif"
   ],
   bodyFontFamily: ["aller", "Noto Sans JP", "serif"],
-  headerWeight: "300",
+  headerWeight: "700",
   bodyWeight: "400"
 });
 

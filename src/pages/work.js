@@ -3,9 +3,10 @@ import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import { GridCardContainer, PageTitle } from "../components/StyledComps";
+import { WorksListContainer, PageTitle } from "../components/StyledComps";
 import Layout from "../components/layout";
 import Card from "../components/card";
+import WorkListItem from "../components/WorkListItem";
 
 function WorkPage(props) {
   return (
@@ -29,8 +30,8 @@ function WorkPage(props) {
 
           <PageTitle>Work</PageTitle>
 
-          <GridCardContainer>
-            <Card
+          <WorksListContainer>
+            <WorkListItem
               title="The Light of Tokyo"
               desc="Tokyo Postcard Award"
               path="the-light-of-tokyo"
@@ -39,8 +40,8 @@ function WorkPage(props) {
                 fluid={data.tpcsq.childImageSharp.fluid}
                 alt="Postcard, The light of Tokyo"
               />
-            </Card>
-            <Card
+            </WorkListItem>
+            <WorkListItem
               title="808 MERA Farming System"
               desc="Logo Design"
               path="mera"
@@ -49,8 +50,8 @@ function WorkPage(props) {
                 fluid={data.merasq.childImageSharp.fluid}
                 alt="Logo design for indoor faming, 808Mera"
               />
-            </Card>
-            <Card
+            </WorkListItem>
+            <WorkListItem
               title="Japan Society of Mountain Research"
               desc="Logo Design"
               path="jasms"
@@ -59,8 +60,8 @@ function WorkPage(props) {
                 fluid={data.jasmssq.childImageSharp.fluid}
                 alt="Logo design, Japan Society of Mountain Research"
               />
-            </Card>
-            <Card
+            </WorkListItem>
+            <WorkListItem
               title="Manhattan Portage Art Collection"
               desc="Messenger Bag Design"
               path="manhattan-portage"
@@ -69,8 +70,8 @@ function WorkPage(props) {
                 fluid={data.mpsq.childImageSharp.fluid}
                 alt="Messenger Bag, Manhattan Portage"
               />
-            </Card>
-            <Card
+            </WorkListItem>
+            <WorkListItem
               title="Satte City, Saitama Pref."
               desc="Promotion Logo Design"
               path="satte"
@@ -79,8 +80,8 @@ function WorkPage(props) {
                 fluid={data.sattesq.childImageSharp.fluid}
                 alt="Satte City, Saitama - Promotion Logo"
               />
-            </Card>
-            <Card
+            </WorkListItem>
+            <WorkListItem
               title="Soreike San Francisco Tee"
               desc="T-shirt Design"
               path="soreike"
@@ -89,8 +90,8 @@ function WorkPage(props) {
                 fluid={data.soreikesq.childImageSharp.fluid}
                 alt="Soreike San Francisco Tee"
               />
-            </Card>
-          </GridCardContainer>
+            </WorkListItem>
+          </WorksListContainer>
         </Layout>
       )}
     />
@@ -101,9 +102,9 @@ export default WorkPage;
 
 const query = graphql`
   query {
-    tpcsq: file(relativePath: { eq: "tpcsq.jpg" }) {
+    tpcsq: file(relativePath: { eq: "test.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 750, quality: 100) {
+        fluid(maxWidth: 400, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

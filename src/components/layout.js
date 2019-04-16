@@ -42,10 +42,6 @@ const Layout = styled.div`
   flex-direction: column;
   align-items: stretch;
   min-height: 100vh;
-  ${"" /* font-family: "Ubuntu", "proxima-nova", "-apple-system", "Open Sans",
-    "Noto Sans JP", "system-ui", "BlinkMacSystemFont", "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "sans-serif"; */}
   color: black;
 `;
 
@@ -57,7 +53,7 @@ const Main = styled.div`
   margin: 0 auto;
   padding: 2rem 2rem;
   width: 100%;
-  max-width: 60rem;
+  max-width: 50rem;
 
   @media (max-width: 768px) {
     padding: 1rem;

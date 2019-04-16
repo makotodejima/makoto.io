@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import {
-  GridCardContainer,
+  WorksListContainer,
   Label,
   WritingLink
 } from "../components/StyledComps";
@@ -34,7 +34,7 @@ const IndexPage = () => (
         <Hero />
         <Label>Latest</Label>
 
-        <GridCardContainer>
+        <WorksListContainer>
           <Card
             title="The Light of Tokyo"
             desc="Tokyo Postcard Award"
@@ -74,7 +74,7 @@ const IndexPage = () => (
               alt="Messenger Bag, Manhattan Portage"
             />
           </Card>
-        </GridCardContainer>
+        </WorksListContainer>
 
         <Label>Writing</Label>
 

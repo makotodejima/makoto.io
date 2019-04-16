@@ -18,24 +18,17 @@ export const WritingLink = styled.p`
 `;
 
 // Index and Works
-export const GridCardContainer = styled.div`
-  display: grid;
-  /* This card wrapper is using CSS Grid
-    do not set gap with relative value (%), it refers to window and screws up */
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
-  grid-row-gap: 30px;
-  grid-column-gap: 20px;
+export const WorksListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-bottom: 6rem;
 
   @media (max-width: 375px) {
-    grid-template-columns: 1fr;
   }
 `;
 
 export const PageTitle = styled.h2`
-  text-align: center;
-  margin: 2rem auto;
+  margin: 2rem 0;
 `;
 
 // Work

@@ -15,12 +15,9 @@ const Hero = () => {
 export default Hero;
 
 const Wrapper = styled.div`
-  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  align-items: center;
 
   h3 {
     letter-spacing: 0.2rem;
