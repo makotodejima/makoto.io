@@ -10,11 +10,8 @@ export default props => {
       </Link>
       <Description>
         <h2>{props.title}</h2>
-        <h4>{props.desc}</h4>
-        <p>
-          The extraction of the light of the city Tokyo. Won the Tokyo postcatd
-          award.
-        </p>
+        <h4>{props.type}</h4>
+        <p>{props.keywords}</p>
       </Description>
     </Wrapper>
   );

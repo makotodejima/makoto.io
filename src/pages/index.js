@@ -41,57 +41,14 @@ const IndexPage = () => (
               <WorkListItem
                 key={featured[id].id}
                 title={featured[id].title}
-                desc={featured[id].type}
+                type={featured[id].type}
+                keywords={featured[id].keywords}
                 path={featured[id].path}
               >
                 <Img fluid={data[id].childImageSharp.fluid} />
               </WorkListItem>
             );
           })}
-
-          {/* <WorkListItem
-          //   title="The Light of Tokyo"
-          //   desc="Tokyo Postcard Award"
-          //   path="the-light-of-tokyo"
-          // >
-          //   <Img
-          //     fluid={data[key].childImageSharp.fluid}
-          //     alt="Postcard, The light of Tokyo"
-          //   />
-          // </WorkListItem>
-
-          // <WorkListItem
-          //   title="Manhattan Portage Art Collection"
-          //   desc="Messenger Bag Design"
-          //   path="manhattan-portage"
-          // >
-          //   <Img
-          //     fluid={data.mpsq.childImageSharp.fluid}
-          //     alt="Messenger Bag, Manhattan Portage"
-          //   />
-          // </WorkListItem>
-
-          // <WorkListItem
-          //   title="808 MERA Farming System"
-          //   desc="Logo Design"
-          //   path="mera"
-          // >
-          //   <Img
-          //     fluid={data.merasq.childImageSharp.fluid}
-          //     alt="Logo design for indoor faming, 808Mera"
-          //   />
-          // </WorkListItem>
-
-          // <WorkListItem
-          //   title="Japan Society of Mountain Research"
-          //   desc="Logo Design"
-          //   path="jasms"
-          // >
-          //   <Img
-          //     fluid={data.jasmssq.childImageSharp.fluid}
-          //     alt="Logo design, Japan Society of Mountain Research"
-          //   />
-          // </WorkListItem> */}
         </WorksListContainer>
 
         <Label>Writing</Label>
