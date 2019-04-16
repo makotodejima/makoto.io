@@ -40,7 +40,7 @@ export const work = {
   },
   manhattan_portage: {
     id: "manhattan_portage",
-    title: "808 MERA Farming System",
+    title: "Manhattan Portage Art Collection",
     client: "Manhattan Portage",
     type: "Messenger Bag Design",
     keywords: "Messenger Bag Design",

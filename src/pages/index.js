@@ -41,6 +41,7 @@ const IndexPage = () => (
               <WorkListItem
                 key={featured[id].id}
                 title={featured[id].title}
+                client={featured[id].client}
                 type={featured[id].type}
                 keywords={featured[id].keywords}
                 path={featured[id].path}
@@ -84,28 +85,28 @@ export default IndexPage;
 
 const query = graphql`
   query {
-    the_light_of_tokyo: file(relativePath: { eq: "tpcsq.jpg" }) {
+    the_light_of_tokyo: file(relativePath: { eq: "the_light_of_tokyo.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    merasq: file(relativePath: { eq: "merasq.jpg" }) {
+    mera: file(relativePath: { eq: "mera.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    satte: file(relativePath: { eq: "sattesq.jpg" }) {
+    satte: file(relativePath: { eq: "satte.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    manhattan_portage: file(relativePath: { eq: "mpsq.jpg" }) {
+    manhattan_portage: file(relativePath: { eq: "manhattan_portage.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid

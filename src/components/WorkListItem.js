@@ -10,6 +10,7 @@ export default props => {
       </Link>
       <Description>
         <h2>{props.title}</h2>
+        <h4>{props.client}</h4>
         <h4>{props.type}</h4>
         <p>{props.keywords}</p>
       </Description>
@@ -19,7 +20,7 @@ export default props => {
 
 const Wrapper = styled.div`
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 `;
 
 const ImgWrapper = styled.div`
