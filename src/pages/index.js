@@ -11,7 +11,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import WorkListItem from "../components/WorkListItem";
-import Card from "../components/card";
+import { featured } from "../data/data";
 
 import weq from "../images/weq.jpg";
 
@@ -33,52 +33,65 @@ const IndexPage = () => (
         />
 
         <Hero />
-        <Label>Latest</Label>
+        <Label>Featured Work</Label>
 
         <WorksListContainer>
-          <WorkListItem
-            title="The Light of Tokyo"
-            desc="Tokyo Postcard Award"
-            path="the-light-of-tokyo"
-          >
-            <Img
-              fluid={data.tpcsq.childImageSharp.fluid}
-              alt="Postcard, The light of Tokyo"
-            />
-          </WorkListItem>
+          {Object.keys(featured).map(id => {
+            return (
+              <WorkListItem
+                key={featured[id].id}
+                title={featured[id].title}
+                desc={featured[id].type}
+                path={featured[id].path}
+              >
+                <Img fluid={data[id].childImageSharp.fluid} />
+              </WorkListItem>
+            );
+          })}
 
-          <WorkListItem
-            title="808 MERA Farming System"
-            desc="Logo Design"
-            path="mera"
-          >
-            <Img
-              fluid={data.merasq.childImageSharp.fluid}
-              alt="Logo design for indoor faming, 808Mera"
-            />
-          </WorkListItem>
+          {/* <WorkListItem
+          //   title="The Light of Tokyo"
+          //   desc="Tokyo Postcard Award"
+          //   path="the-light-of-tokyo"
+          // >
+          //   <Img
+          //     fluid={data[key].childImageSharp.fluid}
+          //     alt="Postcard, The light of Tokyo"
+          //   />
+          // </WorkListItem>
 
-          <WorkListItem
-            title="Japan Society of Mountain Research"
-            desc="Logo Design"
-            path="jasms"
-          >
-            <Img
-              fluid={data.jasmssq.childImageSharp.fluid}
-              alt="Logo design, Japan Society of Mountain Research"
-            />
-          </WorkListItem>
+          // <WorkListItem
+          //   title="Manhattan Portage Art Collection"
+          //   desc="Messenger Bag Design"
+          //   path="manhattan-portage"
+          // >
+          //   <Img
+          //     fluid={data.mpsq.childImageSharp.fluid}
+          //     alt="Messenger Bag, Manhattan Portage"
+          //   />
+          // </WorkListItem>
 
-          <WorkListItem
-            title="Manhattan Portage Art Collection"
-            desc="Messenger Bag Design"
-            path="manhattan-portage"
-          >
-            <Img
-              fluid={data.mpsq.childImageSharp.fluid}
-              alt="Messenger Bag, Manhattan Portage"
-            />
-          </WorkListItem>
+          // <WorkListItem
+          //   title="808 MERA Farming System"
+          //   desc="Logo Design"
+          //   path="mera"
+          // >
+          //   <Img
+          //     fluid={data.merasq.childImageSharp.fluid}
+          //     alt="Logo design for indoor faming, 808Mera"
+          //   />
+          // </WorkListItem>
+
+          // <WorkListItem
+          //   title="Japan Society of Mountain Research"
+          //   desc="Logo Design"
+          //   path="jasms"
+          // >
+          //   <Img
+          //     fluid={data.jasmssq.childImageSharp.fluid}
+          //     alt="Logo design, Japan Society of Mountain Research"
+          //   />
+          // </WorkListItem> */}
         </WorksListContainer>
 
         <Label>Writing</Label>
@@ -114,7 +127,7 @@ export default IndexPage;
 
 const query = graphql`
   query {
-    tpcsq: file(relativePath: { eq: "tpcsq.jpg" }) {
+    the_light_of_tokyo: file(relativePath: { eq: "tpcsq.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -128,14 +141,14 @@ const query = graphql`
         }
       }
     }
-    jasmssq: file(relativePath: { eq: "jasmssq.jpg" }) {
+    satte: file(relativePath: { eq: "sattesq.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    mpsq: file(relativePath: { eq: "mpsq.jpg" }) {
+    manhattan_portage: file(relativePath: { eq: "mpsq.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 750, quality: 100) {
           ...GatsbyImageSharpFluid
