@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import styled from "styled-components";
+import Logo from "./Logo";
 
 function Header({ currentPath }) {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -9,47 +10,8 @@ function Header({ currentPath }) {
   return (
     <StyledNav>
       <Link to="/">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="logo"
-          data-name="Layer 1"
-          viewBox="0 0 100 50"
-        >
-          <g>
-            <line
-              x1="26.61"
-              x2="26.61"
-              y1="16.51"
-              y2="33.49"
-              className="line"
-            />
-            <line x1="42.2" x2="42.2" y1="12.17" y2="37.83" className="line" />
-            <line
-              x1="11.01"
-              x2="11.01"
-              y1="13.72"
-              y2="36.28"
-              className="line"
-            />
-            <line
-              x1="73.39"
-              x2="73.39"
-              y1="16.33"
-              y2="33.67"
-              className="line"
-            />
-            <line
-              x1="88.99"
-              x2="88.99"
-              y1="21.55"
-              y2="28.45"
-              className="line"
-            />
-            <line x1="57.8" x2="57.8" y1="12.17" y2="37.83" className="line" />
-          </g>
-        </svg>
+        <Logo />
       </Link>
-
       <Hamburger onClick={() => toggleExpansion(!isExpanded)}>
         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
@@ -96,9 +58,11 @@ const StyledNav = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   width: 90%;
-  max-width: 60rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 2rem;
+  a {
+  }
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -133,7 +97,7 @@ const HeaderLinks = styled.div`
     margin-left: 1.5rem;
     text-decoration: none;
     &.current {
-      color: magenta;
+      color: blue;
     }
     &::before {
       content: "";

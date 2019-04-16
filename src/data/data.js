@@ -76,7 +76,7 @@ export const work = {
   },
   soreike: {
     id: "soreike",
-    title: "Soreike San Francisco Teen",
+    title: "Soreike San Francisco Tee",
     client: null,
     type: "T-shirt Design",
     keywords: "T-shirt, Logo, Typography",

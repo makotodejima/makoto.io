@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Hero = () => {
   return (
     <Wrapper>
-      <h3>MAKOTO DEJIMA</h3>
+      <h4>MAKOTO DEJIMA</h4>
       <h2>Designer / Front-End Developer</h2>
       {/* <News /> */}
     </Wrapper>
@@ -19,14 +19,15 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  h3 {
+  h4 {
+    font-weight: lighter;
     letter-spacing: 0.2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 0.5rem;
   }
 
   h2 {
     letter-spacing: 0.05rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 `;
