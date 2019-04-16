@@ -32,9 +32,9 @@ const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   padding: 2rem;
-  max-width: 60rem;
+  max-width: 50rem;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 
   @media (max-width: 768px) {

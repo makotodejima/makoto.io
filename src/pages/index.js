@@ -52,7 +52,9 @@ const IndexPage = () => (
           })}
         </WorksListContainer>
 
-        <Label>Writing</Label>
+        <Label>Apps</Label>
+
+        {/* <Label>Writing</Label>
 
         <WritingLink>
           <a
@@ -75,7 +77,7 @@ const IndexPage = () => (
           <br />
           I'm working with German global ad-tech company to accelerate their
           growth in Japanese market.
-        </WritingLink>
+        </WritingLink> */}
       </Layout>
     )}
   />

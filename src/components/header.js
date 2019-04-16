@@ -57,12 +57,10 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   max-width: 50rem;
   margin: 0 auto;
   padding: 2rem;
-  a {
-  }
 
   @media (max-width: 768px) {
     padding: 1rem;
