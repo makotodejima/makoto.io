@@ -10,6 +10,7 @@ import {
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
+import WorkListItem from "../components/WorkListItem";
 import Card from "../components/card";
 
 import weq from "../images/weq.jpg";
@@ -35,7 +36,7 @@ const IndexPage = () => (
         <Label>Latest</Label>
 
         <WorksListContainer>
-          <Card
+          <WorkListItem
             title="The Light of Tokyo"
             desc="Tokyo Postcard Award"
             path="the-light-of-tokyo"
@@ -44,16 +45,20 @@ const IndexPage = () => (
               fluid={data.tpcsq.childImageSharp.fluid}
               alt="Postcard, The light of Tokyo"
             />
-          </Card>
+          </WorkListItem>
 
-          <Card title="808 MERA Farming System" desc="Logo Design" path="mera">
+          <WorkListItem
+            title="808 MERA Farming System"
+            desc="Logo Design"
+            path="mera"
+          >
             <Img
               fluid={data.merasq.childImageSharp.fluid}
               alt="Logo design for indoor faming, 808Mera"
             />
-          </Card>
+          </WorkListItem>
 
-          <Card
+          <WorkListItem
             title="Japan Society of Mountain Research"
             desc="Logo Design"
             path="jasms"
@@ -62,9 +67,9 @@ const IndexPage = () => (
               fluid={data.jasmssq.childImageSharp.fluid}
               alt="Logo design, Japan Society of Mountain Research"
             />
-          </Card>
+          </WorkListItem>
 
-          <Card
+          <WorkListItem
             title="Manhattan Portage Art Collection"
             desc="Messenger Bag Design"
             path="manhattan-portage"
@@ -73,7 +78,7 @@ const IndexPage = () => (
               fluid={data.mpsq.childImageSharp.fluid}
               alt="Messenger Bag, Manhattan Portage"
             />
-          </Card>
+          </WorkListItem>
         </WorksListContainer>
 
         <Label>Writing</Label>
