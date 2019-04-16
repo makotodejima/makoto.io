@@ -12,6 +12,7 @@ import SEO from "../components/seo";
 import Hero from "../components/hero";
 import WorkListItem from "../components/WorkListItem";
 import { featured } from "../data/data";
+import vid from "../images/nao300.mp4";
 
 import weq from "../images/weq.jpg";
 
@@ -34,8 +35,20 @@ const IndexPage = () => (
 
         <Hero />
         <Label>Featured Work</Label>
-
         <WorksListContainer>
+          <WorkListItem
+            key="naotatsu_kaku"
+            title="Artist Naotatsu Kaku's website"
+            client="Naotatsu Kaku"
+            type="Website Design and Development"
+            keywords="React, Gatsby, Netlify CMS, SVG Animation, Anime.js, "
+            path="null"
+          >
+            <video style={{ width: `220px` }} autoPlay loop muted playsInline>
+              <source src={vid} type="video/mp4" />
+            </video>
+          </WorkListItem>
+
           {Object.keys(featured).map(id => {
             return (
               <WorkListItem
