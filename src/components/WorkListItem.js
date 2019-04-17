@@ -30,8 +30,14 @@ const ImgWrapper = styled.div`
   overflow: hidden;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease-in;
+
   &:hover {
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  img,
+  video {
+    vertical-align: middle;
   }
 `;
 
