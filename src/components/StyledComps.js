@@ -52,7 +52,10 @@ export const WorkPageWrapper = styled.div`
 // About Page
 export const MeImageContainer = styled.div`
   position: relative;
-  margin: auto;
+  margin: 0 auto;
+  img {
+    margin-bottom: 0;
+  }
 
   @media (max-width: 768px) {
     margin-top: 3rem;
@@ -66,7 +69,7 @@ export const FadeOutText = styled.p`
   font-size: 0.75rem;
   width: 100%;
   color: lightgray;
-  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
   bottom: 0;
   transition: opacity 1500ms;
   opacity: ${props => (props.mouseOnImage ? 0 : 1)};

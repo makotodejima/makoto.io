@@ -19,11 +19,11 @@ export default () => {
         </animated.span>{" "}
         Makoto Dejima
       </div>
-      <FooterLinks>
+      {/* <FooterLinks>
         <Link to="/">Home</Link>
         <Link to="/about/">About</Link>
         <Link to="/contact/">Contact</Link>
-      </FooterLinks>
+      </FooterLinks> */}
     </StyledFooter>
   );
 };
@@ -33,7 +33,7 @@ const StyledFooter = styled.div`
   align-items: center;
   padding: 2rem;
   max-width: 50rem;
-  justify-content: space-between;
+  /* justify-content: flex-end; */
   width: 100%;
   margin: 0 auto;
 

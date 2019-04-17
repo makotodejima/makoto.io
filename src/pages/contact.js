@@ -96,13 +96,16 @@ const Intro = styled.div`
 const StyledForm = styled.div`
   padding: 2rem;
   margin: 0 auto;
-  width: 50%;
+  width: 60%;
   form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     .name {
       display: flex;
+      span:nth-child(1) {
+        margin-right: 0.5rem;
+      }
       span {
         display: flex;
         flex-direction: column;
@@ -127,7 +130,7 @@ const StyledForm = styled.div`
       }
     }
     textarea {
-      height: 100px;
+      height: 120px;
       vertical-align: middle;
       width: 100%;
       padding: 20px;
@@ -144,20 +147,20 @@ const StyledForm = styled.div`
     button {
       display: inline-block;
       padding: 0.6rem 2rem;
-      margin: 0 auto;
+      margin: 1rem auto 0;
       text-align: center;
       background: black;
       color: #ffffff;
       cursor: pointer;
-      transition: 250ms ease-in-out, transform 150ms ease;
+      transition: 200ms ease-in-out, transform 150ms ease;
       -webkit-appearance: none;
       -moz-appearance: none;
       &:hover,
       &:focus {
-        background: grey;
+        background: darkcyan;
       }
       &:active {
-        transform: scale(0.95);
+        transform: scale(0.9);
       }
     }
   }

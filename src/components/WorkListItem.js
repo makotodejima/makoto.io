@@ -11,7 +11,7 @@ export default props => {
       <Description>
         <h2>{props.title}</h2>
         <h4>{`${props.type} | ${props.client}`}</h4>
-        <p style={{ color: `darkgrey` }}>{props.keywords}</p>
+        <p style={{ color: `grey` }}>{props.keywords}</p>
       </Description>
     </Wrapper>
   );
@@ -20,6 +20,7 @@ export default props => {
 const Wrapper = styled.div`
   display: flex;
   margin-bottom: 5rem;
+  /* justify-content: space-between; */
 `;
 
 const ImgWrapper = styled.div`

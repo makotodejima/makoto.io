@@ -31,7 +31,7 @@ function AboutPage(props) {
             ウェブ広告、記事執筆・編集にも経験があります。現在はヨーロッパの会社を中心にマーケティングの仕事をしています。
           </p>
 
-          <p className="name">Makoto Dejima | 出島 誠</p>
+          {/* <p className="name">Makoto Dejima | 出島 誠</p> */}
         </div>
 
         <AboutImage />
@@ -46,7 +46,7 @@ export default AboutPage;
 const AboutContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   margin-bottom: 3rem;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -61,7 +61,7 @@ const AboutContainer = styled.div`
 
     .intro {
       line-height: 2;
-      border-left: 4px solid black;
+      border-left: 2px solid black;
       padding-left: 1rem;
       text-align: justify;
       @media (max-width: 768px) {

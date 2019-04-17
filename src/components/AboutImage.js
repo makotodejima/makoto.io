@@ -27,10 +27,10 @@ const AboutImage = () => {
         {...bind()}
         style={{
           transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`),
-          left: "31%",
-          top: "26%",
-          width: "40%",
-          position: "absolute"
+          position: "absolute",
+          left: "76px",
+          top: "64px",
+          width: "105px"
         }}
         draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
         src={poco}

@@ -64,8 +64,13 @@ const IndexPage = () => (
         <Label>Apps</Label>
         <Apps />
 
-        <Label>Get in touch</Label>
-        <h3>Interested in working together?</h3>
+        <Label>Interested in working together?</Label>
+        <p>
+          I am always looking for interesting projects and people to collaborate
+          with. Please feel free to get in touch with me. I would love to hear
+          from you.
+        </p>
+        <h5>makotodejima@gmail.com</h5>
       </Layout>
     )}
   />
