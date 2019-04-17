@@ -84,3 +84,34 @@ export const work = {
     altText: "Soreike San Francisco Tee"
   }
 };
+
+export const apps = {
+  sobasquare: {
+    id: "sobasquare",
+    title: "Sobasquare",
+    client: null,
+    type: "Soba Restaurant Exploring",
+    keywords:
+      "React, Redux, Foursquare API, FLIP Animation, Sass, styled-components",
+    path: "https://sobasquare.mkdjm.now.sh",
+    altText: "Never stop exploring soba place"
+  },
+  flashcard: {
+    id: "flashcard",
+    title: "Flashcard App",
+    client: null,
+    type: "Flashcard for EN/JP/GER words",
+    keywords: "React, Firebase, styled-components",
+    path: "http://clean-toothbrush.surge.sh",
+    altText: "Flashcard App, GER/ENG/JP"
+  },
+  pomodoro: {
+    id: "pomodoro",
+    title: "Pomodoro Timer",
+    client: null,
+    type: "Productivity app with cat face",
+    keywords: "React, Redux, Sass",
+    path: "https://pomodoro-redux.mkdjm.now.sh/",
+    altText: "Pomodoro Timer with Cat Face"
+  }
+};

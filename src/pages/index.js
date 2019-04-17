@@ -2,19 +2,15 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import {
-  WorksListContainer,
-  Label,
-  WritingLink
-} from "../components/StyledComps";
+import { featured } from "../data/data";
+import { WorksListContainer, Label } from "../components/StyledComps";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import WorkListItem from "../components/WorkListItem";
-import { featured } from "../data/data";
+import Writing from "../components/Writing";
+import Apps from "../components/Apps";
 import vid from "../images/nao300.mp4";
-
-import weq from "../images/weq.jpg";
 
 const IndexPage = () => (
   <StaticQuery
@@ -66,31 +62,7 @@ const IndexPage = () => (
         </WorksListContainer>
 
         <Label>Apps</Label>
-
-        {/* <Label>Writing</Label>
-
-        <WritingLink>
-          <a
-            href="https://medium.com/this-week-in-america"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tech and politics / テクノロジーと政治
-          </a>
-          <br />I am writing about technology, startups, and politics.
-        </WritingLink>
-        <WritingLink>
-          <a
-            href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WeQ Japanese PR <img src={weq} alt="WeQ" />
-          </a>
-          <br />
-          I'm working with German global ad-tech company to accelerate their
-          growth in Japanese market.
-        </WritingLink> */}
+        <Apps />
       </Layout>
     )}
   />

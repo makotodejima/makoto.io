@@ -21,7 +21,6 @@ export const WritingLink = styled.p`
 export const WorksListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin-bottom: 6rem; */
 
   @media (max-width: 375px) {
   }
