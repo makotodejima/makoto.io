@@ -95,16 +95,16 @@ const HeaderLinks = styled.div`
     margin-left: 1.5rem;
     text-decoration: none;
     &.current {
-      color: blue;
+      color: grey;
     }
     &::before {
       content: "";
       position: absolute;
       visibility: hidden;
       width: 100%;
-      height: 1px;
+      height: 3px;
       background-color: #3d4852;
-      bottom: -1px;
+      bottom: 0;
       left: 0;
       transform: scaleX(0);
       transition: all 0.25s ease-in-out 0s;

@@ -11,7 +11,7 @@ export default props => {
       <Description>
         <h2>{props.title}</h2>
         <h4>{`${props.type} | ${props.client}`}</h4>
-        <p>{props.keywords}</p>
+        <p style={{ color: `darkgrey` }}>{props.keywords}</p>
       </Description>
     </Wrapper>
   );

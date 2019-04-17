@@ -63,9 +63,9 @@ const FooterLinks = styled.div`
     position: absolute;
     visibility: hidden;
     width: 100%;
-    height: 1px;
+    height: 3px;
     background-color: grey;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     transform: scaleX(0);
     transition: all 0.25s ease-in-out 0s;

@@ -11,7 +11,7 @@ export default props => {
       <Description>
         <h2>{props.title}</h2>
         <h4>{props.type}</h4>
-        <p>{props.keywords}</p>
+        <i>{props.keywords}</i>
       </Description>
     </Wrapper>
   );
