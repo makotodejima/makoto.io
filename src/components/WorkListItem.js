@@ -10,8 +10,7 @@ export default props => {
       </Link>
       <Description>
         <h2>{props.title}</h2>
-        <h4>{props.client}</h4>
-        <h4>{props.type}</h4>
+        <h4>{`${props.type} | ${props.client}`}</h4>
         <p>{props.keywords}</p>
       </Description>
     </Wrapper>

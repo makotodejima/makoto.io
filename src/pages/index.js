@@ -34,10 +34,10 @@ const IndexPage = () => (
         <WorksListContainer>
           <WorkListItem
             key="naotatsu_kaku"
-            title="Artist Naotatsu Kaku's website"
-            client="Naotatsu Kaku"
-            type="Website Design and Development"
-            keywords="React, Gatsby, Netlify CMS, SVG Animation, Anime.js, "
+            title="Naotatsu Kaku's website"
+            client="Visual Artist, Naotatsu Kaku"
+            type="Website design and development"
+            keywords="React, Gatsby, Netlify CMS, Anime.js, SVG Animation"
             path="null"
           >
             <video style={{ width: `220px` }} autoPlay loop muted playsInline>
@@ -63,6 +63,9 @@ const IndexPage = () => (
 
         <Label>Apps</Label>
         <Apps />
+
+        <Label>Get in touch</Label>
+        <h3>Interested in working together?</h3>
       </Layout>
     )}
   />
