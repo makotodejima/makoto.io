@@ -64,9 +64,7 @@ const IndexPage = () => (
         <Label>Apps</Label>
         <Apps />
 
-        <Label>
-          Interested in working together? Any question or something else?
-        </Label>
+        <Label>Interested in working together? Get in touch.</Label>
         <p>
           I am always looking for interesting projects and people to collaborate
           with. Please feel free to get in touch with me. I would love to hear
