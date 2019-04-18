@@ -55,7 +55,7 @@ export default SocialLinks;
 
 const SocialLinksContainer = styled.div`
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: 1.8rem;
   a {
     transition: all 0.25s ease-in-out;

@@ -91,8 +91,8 @@ const Intro = styled.div`
 
 const StyledForm = styled.div`
   /* border-top: 1px solid black; */
-  padding: 2rem;
-  margin: 2rem auto 0;
+  padding: 2rem 0;
+  margin: 2rem 0 0;
   width: 70%;
   form {
     display: flex;
@@ -144,7 +144,8 @@ const StyledForm = styled.div`
     button {
       display: inline-block;
       padding: 0.6rem 2rem;
-      margin: 1rem auto 0;
+      margin-top: 20px;
+      width: 150px;
       text-align: center;
       background: black;
       color: #ffffff;
