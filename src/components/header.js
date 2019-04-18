@@ -75,6 +75,7 @@ const Hamburger = styled.button`
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
+  background-color: transparent;
   cursor: pointer;
   :focus {
     outline: 0;
