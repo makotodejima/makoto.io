@@ -36,7 +36,7 @@ const IndexPage = () => (
             key="naotatsu_kaku"
             title="Naotatsu Kaku's website"
             client="Visual Artist, Naotatsu Kaku"
-            type="Website design and development"
+            type="Design and development"
             keywords="React, Gatsby, Netlify CMS, Anime.js, SVG Animation"
             path="null"
           >
@@ -64,7 +64,9 @@ const IndexPage = () => (
         <Label>Apps</Label>
         <Apps />
 
-        <Label>Interested in working together?</Label>
+        <Label>
+          Interested in working together? Any question or something else?
+        </Label>
         <p>
           I am always looking for interesting projects and people to collaborate
           with. Please feel free to get in touch with me. I would love to hear
