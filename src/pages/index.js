@@ -38,7 +38,7 @@ const IndexPage = () => (
             client="Visual Artist, Naotatsu Kaku"
             type="Design and development"
             keywords="React, Gatsby, Netlify CMS, Anime.js, SVG Animation"
-            path="null"
+            path="naotatsu-kaku"
           >
             <video style={{ width: `220px` }} autoPlay loop muted playsInline>
               <source src={vid} type="video/mp4" />

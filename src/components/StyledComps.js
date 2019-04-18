@@ -17,7 +17,7 @@ export const WritingLink = styled.p`
   }
 `;
 
-// Index and Works
+// Index and Work top
 export const WorksListContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ export const PageTitle = styled.h2`
   margin: 2rem 0;
 `;
 
-// Work
+// In Each works
 export const WorkTitle = styled.h2`
   margin: 7rem 0 0.6rem;
 `;
@@ -48,16 +48,3 @@ export const WorkPageWrapper = styled.div`
     margin: 2rem auto;
   }
 `;
-
-// h3 {
-//   font-weight: lighter;
-//   letter-spacing: 0.2rem;
-//   margin-top: 5rem;
-//   margin-bottom: 0.3rem;
-// }
-
-// h2 {
-//   letter-spacing: 0.05rem;
-//   margin-bottom: 7rem;
-// }
-// `;
