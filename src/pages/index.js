@@ -8,7 +8,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import WorkListItem from "../components/WorkListItem";
-import Writing from "../components/Writing";
+import Email from "../components/Email";
 import Apps from "../components/Apps";
 import vid from "../images/nao300.mp4";
 
@@ -72,7 +72,7 @@ const IndexPage = () => (
           with. Please feel free to get in touch with me. I would love to hear
           from you.
         </p>
-        <h5>makotodejima@gmail.com</h5>
+        <Email />
       </Layout>
     )}
   />

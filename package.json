@@ -3,9 +3,6 @@
   "description": "Makoto Dejima - Designer and Front-End Developer",
   "version": "2.1.0",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.15",
-    "@fortawesome/free-brands-svg-icons": "^5.7.2",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.2.9",
     "gatsby-image": "^2.0.32",

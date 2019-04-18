@@ -41,6 +41,23 @@ const CopyEmail = styled.h4`
     top: -2px;
     left: 0;
     transform: translateX(190px);
+    button {
+      margin-left: 2px;
+      cursor: pointer;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 2px 5px;
+      border-radius: 15px;
+      border: black 2px solid;
+      background-color: transparent;
+      font-size: 0.8rem;
+      &:active {
+        transform: scale(0.96);
+        background-color: black;
+        color: white;
+      }
+    }
   }
   span {
     /* position: absolute; */
