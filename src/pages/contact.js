@@ -1,20 +1,11 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { PageTitle } from "../components/StyledComps";
+import Email from "../components/Email";
 
 const ContactPage = props => {
-  const [copySuccess, setCopySuccess] = useState();
-  const ref = useRef(null);
-
-  const copyToClick = e => {
-    ref.current.select();
-    document.execCommand("copy");
-    e.target.focus();
-    setCopySuccess("Copied to clipboard!");
-  };
-
   return (
     <Layout currentPath={props.location.pathname}>
       <SEO
@@ -37,23 +28,8 @@ const ContactPage = props => {
           Eメール、LinkedIn、または下記のフォームからお気軽にご連絡ください。
         </p>
       </Intro>
-      <CopyEmail>
-        makotodejima@gmail.com
-        {/* Logical shortcut for only displaying the 
-          button if the copy command exists */
-        document.queryCommandSupported("copy") && (
-          <div className="copyBtn">
-            <button onClick={copyToClick}>Copy</button>
-            <span>{copySuccess}</span>
-          </div>
-        )}
-        <input
-          readOnly
-          style={{ opacity: 0 }}
-          ref={ref}
-          value="makotodejima@gmail.com"
-        />
-      </CopyEmail>
+
+      <Email />
 
       <StyledForm className="form-container">
         <form name="contact" method="post" data-netlify="true">
@@ -109,43 +85,9 @@ export default ContactPage;
 
 const Intro = styled.div`
   line-height: 2;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   p {
     margin: 1rem 0;
-  }
-`;
-
-const CopyEmail = styled.h4`
-  text-align: "center";
-  position: relative;
-  .copyBtn {
-    position: absolute;
-    top: -2px;
-    left: 0;
-    transform: translateX(190px);
-  }
-  span {
-    /* position: absolute; */
-    /* transform: translateX(-50%); */
-    /* margin-top: 20px; */
-    font-weight: lighter;
-    margin-left: 5px;
-    color: darkgrey;
-
-    /* ::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      border-bottom: 10px solid transparent;
-      border-top: 10px solid transparent;
-      border-right: 10px solid grey;
-      transform: translate(-50%, -100%);
-      box-shadow: 0px 2px 50px -15px rgba(0, 0, 0, 0.5);
-    } */
-  }
-  input {
-    position: absolute;
-    transform: translate(-3000px, -3000px); // put somewhere off the screen
   }
 `;
 
