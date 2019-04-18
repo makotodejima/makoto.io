@@ -3,10 +3,17 @@ import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import { WorksListContainer, PageTitle } from "../components/StyledComps";
+import {
+  WorksListContainer,
+  PageTitle,
+  Label
+} from "../components/StyledComps";
 import Layout from "../components/layout";
+import Apps from "../components/Apps";
 import { work } from "../data/data";
 import WorkListItem from "../components/WorkListItem";
+import { LokiFsAdapter } from "lokijs";
+import Writing from "../components/Writing";
 
 function WorkPage(props) {
   return (
@@ -49,6 +56,9 @@ function WorkPage(props) {
               );
             })}
           </WorksListContainer>
+          <Label>Apps</Label>
+          <Apps />
+          <Writing />
         </Layout>
       )}
     />

@@ -24,9 +24,7 @@ const ContactPage = props => {
       <PageTitle>Contact</PageTitle>
       <Intro>
         <p>Please feel free to contact me via email or the form below.</p>
-        <p>
-          Eメール、LinkedIn、または下記のフォームからお気軽にご連絡ください。
-        </p>
+        <p>Eメール、または下記のフォームからお気軽にご連絡ください。</p>
       </Intro>
 
       <Email />

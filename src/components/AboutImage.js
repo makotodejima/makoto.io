@@ -47,7 +47,7 @@ export default AboutImage;
 
 const MeImageContainer = styled.div`
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   img {
     margin-bottom: 0;
   }
