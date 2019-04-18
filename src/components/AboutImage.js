@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { useGesture } from "react-with-gesture";
-import { MeImageContainer, FadeOutText } from "../components/StyledComps";
+import styled from "styled-components";
 import clamp from "lodash-es/clamp";
 import me from "../images/me.jpg";
 import poco from "../images/poco.png";
@@ -44,3 +44,32 @@ const AboutImage = () => {
 };
 
 export default AboutImage;
+
+const MeImageContainer = styled.div`
+  position: relative;
+  margin: 0 auto;
+  img {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
+`;
+
+const FadeOutText = styled.p`
+  position: absolute;
+  text-align: center;
+  letter-spacing: normal;
+  font-size: 0.75rem;
+  width: 100%;
+  color: lightgray;
+  margin-bottom: 1rem;
+  top: 234px;
+  transition: opacity 1500ms;
+  opacity: ${props => (props.mouseOnImage ? 0 : 1)};
+
+  @media (max-width: 576px) {
+    letter-spacing: -0.05em;
+  }
+`;

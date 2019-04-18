@@ -48,33 +48,3 @@ export const WorkPageWrapper = styled.div`
     margin: 2rem auto;
   }
 `;
-
-// About Page
-export const MeImageContainer = styled.div`
-  position: relative;
-  margin: 0 auto;
-  img {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 3rem;
-  }
-`;
-
-export const FadeOutText = styled.p`
-  position: absolute;
-  text-align: center;
-  letter-spacing: normal;
-  font-size: 0.75rem;
-  width: 100%;
-  color: lightgray;
-  margin-bottom: 1rem;
-  bottom: 0;
-  transition: opacity 1500ms;
-  opacity: ${props => (props.mouseOnImage ? 0 : 1)};
-
-  @media (max-width: 576px) {
-    letter-spacing: -0.05em;
-  }
-`;

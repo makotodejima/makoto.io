@@ -24,11 +24,14 @@ function AboutPage(props) {
       <AboutContainer>
         <div className="wrapper">
           <p className="intro">
-            Tokyo-born designer / front-end developer. Also experienced in
-            ad-tech, Japanese writing and editing. Currently working with
-            several companies to achieve their goals in Japanese market.
-            <br />
-            ウェブ広告、記事執筆・編集にも経験があります。現在はヨーロッパの会社を中心にマーケティングの仕事をしています。
+            Tokyo-born Graphic Designer and Front-End Developer who loves and
+            cares about design. I used to covered tech industry as a journalist
+            with Japanese media, and ended up putting myself in the world of
+            tech as a software engineer due to strong interest in the web
+            development. Also experienced in ad-tech, Japanese writing, editing
+            and localization.
+            <br /> Skills:{" "}
+            <i>React, Gatsby, Angular, Graphic and Motion Design</i>
           </p>
 
           {/* <p className="name">Makoto Dejima | 出島 誠</p> */}
@@ -60,7 +63,7 @@ const AboutContainer = styled.div`
     }
 
     .intro {
-      line-height: 2;
+      line-height: 1.6;
       border-left: 2px solid black;
       padding-left: 1rem;
       text-align: justify;
