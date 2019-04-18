@@ -2,21 +2,17 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { PageTitle } from "../components/StyledComps";
 
 const ContactPage = props => {
-  const [copySuccess, setCopySuccess] = useState("");
+  const [copySuccess, setCopySuccess] = useState();
   const ref = useRef(null);
 
   const copyToClick = e => {
-    let target = document.getElementById("emailaddress");
-    console.log(target);
-    let range = document.createRange();
-    range.selectNode(target);
-    window.getSelection().addRange(range);
-
+    ref.current.select();
     document.execCommand("copy");
-    setCopySuccess("Copied!");
-    console.log(copySuccess);
+    e.target.focus();
+    setCopySuccess("Copied to clipboard!");
   };
 
   return (
@@ -34,21 +30,31 @@ const ContactPage = props => {
           `Motion`
         ]}
       />
+      <PageTitle>Contact</PageTitle>
       <Intro>
+        <p>Please feel free to contact me via email or the form below.</p>
         <p>
-          I love to design, develop, and write. <br />
-          Please feel free to contact me at makotodejima@gmail.com. or using the
-          form below.
+          Eメール、LinkedIn、または下記のフォームからお気軽にご連絡ください。
         </p>
-        <p>
-          デザイン、開発、執筆が好きです。
-          <br />
-          Eメール、または下記のフォームからどうぞお気軽にご連絡ください。
-        </p>
-        <h4 id="emailaddress" onClick={copyToClick} ref={ref}>
-          makotodejima@gmail.com
-        </h4>
       </Intro>
+      <CopyEmail>
+        makotodejima@gmail.com
+        {/* Logical shortcut for only displaying the 
+          button if the copy command exists */
+        document.queryCommandSupported("copy") && (
+          <div className="copyBtn">
+            <button onClick={copyToClick}>Copy</button>
+            <span>{copySuccess}</span>
+          </div>
+        )}
+        <input
+          readOnly
+          style={{ opacity: 0 }}
+          ref={ref}
+          value="makotodejima@gmail.com"
+        />
+      </CopyEmail>
+
       <StyledForm className="form-container">
         <form name="contact" method="post" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
@@ -102,17 +108,52 @@ const ContactPage = props => {
 export default ContactPage;
 
 const Intro = styled.div`
-  text-align: center;
   line-height: 2;
+  margin-bottom: 2rem;
   p {
-    margin: 1rem;
+    margin: 1rem 0;
+  }
+`;
+
+const CopyEmail = styled.h4`
+  text-align: "center";
+  position: relative;
+  .copyBtn {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    transform: translateX(190px);
+  }
+  span {
+    /* position: absolute; */
+    /* transform: translateX(-50%); */
+    /* margin-top: 20px; */
+    font-weight: lighter;
+    margin-left: 5px;
+    color: darkgrey;
+
+    /* ::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-right: 10px solid grey;
+      transform: translate(-50%, -100%);
+      box-shadow: 0px 2px 50px -15px rgba(0, 0, 0, 0.5);
+    } */
+  }
+  input {
+    position: absolute;
+    transform: translate(-3000px, -3000px); // put somewhere off the screen
   }
 `;
 
 const StyledForm = styled.div`
+  /* border-top: 1px solid black; */
   padding: 2rem;
-  margin: 0 auto;
-  width: 60%;
+  margin: 2rem auto 0;
+  width: 70%;
   form {
     display: flex;
     flex-direction: column;

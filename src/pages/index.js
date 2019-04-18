@@ -34,7 +34,7 @@ const IndexPage = () => (
         <WorksListContainer>
           <WorkListItem
             key="naotatsu_kaku"
-            title="Naotatsu Kaku's website"
+            title="Naotatsu Kaku's Portfolio Website"
             client="Visual Artist, Naotatsu Kaku"
             type="Design and development"
             keywords="React, Gatsby, Netlify CMS, Anime.js, SVG Animation"

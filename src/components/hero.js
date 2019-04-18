@@ -23,7 +23,7 @@ const Wrapper = styled.div`
     font-weight: lighter;
     letter-spacing: 0.2rem;
     margin-top: 5rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   h2 {
