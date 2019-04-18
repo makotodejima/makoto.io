@@ -1,14 +1,27 @@
 @import url("https://use.typekit.net/str3lfu.css");
 
-* {
-  color: #000025;
-}
 body {
+  color: #000025;
   background-color: rgb(255, 255, 248);
 }
 #logo {
   width: 80px;
   vertical-align: bottom;
+  #outer {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    stroke-dasharray: 483px;
+    stroke-dashoffset: 483px;
+    animation: dash 1.2s ease-in-out forwards;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* FROM BOTTOMLINK OLD COMPONENT
