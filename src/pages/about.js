@@ -26,7 +26,7 @@ function AboutPage(props) {
 
       <h3>Designer and Front-End Developer</h3>
 
-      <h3>ﾃﾞｻﾞｲﾅｰ･ｱﾝﾄﾞ･ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞﾍﾞﾛｯﾊﾟｰ</h3>
+      <h3>ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞｨﾍﾞﾛｯﾊﾟｰ</h3>
       {/* <h3>デザイナー・アンド・フロントエンドデベロッパー</h3> */}
       <AboutContainer>
         <div className="wrapper">

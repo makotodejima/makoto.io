@@ -113,7 +113,7 @@ const HeaderLinks = styled.div`
       visibility: hidden;
       width: 100%;
       height: 1.5px;
-      background-color: #3d4852;
+      background-color: ${props => props.color || "black"};
       bottom: 0;
       left: 0;
       transform: scaleX(0);
