@@ -5,6 +5,8 @@ import Img from "gatsby-image";
 import SEO from "../../components/seo";
 import Layout from "../../components/layout";
 import {
+  TopCoverColor,
+  TopImage,
   TopSection,
   WorkTitle,
   WorkCopy,
@@ -34,8 +36,8 @@ function TheLightOfTokyo() {
           />
 
           <TopSection>
-            <div className="background" />
-            <Img
+            <TopCoverColor color="#0a3d62" />
+            <TopImage
               className="top-image"
               fluid={data.the_light_of_tokyo_00.childImageSharp.fluid}
               alt="The Light of Tokyo - top"
@@ -50,7 +52,7 @@ function TheLightOfTokyo() {
               owns 4 locations in the central part of Tokyo. As the letters
               written in the card, they start to get dissolved into the night
               scape as the light of Tokyo printed with dark grey color. I won
-              the “Tokyo Postcard Award 2019” which started back in 2012.{" "}
+              the “Tokyo Postcard Award 2019” which started back in 2012.
             </WorkDescription>
           </TopSection>
 

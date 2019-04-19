@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Img from "gatsby-image";
 
 // Index
 export const Label = styled.div`
@@ -31,7 +32,23 @@ export const PageTitle = styled.h2`
   margin: 2rem 0;
 `;
 
-// In Each works
+// Across work pages
+
+export const TopCoverColor = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: ${props => props.color};
+  width: 100%;
+  height: 400px;
+  z-index: -1;
+`;
+
+export const TopImage = styled(Img)`
+  width: ${props => props.width || `50%`};
+  margin: 40px auto 5rem;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+`;
 
 export const TopSection = styled.div``;
 

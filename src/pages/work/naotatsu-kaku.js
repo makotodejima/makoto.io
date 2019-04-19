@@ -5,7 +5,12 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import {
+  TopCoverColor,
+  TopImage,
+  TopSection,
   WorkTitle,
+  WorkCopy,
+  WorkTag,
   WorkDescription,
   WorkPageWrapper
 } from "../../components/StyledComps";
@@ -18,9 +23,9 @@ function ManhattanPortage() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout>
+        <Layout color="white">
           <SEO
-            title="Manhattan Portage"
+            title="Naotatsu Kaku"
             keywords={[
               `Makoto Dejima`,
               `Designer`,
@@ -33,8 +38,28 @@ function ManhattanPortage() {
             ]}
           />
 
-          <WorkTitle>Naotatsu Kaku's Portfolio Website</WorkTitle>
-          <WorkDescription>Visual Artist, Naotatsu Kaku</WorkDescription>
+          <TopSection>
+            <TopCoverColor color="black" />
+            <TopImage
+              width="80%"
+              className="top-image"
+              fluid={data.naotatsu_01.childImageSharp.fluid}
+              alt="Naotatsu Kaku - 01"
+            />
+            <WorkTitle>Naotatsu Kaku's Portfolio Website</WorkTitle>
+            <WorkCopy>Visual Artist, Naotatsu Kaku</WorkCopy>
+            <WorkTag>
+              React, Gatsby, Netlify CMS, Anime.js, SVG Animation, Sass
+            </WorkTag>
+            <WorkDescription>
+              Naotatsu Kaku is a visual artist who is born and raised in Tokyo.
+              He has his family roots in Taiwan and his work represent his
+              thought on the identity. He recently won the "New Cosmos of
+              Photography Award" and continuously working on his visual work
+              with the help of Canon, a leading company in the photo printing
+              industry.
+            </WorkDescription>
+          </TopSection>
 
           <WorkPageWrapper>
             <div style={{ display: `flex`, justifyContent: `space-between` }}>
