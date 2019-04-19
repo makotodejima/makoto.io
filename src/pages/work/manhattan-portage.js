@@ -5,7 +5,13 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import {
+  TopCoverColor,
+  TopImage,
+  TopSection,
+  ExtLink,
   WorkTitle,
+  WorkCopy,
+  WorkTag,
   WorkDescription,
   WorkPageWrapper
 } from "../../components/StyledComps";
@@ -15,7 +21,7 @@ function ManhattanPortage() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout>
+        <Layout color="beige">
           <SEO
             title="Manhattan Portage"
             keywords={[
@@ -30,24 +36,43 @@ function ManhattanPortage() {
             ]}
           />
 
-          <WorkTitle>Manhattan Portage Art Collection</WorkTitle>
-          <WorkDescription>Messenger Bag Design</WorkDescription>
+          <TopSection>
+            <TopCoverColor color="#D83038" />
+            <TopImage
+              width="80%"
+              className="top-image"
+              fluid={data.manhattan_portage_00.childImageSharp.fluid}
+              alt="Manhattan Portage - 00"
+            />
+            <WorkTitle>Manhattan Portage Art Collection</WorkTitle>
+            <WorkCopy>Messenger Bag Design | Manhattan Portage</WorkCopy>
+            <WorkTag>Textile, Print, Graphic Design, Apparel</WorkTag>
+            <WorkDescription>
+              Naotatsu Kaku is a visual artist who is born and raised in Tokyo.
+              His family have their roots in Taiwan and his work represent his
+              thought on the identity. He recently won the "New Cosmos of
+              Photography Award" and is continuously working on his artwork with
+              the support from Canon, a leading company in the photo and camera
+              industry.
+            </WorkDescription>
+          </TopSection>
 
           <WorkPageWrapper>
             <Img
-              fluid={data.mp01.childImageSharp.fluid}
+              fluid={data.manhattan_portage_01.childImageSharp.fluid}
               alt="Manhattan Portage - 01"
             />
             <Img
-              fluid={data.mp02.childImageSharp.fluid}
+              fluid={data.manhattan_portage_02.childImageSharp.fluid}
               alt="Manhattan Portage - 02"
             />
+
             <Img
-              fluid={data.mp03.childImageSharp.fluid}
+              fluid={data.manhattan_portage_03.childImageSharp.fluid}
               alt="Manhattan Portage - 03"
             />
             <Img
-              fluid={data.mp04.childImageSharp.fluid}
+              fluid={data.manhattan_portage_04.childImageSharp.fluid}
               alt="Manhattan Portage - 04"
             />
           </WorkPageWrapper>
@@ -61,28 +86,45 @@ export default ManhattanPortage;
 
 const query = graphql`
   query {
-    mp01: file(relativePath: { eq: "mp01.jpg" }) {
+    manhattan_portage_00: file(
+      relativePath: { eq: "manhattan_portage_00.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    mp02: file(relativePath: { eq: "mp02.jpg" }) {
+    manhattan_portage_01: file(
+      relativePath: { eq: "manhattan_portage_01.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    mp03: file(relativePath: { eq: "mp03.jpg" }) {
+    manhattan_portage_02: file(
+      relativePath: { eq: "manhattan_portage_02.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    mp04: file(relativePath: { eq: "mp04.jpg" }) {
+    manhattan_portage_03: file(
+      relativePath: { eq: "manhattan_portage_03.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    manhattan_portage_04: file(
+      relativePath: { eq: "manhattan_portage_04.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
