@@ -32,14 +32,32 @@ export const PageTitle = styled.h2`
 `;
 
 // In Each works
+
+export const TopSection = styled.div``;
+
 export const WorkTitle = styled.h2`
-  margin: 7rem 0 0.6rem;
+  margin: 0 0 0.6rem;
+  text-align: center;
 `;
 
-export const WorkDescription = styled.div`
-  margin-bottom: 7rem;
+export const WorkCopy = styled.div`
+  margin-bottom: 1rem;
+  text-align: center;
   letter-spacing: 0.05em;
   font-weight: lighter;
+`;
+
+export const WorkTag = styled.p`
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  color: grey;
+`;
+export const WorkDescription = styled.div`
+  width: 33%;
+  margin: 0 auto 3rem;
+  font-size: 0.9rem;
 `;
 
 export const WorkPageWrapper = styled.div`

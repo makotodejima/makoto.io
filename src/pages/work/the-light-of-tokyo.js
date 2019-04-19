@@ -5,7 +5,10 @@ import Img from "gatsby-image";
 import SEO from "../../components/seo";
 import Layout from "../../components/layout";
 import {
+  TopSection,
   WorkTitle,
+  WorkCopy,
+  WorkTag,
   WorkDescription,
   WorkPageWrapper
 } from "../../components/StyledComps";
@@ -30,17 +33,26 @@ function TheLightOfTokyo() {
             ]}
           />
 
-          <div id="back" />
-          <Img
-            className="top-image"
-            fluid={data.lot_top.childImageSharp.fluid}
-            alt="The Light of Tokyo - top"
-          />
-
-          {/* <WorkTitle>The Light of Tokyo</WorkTitle>
-          <WorkDescription>
-            Tokyo Postcard Award 2019 by Hotel Ryumeikan
-          </WorkDescription> */}
+          <TopSection>
+            <div className="background" />
+            <Img
+              className="top-image"
+              fluid={data.lot_top.childImageSharp.fluid}
+              alt="The Light of Tokyo - top"
+            />
+            <WorkTitle>The Light of Tokyo</WorkTitle>
+            <WorkCopy>Tokyo Postcard Award 2019 by Hotel Ryumeikan</WorkCopy>
+            <WorkTag>Print, Illustration, Awarded</WorkTag>
+            <WorkDescription>
+              I designed the postcard for the hotel chain, Hotel Ryumeikan
+              Tokyo. It is offered to the guests as an amenity in every single
+              room. Ryumeikan Tokyo has over a hundred years of history and now
+              owns 4 locations in the central part of Tokyo. As the letters
+              written in the card, they start to get dissolved into the night
+              scape as the light of Tokyo printed with dark grey color. I won
+              the “Tokyo Postcard Award 2019” which started back in 2012.{" "}
+            </WorkDescription>
+          </TopSection>
 
           <WorkPageWrapper>
             <Img
