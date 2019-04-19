@@ -30,10 +30,17 @@ function TheLightOfTokyo() {
             ]}
           />
 
-          <WorkTitle>The Light of Tokyo</WorkTitle>
+          <div id="back" />
+          <Img
+            className="top-image"
+            fluid={data.lot_top.childImageSharp.fluid}
+            alt="The Light of Tokyo - top"
+          />
+
+          {/* <WorkTitle>The Light of Tokyo</WorkTitle>
           <WorkDescription>
             Tokyo Postcard Award 2019 by Hotel Ryumeikan
-          </WorkDescription>
+          </WorkDescription> */}
 
           <WorkPageWrapper>
             <Img
@@ -67,6 +74,13 @@ export default TheLightOfTokyo;
 
 const query = graphql`
   query {
+    lot_top: file(relativePath: { eq: "lot_top.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     tpc01: file(relativePath: { eq: "tpc01.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
