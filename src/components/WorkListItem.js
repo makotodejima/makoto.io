@@ -19,7 +19,7 @@ export default props => {
 
 const Wrapper = styled.div`
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   /* justify-content: space-between; */
 `;
 

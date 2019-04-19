@@ -38,8 +38,9 @@ const StyledFooter = styled.div`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
-    padding: 2.5rem;
+    padding: 1rem;
+    /* flex-direction: column-reverse; */
+    /* padding: 2.5rem; */
   }
 `;
 

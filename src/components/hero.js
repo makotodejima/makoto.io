@@ -22,12 +22,12 @@ const Wrapper = styled.div`
   h3 {
     font-weight: lighter;
     letter-spacing: 0.2rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
     margin-bottom: 0.3rem;
   }
 
   h2 {
     letter-spacing: 0.05rem;
-    margin-bottom: 9rem;
+    margin-bottom: 8rem;
   }
 `;

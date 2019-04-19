@@ -12,7 +12,6 @@ import Layout from "../components/layout";
 import Apps from "../components/Apps";
 import { work } from "../data/data";
 import WorkListItem from "../components/WorkListItem";
-import { LokiFsAdapter } from "lokijs";
 import Writing from "../components/Writing";
 
 function WorkPage(props) {

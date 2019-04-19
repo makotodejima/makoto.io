@@ -9,10 +9,6 @@ import React from "react";
 import styled from "styled-components";
 import AppItem from "../components/AppItem";
 
-import pomodoro from "../images/pomodoro.mp4";
-import flashcard from "../images/flashcard.mp4";
-import sobasquare from "../images/sobasquare.mp4";
-
 import { apps } from "../data/data";
 
 export default () => {
@@ -42,4 +38,5 @@ const AppsContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3rem;
 `;

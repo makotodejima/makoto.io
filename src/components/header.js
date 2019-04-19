@@ -103,7 +103,7 @@ const HeaderLinks = styled.div`
       position: absolute;
       visibility: hidden;
       width: 100%;
-      height: 3px;
+      height: 1.5px;
       background-color: #3d4852;
       bottom: 0;
       left: 0;

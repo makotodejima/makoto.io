@@ -63,16 +63,17 @@ const IndexPage = () => (
 
         <Label>Apps</Label>
         <Apps />
-
-        <h3 style={{ marginTop: `30px` }}>
-          Interested in working together? Get in touch.
-        </h3>
-        <p>
-          I am always looking for interesting projects and people to collaborate
-          with. Please feel free to get in touch with me. I would love to hear
-          from you.
-        </p>
-        <Email />
+        <div style={{ marginBottom: `3rem` }}>
+          <h3 style={{ marginTop: 0 }}>
+            Interested in working together? Get in touch.
+          </h3>
+          <p>
+            I am always looking for interesting projects and people to
+            collaborate with. Please feel free to get in touch with me. I would
+            love to hear from you.
+          </p>
+          <Email />
+        </div>
       </Layout>
     )}
   />

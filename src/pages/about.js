@@ -21,6 +21,13 @@ function AboutPage(props) {
           `React`
         ]}
       />
+      <h4 className="name">Makoto Dejima</h4>
+      <h4 className="name">出島 誠</h4>
+
+      <h3>Designer and Front-End Developer</h3>
+
+      <h3>ﾃﾞｻﾞｲﾅｰ･ｱﾝﾄﾞ･ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞﾍﾞﾛｯﾊﾟｰ</h3>
+      {/* <h3>デザイナー・アンド・フロントエンドデベロッパー</h3> */}
       <AboutContainer>
         <div className="wrapper">
           <p className="intro">
@@ -33,8 +40,6 @@ function AboutPage(props) {
             <br /> Skills:{" "}
             <i>React, Gatsby, Angular, Graphic and Motion Design</i>
           </p>
-
-          {/* <p className="name">Makoto Dejima | 出島 誠</p> */}
         </div>
 
         <AboutImage />
@@ -50,7 +55,7 @@ const AboutContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: flex-start;

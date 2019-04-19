@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Index
 export const Label = styled.div`
   font-size: 1.25rem;
-  margin: 2rem 0 2rem;
+  margin: 0 0 2rem;
 `;
 
 export const WritingLink = styled.p`
@@ -21,6 +21,7 @@ export const WritingLink = styled.p`
 export const WorksListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 
   @media (max-width: 375px) {
   }
