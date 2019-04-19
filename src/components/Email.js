@@ -12,25 +12,28 @@ export default () => {
     setCopySuccess("Nice. Copied to clipboard!");
   };
 
-  return (
-    <CopyEmail>
-      makotodejima@gmail.com
-      {/* Logical shortcut for only displaying the 
+  if (typeof window !== `undefined`) {
+    return (
+      <CopyEmail>
+        makotodejima@gmail.com
+        {/* Logical shortcut for only displaying the 
           button if the copy command exists */
-      document.queryCommandSupported("copy") && (
-        <div className="copyBtn">
-          <button onClick={copyToClick}>Copy</button>
-          <span>{copySuccess}</span>
-        </div>
-      )}
-      <input
-        readOnly
-        style={{ opacity: 0 }}
-        ref={ref}
-        value="makotodejima@gmail.com"
-      />
-    </CopyEmail>
-  );
+        document.queryCommandSupported("copy") && (
+          <div className="copyBtn">
+            <button onClick={copyToClick}>Copy</button>
+            <span>{copySuccess}</span>
+          </div>
+        )}
+        <input
+          readOnly
+          style={{ opacity: 0 }}
+          ref={ref}
+          value="makotodejima@gmail.com"
+        />
+      </CopyEmail>
+    );
+  }
+  return null;
 };
 
 const CopyEmail = styled.h4`
