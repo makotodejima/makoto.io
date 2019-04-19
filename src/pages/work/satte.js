@@ -5,7 +5,13 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import {
+  TopCoverColor,
+  TopImage,
+  TopSection,
+  ExtLink,
   WorkTitle,
+  WorkCopy,
+  WorkTag,
   WorkDescription,
   WorkPageWrapper
 } from "../../components/StyledComps";
@@ -15,7 +21,7 @@ function TheLightOfTokyo() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout>
+        <Layout headerColor="#fffff7">
           <SEO
             title="Satte City"
             keywords={[
@@ -30,8 +36,24 @@ function TheLightOfTokyo() {
             ]}
           />
 
-          <WorkTitle>Satte City Promotion Logo</WorkTitle>
-          <WorkDescription>Logo Design</WorkDescription>
+          <TopSection>
+            <TopCoverColor color="#f8bbd0" />
+            <TopImage
+              width="80%"
+              className="top-image"
+              fluid={data.satte01.childImageSharp.fluid}
+              alt="Manhattan Portage - 00"
+            />
+            <WorkTitle>Satte City Promotion Logo</WorkTitle>
+            <WorkCopy>Promotion Logo Design</WorkCopy>
+            <WorkTag>Logo, Trademark, Local Government</WorkTag>
+            <WorkDescription>
+              Satte city is residential region located in Saitama Prefecture.
+              The city hall was seeking the catchy and symbolic logo for use of
+              city promotion. The name means "Happy" and "Hand". The city is
+              also famous for cherry-blossom.
+            </WorkDescription>
+          </TopSection>
 
           <WorkPageWrapper>
             <Img

@@ -101,7 +101,7 @@ const StyledForm = styled.div`
     .name {
       display: flex;
       span:nth-child(1) {
-        margin-right: 0.5rem;
+        margin-right: 1rem;
       }
       span {
         display: flex;
@@ -116,11 +116,12 @@ const StyledForm = styled.div`
     input {
       width: 100%;
       padding: 15px;
-      border: 0;
       outline: 0;
       -webkit-appearance: none;
       margin: 1rem auto 1rem;
       transition: 0.3s;
+      border: 0;
+      border-bottom: 1px solid lightgrey;
       &:focus {
         border-bottom: 1px solid grey;
         background: whitesmoke;
@@ -132,6 +133,7 @@ const StyledForm = styled.div`
       width: 100%;
       padding: 20px;
       border: 0;
+      border-bottom: 1px solid lightgrey;
       outline: 0;
       -webkit-appearance: none;
       margin: 1rem 0 1rem;

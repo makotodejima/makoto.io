@@ -51,7 +51,7 @@ export const TopSection = styled.div`
 export const TopImage = styled(Img)`
   width: ${props => props.width || `50%`};
   margin: 40px auto 5rem;
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.18);
 `;
 
 export const ExtLink = styled.div`
@@ -90,6 +90,7 @@ export const WorkCopy = styled.div`
 `;
 
 export const WorkTag = styled.p`
+  font-size: 1.1rem;
   margin-bottom: 3rem;
   text-align: center;
   letter-spacing: 0.05em;
