@@ -4,22 +4,27 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 
-function Header({ currentPath }) {
+/* 
+'color' props is passed down from Layout Comp
+it defines header logo, text and hamburger color
+*/
+
+function Header({ color, currentPath }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <StyledNav>
       <Link to="/">
-        <Logo />
+        <Logo color={color} />
       </Link>
-      <Hamburger onClick={() => toggleExpansion(!isExpanded)}>
+      <Hamburger color={color} onClick={() => toggleExpansion(!isExpanded)}>
         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
           <path d="M0 3h20v1H0V3zm0 6h20v1H0V9zm0 6h20v1H0v-2z" />
         </svg>
       </Hamburger>
 
-      <HeaderLinks isExpanded={isExpanded}>
+      <HeaderLinks color={color} isExpanded={isExpanded}>
         <Link to="/work/" className={currentPath === "/work/" ? `current` : ""}>
           Work
         </Link>
@@ -47,7 +52,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  siteTitle: ``
+  siteTitle: `Makoto Dejima | Designer and Front-End Developer`
 };
 
 export default Header;
@@ -77,6 +82,10 @@ const Hamburger = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  path {
+    stroke: ${props => props.color || "black"};
+  }
+
   :focus {
     outline: 0;
   }
@@ -92,7 +101,7 @@ const HeaderLinks = styled.div`
   a {
     display: inline-block;
     position: relative;
-    color: black;
+    color: ${props => props.color || "black"};
     margin-left: 1.5rem;
     text-decoration: none;
     &.current {

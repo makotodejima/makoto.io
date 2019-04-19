@@ -7,7 +7,7 @@ import Footer from "./Footer";
 // GLOBAL CSS
 import "./layout.scss";
 
-export default ({ children, currentPath }) => {
+export default ({ children, color, currentPath }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -20,14 +20,15 @@ export default ({ children, currentPath }) => {
         }
       `}
       render={data => (
-        <Layout>
+        <StyledLayout>
           <Header
+            color={color}
             siteTitle={data.site.siteMetadata.title}
             currentPath={currentPath}
           />
           <Main>{children}</Main>
           <Footer />
-        </Layout>
+        </StyledLayout>
       )}
     />
   );
@@ -37,7 +38,7 @@ export default ({ children, currentPath }) => {
 //   children: PropTypes.node.isRequired
 // };
 
-const Layout = styled.div`
+const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;

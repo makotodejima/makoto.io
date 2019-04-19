@@ -19,11 +19,6 @@ export default () => {
         </animated.span>{" "}
         Makoto Dejima
       </div>
-      {/* <FooterLinks>
-        <Link to="/">Home</Link>
-        <Link to="/about/">About</Link>
-        <Link to="/contact/">Contact</Link>
-      </FooterLinks> */}
     </StyledFooter>
   );
 };

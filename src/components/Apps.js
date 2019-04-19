@@ -1,10 +1,3 @@
-/* 
-sobasquare redux 
-pomodoro timer redux
-flashcard
-matching game
-*/
-
 import React from "react";
 import styled from "styled-components";
 import AppItem from "../components/AppItem";

@@ -18,7 +18,7 @@ function TheLightOfTokyo() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout>
+        <Layout color="white">
           <SEO
             title="The Light of Tokyo"
             keywords={[

@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-export default () => (
-  <SVG id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198.3 91.46">
+export default ({ color }) => (
+  <SVG
+    color={color}
+    id="logo"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 198.3 91.46"
+  >
     <title>md</title>
     <path
       id="outer"
@@ -25,13 +30,17 @@ const SVG = styled.svg`
     vertical-align: bottom;
     #outer {
       fill: none;
-      stroke: #000;
+      stroke: ${props => props.color || "black"};
       stroke-miterlimit: 10;
       stroke-width: 5px;
       stroke-dasharray: 483px;
       stroke-dashoffset: 483px;
       /* 'dash' animation is defined in Scss */
       animation: dash 1.2s ease-in-out forwards;
+    }
+    #m,
+    #d {
+      fill: ${props => props.color || "black"};
     }
   }
 `;
