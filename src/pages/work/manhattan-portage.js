@@ -21,7 +21,7 @@ function ManhattanPortage() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout color="beige">
+        <Layout headerColor="beige">
           <SEO
             title="Manhattan Portage"
             keywords={[
@@ -48,12 +48,14 @@ function ManhattanPortage() {
             <WorkCopy>Messenger Bag Design | Manhattan Portage</WorkCopy>
             <WorkTag>Textile, Print, Graphic Design, Apparel</WorkTag>
             <WorkDescription>
-              Naotatsu Kaku is a visual artist who is born and raised in Tokyo.
-              His family have their roots in Taiwan and his work represent his
-              thought on the identity. He recently won the "New Cosmos of
-              Photography Award" and is continuously working on his artwork with
-              the support from Canon, a leading company in the photo and camera
-              industry.
+              Manhattan Portage is one of the most well-known messenger bag
+              brand and manufacturer in the world. They started from New York
+              City in 1983. The simple philosophy they set out to achieve back
+              in 1983, is "New York Tough." Their outdoor gear and packs are
+              crafted with materials like CORDURA brand nylon and high quality
+              plastic Delrin buckles. "Manhattan Portage Art Award" is held
+              every year and artists create design that matches Manhattan
+              Portage's culture, materials and philosophy of "New York Tough".
             </WorkDescription>
           </TopSection>
 

@@ -7,7 +7,7 @@ import Footer from "./Footer";
 // GLOBAL CSS
 import "./layout.scss";
 
-export default ({ children, color, currentPath }) => {
+export default ({ children, headerColor, currentPath }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -22,7 +22,7 @@ export default ({ children, color, currentPath }) => {
       render={data => (
         <StyledLayout>
           <Header
-            color={color}
+            color={headerColor}
             siteTitle={data.site.siteMetadata.title}
             currentPath={currentPath}
           />

@@ -24,7 +24,7 @@ function ManhattanPortage() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout color="white">
+        <Layout headerColor="white">
           <SEO
             title="Naotatsu Kaku"
             keywords={[

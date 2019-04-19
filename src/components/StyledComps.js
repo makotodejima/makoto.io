@@ -44,12 +44,14 @@ export const TopCoverColor = styled.div`
   z-index: -1;
 `;
 
-export const TopSection = styled.div``;
+export const TopSection = styled.div`
+  margin-bottom: 3rem;
+`;
 
 export const TopImage = styled(Img)`
   width: ${props => props.width || `50%`};
   margin: 40px auto 5rem;
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
 `;
 
 export const ExtLink = styled.div`
@@ -81,7 +83,7 @@ export const WorkTitle = styled.h2`
 `;
 
 export const WorkCopy = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: lighter;

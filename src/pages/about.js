@@ -21,13 +21,15 @@ function AboutPage(props) {
           `React`
         ]}
       />
-      <h4 className="name">Makoto Dejima</h4>
-      <h4 className="name">出島 誠</h4>
+      <h4 className="name">
+        <span>Makoto Dejima </span> <span> 出島 誠</span>
+      </h4>
 
-      <h3>Designer and Front-End Developer</h3>
+      <h3>
+        <span>Designer and Front-End Developer</span>
+        <span> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
+      </h3>
 
-      <h3>ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞｨﾍﾞﾛｯﾊﾟｰ</h3>
-      {/* <h3>デザイナー・アンド・フロントエンドデベロッパー</h3> */}
       <AboutContainer>
         <div className="wrapper">
           <p className="intro">
