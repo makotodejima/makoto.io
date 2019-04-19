@@ -8,6 +8,7 @@ import {
   TopCoverColor,
   TopImage,
   TopSection,
+  ExtLink,
   WorkTitle,
   WorkCopy,
   WorkTag,
@@ -43,8 +44,8 @@ function ManhattanPortage() {
             <TopImage
               width="80%"
               className="top-image"
-              fluid={data.naotatsu_01.childImageSharp.fluid}
-              alt="Naotatsu Kaku - 01"
+              fluid={data.naotatsu_kaku_00.childImageSharp.fluid}
+              alt="Naotatsu Kaku - 00"
             />
             <WorkTitle>Naotatsu Kaku's Portfolio Website</WorkTitle>
             <WorkCopy>Visual Artist, Naotatsu Kaku</WorkCopy>
@@ -59,6 +60,15 @@ function ManhattanPortage() {
               with the help of Canon, a leading company in the photo printing
               industry.
             </WorkDescription>
+            <ExtLink>
+              <a
+                href="http://naotatsukaku.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit: www.naotatsukaku.com
+              </a>
+            </ExtLink>
           </TopSection>
 
           <WorkPageWrapper>
@@ -71,11 +81,11 @@ function ManhattanPortage() {
               </video>
             </div>
             <Img
-              fluid={data.naotatsu_01.childImageSharp.fluid}
+              fluid={data.naotatsu_kaku_01.childImageSharp.fluid}
               alt="Naotatsu Kaku - 01"
             />
             <Img
-              fluid={data.naotatsu_02.childImageSharp.fluid}
+              fluid={data.naotatsu_kaku_02.childImageSharp.fluid}
               alt="Naotatsu Kaku - 02"
             />
           </WorkPageWrapper>
@@ -89,14 +99,21 @@ export default ManhattanPortage;
 
 const query = graphql`
   query {
-    naotatsu_01: file(relativePath: { eq: "naotatsu_01.png" }) {
+    naotatsu_kaku_00: file(relativePath: { eq: "naotatsu_kaku_00.png" }) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    naotatsu_02: file(relativePath: { eq: "naotatsu_02.png" }) {
+    naotatsu_kaku_01: file(relativePath: { eq: "naotatsu_kaku_01.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    naotatsu_kaku_02: file(relativePath: { eq: "naotatsu_kaku_02.png" }) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid

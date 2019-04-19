@@ -44,13 +44,36 @@ export const TopCoverColor = styled.div`
   z-index: -1;
 `;
 
+export const TopSection = styled.div``;
+
 export const TopImage = styled(Img)`
   width: ${props => props.width || `50%`};
   margin: 40px auto 5rem;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
 `;
 
-export const TopSection = styled.div``;
+export const ExtLink = styled.div`
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  margin-bottom: 4rem;
+  a {
+    margin: 0 auto;
+    padding: 5px 12px;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+    :active {
+      transform: scale(0.9);
+    }
+  }
+`;
 
 export const WorkTitle = styled.h2`
   margin: 0 0 0.6rem;
