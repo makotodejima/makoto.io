@@ -37,7 +37,7 @@ function TheLightOfTokyo() {
             <div className="background" />
             <Img
               className="top-image"
-              fluid={data.lot_top.childImageSharp.fluid}
+              fluid={data.the_light_of_tokyo_00.childImageSharp.fluid}
               alt="The Light of Tokyo - top"
             />
             <WorkTitle>The Light of Tokyo</WorkTitle>
@@ -56,24 +56,29 @@ function TheLightOfTokyo() {
 
           <WorkPageWrapper>
             <Img
-              fluid={data.tpc01.childImageSharp.fluid}
-              alt="The Light of Tokyo - 01"
-            />
-            <Img
-              fluid={data.tpc02.childImageSharp.fluid}
+              fluid={data.the_light_of_tokyo_02.childImageSharp.fluid}
               alt="The Light of Tokyo - 02"
             />
             <Img
-              fluid={data.tpc03.childImageSharp.fluid}
+              fluid={data.the_light_of_tokyo_05.childImageSharp.fluid}
+              alt="The Light of Tokyo - 05"
+            />
+            <Img
+              fluid={data.the_light_of_tokyo_01.childImageSharp.fluid}
+              alt="The Light of Tokyo - 01"
+            />
+
+            <Img
+              fluid={data.the_light_of_tokyo_03.childImageSharp.fluid}
               alt="The Light of Tokyo - 03"
             />
             <Img
-              fluid={data.tpc04.childImageSharp.fluid}
+              fluid={data.the_light_of_tokyo_04.childImageSharp.fluid}
               alt="The Light of Tokyo - 04"
             />
             <Img
-              fluid={data.tpc05.childImageSharp.fluid}
-              alt="The Light of Tokyo - 05"
+              fluid={data.the_light_of_tokyo_06.childImageSharp.fluid}
+              alt="The Light of Tokyo - 06"
             />
           </WorkPageWrapper>
         </Layout>
@@ -86,42 +91,63 @@ export default TheLightOfTokyo;
 
 const query = graphql`
   query {
-    lot_top: file(relativePath: { eq: "lot_top.jpg" }) {
+    the_light_of_tokyo_00: file(
+      relativePath: { eq: "the_light_of_tokyo_00.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    tpc01: file(relativePath: { eq: "tpc01.jpg" }) {
+    the_light_of_tokyo_01: file(
+      relativePath: { eq: "the_light_of_tokyo_01.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    tpc02: file(relativePath: { eq: "tpc02.jpg" }) {
+    the_light_of_tokyo_02: file(
+      relativePath: { eq: "the_light_of_tokyo_02.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    tpc03: file(relativePath: { eq: "tpc03.jpg" }) {
+    the_light_of_tokyo_03: file(
+      relativePath: { eq: "the_light_of_tokyo_03.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    tpc04: file(relativePath: { eq: "tpc04.jpg" }) {
+    the_light_of_tokyo_04: file(
+      relativePath: { eq: "the_light_of_tokyo_04.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    tpc05: file(relativePath: { eq: "tpc05.jpg" }) {
+    the_light_of_tokyo_05: file(
+      relativePath: { eq: "the_light_of_tokyo_05.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    the_light_of_tokyo_06: file(
+      relativePath: { eq: "the_light_of_tokyo_06.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1500, quality: 100) {
           ...GatsbyImageSharpFluid

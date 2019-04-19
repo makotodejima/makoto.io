@@ -61,9 +61,7 @@ export const WorkDescription = styled.div`
 `;
 
 export const WorkPageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  img {
-    margin: 2rem auto;
+  .gatsby-image-wrapper {
+    margin-bottom: 3rem;
   }
 `;

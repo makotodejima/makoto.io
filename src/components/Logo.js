@@ -1,17 +1,8 @@
 import React from "react";
+import styled from "styled-components";
 
 export default () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198.3 91.46">
-    {/* <defs>
-    <style>
-      #outer {
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 5px;
-      }
-    </style>
-  </defs> */}
+  <SVG id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198.3 91.46">
     <title>md</title>
     <path
       id="outer"
@@ -25,5 +16,22 @@ export default () => (
       id="d"
       d="M165.77,74.94a66.39,66.39,0,0,0-1.13,11h-4.85a37.78,37.78,0,0,1,.41-6.2,16.49,16.49,0,0,1-14,7.33c-9.8,0-14.86-8.77-13.31-19.2,1.55-10.73,9.7-18.27,19.09-18.27,5.47,0,10.43,3.2,11.77,7.64L169.63,24h5.27ZM152.25,53.88c-6.71,0-13,5.58-14.24,14.46s3.2,14.55,9.81,14.55,13-5.65,14.33-14.55S159,53.88,152.25,53.88Z"
     />
-  </svg>
+  </SVG>
 );
+
+const SVG = styled.svg`
+  &#logo {
+    width: 80px;
+    vertical-align: bottom;
+    #outer {
+      fill: none;
+      stroke: #000;
+      stroke-miterlimit: 10;
+      stroke-width: 5px;
+      stroke-dasharray: 483px;
+      stroke-dashoffset: 483px;
+      /* 'dash' animation is defined in Scss */
+      animation: dash 1.2s ease-in-out forwards;
+    }
+  }
+`;
