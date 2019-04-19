@@ -30,6 +30,7 @@ export default () => {
 const AppsContainer = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 3rem;
 `;
