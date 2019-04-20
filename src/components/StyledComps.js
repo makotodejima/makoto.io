@@ -108,3 +108,9 @@ export const WorkPageWrapper = styled.div`
     margin-bottom: 3rem;
   }
 `;
+
+export const Caption = styled.div`
+  margin: 1rem auto 10rem;
+  text-align: center;
+  color: grey;
+`;

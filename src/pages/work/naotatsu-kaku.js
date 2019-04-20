@@ -13,7 +13,8 @@ import {
   WorkCopy,
   WorkTag,
   WorkDescription,
-  WorkPageWrapper
+  WorkPageWrapper,
+  Caption
 } from "../../components/StyledComps";
 
 import vid_1 from "../../images/naotatsu_v1.mp4";
@@ -80,14 +81,25 @@ function ManhattanPortage() {
                 <source src={vid_1} type="video/mp4" />
               </video>
             </div>
+            <Caption>
+              Experimenting different patterns of animation. Animation is shown
+              to only new visitors.
+            </Caption>
             <Img
               fluid={data.naotatsu_kaku_01.childImageSharp.fluid}
               alt="Naotatsu Kaku - 01"
             />
+            <Caption>
+              As his artwork focus on transition of image, pictures are set in
+              beautiful slideshow form.
+            </Caption>
             <Img
               fluid={data.naotatsu_kaku_02.childImageSharp.fluid}
               alt="Naotatsu Kaku - 02"
             />
+            <Caption>
+              Animated with SVGs, Anime.js and styled-components.
+            </Caption>
           </WorkPageWrapper>
         </Layout>
       )}
