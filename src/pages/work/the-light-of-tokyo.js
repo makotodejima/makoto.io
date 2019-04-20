@@ -12,7 +12,8 @@ import {
   WorkCopy,
   WorkTag,
   WorkDescription,
-  WorkPageWrapper
+  WorkPageWrapper,
+  Caption
 } from "../../components/StyledComps";
 
 function TheLightOfTokyo() {
@@ -44,7 +45,7 @@ function TheLightOfTokyo() {
             />
             <WorkTitle>The Light of Tokyo</WorkTitle>
             <WorkCopy>Tokyo Postcard Award 2019 by Hotel Ryumeikan</WorkCopy>
-            <WorkTag>Print, Illustration, Awarded</WorkTag>
+            <WorkTag>Print, Illustration, Award-winning</WorkTag>
             <WorkDescription>
               I designed the postcard for the hotel chain, Hotel Ryumeikan
               Tokyo. It is offered to the guests as an amenity in every single
@@ -61,14 +62,19 @@ function TheLightOfTokyo() {
               fluid={data.the_light_of_tokyo_02.childImageSharp.fluid}
               alt="The Light of Tokyo - 02"
             />
+            <Caption>At the ceremony</Caption>
             <Img
               fluid={data.the_light_of_tokyo_05.childImageSharp.fluid}
               alt="The Light of Tokyo - 05"
             />
+            <Caption>Final draft</Caption>
             <Img
               fluid={data.the_light_of_tokyo_01.childImageSharp.fluid}
               alt="The Light of Tokyo - 01"
             />
+            <Caption>
+              Study for the light coming out of diffrent buiildings.
+            </Caption>
 
             <Img
               fluid={data.the_light_of_tokyo_03.childImageSharp.fluid}

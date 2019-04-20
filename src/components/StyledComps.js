@@ -110,7 +110,7 @@ export const WorkPageWrapper = styled.div`
 `;
 
 export const Caption = styled.div`
-  margin: 1rem auto 10rem;
+  margin: 1rem auto 8rem;
   text-align: center;
   color: grey;
 `;
