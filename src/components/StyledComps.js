@@ -7,17 +7,6 @@ export const Label = styled.div`
   margin: 0 0 2rem;
 `;
 
-export const WritingLink = styled.p`
-  line-height: 2;
-  a {
-    color: navy;
-    img {
-      height: 0.8rem;
-      margin-left: 0.5rem;
-    }
-  }
-`;
-
 // Index and Work top
 export const WorksListContainer = styled.div`
   display: flex;

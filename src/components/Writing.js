@@ -1,5 +1,6 @@
 import React from "react";
-import { Label, WritingLink } from "../components/StyledComps";
+import { Label } from "../components/StyledComps";
+import styled from "styled-components";
 import weq from "../images/weq.jpg";
 
 export default () => (
@@ -29,3 +30,14 @@ export default () => (
     </WritingLink>
   </>
 );
+
+const WritingLink = styled.p`
+  line-height: 2;
+  a {
+    color: darkcyan;
+    img {
+      height: 0.8rem;
+      margin-left: 0.5rem;
+    }
+  }
+`;
