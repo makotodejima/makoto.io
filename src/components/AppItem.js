@@ -20,12 +20,15 @@ export default props => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
   width: 220px;
+  margin-bottom: 4rem;
+  @media (max-width: 768px) {
+    flex-direction: row;
+    width: auto;
+  }
 `;
 
 const ImgWrapper = styled.div`
-  margin-bottom: 1.5rem;
   border-radius: 5px;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -40,6 +43,10 @@ const ImgWrapper = styled.div`
   img,
   video {
     vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 2rem;
   }
 `;
 
