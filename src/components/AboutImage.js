@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { useGesture } from "react-with-gesture";
 import styled from "styled-components";
+import { media } from "../components/StyledComps";
 import clamp from "lodash-es/clamp";
 import me from "../images/me.jpg";
 import poco from "../images/poco.png";
@@ -52,19 +53,19 @@ const MeImageContainer = styled.div`
     margin-bottom: 0;
   }
 
-  @media (max-width: 768px) {
+  ${media.tablet`
     margin-top: 3rem;
-  }
+  `}
 `;
 
 const FadeOutText = styled.p`
   position: absolute;
-  text-align: center;
   letter-spacing: normal;
   font-size: 0.75rem;
   width: 100%;
   color: lightgray;
   margin-bottom: 1rem;
+  left: 60px;
   top: 234px;
   transition: opacity 1500ms;
   opacity: ${props => (props.mouseOnImage ? 0 : 1)};

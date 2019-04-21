@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { media } from "../components/StyledComps";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -25,7 +26,7 @@ function AboutPage(props) {
         <span>Makoto Dejima </span> <span> 出島 誠</span>
       </h4>
 
-      <h3>
+      <h3 className="title">
         <span>Designer and Front-End Developer</span>
         <span> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
       </h3>
@@ -58,34 +59,28 @@ const AboutContainer = styled.div`
   justify-content: space-between;
 
   margin: 3rem 0;
-  @media (max-width: 768px) {
+  ${media.tablet`
     flex-direction: column;
     justify-content: flex-start;
-  }
+  `}
   .wrapper {
     width: 50%;
-    @media (max-width: 768px) {
+    ${media.tablet`
       width: 100%;
       margin: auto;
-    }
+    `}
 
     .intro {
       line-height: 1.6;
       border-left: 2px solid black;
       padding-left: 1rem;
       text-align: justify;
-      @media (max-width: 768px) {
+      ${media.tablet`
         border: none;
+        padding-left: 0;
         flex-direction: column;
         justify-content: flex-start;
-      }
-    }
-
-    .name {
-      margin-top: 2rem;
-      text-align: right;
+      `}
     }
   }
 `;
-
-// font-bold mt-8 text-right text-xs uppercase
