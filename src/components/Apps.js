@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AppItem from "../components/AppItem";
-
+import { media } from "../components/StyledComps";
 import { apps } from "../data/data";
 
 export default () => {
@@ -17,7 +17,7 @@ export default () => {
             path={apps[id].path}
             altText={apps[id].altText}
           >
-            <video style={{ width: `220px` }} autoPlay loop muted playsInline>
+            <video autoPlay loop muted playsInline>
               <source src={require(`../images/${id}.mp4`)} type="video/mp4" />
             </video>
           </AppItem>
@@ -34,7 +34,7 @@ const AppsContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 4rem;
 
-  @media (max-width: 768px) {
+  ${media.tablet`
     flex-direction: column;
-  }
+  `}
 `;

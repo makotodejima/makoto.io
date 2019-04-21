@@ -40,7 +40,7 @@ const IndexPage = () => (
             keywords="React, Gatsby, Netlify CMS, Anime.js, SVG Animation"
             path="naotatsu-kaku"
           >
-            <video style={{ width: `220px` }} autoPlay loop muted playsInline>
+            <video autoPlay loop muted playsInline>
               <source src={vid} type="video/mp4" />
             </video>
           </WorkListItem>

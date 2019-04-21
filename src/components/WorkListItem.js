@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { media } from "../components/StyledComps";
 
 export default props => {
   return (
@@ -20,7 +21,9 @@ export default props => {
 const Wrapper = styled.div`
   display: flex;
   margin-bottom: 4rem;
-  /* justify-content: space-between; */
+  ${media.phone`
+    flex-direction: column;
+  `}
 `;
 
 const ImgWrapper = styled.div`
@@ -42,7 +45,19 @@ const ImgWrapper = styled.div`
   img,
   video {
     vertical-align: middle;
+
+    ${media.desktop`
+      width: 220px;
+    `}
+    ${media.phone`
+      width: 280px;  
+    `}
   }
+
+  ${media.phone`
+    width: 280px;
+    margin-bottom: 2rem;
+  `}
 `;
 
 const Description = styled.div``;
