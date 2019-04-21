@@ -45,10 +45,8 @@ const ImgWrapper = styled.div`
   img,
   video {
     vertical-align: middle;
+    width: 220px;
 
-    ${media.desktop`
-      width: 220px;
-    `}
     ${media.phone`
       width: 280px;  
     `}
