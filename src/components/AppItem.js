@@ -29,6 +29,7 @@ const Wrapper = styled.div`
 `;
 
 const ImgWrapper = styled.div`
+  margin-bottom: 1.5rem;
   border-radius: 5px;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -46,6 +47,7 @@ const ImgWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
+    margin-bottom: 0;
     margin-right: 2rem;
   }
 `;
