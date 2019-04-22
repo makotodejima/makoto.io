@@ -8,6 +8,8 @@ import { withInfo } from "@storybook/addon-info";
 import { Button, Welcome } from "@storybook/react/demo";
 
 import WorkListItem from "./WorkListItem";
+import Logo from "./Logo";
+import Header from "./Header";
 import SocialLinks from "./SocialLinks";
 import vid from "../images/nao300.mp4";
 
@@ -61,13 +63,12 @@ storiesOf("WorkListItem", module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "This is social links used in ABOUT page",
+      text: "Need to wrap image or video",
 
       // Make a default for all stories in this book,
       inline: true // where the components are inlined
     }
   })
-
   .add("standard", () => (
     <WorkListItem
       key="naotatsu_kaku"
@@ -82,3 +83,27 @@ storiesOf("WorkListItem", module)
       </video>
     </WorkListItem>
   ));
+
+storiesOf("Logo", module)
+  .addDecorator(withInfo)
+  .addParameters({
+    info: {
+      text: "Logo rendered with SVG file",
+
+      // Make a default for all stories in this book,
+      inline: true // where the components are inlined
+    }
+  })
+  .add("standard", () => <Logo />);
+
+storiesOf("Header", module)
+  .addDecorator(withInfo)
+  .addParameters({
+    info: {
+      text: "Header",
+
+      // Make a default for all stories in this book,
+      inline: true // where the components are inlined
+    }
+  })
+  .add("standard", () => <Header color="red" />);
