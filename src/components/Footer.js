@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 
-export default () => {
+const Footer = () => {
   const props = useSpring({
     year: 2019,
     from: { year: 1990 },
@@ -22,6 +22,8 @@ export default () => {
     </StyledFooter>
   );
 };
+
+export default Footer;
 
 const StyledFooter = styled.div`
   display: flex;

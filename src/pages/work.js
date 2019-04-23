@@ -47,10 +47,20 @@ function WorkPage(props) {
                   keywords={work[id].keywords}
                   path={work[id].path}
                 >
-                  <Img
-                    fluid={data[id].childImageSharp.fluid}
-                    alt={work[id].altText}
-                  />
+                  {work[id].isVideo ? (
+                    <video autoPlay loop muted playsInline>
+                      <source
+                        poster="../images/naotatsu_kaku_poster.png"
+                        src={require(`../images/${work[id].id}.mp4`)}
+                        type="video/mp4"
+                      />
+                    </video>
+                  ) : (
+                    <Img
+                      fluid={data[id].childImageSharp.fluid}
+                      alt={work[id].altText}
+                    />
+                  )}
                 </WorkListItem>
               );
             })}

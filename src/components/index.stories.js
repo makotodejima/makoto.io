@@ -12,6 +12,11 @@ import Logo from "./Logo";
 import Header from "./Header";
 import SocialLinks from "./SocialLinks";
 import vid from "../images/nao300.mp4";
+import AboutImage from "./AboutImage";
+import AppItem from "./AppItem";
+import Email from "./Email";
+import Footer from "./Footer";
+import News from "./News";
 
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
@@ -108,3 +113,68 @@ storiesOf("Header", module)
   })
   .add("Default Black", () => <Header />)
   .add("Red", () => <Header color="red" />);
+
+storiesOf("About Image", module)
+  .addDecorator(withInfo)
+  .addParameters({
+    info: {
+      text: "About",
+      // Make a default for all stories in this book,
+      inline: true // where the components are inlined
+    }
+  })
+  .add("About image", () => <AboutImage />);
+
+storiesOf("App Item", module)
+  .addDecorator(withInfo)
+  .addParameters({
+    info: {
+      text: "App Item",
+      // Make a default for all stories in this book,
+      inline: true // where the components are inlined
+    }
+  })
+  .add("App Item", () => (
+    <AppItem
+      title="Here goes title"
+      type="work type"
+      keywords="keywords"
+      path="this is path"
+      altText="this is alt text"
+    >
+      <video autoPlay loop muted playsInline>
+        <source src={vid} type="video/mp4" />
+      </video>
+    </AppItem>
+  ));
+
+storiesOf("Email with copyBtn", module)
+  .addDecorator(withInfo)
+  .addParameters({
+    info: {
+      text: "Email address",
+      // Make a default for all stories in this book,
+      inline: true // where the components are inlined
+    }
+  })
+  .add("Email", () => <Email />);
+
+storiesOf("Footer")
+  .addDecorator(withInfo)
+  .addParameters({
+    info: {
+      text: "Footer",
+      inline: true
+    }
+  })
+  .add("Footer", () => <Footer />);
+
+storiesOf("News")
+  .addDecorator(withInfo)
+  .addParameters({
+    info: {
+      text: "News",
+      inline: true
+    }
+  })
+  .add("News", () => <News />);

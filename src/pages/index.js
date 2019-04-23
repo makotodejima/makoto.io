@@ -10,7 +10,6 @@ import Hero from "../components/hero";
 import WorkListItem from "../components/WorkListItem";
 import Email from "../components/Email";
 import Apps from "../components/Apps";
-import vid from "../images/nao300.mp4";
 
 const IndexPage = () => (
   <StaticQuery
@@ -32,19 +31,6 @@ const IndexPage = () => (
         <Hero />
         <Label>Featured Work</Label>
         <WorksListContainer>
-          <WorkListItem
-            key="naotatsu_kaku"
-            title="Naotatsu Kaku's Portfolio Website"
-            client="Visual Artist, Naotatsu Kaku"
-            type="Design and development"
-            keywords="React, Gatsby, Netlify CMS, Anime.js, SVG Animation"
-            path="naotatsu-kaku"
-          >
-            <video autoPlay loop muted playsInline>
-              <source src={vid} type="video/mp4" />
-            </video>
-          </WorkListItem>
-
           {Object.keys(featured).map(id => {
             return (
               <WorkListItem
@@ -55,7 +41,22 @@ const IndexPage = () => (
                 keywords={featured[id].keywords}
                 path={featured[id].path}
               >
-                <Img fluid={data[id].childImageSharp.fluid} />
+                {featured[id].isVideo ? (
+                  <video
+                    poster={require(`../images/${featured[id].id}_poster.png`)}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source
+                      src={require(`../images/${featured[id].id}.mp4`)}
+                      type="video/mp4"
+                    />
+                  </video>
+                ) : (
+                  <Img fluid={data[id].childImageSharp.fluid} />
+                )}
               </WorkListItem>
             );
           })}
