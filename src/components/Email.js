@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
-export default () => {
+const Email = () => {
   const [copySuccess, setCopySuccess] = useState();
   const ref = useRef(null);
 
@@ -35,6 +35,8 @@ export default () => {
   }
   return null;
 };
+
+export default Email;
 
 const CopyEmail = styled.h4`
   text-align: "center";

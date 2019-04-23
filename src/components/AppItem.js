@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { media } from "../components/StyledComps";
 
-export default props => {
+const AppItem = props => {
   return (
     <Wrapper>
       <a href={props.path} target="_blank" rel="noopener noreferrer">
@@ -17,6 +17,8 @@ export default props => {
     </Wrapper>
   );
 };
+
+export default AppItem;
 
 const Wrapper = styled.div`
   display: flex;
