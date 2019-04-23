@@ -94,7 +94,7 @@ storiesOf("Logo", module)
       inline: true // where the components are inlined
     }
   })
-  .add("standard", () => <Logo />);
+  .add("original", () => <Logo />);
 
 storiesOf("Header", module)
   .addDecorator(withInfo)
@@ -106,4 +106,5 @@ storiesOf("Header", module)
       inline: true // where the components are inlined
     }
   })
-  .add("standard", () => <Header color="red" />);
+  .add("Default Black", () => <Header />)
+  .add("Red", () => <Header color="red" />);
