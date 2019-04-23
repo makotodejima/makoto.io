@@ -1,4 +1,14 @@
 export const work = {
+  naotatsu_kaku: {
+    id: "naotatsu_kaku",
+    title: "Naotatsu Kaku's Portfolio Website",
+    client: "Visual Artist, Naotatsu Kaku",
+    type: "Design and development",
+    keywords: "React, Gatsby, Netlify CMS, Anime.js, SVG Animation",
+    path: "naotatsu-kaku",
+    altText: "Visual Artist, Naotatsu Kaku",
+    isVideo: true
+  },
   the_light_of_tokyo: {
     id: "the_light_of_tokyo",
     title: "The Light of Tokyo",
@@ -56,14 +66,14 @@ export const work = {
 };
 
 export const featured = {
+  naotatsu_kaku: {
+    ...work.naotatsu_kaku
+  },
   the_light_of_tokyo: {
     ...work.the_light_of_tokyo
   },
   manhattan_portage: {
     ...work.manhattan_portage
-  },
-  satte: {
-    ...work.satte
   }
 };
 
