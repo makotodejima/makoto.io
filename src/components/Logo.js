@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default ({ color }) => (
+const Logo = ({ color }) => (
   <SVG
     color={color}
     id="logo"
@@ -23,6 +23,8 @@ export default ({ color }) => (
     />
   </SVG>
 );
+
+export default Logo;
 
 const SVG = styled.svg`
   &#logo {

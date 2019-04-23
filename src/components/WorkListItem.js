@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { media } from "../components/StyledComps";
 
-export default props => {
+const WorkListItem = props => {
   return (
     <Wrapper>
       <Link to={`/work/${props.path}/`}>
@@ -17,6 +17,8 @@ export default props => {
     </Wrapper>
   );
 };
+
+export default WorkListItem;
 
 const Wrapper = styled.div`
   display: flex;
