@@ -28,7 +28,6 @@ export const Label = styled.div`
 export const WorksListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
   margin-bottom: 4rem;
 
   @media (max-width: 375px) {
@@ -36,7 +35,7 @@ export const WorksListContainer = styled.div`
 `;
 
 export const PageTitle = styled.h2`
-  margin: 2rem 0 3rem;
+  margin: 2rem 0 4rem;
 `;
 
 // Across work pages
