@@ -12,7 +12,7 @@ const AppItem = props => {
       <Description>
         <h2>{props.title}</h2>
         <h4>{props.type}</h4>
-        <i>{props.keywords}</i>
+        <p>{props.keywords}</p>
       </Description>
     </Wrapper>
   );
@@ -68,4 +68,8 @@ const ImgWrapper = styled.div`
   }
 `;
 
-const Description = styled.div``;
+const Description = styled.div`
+  p {
+    color: grey;
+  }
+`;

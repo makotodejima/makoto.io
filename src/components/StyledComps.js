@@ -35,7 +35,7 @@ export const WorksListContainer = styled.div`
 `;
 
 export const PageTitle = styled.h2`
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
 `;
 
 // Across work pages

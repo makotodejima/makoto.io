@@ -22,14 +22,18 @@ function AboutPage(props) {
           `React`
         ]}
       />
-      <h4 className="name">
-        <span>Makoto Dejima </span> <span> 出島 誠</span>
-      </h4>
 
-      <h3 className="title">
-        <span>Designer and Front-End Developer</span>
-        <span> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
-      </h3>
+      <NameWrapper>
+        <h3 className="name">
+          <span className="en">Makoto Dejima</span>{" "}
+          <span className="jp"> 出島 誠</span>
+        </h3>
+
+        <h3 className="title">
+          <span className="en">Designer and Front-End Developer</span>
+          <span className="jp"> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
+        </h3>
+      </NameWrapper>
 
       <AboutContainer>
         <div className="wrapper">
@@ -40,8 +44,10 @@ function AboutPage(props) {
             tech as a software engineer due to strong interest in the web
             development. Also experienced in ad-tech, Japanese writing, editing
             and localization.
-            <br /> Skills:{" "}
-            <i>React, Gatsby, Angular, Graphic and Motion Design</i>
+            <br />
+            <span style={{ color: `grey` }}>
+              Skills: React, Gatsby, Angular, Graphic and Motion Design
+            </span>
           </p>
         </div>
 
@@ -53,6 +59,27 @@ function AboutPage(props) {
 }
 
 export default AboutPage;
+
+const NameWrapper = styled.div`
+  ${media.phone`
+  margin-top:1.4rem;
+`}
+
+  .en {
+    margin-right: 1.4rem;
+  }
+  span {
+    ${media.tablet`
+    display: block;
+  `}
+    &.en {
+      ${media.tablet`
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    `}
+    }
+  }
+`;
 
 const AboutContainer = styled.div`
   display: flex;
