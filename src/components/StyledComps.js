@@ -48,10 +48,16 @@ export const TopCoverColor = styled.div`
   width: 100%;
   height: 400px;
   z-index: -1;
+  ${media.phone`
+  height: 240px;
+  `}
 `;
 
 export const TopSection = styled.div`
   margin-bottom: 3rem;
+  ${media.phone`   
+  margin-bottom: 0;
+  `}
 `;
 
 export const TopImage = styled(Img)`
@@ -107,6 +113,9 @@ export const WorkDescription = styled.div`
   width: 33%;
   margin: 0 auto 3rem;
   font-size: 0.9rem;
+  ${media.phone`
+    width: 80%;
+  `}
 `;
 
 export const WorkPageWrapper = styled.div`

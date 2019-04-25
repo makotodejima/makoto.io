@@ -28,6 +28,7 @@ export default () => (
       I'm working with German global ad-tech company to accelerate their growth
       in Japanese market.
     </WritingLink>
+    <div style={{ height: `3rem` }} />
   </>
 );
 

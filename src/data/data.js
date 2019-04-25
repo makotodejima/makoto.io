@@ -14,7 +14,7 @@ export const work = {
     title: "The Light of Tokyo",
     client: "Hotel Ryumeikan Tokyo",
     type: "Hotel Room Postcard Design",
-    keywords: 'Won the "Tokyo Postcard Award"',
+    keywords: 'Graphic design, Won the "Tokyo Postcard Award"',
     path: "the-light-of-tokyo",
     altText: "Postcard, The light of Tokyo"
   },
@@ -23,7 +23,7 @@ export const work = {
     title: "Manhattan Portage Art Collection",
     client: "Manhattan Portage",
     type: "Messenger Bag Design",
-    keywords: "",
+    keywords: "Graphic design, Manhattan Portage Art Award 2019",
     path: "manhattan-portage",
     altText: "Messenger Bag, Manhattan Portage"
   },
