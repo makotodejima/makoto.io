@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: data.md.childImageSharp.fixed.src
+                content: `https://madmak.me${data.md.childImageSharp.fixed.src}`
               },
               {
                 property: `og:type`,
