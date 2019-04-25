@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import md from "../images/md.png";
+// import md from "../images/md.png";
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `"og:image"`,
-                content: md
+                content: data.md.childImageSharp.fixed.src
               },
               {
                 property: `og:type`,
@@ -104,6 +104,13 @@ const detailsQuery = graphql`
         title
         description
         author
+      }
+    }
+    md: file(relativePath: { eq: "md.png" }) {
+      childImageSharp {
+        fixed(width: 400) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }
