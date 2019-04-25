@@ -64,7 +64,7 @@ const IndexPage = () => (
 
         <Label>Apps</Label>
         <Apps />
-        <div style={{ marginBottom: `3rem` }}>
+        <div style={{ marginBottom: `4rem` }}>
           <h3 style={{ marginTop: 0 }}>
             Interested in working together? Get in touch.
           </h3>

@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import styled from "styled-components";
+import { media } from "../components/StyledComps";
 import Logo from "./Logo";
 
 /* 
@@ -67,9 +68,9 @@ const StyledNav = styled.nav`
   margin: 0 auto;
   padding: 2rem;
 
-  @media (max-width: 768px) {
+  ${media.phone`
     padding: 1rem;
-  }
+  `}
 `;
 
 const Hamburger = styled.button`
