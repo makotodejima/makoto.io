@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: metaDescription
               },
               {
-                property: `"og:image"`,
+                property: `og:image`,
                 content: data.md.childImageSharp.fixed.src
               },
               {
