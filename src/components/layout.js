@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -7,7 +8,7 @@ import Footer from "./Footer";
 // GLOBAL CSS
 import "./layout.scss";
 
-export default ({ children, headerColor, currentPath }) => {
+const Layout = ({ children, headerColor, currentPath }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -34,9 +35,11 @@ export default ({ children, headerColor, currentPath }) => {
   );
 };
 
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired
-// };
+export default Layout;
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 const StyledLayout = styled.div`
   display: flex;
