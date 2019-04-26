@@ -92,7 +92,11 @@ const query = graphql`
   query {
     me: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
+        fluid(
+          maxWidth: 500
+          quality: 100
+          traceSVG: { background: "black", color: "white" }
+        ) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
