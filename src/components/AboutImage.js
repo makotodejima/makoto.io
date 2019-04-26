@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { useGesture } from "react-with-gesture";
 import styled from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import { media } from "../components/StyledComps";
 import clamp from "lodash-es/clamp";
-import me from "../images/me.jpg";
 import poco from "../images/poco.png";
 
 const AboutImage = () => {
@@ -19,28 +20,36 @@ const AboutImage = () => {
   const [mouseOnImage, toggle] = useState(false);
 
   return (
-    <MeImageContainer
-      onMouseEnter={() => toggle(true)}
-      onMouseLeave={() => toggle(false)}
-    >
-      <img src={me} alt="me" />
-      <animated.img
-        {...bind()}
-        style={{
-          transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`),
-          position: "absolute",
-          left: "76px",
-          top: "64px",
-          width: "105px"
-        }}
-        draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
-        src={poco}
-        alt="Cute dog face"
-      />
-      <FadeOutText mouseOnImage={mouseOnImage}>
-        Yes, you can drag my face.
-      </FadeOutText>
-    </MeImageContainer>
+    <StaticQuery
+      query={query}
+      render={data => (
+        <MeImageContainer
+          onMouseEnter={() => toggle(true)}
+          onMouseLeave={() => toggle(false)}
+        >
+          {/* <img src={me} alt="me" /> */}
+          <Img fluid={data.me.childImageSharp.fluid} alt="me" />
+          <animated.img
+            {...bind()}
+            style={{
+              transform: xy.interpolate(
+                (x, y) => `translate3d(${x}px,${y}px,0)`
+              ),
+              position: "absolute",
+              left: "76px",
+              top: "64px",
+              width: "105px"
+            }}
+            draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
+            src={poco}
+            alt="Cute dog face"
+          />
+          <FadeOutText mouseOnImage={mouseOnImage}>
+            Yes, you can drag my face.
+          </FadeOutText>
+        </MeImageContainer>
+      )}
+    />
   );
 };
 
@@ -51,6 +60,10 @@ const MeImageContainer = styled.div`
   margin: 0;
   img {
     margin-bottom: 0;
+  }
+  .gatsby-image-wrapper {
+    margin-bottom: 0;
+    width: 250px;
   }
 
   ${media.tablet`
@@ -72,5 +85,17 @@ const FadeOutText = styled.p`
 
   @media (max-width: 576px) {
     letter-spacing: -0.05em;
+  }
+`;
+
+const query = graphql`
+  query {
+    me: file(relativePath: { eq: "me.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
   }
 `;
