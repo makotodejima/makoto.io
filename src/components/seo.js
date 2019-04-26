@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-// import md from "../images/md.png";
+// import md from "../../public/icons/md.png";
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -31,10 +31,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 property: `og:description`,
                 content: metaDescription
               },
-              {
-                property: `og:image`,
-                content: `https://madmak.me${data.md.childImageSharp.fixed.src}`
-              },
+              // {
+              //   property: `og:image`,
+              //   content: md
+              // },
               {
                 property: `og:type`,
                 content: `website`

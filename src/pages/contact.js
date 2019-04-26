@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { PageTitle } from "../components/StyledComps";
 import Email from "../components/Email";
+import SocialLinks from "../components/SocialLinks";
 
 const ContactPage = props => {
   return (
@@ -75,6 +76,7 @@ const ContactPage = props => {
           <button type="submit">Send</button>
         </form>
       </StyledForm>
+      <SocialLinks />
     </Layout>
   );
 };

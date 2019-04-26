@@ -22,7 +22,7 @@ module.exports = {
         short_name: `Makoto Dejima`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#1C3D5A`,
+        theme_color: `rgb(255, 255, 248)`,
         display: `minimal-ui`,
         icon: `src/images/mdicon.svg`,
         icons: [

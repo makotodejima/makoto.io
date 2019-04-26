@@ -9,6 +9,7 @@ import SEO from "../components/seo";
 import Hero from "../components/hero";
 import WorkListItem from "../components/WorkListItem";
 import Email from "../components/Email";
+import SocialLinks from "../components/SocialLinks";
 import Apps from "../components/Apps";
 
 const IndexPage = () => (
@@ -74,6 +75,7 @@ const IndexPage = () => (
             love to hear from you.
           </p>
           <Email />
+          <SocialLinks />
         </div>
       </Layout>
     )}

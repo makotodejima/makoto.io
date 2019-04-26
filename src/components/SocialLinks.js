@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SocialLinks = () => (
+const SocialLinks = props => (
   <SocialLinksContainer>
     <a
       href="https://dribbble.com/mak84sasami"
@@ -55,12 +55,15 @@ export default SocialLinks;
 
 const SocialLinksContainer = styled.div`
   display: flex;
-  /* justify-content: center; */
   font-size: 1.8rem;
   a {
     transition: all 0.25s ease-in-out;
     color: #1c3d5a;
     margin: 0 1rem;
+  }
+  /* Remove Dribbble's margin-left */
+  a:first-child {
+    margin-left: 0;
   }
   a:hover {
     transform: scale(1.1);
