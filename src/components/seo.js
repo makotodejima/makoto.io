@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-// import md from "../../public/icons/md.png";
+import md from "../images/md_ogp.png";
 
 function SEO({ description, lang, meta, keywords, title }) {
+  console.log(md);
   return (
     <StaticQuery
       query={detailsQuery}
@@ -31,10 +32,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 property: `og:description`,
                 content: metaDescription
               },
-              // {
-              //   property: `og:image`,
-              //   content: md
-              // },
+              {
+                property: `og:image`,
+                content: md
+              },
               {
                 property: `og:type`,
                 content: `website`
@@ -106,12 +107,12 @@ const detailsQuery = graphql`
         author
       }
     }
-    md: file(relativePath: { eq: "md.png" }) {
-      childImageSharp {
-        fixed(width: 400) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
+    # md: file(relativePath: { eq: "md.png" }) {
+    #   childImageSharp {
+    #     fixed(width: 400) {
+    #       ...GatsbyImageSharpFixed
+    #     }
+    #   }
+    # }
   }
 `;
