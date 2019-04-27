@@ -3,7 +3,7 @@ module.exports = {
     title: `Makoto Dejima`,
     description: `Makoto Dejima | Designer and Front-End Developer`,
     url: "madmak.me",
-    author: `@mak84sasami`
+    author: `@mdejima`
   },
   plugins: [
     {
