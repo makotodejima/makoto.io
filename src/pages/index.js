@@ -18,7 +18,7 @@ const IndexPage = () => (
     render={data => (
       <Layout>
         <SEO
-          title="Home"
+          title="Makoto Dejima"
           keywords={[
             `Makoto Dejima`,
             `Designer`,
