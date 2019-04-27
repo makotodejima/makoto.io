@@ -12,7 +12,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         const metaDescription =
           description || data.site.siteMetadata.description;
         console.log(md);
-        // console.log(data.md.childImageSharp.fixed);
+        console.log(data.md.childImageSharp.fixed.src);
         return (
           <Helmet
             htmlAttributes={{
@@ -31,7 +31,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:url`,
-                content: `madmak.me`
+                content: `www.madmak.me`
               },
               {
                 property: `og:description`,
@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: md
+                content: data.md.childImageSharp.fixed.src
               },
               {
                 property: `og:type`,
