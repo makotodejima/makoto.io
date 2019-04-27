@@ -2,16 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import md from "../images/md_ogp.png";
+import md from "../images/md_ogp.jpg";
 
 function SEO({ description, lang, meta, keywords, title }) {
-  console.log(md);
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description;
+        console.log(md);
+        // console.log(data.md.childImageSharp.fixed);
         return (
           <Helmet
             htmlAttributes={{
@@ -27,6 +28,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 property: `og:title`,
                 content: title
+              },
+              {
+                property: `og:url`,
+                content: `madmak.me`
               },
               {
                 property: `og:description`,
@@ -107,12 +112,12 @@ const detailsQuery = graphql`
         author
       }
     }
-    # md: file(relativePath: { eq: "md.png" }) {
-    #   childImageSharp {
-    #     fixed(width: 400) {
-    #       ...GatsbyImageSharpFixed
-    #     }
-    #   }
-    # }
+    md: file(relativePath: { eq: "md_ogp.jpg" }) {
+      childImageSharp {
+        fixed(width: 400) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
   }
 `;
