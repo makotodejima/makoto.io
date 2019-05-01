@@ -39,7 +39,9 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: data.md.childImageSharp.fixed.src
+                content:
+                  data.md.childImageSharp.fixed.src ||
+                  "https://madmak.me/static/9e16ba3b818e981badee45dcf4af1ccd/7ef6a/md_ogp.jpg"
               },
               {
                 property: `og:type`,
