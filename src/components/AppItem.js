@@ -10,7 +10,9 @@ const AppItem = props => {
         <ImgWrapper>{props.children}</ImgWrapper>
       </a>
       <Description>
-        <h2>{props.title}</h2>
+        <a href={props.path} target="_blank" rel="noopener noreferrer">
+          <h2 className="title">{props.title}</h2>
+        </a>
         <h4>{props.type}</h4>
         <p>{props.keywords}</p>
       </Description>
@@ -69,6 +71,34 @@ const ImgWrapper = styled.div`
 `;
 
 const Description = styled.div`
+  a {
+    text-decoration: none;
+    .title {
+      color: black;
+      position: relative;
+      display: inline-block;
+      transition: text-shadow 0.2s ease-in;
+      :hover {
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        background-color: #000000;
+        transform: scaleY(0);
+        transform-origin: left bottom;
+        transition: transform 0.3s ease-in;
+        z-index: -1;
+      }
+      &:hover::before {
+        transform: scaleY(1);
+      }
+    }
+  }
   p {
     color: grey;
   }
