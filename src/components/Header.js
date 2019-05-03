@@ -76,7 +76,7 @@ const StyledNav = styled.nav`
 const Hamburger = styled.button`
   display: none;
   align-items: center;
-  padding: 0.3rem 0.75rem;
+  padding: 0.8rem 0.75rem 0.3rem;
   width: 50px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -123,6 +123,9 @@ const HeaderLinks = styled.div`
     &:hover::before {
       visibility: visible;
       transform: scaleX(1);
+      ${media.tablet`
+        display:none;
+      `}
     }
   }
 
