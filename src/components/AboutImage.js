@@ -75,7 +75,6 @@ const FadeOutText = styled.p`
   position: absolute;
   letter-spacing: normal;
   font-size: 0.75rem;
-  width: 100%;
   color: lightgray;
   margin-bottom: 1rem;
   left: 60px;
