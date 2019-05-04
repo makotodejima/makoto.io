@@ -9,7 +9,7 @@ import SocialLinks from "../components/SocialLinks";
 
 function AboutPage(props) {
   return (
-    <Layout currentPath={props.location.pathname}>
+    <Layout>
       <SEO
         title="About"
         keywords={[

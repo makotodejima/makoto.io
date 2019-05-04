@@ -19,7 +19,7 @@ function WorkPage(props) {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout currentPath={props.location.pathname}>
+        <Layout>
           <SEO
             title="Work"
             keywords={[

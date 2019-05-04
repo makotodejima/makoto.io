@@ -8,7 +8,7 @@ import Footer from "./Footer";
 // GLOBAL CSS
 import "./layout.scss";
 
-const Layout = ({ children, headerColor, currentPath }) => {
+const Layout = ({ children, headerColor }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -25,7 +25,6 @@ const Layout = ({ children, headerColor, currentPath }) => {
           <Header
             color={headerColor}
             siteTitle={data.site.siteMetadata.title}
-            currentPath={currentPath}
           />
           <Main>{children}</Main>
           <Footer />

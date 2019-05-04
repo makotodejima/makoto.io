@@ -8,7 +8,7 @@ import SocialLinks from "../components/SocialLinks";
 
 const ContactPage = props => {
   return (
-    <Layout currentPath={props.location.pathname}>
+    <Layout>
       <SEO
         title="Contact"
         keywords={[

@@ -10,7 +10,7 @@ import Logo from "./Logo";
 it defines header logo, text and hamburger color
 */
 
-function Header({ color, currentPath }) {
+function Header({ color }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
@@ -26,21 +26,15 @@ function Header({ color, currentPath }) {
       </Hamburger>
 
       <HeaderLinks color={color} isExpanded={isExpanded}>
-        <Link to="/work/" className={currentPath === "/work/" ? `current` : ""}>
+        <Link to="/work/" activeStyle={{ color: `grey` }}>
           Work
         </Link>
 
-        <Link
-          to="/about/"
-          className={currentPath === "/about/" ? `current` : ``}
-        >
+        <Link to="/about/" activeStyle={{ color: `grey` }}>
           About
         </Link>
 
-        <Link
-          to="/contact/"
-          className={currentPath === "/contact/" ? `current` : ``}
-        >
+        <Link to="/contact/" activeStyle={{ color: `grey` }}>
           Contact
         </Link>
       </HeaderLinks>
@@ -105,9 +99,6 @@ const HeaderLinks = styled.div`
     color: ${props => props.color || "black"};
     margin-left: 1.5rem;
     text-decoration: none;
-    &.current {
-      color: grey;
-    }
     &::before {
       content: "";
       position: absolute;
