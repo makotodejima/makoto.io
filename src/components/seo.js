@@ -11,8 +11,6 @@ function SEO({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description;
-        console.log(md);
-        console.log(data.md.childImageSharp.fixed.src);
         return (
           <Helmet
             htmlAttributes={{
