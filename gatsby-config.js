@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Makoto Dejima`,
-    description: `Makoto Dejima | Designer and Front-End Developer`,
-    url: "madmak.me",
+    description: `Tokyo-born Graphic Designer and Front-End Developer based in Berlin. Loves grahic, motion and generative design/art. Former journalist.`,
+    url: "www.madmak.me",
     author: `@mdejima`
   },
   plugins: [
