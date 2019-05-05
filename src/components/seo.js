@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import md from "../images/md_ogp.jpg";
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -17,7 +16,11 @@ function SEO({ description, lang, meta, keywords, title }) {
               lang
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={
+              title === `Makoto Dejima | Design and Development`
+                ? title
+                : `%s | ${data.site.siteMetadata.title}`
+            }
             meta={[
               {
                 name: `description`,
