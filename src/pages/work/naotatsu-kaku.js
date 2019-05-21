@@ -54,12 +54,11 @@ function ManhattanPortage() {
               React, Gatsby, Netlify CMS, Anime.js, SVG Animation, Sass
             </WorkTag>
             <WorkDescription>
-              Naotatsu Kaku is a visual artist who is born and raised in Tokyo.
-              His family have their roots in Taiwan and his work represent his
-              thought on the identity. He recently won the "New Cosmos of
-              Photography Award" and is continuously working on his artwork with
-              the support from Canon, a leading company in the photo and camera
-              industry.
+              Naotatsu Kaku is a visual artist who was born and raised in Tokyo.
+              His family have their roots in Taiwan and some of his works
+              represent his thoughts on his own identity. He won the "New Cosmos
+              of Photography Award" and now is working with the support from
+              Canon, a leading company in the photo and camera industry.
             </WorkDescription>
             <ExtLink>
               <a
@@ -90,8 +89,8 @@ function ManhattanPortage() {
               alt="Naotatsu Kaku - 01"
             />
             <Caption>
-              As his artwork focus on transition of image, pictures are set in
-              beautiful slideshow form.
+              As his artworks feature transition between images, pictures are
+              set in beautiful slideshow form.
             </Caption>
             <Img
               fluid={data.naotatsu_kaku_02.childImageSharp.fluid}

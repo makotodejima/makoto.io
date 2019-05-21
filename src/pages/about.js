@@ -39,14 +39,14 @@ function AboutPage(props) {
         <div className="wrapper">
           <p className="intro">
             Tokyo-born Graphic Designer and Front-End Developer who loves and
-            cares about design. I used to covered tech industry as a journalist
+            cares about design. I used to cover tech industry as a journalist
             with Japanese media, and ended up putting myself in the world of
             tech as a software engineer due to strong interest in the web
             development. Also experienced in ad-tech, Japanese writing, editing
             and localization.
             <br />
             <span style={{ color: `grey` }}>
-              Skills: React, Gatsby, Angular, Graphic and Motion Design
+              Skills: React, Gatsby, Processing, Graphic and Motion Design
             </span>
           </p>
         </div>
