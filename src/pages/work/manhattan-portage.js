@@ -26,13 +26,11 @@ function ManhattanPortage() {
             title="Manhattan Portage"
             keywords={[
               `Makoto Dejima`,
-              `Designer`,
-              `Front-End Developer`,
-              `Design`,
-              `Graphic Design`,
               `JavaScript`,
+              `Design`,
               `React`,
-              `Motion`
+              `Front-End Developer`,
+              `Graphic Design`
             ]}
           />
 

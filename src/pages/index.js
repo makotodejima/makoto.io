@@ -21,11 +21,11 @@ const IndexPage = () => (
           title="Makoto Dejima | Design and Development"
           keywords={[
             `Makoto Dejima`,
-            `Designer`,
-            `Front-End Developer`,
-            `Graphic Design`,
+            `JavaScript`,
+            `Design`,
             `React`,
-            `JavaScript`
+            `Front-End Developer`,
+            `Graphic Design`
           ]}
         />
 

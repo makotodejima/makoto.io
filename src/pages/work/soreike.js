@@ -20,13 +20,11 @@ function Soreike() {
             title="Soreike SF Tee"
             keywords={[
               `Makoto Dejima`,
-              `Designer`,
-              `Front-End Developer`,
-              `Design`,
-              `Graphic Design`,
               `JavaScript`,
+              `Design`,
               `React`,
-              `Motion`
+              `Front-End Developer`,
+              `Graphic Design`
             ]}
           />
           <WorkTitle>Soreike San Francisco Tee</WorkTitle>

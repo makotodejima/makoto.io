@@ -20,13 +20,11 @@ function Jasms() {
             title="JASMS"
             keywords={[
               `Makoto Dejima`,
-              `Designer`,
-              `Front-End Developer`,
-              `Design`,
-              `Graphic Design`,
               `JavaScript`,
+              `Design`,
               `React`,
-              `Motion`
+              `Front-End Developer`,
+              `Graphic Design`
             ]}
           />
           <WorkTitle>Japan Society of Mountain Reseach</WorkTitle>

@@ -30,13 +30,11 @@ function ManhattanPortage() {
             title="Naotatsu Kaku"
             keywords={[
               `Makoto Dejima`,
-              `Designer`,
-              `Front-End Developer`,
-              `Design`,
-              `Graphic Design`,
               `JavaScript`,
+              `Design`,
               `React`,
-              `Motion`
+              `Front-End Developer`,
+              `Graphic Design`
             ]}
           />
 

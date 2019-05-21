@@ -13,13 +13,11 @@ const ContactPage = props => {
         title="Contact"
         keywords={[
           `Makoto Dejima`,
-          `Designer`,
-          `Front-End Developer`,
-          `Design`,
-          `Graphic Design`,
           `JavaScript`,
+          `Design`,
           `React`,
-          `Motion`
+          `Front-End Developer`,
+          `Graphic Design`
         ]}
       />
       <PageTitle>Contact</PageTitle>

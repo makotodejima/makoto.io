@@ -14,12 +14,11 @@ function AboutPage(props) {
         title="About"
         keywords={[
           `Makoto Dejima`,
-          `Designer`,
-          `Front-End Developer`,
-          `Design`,
-          `Graphic Design`,
           `JavaScript`,
-          `React`
+          `Design`,
+          `React`,
+          `Front-End Developer`,
+          `Graphic Design`
         ]}
       />
 

@@ -20,13 +20,11 @@ function IndexPage() {
             title="808MERA"
             keywords={[
               `Makoto Dejima`,
-              `Designer`,
-              `Front-End Developer`,
-              `Design`,
-              `Graphic Design`,
               `JavaScript`,
+              `Design`,
               `React`,
-              `Motion`
+              `Front-End Developer`,
+              `Graphic Design`
             ]}
           />
           <WorkTitle>808 MERA</WorkTitle>
