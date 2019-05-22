@@ -6,9 +6,11 @@ import { media } from "../components/StyledComps";
 const AppItem = props => {
   return (
     <Wrapper>
-      <a href={props.path} target="_blank" rel="noopener noreferrer">
-        <ImgWrapper>{props.children}</ImgWrapper>
-      </a>
+      <ImgWrapper>
+        <a href={props.path} target="_blank" rel="noopener noreferrer">
+          {props.children}
+        </a>
+      </ImgWrapper>
       <Description>
         <a href={props.path} target="_blank" rel="noopener noreferrer">
           <h2 className="title">{props.title}</h2>

@@ -6,9 +6,9 @@ import { media } from "../components/StyledComps";
 const WorkListItem = props => {
   return (
     <Wrapper>
-      <Link to={`/work/${props.path}/`}>
-        <ImgWrapper>{props.children}</ImgWrapper>
-      </Link>
+      <ImgWrapper>
+        <Link to={`/work/${props.path}/`}>{props.children}</Link>
+      </ImgWrapper>
       <Description>
         <Link to={`/work/${props.path}/`}>
           <h2 className="title">{props.title}</h2>

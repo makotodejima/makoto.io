@@ -46,12 +46,13 @@ function TheLightOfTokyo() {
             <WorkTag>Print, Illustration, Award-winning</WorkTag>
             <WorkDescription>
               I designed the postcard for the hotel chain, Hotel Ryumeikan
-              Tokyo. It is offered to the guests as an amenity in every single
-              room. Ryumeikan Tokyo has over a hundred years of history and now
-              owns 4 locations in the central part of Tokyo. As the message
-              written in the card, they start to get dissolved into the night
-              scape as the light of Tokyo printed with dark grey color. I won
-              the “Tokyo Postcard Award 2019” founded back in 2012.
+              Tokyo. This postcard is being offered to their guests as an
+              amenity in every single room. Ryumeikan Tokyo has over a hundred
+              years of history and now owns 4 locations in the central part of
+              Tokyo. As the message written in the card, each letters start to
+              get dissolved into the night scape as the light coming out of
+              buildings are printed with dark grey color. Won the “Tokyo
+              Postcard Award 2019”.
             </WorkDescription>
           </TopSection>
 
