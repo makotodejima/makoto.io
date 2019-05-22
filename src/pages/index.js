@@ -43,13 +43,7 @@ const IndexPage = () => (
                 path={featured[id].path}
               >
                 {featured[id].isVideo ? (
-                  <video
-                    poster={require(`../images/${featured[id].id}_poster.png`)}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
+                  <video autoPlay loop muted playsInline>
                     <source
                       src={require(`../images/${featured[id].id}.mp4`)}
                       type="video/mp4"
