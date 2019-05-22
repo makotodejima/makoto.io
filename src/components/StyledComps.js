@@ -107,7 +107,7 @@ export const WorkTag = styled.p`
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: lighter;
-  color: grey;
+  color: dimgrey;
 `;
 export const WorkDescription = styled.div`
   width: 33%;
@@ -127,5 +127,5 @@ export const WorkPageWrapper = styled.div`
 export const Caption = styled.div`
   margin: 1rem auto 8rem;
   text-align: center;
-  color: grey;
+  color: dimgrey;
 `;

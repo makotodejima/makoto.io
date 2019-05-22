@@ -26,15 +26,15 @@ function Header({ color }) {
       </Hamburger>
 
       <HeaderLinks color={color} isExpanded={isExpanded}>
-        <Link to="/work/" activeStyle={{ color: `grey` }}>
+        <Link to="/work/" activeStyle={{ color: `dimgrey` }}>
           Work
         </Link>
 
-        <Link to="/about/" activeStyle={{ color: `grey` }}>
+        <Link to="/about/" activeStyle={{ color: `dimgrey` }}>
           About
         </Link>
 
-        <Link to="/contact/" activeStyle={{ color: `grey` }}>
+        <Link to="/contact/" activeStyle={{ color: `dimgrey` }}>
           Contact
         </Link>
       </HeaderLinks>

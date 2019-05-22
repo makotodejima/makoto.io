@@ -38,7 +38,7 @@ const FooterLinks = styled.div`
   }
 
   a {
-    color: grey;
+    color: dimgrey;
     position: relative;
     text-decoration: none;
   }

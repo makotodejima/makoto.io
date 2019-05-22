@@ -44,7 +44,7 @@ function AboutPage(props) {
             development. Also experienced in ad-tech, Japanese writing, editing
             and localization.
             <br />
-            <span style={{ color: `grey` }}>
+            <span style={{ color: `dimgrey` }}>
               Skills: React, Gatsby, Processing, Graphic and Motion Design
             </span>
           </p>

@@ -102,6 +102,6 @@ const Description = styled.div`
     }
   }
   p {
-    color: grey;
+    color: dimgrey;
   }
 `;

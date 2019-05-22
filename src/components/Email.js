@@ -70,7 +70,7 @@ const CopyEmail = styled.h4`
     /* margin-top: 20px; */
     font-weight: lighter;
     margin-left: 5px;
-    color: darkgrey;
+    color: dimgrey;
 
     /* ::before {
     content: "";
