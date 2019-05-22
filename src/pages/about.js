@@ -7,7 +7,7 @@ import SEO from "../components/seo";
 import AboutImage from "../components/AboutImage";
 import SocialLinks from "../components/SocialLinks";
 
-function AboutPage(props) {
+function AboutPage() {
   return (
     <Layout>
       <SEO
@@ -24,7 +24,7 @@ function AboutPage(props) {
 
       <NameWrapper>
         <h3 className="name">
-          <span className="en">Makoto Dejima</span>{" "}
+          <span className="en">Makoto Dejima</span>
           <span className="jp"> 出島 誠</span>
         </h3>
 

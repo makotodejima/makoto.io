@@ -45,10 +45,6 @@ function Mera() {
             <WorkTitle>Indoor Farming System Logo Design</WorkTitle>
             <WorkCopy>Logo design for farming system brand</WorkCopy>
             <WorkTag>Logo, Branding, Graphic design</WorkTag>
-
-            {/* <WorkDescription>
-              Logo Design for Indoor Farming System
-            </WorkDescription> */}
           </TopSection>
 
           <WorkPageWrapper>
