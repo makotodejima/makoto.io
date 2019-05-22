@@ -1,22 +1,25 @@
 import Typography from "typography";
 
 const typography = new Typography({
-  googleFonts: [
-    {
-      name: "Noto Sans JP",
-      styles: ["400"]
-    }
-  ],
   baseFontSize: "15px",
   baseLineHeight: 1.5,
   headerFontFamily: [
     "aller",
+    "Ubuntu",
     "Helvetica",
     "Helvetica Neue",
     "Arial",
     "sans-serif"
   ],
-  bodyFontFamily: ["aller", "Noto Sans JP", "serif"],
+  bodyFontFamily: [
+    "aller",
+    "Ubuntu",
+    "Helvetica",
+    "Helvetica Neue",
+    "游ゴシック",
+    "游ゴシック体",
+    "YuGothic"
+  ],
   headerWeight: "700",
   bodyWeight: "400"
 });
