@@ -13,8 +13,8 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.div`
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
   padding: 2rem;
   max-width: 50rem;
   /* justify-content: flex-end; */
