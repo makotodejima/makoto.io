@@ -46,15 +46,8 @@ function WorkPage(props) {
                   path={work[id].path}
                 >
                   {work[id].isVideo ? (
-                    <video
-                      poster={require(`../images/${work[id].id}_poster.png`)}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
+                    <video autoPlay loop muted playsInline>
                       <source
-                        poster="../images/naotatsu_kaku_poster.png"
                         src={require(`../images/${work[id].id}.mp4`)}
                         type="video/mp4"
                       />
