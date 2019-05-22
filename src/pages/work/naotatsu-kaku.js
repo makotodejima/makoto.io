@@ -53,7 +53,7 @@ function ManhattanPortage() {
             </WorkTag>
             <WorkDescription>
               Naotatsu Kaku is a visual artist who was born and raised in Tokyo.
-              His family have their roots in Taiwan and some of his works
+              His family have their roots in Taiwan and some of the works
               represent his thoughts on his own identity. He won the "New Cosmos
               of Photography Award" and now is working with the support from
               Canon, a leading company in the photo and camera industry.

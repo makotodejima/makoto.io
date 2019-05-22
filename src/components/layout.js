@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
+import { media } from "../components/StyledComps";
 
 // GLOBAL CSS
 import "./layout.scss";
@@ -58,7 +59,7 @@ const Main = styled.div`
   width: 100%;
   max-width: 50rem;
 
-  @media (max-width: 768px) {
+  ${media.phone`
     padding: 1rem;
-  }
+  `}
 `;
