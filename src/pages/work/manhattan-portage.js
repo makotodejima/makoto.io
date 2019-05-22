@@ -90,7 +90,7 @@ const query = graphql`
       relativePath: { eq: "manhattan_portage_00.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -99,7 +99,7 @@ const query = graphql`
       relativePath: { eq: "manhattan_portage_01.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -108,7 +108,7 @@ const query = graphql`
       relativePath: { eq: "manhattan_portage_02.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -117,7 +117,7 @@ const query = graphql`
       relativePath: { eq: "manhattan_portage_03.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -126,7 +126,7 @@ const query = graphql`
       relativePath: { eq: "manhattan_portage_04.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

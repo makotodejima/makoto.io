@@ -49,35 +49,35 @@ const query = graphql`
   query {
     jasms01: file(relativePath: { eq: "jasms01.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     jasms02: file(relativePath: { eq: "jasms02.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     jasms03: file(relativePath: { eq: "jasms03.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     jasms04: file(relativePath: { eq: "jasms04.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     jasms05: file(relativePath: { eq: "jasms05.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

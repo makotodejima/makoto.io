@@ -101,7 +101,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo_00.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 400, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -110,7 +110,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo_01.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -119,7 +119,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo_02.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -128,7 +128,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo_03.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -137,7 +137,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo_04.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -146,7 +146,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo_05.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -155,7 +155,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo_06.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -61,28 +61,28 @@ const query = graphql`
   query {
     mera01: file(relativePath: { eq: "mera01.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mera02: file(relativePath: { eq: "mera02.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mera03: file(relativePath: { eq: "mera03.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mera04: file(relativePath: { eq: "mera04.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

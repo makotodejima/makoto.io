@@ -83,28 +83,28 @@ const query = graphql`
   query {
     satte01: file(relativePath: { eq: "satte01.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     satte02: file(relativePath: { eq: "satte02.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     satte03: file(relativePath: { eq: "satte03.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     satte04: file(relativePath: { eq: "satte04.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1500, quality: 100) {
+        fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
