@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -6,7 +6,16 @@ import { PageTitle } from "../components/StyledComps";
 import Email from "../components/Email";
 import SocialLinks from "../components/SocialLinks";
 
-const ContactPage = props => {
+const ContactPage = () => {
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const isDisabled = () => {
+    return fname === "" || lname === "" || email === "" || message == "";
+  };
+
   return (
     <Layout>
       <SEO
@@ -41,6 +50,7 @@ const ContactPage = props => {
                 name="firstname"
                 placeholder="Your first name.."
                 required
+                onChange={e => setFname(e.target.value)}
               />
             </span>
             <span className="lname">
@@ -51,6 +61,7 @@ const ContactPage = props => {
                 name="lastname"
                 placeholder="Your last name.."
                 required
+                onChange={e => setLname(e.target.value)}
               />
             </span>
           </div>
@@ -61,6 +72,7 @@ const ContactPage = props => {
             name="email"
             placeholder="Your email.."
             required
+            onChange={e => setEmail(e.target.value)}
           />
 
           <label htmlFor="message">Message</label>
@@ -70,8 +82,11 @@ const ContactPage = props => {
             name="message"
             placeholder="Your message.."
             required
+            onChange={e => setMessage(e.target.value)}
           />
-          <button type="submit">Send</button>
+          <button type="submit" disabled={isDisabled()}>
+            Send
+          </button>
         </form>
       </StyledForm>
       <SocialLinks />
@@ -145,19 +160,29 @@ const StyledForm = styled.div`
     }
     button {
       display: inline-block;
-      padding: 0.6rem 2rem;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
       margin-top: 20px;
-      width: 150px;
+      width: 120px;
       text-align: center;
       background: black;
       color: #ffffff;
+      border: none;
       cursor: pointer;
-      transition: 200ms ease-in-out, transform 150ms ease;
+      transition: 200ms ease-in-out, transform 120ms ease;
       -webkit-appearance: none;
       -moz-appearance: none;
+      &:disabled {
+        background-color: rgba(200, 200, 200, 0.8);
+        cursor: not-allowed;
+        :hover,
+        :focus {
+          background-color: rgba(200, 200, 200, 0.8);
+        }
+      }
       &:hover,
       &:focus {
-        background: darkcyan;
+        background: #4892ff;
       }
       &:active {
         transform: scale(0.9);
