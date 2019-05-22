@@ -13,7 +13,8 @@ import {
   WorkCopy,
   WorkTag,
   WorkDescription,
-  WorkPageWrapper
+  WorkPageWrapper,
+  Caption
 } from "../../components/StyledComps";
 
 function TheLightOfTokyo() {
@@ -21,7 +22,7 @@ function TheLightOfTokyo() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout headerColor="#fffff7">
+        <Layout headerColor="#FFFFE3">
           <SEO
             title="Satte City"
             keywords={[
@@ -58,6 +59,7 @@ function TheLightOfTokyo() {
               fluid={data.satte01.childImageSharp.fluid}
               alt="Satte City - 01"
             />
+            <Caption>Drawing hand shape with a subtle line.</Caption>
             <Img
               fluid={data.satte02.childImageSharp.fluid}
               alt="Satte City - 02"

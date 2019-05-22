@@ -5,17 +5,23 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import {
+  TopCoverColor,
+  TopImage,
+  TopSection,
   WorkTitle,
+  WorkCopy,
+  WorkTag,
   WorkDescription,
-  WorkPageWrapper
+  WorkPageWrapper,
+  Caption
 } from "../../components/StyledComps";
 
-function IndexPage() {
+function Mera() {
   return (
     <StaticQuery
       query={query}
       render={data => (
-        <Layout>
+        <Layout headerColor="#FAF2CD">
           <SEO
             title="808MERA"
             keywords={[
@@ -27,15 +33,29 @@ function IndexPage() {
               `Graphic Design`
             ]}
           />
-          <WorkTitle>808 MERA</WorkTitle>
-          <WorkDescription>
-            Logo Design for Indoor Farming System
-          </WorkDescription>
+
+          <TopSection>
+            <TopCoverColor color="#00646A" />
+            <TopImage
+              width="80%"
+              className="top-image"
+              fluid={data.mera01.childImageSharp.fluid}
+              alt="808 MERA Logo - top"
+            />
+            <WorkTitle>Indoor Farming System Logo Design</WorkTitle>
+            <WorkCopy>Logo design for farming system brand</WorkCopy>
+            <WorkTag>Logo, Branding, Graphic design</WorkTag>
+
+            {/* <WorkDescription>
+              Logo Design for Indoor Farming System
+            </WorkDescription> */}
+          </TopSection>
+
           <WorkPageWrapper>
-            <Img
+            {/* <Img
               fluid={data.mera01.childImageSharp.fluid}
               alt="808 MERA - 01"
-            />
+            /> */}
             <Img
               fluid={data.mera02.childImageSharp.fluid}
               alt="808 MERA - 02"
@@ -55,13 +75,13 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+export default Mera;
 
 const query = graphql`
   query {
     mera01: file(relativePath: { eq: "mera01.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

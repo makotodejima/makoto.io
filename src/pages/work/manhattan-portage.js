@@ -13,7 +13,8 @@ import {
   WorkCopy,
   WorkTag,
   WorkDescription,
-  WorkPageWrapper
+  WorkPageWrapper,
+  Caption
 } from "../../components/StyledComps";
 
 function ManhattanPortage() {
@@ -48,12 +49,12 @@ function ManhattanPortage() {
             <WorkDescription>
               Manhattan Portage is one of the most well-known messenger bag
               brand and manufacturer in the world. They started from New York
-              City in 1983. The simple philosophy they set out to achieve back
-              in 1983, is "New York Tough." Their outdoor gear and packs are
-              crafted with materials like CORDURA brand nylon and high quality
-              plastic Delrin buckles. "Manhattan Portage Art Award" is held
-              every year and artists create design that matches Manhattan
-              Portage's culture, materials and philosophy of "New York Tough".
+              City in 1983. The philosophy they set out to achieve back in 1983,
+              is "New York Tough." Their outdoor gear and packs are crafted with
+              materials like CORDURA brand nylon. "Manhattan Portage Art Award"
+              is held every year and artists create design that matches
+              Manhattan Portage's culture, materials and philosophy of "New York
+              Tough".
             </WorkDescription>
           </TopSection>
 
@@ -62,19 +63,28 @@ function ManhattanPortage() {
               fluid={data.manhattan_portage_01.childImageSharp.fluid}
               alt="Manhattan Portage - 01"
             />
+            <Caption>
+              The biker strongly running through the New York City, representing
+              the history of Manhattan Portage that thrives in competitive
+              market.
+            </Caption>
             <Img
               fluid={data.manhattan_portage_02.childImageSharp.fluid}
               alt="Manhattan Portage - 02"
             />
-
+            <Caption>The philosophy, "New York Tough" on the bottom.</Caption>
             <Img
               fluid={data.manhattan_portage_03.childImageSharp.fluid}
               alt="Manhattan Portage - 03"
             />
+            <Caption>
+              Experimenting different colors and allocation of city icons.
+            </Caption>
             <Img
               fluid={data.manhattan_portage_04.childImageSharp.fluid}
               alt="Manhattan Portage - 04"
             />
+            <Caption>Final proof</Caption>
           </WorkPageWrapper>
         </Layout>
       )}

@@ -27,6 +27,15 @@ export const work = {
     path: "manhattan-portage",
     altText: "Messenger Bag, Manhattan Portage"
   },
+  satte: {
+    id: "satte",
+    title: "Satte City Logo Design",
+    client: "Satte City, Japan",
+    type: "Logo Design for a Local Government",
+    keywords: "Logo, Branding, Public sector",
+    path: "satte",
+    altText: "Satte City Logo Design"
+  },
   mera: {
     id: "mera",
     title: "808 MERA Farming System",
@@ -36,30 +45,22 @@ export const work = {
     path: "mera",
     altText: "Logo design for indoor faming system, 808Mera"
   },
-  jasms: {
-    id: "jasms",
-    title: "Japan Society of Mountain Research",
-    client: "Japan Society of Mountain Research",
-    type: "Logo Design",
-    keywords: "",
-    path: "jasms",
-    altText: "Logo design, Japan Society of Mountain Research"
-  },
-  satte: {
-    id: "satte",
-    title: "Satte City Logo Design",
-    client: "Satte City, Japan",
-    type: "Logo Design for a Local Government",
-    keywords: "",
-    path: "satte",
-    altText: " "
-  },
+  // jasms: {
+  //   id: "jasms",
+  //   title: "Japan Society of Mountain Research",
+  //   client: "Japan Society of Mountain Research",
+  //   type: "Logo Design",
+  //   keywords: "",
+  //   path: "jasms",
+  //   altText: "Logo design, Japan Society of Mountain Research"
+  // },
+
   soreike: {
     id: "soreike",
     title: "Soreike San Francisco Tee",
-    client: "",
+    client: "For lovely neighbors",
     type: "T-shirt Design",
-    keywords: "Typography, T-shirt, Logo",
+    keywords: "Japanese, Typography, T-shirt",
     path: "soreike",
     altText: "Soreike San Francisco Tee"
   }

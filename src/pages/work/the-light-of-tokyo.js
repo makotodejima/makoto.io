@@ -61,12 +61,18 @@ function TheLightOfTokyo() {
               fluid={data.the_light_of_tokyo_02.childImageSharp.fluid}
               alt="The Light of Tokyo - 02"
             />
-            <Caption>At the ceremony</Caption>
+            <Caption>Awarding ceremony</Caption>
             <Img
               fluid={data.the_light_of_tokyo_05.childImageSharp.fluid}
               alt="The Light of Tokyo - 05"
             />
-            <Caption>Final draft</Caption>
+            <Caption>Original illustration</Caption>
+
+            <Img
+              fluid={data.the_light_of_tokyo_03.childImageSharp.fluid}
+              alt="The Light of Tokyo - 03"
+            />
+            <Caption>Media coverage. Photo of me giving a talk.</Caption>
             <Img
               fluid={data.the_light_of_tokyo_01.childImageSharp.fluid}
               alt="The Light of Tokyo - 01"
@@ -74,19 +80,19 @@ function TheLightOfTokyo() {
             <Caption>
               Study for the light coming out of diffrent buiildings.
             </Caption>
-
-            <Img
-              fluid={data.the_light_of_tokyo_03.childImageSharp.fluid}
-              alt="The Light of Tokyo - 03"
-            />
             <Img
               fluid={data.the_light_of_tokyo_04.childImageSharp.fluid}
               alt="The Light of Tokyo - 04"
             />
+            <Caption>Variation of color combiations. Sunset. Clouds.</Caption>
+
             <Img
               fluid={data.the_light_of_tokyo_06.childImageSharp.fluid}
               alt="The Light of Tokyo - 06"
             />
+            <Caption>
+              Everything comes together when you write down message.
+            </Caption>
           </WorkPageWrapper>
         </Layout>
       )}
@@ -126,7 +132,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_03: file(
-      relativePath: { eq: "the_light_of_tokyo_03.jpg" }
+      relativePath: { eq: "the_light_of_tokyo_03.png" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {

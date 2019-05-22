@@ -95,13 +95,14 @@ export const WorkTitle = styled.h2`
 `;
 
 export const WorkCopy = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: lighter;
 `;
 
 export const WorkTag = styled.p`
+  font-style: italic;
   font-size: 1.1rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -125,7 +126,7 @@ export const WorkPageWrapper = styled.div`
 `;
 
 export const Caption = styled.div`
-  margin: 1rem auto 8rem;
+  margin: 1rem auto 6rem;
   text-align: center;
   color: dimgrey;
 `;

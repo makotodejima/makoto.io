@@ -5,9 +5,16 @@ import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import {
+  TopCoverColor,
+  TopImage,
+  TopSection,
+  ExtLink,
   WorkTitle,
+  WorkCopy,
+  WorkTag,
   WorkDescription,
-  WorkPageWrapper
+  WorkPageWrapper,
+  Caption
 } from "../../components/StyledComps";
 
 function Soreike() {
@@ -15,7 +22,7 @@ function Soreike() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout>
+        <Layout headerColor="#EFFFFF">
           <SEO
             title="Soreike SF Tee"
             keywords={[
@@ -27,17 +34,22 @@ function Soreike() {
               `Graphic Design`
             ]}
           />
-          <WorkTitle>Soreike San Francisco Tee</WorkTitle>
-          <WorkDescription>T-shirt Design</WorkDescription>
-
+          <TopSection>
+            <TopCoverColor color="#65C6BA" />
+            <TopImage
+              width="70%"
+              className="top-image"
+              fluid={data.soreike02.childImageSharp.fluid}
+              alt="Soreike Tee - 00"
+            />
+            <WorkTitle>Soreike San Francisco Tee</WorkTitle>
+            <WorkCopy>T-shirt Design</WorkCopy>
+            <WorkTag>Japanese, Typography, T-shirt</WorkTag>
+          </TopSection>
           <WorkPageWrapper>
             <Img
               fluid={data.soreike01.childImageSharp.fluid}
               alt="Soreike SF Tee - 01"
-            />
-            <Img
-              fluid={data.soreike02.childImageSharp.fluid}
-              alt="Soreike SF Tee - 02"
             />
             <Img
               fluid={data.soreike03.childImageSharp.fluid}
