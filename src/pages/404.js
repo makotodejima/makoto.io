@@ -14,7 +14,10 @@ const NotFoundPage = () => (
         <SEO title="404: Not found" />
         <div>
           <h3>Hi, it's me, Poco.</h3>
-          <Img fluid={data.poco.childImageSharp.fluid} />
+          <Img
+            fixed={data.poco.childImageSharp.fixed}
+            style={{ marginBottom: `1.8rem` }}
+          />
           <h2>Looks like you've come to wrong place...</h2>
         </div>
       </Layout>
@@ -28,8 +31,8 @@ const query = graphql`
   query {
     poco: file(relativePath: { eq: "poco.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
