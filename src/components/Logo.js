@@ -36,9 +36,9 @@ const SVG = styled.svg`
       stroke-miterlimit: 10;
       stroke-width: 5px;
       stroke-dasharray: 483px;
-      stroke-dashoffset: 483px;
+      stroke-dashoffset: 966px;
       /* 'dash' animation is defined in Scss */
-      animation: dash 1.2s ease-in-out forwards;
+      animation: dash 2s ease-in-out forwards;
     }
     #m,
     #d {
