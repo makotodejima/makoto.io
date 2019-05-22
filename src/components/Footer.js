@@ -1,24 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import styled from "styled-components";
-import { useSpring, animated } from "react-spring";
 
 const Footer = () => {
-  const props = useSpring({
-    year: 2019,
-    from: { year: 1990 },
-    config: { mass: 1, tension: 100, friction: 200 }
-  });
-
   return (
     <StyledFooter>
-      <div className="copyright">
-        &copy;{" "}
-        <animated.span>
-          {props.year.interpolate(val => val.toFixed(0))}
-        </animated.span>{" "}
-        Makoto Dejima
-      </div>
+      <div className="copyright">&copy; 2019 Makoto Dejima</div>
     </StyledFooter>
   );
 };

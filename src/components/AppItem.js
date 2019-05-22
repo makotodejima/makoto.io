@@ -42,7 +42,7 @@ const ImgWrapper = styled.div`
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease-in;
 
   ${media.tablet`
@@ -55,7 +55,7 @@ const ImgWrapper = styled.div`
   `}
 
   &:hover {
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.3);
   }
 
   img,
