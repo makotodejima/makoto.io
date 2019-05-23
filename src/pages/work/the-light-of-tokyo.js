@@ -63,11 +63,10 @@ function TheLightOfTokyo() {
             />
             <Caption>Awarding ceremony</Caption>
             <Img
-              fluid={data.the_light_of_tokyo_05.childImageSharp.fluid}
-              alt="The Light of Tokyo - 05"
+              fluid={data.the_light_of_tokyo_07.childImageSharp.fluid}
+              alt="The Light of Tokyo - 07"
             />
-            <Caption>Original illustration</Caption>
-
+            <Caption>Printing went very well.</Caption>
             <Img
               fluid={data.the_light_of_tokyo_03.childImageSharp.fluid}
               alt="The Light of Tokyo - 03"
@@ -80,6 +79,11 @@ function TheLightOfTokyo() {
             <Caption>
               Study for the light coming out of diffrent buiildings.
             </Caption>
+            <Img
+              fluid={data.the_light_of_tokyo_05.childImageSharp.fluid}
+              alt="The Light of Tokyo - 05"
+            />
+            <Caption>Original illustration</Caption>
             <Img
               fluid={data.the_light_of_tokyo_04.childImageSharp.fluid}
               alt="The Light of Tokyo - 04"
@@ -163,6 +167,15 @@ const query = graphql`
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    the_light_of_tokyo_07: file(
+      relativePath: { eq: "the_light_of_tokyo_07.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

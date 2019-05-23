@@ -91,8 +91,7 @@ SEO.defaultProps = {
     `Design`,
     `Graphic Design`,
     `JavaScript`,
-    `React`,
-    `Motion`
+    `React`
   ]
 };
 
