@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { media } from "../components/StyledComps";
 import Logo from "./Logo";
-import { useSpring, animated } from "react-spring";
 
 /* 
 'color' props is passed down from Layout Comp
@@ -13,8 +12,6 @@ it defines header logo, text and hamburger color
 
 function Header({ color }) {
   const [isExpanded, toggleExpansion] = useState(false);
-
-  const props = useSpring({ opacity: isExpanded ? 1 : 0 });
 
   return (
     <StyledNav>
@@ -43,21 +40,22 @@ function Header({ color }) {
       </HeaderLinks>
 
       <Overlay isExpanded={isExpanded}>
-        <animated.div style={props}>
-          <h1 className="close" onClick={() => toggleExpansion(!isExpanded)}>
-            CLOSE
-          </h1>
-          <Link to="/work/" activeStyle={{ color: `dimgrey` }}>
-            <h1>Work</h1>
-          </Link>
-          <Link to="/about/" activeStyle={{ color: `dimgrey` }}>
-            <h1>About</h1>
-          </Link>
+        <h1 className="close" onClick={() => toggleExpansion(!isExpanded)}>
+          CLOSE
+        </h1>
+        <Link to="/" activeStyle={{ color: `dimgrey` }}>
+          <h1>Home</h1>
+        </Link>
+        <Link to="/work/" activeStyle={{ color: `dimgrey` }}>
+          <h1>Work</h1>
+        </Link>
+        <Link to="/about/" activeStyle={{ color: `dimgrey` }}>
+          <h1>About</h1>
+        </Link>
 
-          <Link to="/contact/" activeStyle={{ color: `dimgrey` }}>
-            <h1>Contact</h1>
-          </Link>
-        </animated.div>
+        <Link to="/contact/" activeStyle={{ color: `dimgrey` }}>
+          <h1>Contact</h1>
+        </Link>
       </Overlay>
     </StyledNav>
   );
@@ -157,10 +155,10 @@ const HeaderLinks = styled.div`
 
 const Overlay = styled.div`
   visibility: hidden;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
   @media (max-width: 576px) {
     visibility: ${props => (props.isExpanded ? "visible" : "hidden")};
-    opacity: ${props => (props.isExpanded ? 0.99 : 0)};
+    opacity: ${props => (props.isExpanded ? 0.98 : 0)};
   }
 
   z-index: 99;
