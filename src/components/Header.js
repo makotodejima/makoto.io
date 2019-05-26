@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { media } from "../components/StyledComps";
 import Logo from "./Logo";
+import { useSpring, animated } from "react-spring";
 
 /* 
 'color' props is passed down from Layout Comp
@@ -12,6 +13,8 @@ it defines header logo, text and hamburger color
 
 function Header({ color }) {
   const [isExpanded, toggleExpansion] = useState(false);
+
+  const props = useSpring({ opacity: isExpanded ? 1 : 0 });
 
   return (
     <StyledNav>
@@ -38,6 +41,24 @@ function Header({ color }) {
           Contact
         </Link>
       </HeaderLinks>
+
+      <Overlay isExpanded={isExpanded}>
+        <animated.div style={props}>
+          <h1 className="close" onClick={() => toggleExpansion(!isExpanded)}>
+            CLOSE
+          </h1>
+          <Link to="/work/" activeStyle={{ color: `dimgrey` }}>
+            <h1>Work</h1>
+          </Link>
+          <Link to="/about/" activeStyle={{ color: `dimgrey` }}>
+            <h1>About</h1>
+          </Link>
+
+          <Link to="/contact/" activeStyle={{ color: `dimgrey` }}>
+            <h1>Contact</h1>
+          </Link>
+        </animated.div>
+      </Overlay>
     </StyledNav>
   );
 }
@@ -84,9 +105,10 @@ const Hamburger = styled.button`
   :focus {
     outline: 0;
   }
-  @media (max-width: 768px) {
+
+  ${media.phone`
     display: block;
-  }
+  `}
 `;
 
 const HeaderLinks = styled.div`
@@ -120,14 +142,49 @@ const HeaderLinks = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 576px) {
     text-align: center;
     width: 100%;
-    display: ${props => (props.isExpanded ? `block` : `none`)};
+    /* display: ${props => (props.isExpanded ? `block` : `none`)}; */
+    display: none;
     a {
       display: block;
       margin-top: 1rem;
       margin-left: 0;
+    }
+  }
+`;
+
+const Overlay = styled.div`
+  visibility: hidden;
+  transition: opacity 0.3s;
+  @media (max-width: 576px) {
+    visibility: ${props => (props.isExpanded ? "visible" : "hidden")};
+    opacity: ${props => (props.isExpanded ? 0.99 : 0)};
+  }
+
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 249);
+  overflow: auto;
+  padding: 2rem;
+
+  .close {
+    text-align: right;
+    margin-bottom: 6rem;
+    color: grey;
+    z-index: 999;
+  }
+
+  a {
+    color: black;
+    text-align: center;
+    h1 {
+      margin: 2rem 0;
     }
   }
 `;
