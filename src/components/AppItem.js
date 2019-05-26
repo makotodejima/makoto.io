@@ -39,6 +39,7 @@ const Wrapper = styled.div`
 `;
 
 const ImgWrapper = styled.div`
+  min-width: 220px;
   margin-bottom: 1.5rem;
   border-radius: 5px;
   overflow: hidden;
@@ -46,6 +47,7 @@ const ImgWrapper = styled.div`
   -moz-transform: translate3d(0, 0, 0);
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease-in;
+  width: 220px;
 
   ${media.tablet`
     margin-bottom: 0;
@@ -73,6 +75,7 @@ const ImgWrapper = styled.div`
 `;
 
 const Description = styled.div`
+  max-width: 380px;
   a {
     text-decoration: none;
     .title {

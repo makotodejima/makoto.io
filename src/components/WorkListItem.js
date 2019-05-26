@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 `;
 
 const ImgWrapper = styled.div`
-  width: 220px;
+  min-width: 220px;
   margin-right: 2rem;
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
