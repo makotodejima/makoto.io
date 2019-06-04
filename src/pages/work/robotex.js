@@ -56,37 +56,36 @@ function Robotex({ data }) {
           </a>
         </ExtLink>
         <WorkDescription>
-          Naotatsu Kaku is a visual artist who was born and raised in Tokyo. His
-          family have their roots in Taiwan and some of the works represent his
-          thoughts on his own identity. He won the "New Cosmos of Photography
-          Award" and now is working with the support from Canon, a leading
-          company in the photo and camera industry.
+          Robotex International is a global robotics education network, focusing
+          on robotics (including AI and Drones) education and startup training.
+          Established back in 2001, Robotex has expanded the network to over 18
+          countries. In October 2019, Robotex Japan will hold first big
+          conference in Kyoto. Continueing to grow its presense in Japanese
+          education scene.
         </WorkDescription>
       </TopSection>
 
       <WorkPageWrapper>
-        {/* <Img /> */}
-        <Caption>
-          Experimenting different patterns of animation. Animation is shown to
-          only new visitors.
-        </Caption>
         <Img
           fluid={data.robotex_01.childImageSharp.fluid}
           alt="Robotex Japan - 01"
         />
         <Caption>
-          As his artworks feature transition between images, pictures are set in
-          beautiful slideshow form.
+          Set up UI component development environment and design guideline with
+          Storybook, helping other developers to have consistency and efficiency
         </Caption>
         <Img
           fluid={data.robotex_02.childImageSharp.fluid}
           alt="Robotex Japan - 02"
         />
-        <Caption>Animated with SVGs, Anime.js and styled-components.</Caption>
+        <Caption>
+          Prototyping website mockup, grahic and brand visual identity.
+        </Caption>
         <Img
           fluid={data.robotex_03.childImageSharp.fluid}
           alt="Robotex Japan - 03"
         />
+        <Caption>Designed and illustrated the brand visual identity.</Caption>
       </WorkPageWrapper>
     </Layout>
   );
