@@ -70,18 +70,19 @@ export const ExtLink = styled.div`
   width: 100%;
   text-align: center;
   background-color: transparent;
-  margin-bottom: 4rem;
+  margin: 3.4rem auto;
   a {
     margin: 0 auto;
-    padding: 5px 12px;
-    border: 2px solid black;
+    font-size: 1.1rem;
+    padding: 5px 22px;
+    border: 2px solid ${props => props.color || "darkcyan"};
     border-radius: 30px;
     text-decoration: none;
-    color: black;
+    color: ${props => props.color || "darkcyan"};
     transition: all 0.3s;
     &:hover {
       color: white;
-      background-color: black;
+      background-color: ${props => props.color || "darkcyan"};
     }
     :active {
       transform: scale(0.9);

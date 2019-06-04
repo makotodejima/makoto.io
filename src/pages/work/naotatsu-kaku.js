@@ -48,6 +48,15 @@ function ManhattanPortage() {
             />
             <WorkTitle>Naotatsu Kaku's Portfolio Website</WorkTitle>
             <WorkCopy>Visual Artist, Naotatsu Kaku</WorkCopy>
+            <ExtLink color="black">
+              <a
+                href="http://naotatsukaku.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit website
+              </a>
+            </ExtLink>
             <WorkTag>
               React, Gatsby, Netlify CMS, Anime.js, SVG Animation, Sass
             </WorkTag>
@@ -58,15 +67,6 @@ function ManhattanPortage() {
               of Photography Award" and now is working with the support from
               Canon, a leading company in the photo and camera industry.
             </WorkDescription>
-            <ExtLink>
-              <a
-                href="http://naotatsukaku.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit: www.naotatsukaku.com
-              </a>
-            </ExtLink>
           </TopSection>
 
           <WorkPageWrapper>

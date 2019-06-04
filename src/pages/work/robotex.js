@@ -18,7 +18,7 @@ import {
 
 function Robotex({ data }) {
   return (
-    <Layout headerColor="white">
+    <Layout headerColor="rgb(255, 255, 249)">
       <SEO
         title="Robotex Japan"
         keywords={[
@@ -32,7 +32,7 @@ function Robotex({ data }) {
       />
 
       <TopSection>
-        <TopCoverColor color="red" />
+        <TopCoverColor color="#CE1437" />
         <TopImage
           width="65%"
           className="top-image"
@@ -43,13 +43,13 @@ function Robotex({ data }) {
         <WorkCopy>
           Global robotics education network originated in Estonia
         </WorkCopy>
-        <ExtLink>
+        <ExtLink color="#CE1437">
           <a
             href="https://robotex.or.jp"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit: Robotex Japan
+            Visit website
           </a>
         </ExtLink>
         <WorkTag>
