@@ -13,7 +13,7 @@ const ContactPage = () => {
   const [message, setMessage] = useState("");
 
   const isDisabled = () => {
-    return fname === "" || lname === "" || email === "" || message == "";
+    return fname === "" || lname === "" || email === "" || message === "";
   };
 
   return (

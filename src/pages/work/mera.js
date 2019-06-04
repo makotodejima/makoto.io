@@ -11,9 +11,7 @@ import {
   WorkTitle,
   WorkCopy,
   WorkTag,
-  WorkDescription,
-  WorkPageWrapper,
-  Caption
+  WorkPageWrapper
 } from "../../components/StyledComps";
 
 function Mera() {

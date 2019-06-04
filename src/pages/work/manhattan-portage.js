@@ -8,7 +8,6 @@ import {
   TopCoverColor,
   TopImage,
   TopSection,
-  ExtLink,
   WorkTitle,
   WorkCopy,
   WorkTag,

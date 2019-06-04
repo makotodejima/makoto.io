@@ -1,5 +1,4 @@
 import React from "react";
-import News from "./News";
 import styled from "styled-components";
 
 const Hero = () => {
@@ -7,7 +6,6 @@ const Hero = () => {
     <Wrapper>
       <h3>MAKOTO DEJIMA</h3>
       <h2>Designer / Front-End Developer</h2>
-      {/* <News /> */}
     </Wrapper>
   );
 };
