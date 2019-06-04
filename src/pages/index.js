@@ -108,5 +108,12 @@ const query = graphql`
         }
       }
     }
+    robotex: file(relativePath: { eq: "robotex.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `;

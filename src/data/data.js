@@ -23,7 +23,7 @@ export const work = {
     id: "the_light_of_tokyo",
     title: "The Light of Tokyo",
     client: "Hotel Ryumeikan Tokyo",
-    type: "Hotel Room Postcard Design",
+    type: "Postcard Design",
     keywords: 'Graphic design, Won the "Tokyo Postcard Award"',
     path: "the-light-of-tokyo",
     altText: "Postcard, The light of Tokyo"
@@ -77,14 +77,14 @@ export const work = {
 };
 
 export const featured = {
-  naotatsu_kaku: {
-    ...work.naotatsu_kaku
+  robotex: {
+    ...work.robotex
   },
   the_light_of_tokyo: {
     ...work.the_light_of_tokyo
   },
-  manhattan_portage: {
-    ...work.manhattan_portage
+  naotatsu_kaku: {
+    ...work.naotatsu_kaku
   }
 };
 

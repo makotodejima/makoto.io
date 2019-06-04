@@ -75,6 +75,15 @@ function Robotex({ data }) {
           Storybook, helping other developers to have consistency and efficiency
         </Caption>
         <Img
+          fluid={data.robotex_04.childImageSharp.fluid}
+          alt="Robotex Japan - 04"
+        />
+        <Caption>
+          Storybook made easy to develop a component or a set of components in
+          the independent environment. Resulting in resilient and reusable
+          components.
+        </Caption>
+        <Img
           fluid={data.robotex_02.childImageSharp.fluid}
           alt="Robotex Japan - 02"
         />
@@ -117,6 +126,13 @@ export const query = graphql`
       }
     }
     robotex_03: file(relativePath: { eq: "robotex_03.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    robotex_04: file(relativePath: { eq: "robotex_04.png" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
