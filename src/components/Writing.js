@@ -14,7 +14,8 @@ export default () => (
       >
         Tech and politics / テクノロジーと政治
       </a>
-      <br />I am writing about technology, startups, and politics.
+      <br />
+      Technology, startups, and politics.
     </WritingLink>
     <WritingLink>
       <a
@@ -25,8 +26,8 @@ export default () => (
         WeQ Japanese PR <img src={weq} alt="WeQ" />
       </a>
       <br />
-      I'm working with German global ad-tech company to accelerate their growth
-      in Japanese market.
+      Working with German global ad-tech company to accelerate their growth in
+      Japanese market.
     </WritingLink>
     <div style={{ height: `3rem` }} />
   </>
