@@ -67,14 +67,13 @@ export const TopImage = styled(Img)`
 `;
 
 export const ExtLink = styled.div`
-  width: 100%;
   text-align: center;
   background-color: transparent;
   margin: 3.4rem auto;
   a {
     margin: 0 auto;
     font-size: 1.1rem;
-    padding: 5px 22px;
+    padding: 5px 40px;
     border: 2px solid ${props => props.color || "darkcyan"};
     border-radius: 30px;
     text-decoration: none;

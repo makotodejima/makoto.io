@@ -43,6 +43,9 @@ function Robotex({ data }) {
         <WorkCopy>
           Global robotics education network originated in Estonia
         </WorkCopy>
+        <WorkTag>
+          Gatsby, React, GraphQL, Storybook, Netlify CMS, Styled-components
+        </WorkTag>
         <ExtLink color="#CE1437">
           <a
             href="https://robotex.or.jp"
@@ -52,9 +55,6 @@ function Robotex({ data }) {
             Visit website
           </a>
         </ExtLink>
-        <WorkTag>
-          Gatsby, React, GraphQL, Storybook, Netlify CMS, Styled-components
-        </WorkTag>
         <WorkDescription>
           Naotatsu Kaku is a visual artist who was born and raised in Tokyo. His
           family have their roots in Taiwan and some of the works represent his

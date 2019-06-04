@@ -48,6 +48,9 @@ function ManhattanPortage() {
             />
             <WorkTitle>Naotatsu Kaku's Portfolio Website</WorkTitle>
             <WorkCopy>Visual Artist, Naotatsu Kaku</WorkCopy>
+            <WorkTag>
+              React, Gatsby, Netlify CMS, Anime.js, SVG Animation, Sass
+            </WorkTag>
             <ExtLink color="black">
               <a
                 href="http://naotatsukaku.com/"
@@ -57,9 +60,6 @@ function ManhattanPortage() {
                 Visit website
               </a>
             </ExtLink>
-            <WorkTag>
-              React, Gatsby, Netlify CMS, Anime.js, SVG Animation, Sass
-            </WorkTag>
             <WorkDescription>
               Naotatsu Kaku is a visual artist who was born and raised in Tokyo.
               His family have their roots in Taiwan and some of the works
