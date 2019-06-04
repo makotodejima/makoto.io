@@ -11,8 +11,8 @@ export const work = {
   },
   naotatsu_kaku: {
     id: "naotatsu_kaku",
-    title: "Naotatsu Kaku's Portfolio Website",
-    client: "Visual Artist, Naotatsu Kaku",
+    title: "Visual Artist's Portfolio Website",
+    client: "Naotatsu Kaku",
     type: "Design and Development",
     keywords: "React, Gatsby, Netlify CMS, Anime.js, SVG Animation",
     path: "naotatsu-kaku",
