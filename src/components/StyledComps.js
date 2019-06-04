@@ -68,8 +68,8 @@ export const TopImage = styled(Img)`
 
 export const ExtLink = styled.div`
   text-align: center;
-  background-color: transparent;
   margin: 3.4rem auto;
+
   a {
     margin: 0 auto;
     font-size: 1.1rem;
@@ -78,13 +78,10 @@ export const ExtLink = styled.div`
     border-radius: 30px;
     text-decoration: none;
     color: ${props => props.color || "darkcyan"};
-    transition: all 0.3s;
+    transition: all 0.2s ease-in;
     &:hover {
       color: white;
       background-color: ${props => props.color || "darkcyan"};
-    }
-    :active {
-      transform: scale(0.9);
     }
   }
 `;
