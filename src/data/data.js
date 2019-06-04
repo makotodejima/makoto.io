@@ -3,9 +3,9 @@ export const work = {
     id: "robotex",
     title: "Robotex Japan Corporate Website",
     client: "Global robotics education network originated in Estonia",
-    type: "Design and development",
+    type: "Design and Development",
     keywords:
-      "Gatsby, React, GraphQL, Storybook, Netlify CMS, Styled-components",
+      "React, Gatsby, GraphQL, Storybook, Netlify CMS, Styled-components",
     path: "robotex",
     altText: "Robotex Japan"
   },
@@ -13,7 +13,7 @@ export const work = {
     id: "naotatsu_kaku",
     title: "Naotatsu Kaku's Portfolio Website",
     client: "Visual Artist, Naotatsu Kaku",
-    type: "Design and development",
+    type: "Design and Development",
     keywords: "React, Gatsby, Netlify CMS, Anime.js, SVG Animation",
     path: "naotatsu-kaku",
     altText: "Visual Artist, Naotatsu Kaku",
