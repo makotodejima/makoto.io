@@ -111,7 +111,7 @@ export const WorkTag = styled.p`
   color: dimgrey;
 `;
 export const WorkDescription = styled.div`
-  width: 33%;
+  width: 32%;
   /* text-align: justify; */
   margin: 0 auto 3rem;
   font-size: 0.9rem;
