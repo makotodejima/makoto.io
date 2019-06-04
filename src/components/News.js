@@ -4,13 +4,18 @@ import { Link } from "gatsby";
 
 const scaleOut = keyframes`
  0% { 
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.6;
   } 
+  50% {
+
+    opacity: 1;
+  }
   100% {
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-    opacity: 0;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.4;
   }
 `;
 
@@ -18,29 +23,28 @@ const News = () => {
   const [hover, toggleHover] = useState(false);
 
   return (
-    <BlinkerContainer>
-      <span
-        onMouseEnter={() => toggleHover(true)}
-        onMouseLeave={() => toggleHover(false)}
-      >
-        <Blinker />
+    <BlinkerContainer
+      onMouseEnter={() => toggleHover(true)}
+      onMouseLeave={() => toggleHover(false)}
+    >
+      <Blinker />
+      <Blinker delay />
 
-        <Balloon hover={hover}>
-          <p>
-            <span className="text-grey-dark">2019.3 </span>
-            <Link to="/work/the-light-of-tokyo" className="text-red-light">
-              Won "Tokyo Post Card Award 2019"
-            </Link>
-          </p>
+      <Balloon hover={true}>
+        <div className="item">
+          <div className="date">2019.3</div>
+          <Link to="/work/the-light-of-tokyo" className="text-red-light">
+            Awarded "Tokyo Post Card Award 2019"
+          </Link>
+        </div>
 
-          <p>
-            <span className="text-grey-dark">2019.4 </span>
-            <Link to="/work/manhattan-portage" className="text-red-light">
-              Finalist "Manhattan Portage Art Award"
-            </Link>
-          </p>
-        </Balloon>
-      </span>
+        <div className="item">
+          <div className="date">2019.4</div>
+          <Link to="/work/manhattan-portage" className="text-red-light">
+            Finalist "Manhattan Portage Art Award"
+          </Link>
+        </div>
+      </Balloon>
     </BlinkerContainer>
   );
 };
@@ -52,31 +56,38 @@ const BlinkerContainer = styled.div`
   display: inline-block;
   width: 22px;
   height: 22px;
+  padding: 4px;
 `;
 
 const Blinker = styled.div`
-  width: 12px;
-  height: 12px;
-  margin: 6px auto 6px;
-  background-color: rgb(80, 227, 194);
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: rgba(79, 227, 218);
   border-radius: 100%;
-  -webkit-animation: ${scaleOut} 2s infinite ease-in-out;
-  animation: ${scaleOut} 2s infinite ease-in-out;
+  -webkit-animation: ${scaleOut} 3s infinite ease-in-out;
+  animation: ${scaleOut} 3s infinite ease-in-out;
+  animation-delay: ${props => props.delay && "1500ms"};
 `;
 
 const Balloon = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 999;
+  top: 35px;
+  left: -9px;
+  width: 245px;
   font-size: 0.9rem;
   opacity: ${props => (props.hover ? 1 : 0)};
   visibility: ${props => (props.hover ? "visible" : "hidden")};
   padding: 10px 20px;
   line-height: 1.8;
-  transform: translateX(-50%);
-  /* margin-top: 20px; */
-  border-radius: 0.5rem;
-  transition: all 0.5s ease-out;
+  background-color: white;
+  border-radius: 0.2rem;
+  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  .item {
+  }
+
   ::before {
     content: "";
     position: absolute;
@@ -85,13 +96,11 @@ const Balloon = styled.div`
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     transform: translate(-50%, -100%);
-    box-shadow: 0px 2px 50px -15px rgba(0, 0, 0, 0.5);
     @media (max-width: 767px) {
       visibility: hidden;
     }
   }
-  box-shadow: 0px 2px 40px -15px rgba(0, 0, 0, 0.5);
-  @media (max-width: 767px) {
+  /* @media (max-width: 767px) {
     margin-top: 0px;
     margin-bottom: 20px;
     opacity: 1;
@@ -99,5 +108,5 @@ const Balloon = styled.div`
     position: relative;
     box-shadow: none;
     font-size: 0.8rem;
-  }
+  } */
 `;

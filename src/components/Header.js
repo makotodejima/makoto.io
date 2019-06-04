@@ -27,16 +27,20 @@ function Header({ color }) {
       </Hamburger>
 
       <HeaderLinks color={color} isExpanded={isExpanded}>
-        {/* <News /> */}
-        <Link to="/work/" activeStyle={{ color: `dimgrey` }}>
+        <News />
+        <Link className="link" to="/work/" activeStyle={{ color: `dimgrey` }}>
           Work
         </Link>
 
-        <Link to="/about/" activeStyle={{ color: `dimgrey` }}>
+        <Link className="link" to="/about/" activeStyle={{ color: `dimgrey` }}>
           About
         </Link>
 
-        <Link to="/contact/" activeStyle={{ color: `dimgrey` }}>
+        <Link
+          className="link"
+          to="/contact/"
+          activeStyle={{ color: `dimgrey` }}
+        >
           Contact
         </Link>
       </HeaderLinks>
@@ -116,7 +120,7 @@ const HeaderLinks = styled.div`
   align-items: center;
   font-size: 1rem;
 
-  a {
+  a.link {
     display: inline-block;
     position: relative;
     color: ${props => props.color || "black"};
