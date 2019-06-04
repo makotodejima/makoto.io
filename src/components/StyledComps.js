@@ -78,7 +78,7 @@ export const ExtLink = styled.div`
     border-radius: 30px;
     text-decoration: none;
     color: black;
-    transition: all 0.2s;
+    transition: all 0.3s;
     &:hover {
       color: white;
       background-color: black;
