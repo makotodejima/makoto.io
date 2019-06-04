@@ -14,7 +14,9 @@ const WorkListItem = props => {
           <h2 className="title">{props.title}</h2>
         </Link>
         <h4>{`${props.type} | ${props.client}`}</h4>
-        <p style={{ color: `dimgrey` }}>{props.keywords}</p>
+        <p className="keywords" style={{ color: `dimgrey` }}>
+          {props.keywords}
+        </p>
       </Description>
     </Wrapper>
   );
@@ -65,6 +67,12 @@ const ImgWrapper = styled.div`
 `;
 
 const Description = styled.div`
+  .keywords {
+    margin-bottom: 0;
+    ${media.phone`
+    margin-bottom: 1.5rem;
+    `}
+  }
   a {
     text-decoration: none;
     .title {

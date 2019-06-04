@@ -1,4 +1,14 @@
 export const work = {
+  robotex: {
+    id: "robotex",
+    title: "Robotex Japan Corporate Website",
+    client: "Global robotics education network originated in Estonia",
+    type: "Design and development",
+    keywords:
+      "Gatsby, React, GraphQL, Storybook, Netlify CMS, Styled-components",
+    path: "robotex",
+    altText: "Robotex Japan"
+  },
   naotatsu_kaku: {
     id: "naotatsu_kaku",
     title: "Naotatsu Kaku's Portfolio Website",
