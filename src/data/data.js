@@ -93,9 +93,9 @@ export const apps = {
     id: "sobasquare",
     title: "Sobasquare",
     client: null,
-    type: "Soba Restaurant Exploring",
+    type: "Soba Restaurant Exploring App",
     keywords:
-      "React, Redux, Foursquare API,\nFLIP Animation, Sass, styled-components",
+      "React, Redux, Foursquare API, Google Maps API, FLIP Animation, Sass, styled-components",
     path: "https://sobasquare.mkdjm.now.sh",
     altText: "Never stop exploring soba place"
   },
