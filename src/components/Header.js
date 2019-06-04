@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { media } from "../components/StyledComps";
 import Logo from "./Logo";
+import News from "../components/News";
 
 /* 
 'color' props is passed down from Layout Comp
@@ -26,6 +27,7 @@ function Header({ color }) {
       </Hamburger>
 
       <HeaderLinks color={color} isExpanded={isExpanded}>
+        {/* <News /> */}
         <Link to="/work/" activeStyle={{ color: `dimgrey` }}>
           Work
         </Link>
@@ -110,6 +112,7 @@ const Hamburger = styled.button`
 `;
 
 const HeaderLinks = styled.div`
+  display: flex;
   align-items: center;
   font-size: 1rem;
 

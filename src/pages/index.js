@@ -30,6 +30,7 @@ const IndexPage = () => (
         />
 
         <Hero />
+
         <Label>Featured Work</Label>
         <WorksListContainer>
           {Object.keys(featured).map(id => {

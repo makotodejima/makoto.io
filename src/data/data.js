@@ -2,7 +2,7 @@ export const work = {
   robotex: {
     id: "robotex",
     title: "Robotex Japan Corporate Website",
-    client: "Global robotics education network originated in Estonia",
+    client: "Robotex International",
     type: "Design and Development",
     keywords:
       "React, Gatsby, GraphQL, Storybook, Netlify CMS, Styled-components",
@@ -39,7 +39,7 @@ export const work = {
   },
   satte: {
     id: "satte",
-    title: "Satte City Logo Design",
+    title: "Satte City Logo",
     client: "Satte City, Japan",
     type: "Logo Design for a Local Government",
     keywords: "Logo, Branding, Public sector",
@@ -68,7 +68,7 @@ export const work = {
   soreike: {
     id: "soreike",
     title: "Soreike San Francisco Tee",
-    client: "For lovely neighbors",
+    client: "Nice neighbors",
     type: "T-shirt Design",
     keywords: "Japanese, Typography, T-shirt",
     path: "soreike",

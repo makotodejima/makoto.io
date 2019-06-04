@@ -60,7 +60,7 @@ function Robotex({ data }) {
           on robotics (including AI and Drones) education and startup training.
           Established back in 2001, Robotex has expanded the network to over 18
           countries. In October 2019, Robotex Japan will hold first big
-          conference in Kyoto. Continueing to grow its presense in Japanese
+          conference in Kyoto. Continuing to grow its presense in Japanese
           education scene.
         </WorkDescription>
       </TopSection>
