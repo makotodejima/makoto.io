@@ -30,19 +30,26 @@ const News = () => {
       <Blinker />
       <Blinker delay />
 
-      <Balloon hover={true}>
+      <Balloon hover={hover}>
         <div className="heading">What's new</div>
         <div className="item">
-          <div className="date">2019.3</div>
-          <Link to="/work/the-light-of-tokyo" className="text-red-light">
-            Awarded "Tokyo Post Card Award 2019"
-          </Link>
+          <div className="date">2019.5</div>
+          <a
+            href="https://sobasquare.mkdjm.now.sh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sobasquare got new Instant Search feature!
+          </a>
         </div>
-
         <div className="item">
-          <div className="date">2019.4</div>
-          <Link to="/work/manhattan-portage" className="text-red-light">
-            Finalist "Manhattan Portage Art Award"
+          <div className="date">2019.6</div>
+          <Link to="/work/robotex">Robotex Japan corporate site released</Link>
+        </div>
+        <div className="item">
+          <div className="date">2019.3</div>
+          <Link to="/work/the-light-of-tokyo">
+            Awarded "Tokyo Post Card Award 2019"
           </Link>
         </div>
       </Balloon>
