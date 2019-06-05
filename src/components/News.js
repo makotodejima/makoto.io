@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Link } from "gatsby";
 
-const scaleOut = keyframes`
- 0% { 
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 0.6;
-  } 
-  50% {
+// const scaleOut = keyframes`
+//  0% {
+//     -webkit-transform: scale(0.2);
+//     transform: scale(0.2);
+//     opacity: 0.6;
+//   }
+//   50% {
 
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: 0.2;
-  }
-`;
+//     opacity: 1;
+//   }
+//   100% {
+//     -webkit-transform: scale(1.1);
+//     transform: scale(1.1);
+//     opacity: 0.2;
+//   }
+// `;
 
 const News = () => {
   const [hover, toggleHover] = useState(false);
@@ -73,8 +73,8 @@ const Blinker = styled.div`
   height: 14px;
   background-color: rgba(79, 227, 218);
   border-radius: 100%;
-  -webkit-animation: ${scaleOut} 3s infinite ease-in-out;
-  animation: ${scaleOut} 3s infinite ease-in-out;
+  -webkit-animation: scaleOut 3s infinite ease-in-out;
+  animation: scaleOut 3s infinite ease-in-out;
   animation-delay: ${props => props.delay && "1500ms"};
 `;
 
