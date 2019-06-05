@@ -16,8 +16,8 @@ const News = () => {
 
       <Balloon hover={hover}>
         <div className="heading">What's new</div>
-        {news.map(n => (
-          <div className="item">
+        {news.map((n, idx) => (
+          <div key={idx} className="item">
             <div className="date">{n.date}</div>
             {n.href && (
               <a href={n.href} target="_blank" rel="noopener noreferrer">
@@ -56,18 +56,19 @@ const Blinker = styled.div`
 const Balloon = styled.div`
   position: absolute;
   z-index: 999;
-  top: 35px;
+  top: 32px;
   left: -9px;
   width: 245px;
   font-size: 0.9rem;
   opacity: ${props => (props.hover ? 1 : 0)};
   visibility: ${props => (props.hover ? "visible" : "hidden")};
+  transform: ${props => (props.hover ? "translateY(0)" : "translateY(5px)")};
   padding: 10px 20px;
   line-height: 1.8;
   background-color: white;
   border-radius: 0.2rem;
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-out;
+  transition: all 250ms ease-out;
 
   .heading {
     font-weight: bold;
@@ -90,17 +91,8 @@ const Balloon = styled.div`
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     transform: translate(-50%, -100%);
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       visibility: hidden;
     }
   }
-  /* @media (max-width: 767px) {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    box-shadow: none;
-    font-size: 0.8rem;
-  } */
 `;

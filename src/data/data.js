@@ -128,7 +128,7 @@ export const news = [
   {
     date: "Jun 2019",
     to: "/work/robotex",
-    text: "Brand new Robotex Japan corporate site released"
+    text: "Robotex Japan corporate website released"
   },
   {
     date: "Apr 2019",
