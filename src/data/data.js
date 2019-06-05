@@ -5,7 +5,7 @@ export const work = {
     client: "Robotex International",
     type: "Design and Development",
     keywords:
-      "React, Gatsby, GraphQL, Storybook, Netlify CMS, Styled-components",
+      "React, Gatsby, GraphQL, Storybook, Netlify CMS, Styled-components, Illustrator",
     path: "robotex",
     altText: "Robotex Japan"
   },
