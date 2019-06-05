@@ -64,13 +64,13 @@ const BlinkerContainer = styled.div`
   display: inline-block;
   width: 22px;
   height: 22px;
-  padding: 4px;
+  padding: 5px;
 `;
 
 const Blinker = styled.div`
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background-color: rgba(79, 227, 218);
   border-radius: 100%;
   -webkit-animation: scaleOut 3s infinite ease-in-out;
