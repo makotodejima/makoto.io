@@ -96,7 +96,7 @@ export const apps = {
     type: "Soba (buckwheat noodle) Restaurant Exploring App",
     keywords:
       "React, Redux, Foursquare API, Google Maps API, FLIP Animation, Sass, styled-components",
-    path: "https://sobasquare.mkdjm.now.sh",
+    path: "https://soba.madmak.me",
     altText: "Never stop exploring soba place"
   },
   flashcard: {
@@ -122,7 +122,7 @@ export const apps = {
 export const news = [
   {
     date: "Jun 2019",
-    href: "https://sobasquare.mkdjm.now.sh",
+    href: "https://soba.madmak.me",
     text: "✨New Instant Search feature on SOBASQUARE!!"
   },
   {
