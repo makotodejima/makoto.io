@@ -1,23 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-
-// const scaleOut = keyframes`
-//  0% {
-//     -webkit-transform: scale(0.2);
-//     transform: scale(0.2);
-//     opacity: 0.6;
-//   }
-//   50% {
-
-//     opacity: 1;
-//   }
-//   100% {
-//     -webkit-transform: scale(1.1);
-//     transform: scale(1.1);
-//     opacity: 0.2;
-//   }
-// `;
+import { news } from "../../src/data/data";
 
 const News = () => {
   const [hover, toggleHover] = useState(false);
@@ -32,26 +16,17 @@ const News = () => {
 
       <Balloon hover={hover}>
         <div className="heading">What's new</div>
-        <div className="item">
-          <div className="date">2019.5</div>
-          <a
-            href="https://sobasquare.mkdjm.now.sh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sobasquare got new Instant Search feature!
-          </a>
-        </div>
-        <div className="item">
-          <div className="date">2019.6</div>
-          <Link to="/work/robotex">Robotex Japan corporate site released</Link>
-        </div>
-        <div className="item">
-          <div className="date">2019.3</div>
-          <Link to="/work/the-light-of-tokyo">
-            Awarded "Tokyo Post Card Award 2019"
-          </Link>
-        </div>
+        {news.map(n => (
+          <div className="item">
+            <div className="date">{n.date}</div>
+            {n.href && (
+              <a href={n.href} target="_blank" rel="noopener noreferrer">
+                {n.text}
+              </a>
+            )}
+            {n.to && <Link to={n.to}>{n.text}</Link>}
+          </div>
+        ))}
       </Balloon>
     </BlinkerContainer>
   );
@@ -97,9 +72,11 @@ const Balloon = styled.div`
   .heading {
     font-weight: bold;
     font-size: 1.1rem;
+    margin-bottom: 0.6rem;
   }
 
   .item {
+    margin-bottom: 0.6rem;
     a {
       color: #0076ff;
     }

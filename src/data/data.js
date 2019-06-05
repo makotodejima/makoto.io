@@ -118,3 +118,21 @@ export const apps = {
     altText: "Pomodoro Timer with Cat Face"
   }
 };
+
+export const news = [
+  {
+    date: "Jun 2019",
+    href: "https://sobasquare.mkdjm.now.sh",
+    text: "🎉New Instant Search feature on Sobasquare!!"
+  },
+  {
+    date: "Jun 2019",
+    to: "/work/robotex",
+    text: "Brand new Robotex Japan corporate site released"
+  },
+  {
+    date: "Apr 2019",
+    to: "/work/the-light-of-tokyo",
+    text: 'Awarded "Tokyo Post Card Award 2019"'
+  }
+];
