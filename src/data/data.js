@@ -91,9 +91,9 @@ export const featured = {
 export const apps = {
   sobasquare: {
     id: "sobasquare",
-    title: "Sobasquare",
+    title: "SOBASQUARE",
     client: null,
-    type: "Soba Restaurant Exploring App",
+    type: "Soba (buckwheat noodle) Restaurant Exploring App",
     keywords:
       "React, Redux, Foursquare API, Google Maps API, FLIP Animation, Sass, styled-components",
     path: "https://sobasquare.mkdjm.now.sh",
@@ -123,16 +123,16 @@ export const news = [
   {
     date: "Jun 2019",
     href: "https://sobasquare.mkdjm.now.sh",
-    text: "🎉New Instant Search feature on Sobasquare!!"
+    text: "✨New Instant Search feature on SOBASQUARE!!"
   },
   {
     date: "Jun 2019",
     to: "/work/robotex",
-    text: "Robotex Japan corporate website released"
+    text: "🤖Robotex Japan corporate website released"
   },
   {
     date: "Apr 2019",
     to: "/work/the-light-of-tokyo",
-    text: 'Awarded "Tokyo Post Card Award 2019"'
+    text: '🎊Awarded "Tokyo Post Card Award 2019"'
   }
 ];
