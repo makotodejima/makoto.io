@@ -182,7 +182,7 @@ const StyledForm = styled.div`
       }
       &:hover,
       &:focus {
-        background: #4892ff;
+        background: #0076ff;
       }
       &:active {
         transform: scale(0.9);

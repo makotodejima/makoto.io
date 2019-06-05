@@ -15,7 +15,7 @@ const scaleOut = keyframes`
   100% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    opacity: 0.4;
+    opacity: 0.2;
   }
 `;
 
@@ -31,6 +31,7 @@ const News = () => {
       <Blinker delay />
 
       <Balloon hover={true}>
+        <div className="heading">What's new</div>
         <div className="item">
           <div className="date">2019.3</div>
           <Link to="/work/the-light-of-tokyo" className="text-red-light">
@@ -85,7 +86,16 @@ const Balloon = styled.div`
   border-radius: 0.2rem;
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-out;
+
+  .heading {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
   .item {
+    a {
+      color: #0076ff;
+    }
   }
 
   ::before {
