@@ -27,7 +27,6 @@ const AboutImage = () => {
           onMouseEnter={() => toggle(true)}
           onMouseLeave={() => toggle(false)}
         >
-          {/* <img src={me} alt="me" /> */}
           <Img fluid={data.me.childImageSharp.fluid} alt="me" />
           <animated.img
             {...bind()}
@@ -42,6 +41,7 @@ const AboutImage = () => {
             }}
             draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
             src={poco}
+            className="poco"
             alt="Cute dog face"
           />
           <FadeOutText mouseOnImage={mouseOnImage}>
@@ -64,6 +64,12 @@ const MeImageContainer = styled.div`
   .gatsby-image-wrapper {
     margin-bottom: 0;
     width: 250px;
+  }
+  .poco {
+    cursor: grab;
+    :active {
+      cursor: grabbing;
+    }
   }
 
   ${media.tablet`
