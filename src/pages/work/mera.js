@@ -21,7 +21,7 @@ function Mera() {
       render={data => (
         <Layout headerColor="#FAF2CD">
           <SEO
-            title="808MERA"
+            title="Farming System Logo Design"
             keywords={[
               `Makoto Dejima`,
               `JavaScript`,
@@ -38,7 +38,7 @@ function Mera() {
               width="80%"
               className="top-image"
               fluid={data.mera01.childImageSharp.fluid}
-              alt="808 MERA Logo - top"
+              alt="Farming System Logo"
             />
             <WorkTitle>Indoor Farming System Logo Design</WorkTitle>
             <WorkCopy>Logo design for farming system brand</WorkCopy>
@@ -46,21 +46,17 @@ function Mera() {
           </TopSection>
 
           <WorkPageWrapper>
-            {/* <Img
-              fluid={data.mera01.childImageSharp.fluid}
-              alt="808 MERA - 01"
-            /> */}
             <Img
               fluid={data.mera02.childImageSharp.fluid}
-              alt="808 MERA - 02"
+              alt="Farming System Logo - 02"
             />
             <Img
               fluid={data.mera03.childImageSharp.fluid}
-              alt="808 MERA - 03"
+              alt="Farming System Logo - 03"
             />
             <Img
               fluid={data.mera04.childImageSharp.fluid}
-              alt="808 MERA - 04"
+              alt="Farming System Logo - 04"
             />
           </WorkPageWrapper>
         </Layout>

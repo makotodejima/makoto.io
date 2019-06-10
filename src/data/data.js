@@ -48,12 +48,12 @@ export const work = {
   },
   mera: {
     id: "mera",
-    title: "808 MERA Farming System",
+    title: "Indoor Farming System Logo Design",
     client: "Kyoritsu Lighting Systems",
     type: "Product Logo Design",
     keywords: "Logo Design, Branding",
     path: "mera",
-    altText: "Logo design for indoor faming system, 808Mera"
+    altText: "Logo design for indoor faming system"
   },
   // jasms: {
   //   id: "jasms",
