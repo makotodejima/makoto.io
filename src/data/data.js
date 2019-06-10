@@ -51,7 +51,7 @@ export const work = {
     title: "808 MERA Farming System",
     client: "Kyoritsu Lighting Systems",
     type: "Product Logo Design",
-    keywords: "",
+    keywords: "Logo Design, Branding",
     path: "mera",
     altText: "Logo design for indoor faming system, 808Mera"
   },
@@ -114,7 +114,7 @@ export const apps = {
     client: null,
     type: "Productivity app with cat face",
     keywords: "React, Redux, Sass",
-    path: "https://pomodoro-redux.mkdjm.now.sh/",
+    path: "https://pomodoro-with-catface.mkd.now.sh",
     altText: "Pomodoro Timer with Cat Face"
   }
 };
