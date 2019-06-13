@@ -9,7 +9,10 @@ const typography = new Typography({
     "Helvetica",
     "Helvetica Neue",
     "Arial",
-    "sans-serif"
+    "sans-serif",
+    "游ゴシック",
+    "游ゴシック体",
+    "YuGothic"
   ],
   bodyFontFamily: [
     "aller",
