@@ -119,12 +119,26 @@ export const WorkDescription = styled.div`
 
 export const WorkPageWrapper = styled.div`
   .gatsby-image-wrapper {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    ${media.phone`
+      margin-bottom: 0;
+    `}
+  }
+  video {
+    width: 47%;
+    height: 310px;
+    ${media.phone`
+      height: 150px;
+    `}
   }
 `;
 
 export const Caption = styled.div`
-  margin: 1rem auto 6rem;
+  margin: 1rem auto 7rem;
   text-align: center;
   color: dimgrey;
+  ${media.phone`
+      margin: 0.8rem auto 4.5rem;
+      font-size: 0.85rem;
+    `}
 `;

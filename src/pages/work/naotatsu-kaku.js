@@ -71,10 +71,10 @@ function ManhattanPortage() {
 
           <WorkPageWrapper>
             <div style={{ display: `flex`, justifyContent: `space-between` }}>
-              <video width="47%" height="310px" loop autoPlay muted playsInline>
+              <video loop autoPlay muted playsInline>
                 <source src={vid_2} type="video/mp4" />
               </video>
-              <video width="47%" height="310px" loop autoPlay muted playsInline>
+              <video loop autoPlay muted playsInline>
                 <source src={vid_1} type="video/mp4" />
               </video>
             </div>
