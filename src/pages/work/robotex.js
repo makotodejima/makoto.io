@@ -34,7 +34,7 @@ function Robotex({ data }) {
       <TopSection>
         <TopCoverColor color="#CE1437" />
         <TopImage
-          width="65%"
+          width="70%"
           className="top-image"
           fluid={data.robotex_00.childImageSharp.fluid}
           alt="Naotatsu Kaku - 00"
