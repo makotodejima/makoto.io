@@ -121,9 +121,9 @@ export const apps = {
 
 export const news = [
   {
-    date: "Jun 2019",
+    date: "Jun 2019 🔍✨",
     href: "https://soba.madmak.me",
-    text: "✨New Instant Search feature on SOBASQUARE!!"
+    text: "New Instant Search feature on SOBASQUARE!!"
   },
   // {
   //   date: "Jun 2019",
@@ -131,8 +131,8 @@ export const news = [
   //   text: "🤖Robotex Japan corporate website released"
   // },
   {
-    date: "Apr 2019",
+    date: "Apr 2019 🗼🎊",
     to: "/work/the-light-of-tokyo",
-    text: '🎊Awarded "Tokyo Post Card Award 2019"'
+    text: 'Awarded "Tokyo Post Card Award 2019"'
   }
 ];

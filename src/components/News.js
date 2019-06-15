@@ -79,7 +79,11 @@ const Balloon = styled.div`
   .item {
     margin-bottom: 0.6rem;
     a {
+      text-decoration: none;
       color: #0076ff;
+      &:hover {
+        opacity: 0.6;
+      }
     }
   }
 
