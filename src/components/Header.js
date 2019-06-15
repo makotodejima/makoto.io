@@ -28,19 +28,15 @@ function Header({ color }) {
 
       <HeaderLinks color={color} isExpanded={isExpanded}>
         <News />
-        <Link className="link" to="/work/" activeStyle={{ color: `dimgrey` }}>
+        <Link className="link" to="/work/" activeStyle={{ opacity: 0.4 }}>
           Work
         </Link>
 
-        <Link className="link" to="/about/" activeStyle={{ color: `dimgrey` }}>
+        <Link className="link" to="/about/" activeStyle={{ opacity: 0.4 }}>
           About
         </Link>
 
-        <Link
-          className="link"
-          to="/contact/"
-          activeStyle={{ color: `dimgrey` }}
-        >
+        <Link className="link" to="/contact/" activeStyle={{ opacity: 0.4 }}>
           Contact
         </Link>
       </HeaderLinks>
@@ -95,7 +91,7 @@ const StyledNav = styled.nav`
 const Hamburger = styled.button`
   display: none;
   align-items: center;
-  padding: 0.8rem 0.75rem 0.3rem;
+  padding: 0.8rem 0.75rem 0.4rem;
   width: 50px;
   -webkit-appearance: none;
   -moz-appearance: none;
