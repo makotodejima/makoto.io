@@ -30,10 +30,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 property: `og:title`,
                 content: title
               },
-              {
-                property: `og:url`,
-                content: `https://madmak.me`
-              },
+              // {
+              //   property: `og:url`,
+              //   content: `https://madmak.me`
+              // },
               {
                 property: `og:description`,
                 content: metaDescription
