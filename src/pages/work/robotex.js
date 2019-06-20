@@ -67,6 +67,19 @@ function Robotex({ data }) {
 
       <WorkPageWrapper>
         <Img
+          fluid={data.robotex_05.childImageSharp.fluid}
+          alt="Robotex Japan - 05"
+        />
+        <Caption>Robotex Japan's website top page.</Caption>
+        <Img
+          fluid={data.robotex_06.childImageSharp.fluid}
+          alt="Robotex Japan - 06"
+        />
+        <Caption>
+          Contents data (such as News and Blog articles) are created by the
+          editors through Netlify CMS.
+        </Caption>
+        <Img
           fluid={data.robotex_01.childImageSharp.fluid}
           alt="Robotex Japan - 01"
         />
@@ -133,6 +146,20 @@ export const query = graphql`
       }
     }
     robotex_04: file(relativePath: { eq: "robotex_04.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    robotex_05: file(relativePath: { eq: "robotex_05.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    robotex_06: file(relativePath: { eq: "robotex_06.png" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
