@@ -77,11 +77,13 @@ export const ExtLink = styled.div`
     border: 2px solid ${props => props.color || "darkcyan"};
     border-radius: 30px;
     text-decoration: none;
-    color: ${props => props.color || "darkcyan"};
+    color: white;
+    background-color: ${props => props.color || "darkcyan"};
+
     transition: all 0.2s ease-in;
     &:hover {
-      color: white;
-      background-color: ${props => props.color || "darkcyan"};
+      color: ${props => props.color || "darkcyan"};
+      background-color: #fff;
     }
   }
 `;
