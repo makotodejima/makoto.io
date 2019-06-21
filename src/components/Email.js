@@ -9,7 +9,7 @@ const Email = () => {
     ref.current.select();
     document.execCommand("copy");
     e.target.focus();
-    setCopySuccess("Nice. Copied to clipboard!");
+    setCopySuccess(" Nice! Copied to clipboard.");
   };
 
   if (typeof window !== `undefined`) {
@@ -19,10 +19,12 @@ const Email = () => {
         {/* Logical shortcut for only displaying the 
           button if the copy command exists */
         document.queryCommandSupported("copy") && (
-          <div className="copyBtn">
-            <button onClick={copyToClick}>Copy</button>
-            <span>{copySuccess}</span>
-          </div>
+          <>
+            <div className="copyBtn">
+              <button onClick={copyToClick}>Copy</button>
+              <span>{copySuccess}</span>
+            </div>
+          </>
         )}
         <input
           readOnly
@@ -41,13 +43,12 @@ export default Email;
 const CopyEmail = styled.h4`
   text-align: "center";
   position: relative;
+  display: inline-block;
   .copyBtn {
     position: absolute;
     top: -2px;
-    left: 0;
-    transform: translateX(190px);
+    right: -50px;
     button {
-      margin-left: 2px;
       cursor: pointer;
       outline: none;
       -webkit-appearance: none;
@@ -65,23 +66,12 @@ const CopyEmail = styled.h4`
     }
   }
   span {
-    /* position: absolute; */
-    /* transform: translateX(-50%); */
-    /* margin-top: 20px; */
-    font-weight: lighter;
-    margin-left: 5px;
-    color: dimgrey;
-
-    /* ::before {
-    content: "";
     position: absolute;
-    top: 0;
-    border-bottom: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-right: 10px solid grey;
-    transform: translate(-50%, -100%);
-    box-shadow: 0px 2px 50px -15px rgba(0, 0, 0, 0.5);
-  } */
+    top: 2px;
+    font-weight: lighter;
+    width: 190px;
+    margin-left: 6px;
+    color: dimgrey;
   }
   input {
     position: absolute;
