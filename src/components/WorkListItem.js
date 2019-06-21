@@ -13,7 +13,9 @@ const WorkListItem = props => {
         <Link to={`/work/${props.path}/`}>
           <h2 className="title">{props.title}</h2>
         </Link>
-        <h4>{`${props.type} | ${props.client}`}</h4>
+        <h4>
+          {props.type} {props.client ? `| ${props.client}` : ""}
+        </h4>
         <p className="keywords" style={{ color: `dimgrey` }}>
           {props.keywords}
         </p>

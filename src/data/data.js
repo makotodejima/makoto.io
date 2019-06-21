@@ -76,33 +76,19 @@ export const work = {
   }
 };
 
-export const featured = {
-  robotex: {
-    ...work.robotex
-  },
-  the_light_of_tokyo: {
-    ...work.the_light_of_tokyo
-  },
-  naotatsu_kaku: {
-    ...work.naotatsu_kaku
-  }
-};
-
 export const apps = {
   sobasquare: {
     id: "sobasquare",
     title: "SOBASQUARE",
-    client: null,
     type: "Soba (buckwheat noodle) Restaurant Exploring App",
     keywords:
-      "React, Redux, Foursquare API, Google Maps API, FLIP Animation, Sass, styled-components",
+      "React, Redux, Foursquare API, Google Maps API, FLIP Animation, SCSS, Styled-components",
     path: "https://soba.madmak.me",
     altText: "Never stop exploring soba place"
   },
   flashcard: {
     id: "flashcard",
     title: "Flashcard",
-    client: null,
     type: "Flashcard for EN/JP/GER words",
     keywords: "React, Firebase, styled-components",
     path: "http://clean-toothbrush.surge.sh",
@@ -111,7 +97,6 @@ export const apps = {
   pomodoro: {
     id: "pomodoro",
     title: "Pomodoro Timer",
-    client: null,
     type: "Productivity app with cat face",
     keywords: "React, Redux, Sass",
     path: "https://pomodoro-with-catface.mkd.now.sh",
@@ -136,3 +121,19 @@ export const news = [
     text: 'Awarded "Tokyo Post Card Award 2019"'
   }
 ];
+
+export const featured = {
+  sobasquare: {
+    ...apps.sobasquare,
+    isVideo: true
+  },
+  robotex: {
+    ...work.robotex
+  },
+  the_light_of_tokyo: {
+    ...work.the_light_of_tokyo
+  },
+  naotatsu_kaku: {
+    ...work.naotatsu_kaku
+  }
+};
