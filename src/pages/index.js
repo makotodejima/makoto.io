@@ -42,6 +42,7 @@ const IndexPage = () => (
                 type={featured[id].type}
                 keywords={featured[id].keywords}
                 path={featured[id].path}
+                url={featured[id].url}
               >
                 {featured[id].isVideo ? (
                   <video autoPlay loop muted playsInline>

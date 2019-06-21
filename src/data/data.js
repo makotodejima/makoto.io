@@ -83,7 +83,7 @@ export const apps = {
     type: "Soba (buckwheat noodle) Restaurant Exploring App",
     keywords:
       "React, Redux, Foursquare API, Google Maps API, FLIP Animation, SCSS, Styled-components",
-    path: "https://soba.madmak.me",
+    url: "https://soba.madmak.me",
     altText: "Never stop exploring soba place"
   },
   flashcard: {
@@ -91,7 +91,7 @@ export const apps = {
     title: "Flashcard",
     type: "Flashcard for EN/JP/GER words",
     keywords: "React, Firebase, styled-components",
-    path: "http://clean-toothbrush.surge.sh",
+    url: "http://clean-toothbrush.surge.sh",
     altText: "Flashcard App, GER/ENG/JP"
   },
   pomodoro: {
@@ -99,7 +99,7 @@ export const apps = {
     title: "Pomodoro Timer",
     type: "Productivity app with cat face",
     keywords: "React, Redux, Sass",
-    path: "https://pomodoro-with-catface.mkd.now.sh",
+    url: "https://pomodoro-with-catface.mkd.now.sh",
     altText: "Pomodoro Timer with Cat Face"
   }
 };

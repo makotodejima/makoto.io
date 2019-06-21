@@ -6,12 +6,12 @@ const AppItem = props => {
   return (
     <Wrapper>
       <ImgWrapper>
-        <a href={props.path} target="_blank" rel="noopener noreferrer">
+        <a href={props.url} target="_blank" rel="noopener noreferrer">
           {props.children}
         </a>
       </ImgWrapper>
       <Description>
-        <a href={props.path} target="_blank" rel="noopener noreferrer">
+        <a href={props.url} target="_blank" rel="noopener noreferrer">
           <h2 className="title">{props.title}</h2>
         </a>
         <h4>{props.type}</h4>

@@ -14,7 +14,7 @@ export default () => {
             title={apps[id].title}
             type={apps[id].type}
             keywords={apps[id].keywords}
-            path={apps[id].path}
+            url={apps[id].url}
             altText={apps[id].altText}
           >
             <video autoPlay loop muted playsInline>

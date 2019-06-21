@@ -7,12 +7,25 @@ const WorkListItem = props => {
   return (
     <Wrapper>
       <ImgWrapper>
-        <Link to={`/work/${props.path}/`}>{props.children}</Link>
+        {props.path ? (
+          <Link to={`/work/${props.path}/`}>{props.children}</Link>
+        ) : (
+          <a href={props.url} target="_blank" rel="noopener noreferrer">
+            {props.children}
+          </a>
+        )}
       </ImgWrapper>
       <Description>
-        <Link to={`/work/${props.path}/`}>
-          <h2 className="title">{props.title}</h2>
-        </Link>
+        {props.path ? (
+          <Link to={`/work/${props.path}/`}>
+            <h2 className="title">{props.title}</h2>
+          </Link>
+        ) : (
+          <a href={props.url} target="_blank" rel="noopener noreferrer">
+            <h2 className="title">{props.title}</h2>
+          </a>
+        )}
+
         <h4>
           {props.type} {props.client ? `| ${props.client}` : ""}
         </h4>
