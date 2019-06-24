@@ -106,6 +106,22 @@ export const apps = {
   }
 };
 
+export const featured = {
+  sobasquare: {
+    ...apps.sobasquare,
+    isVideo: true
+  },
+  robotex: {
+    ...work.robotex
+  },
+  the_light_of_tokyo: {
+    ...work.the_light_of_tokyo
+  },
+  naotatsu_kaku: {
+    ...work.naotatsu_kaku
+  }
+};
+
 export const news = [
   {
     date: "Jun 2019 🔍✨",
@@ -123,19 +139,3 @@ export const news = [
     text: 'Awarded "Tokyo Post Card Award 2019"'
   }
 ];
-
-export const featured = {
-  sobasquare: {
-    ...apps.sobasquare,
-    isVideo: true
-  },
-  robotex: {
-    ...work.robotex
-  },
-  the_light_of_tokyo: {
-    ...work.the_light_of_tokyo
-  },
-  naotatsu_kaku: {
-    ...work.naotatsu_kaku
-  }
-};
