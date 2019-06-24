@@ -84,7 +84,8 @@ export const apps = {
     keywords:
       "React, Redux, Foursquare API, Google Maps API, FLIP Animation, SCSS, Styled-components",
     url: "https://soba.madmak.me",
-    altText: "Never stop exploring soba place"
+    altText: "Never stop exploring soba place",
+    isVideo: true
   },
   flashcard: {
     id: "flashcard",
@@ -100,7 +101,8 @@ export const apps = {
     type: "Productivity app with cat face",
     keywords: "React, Redux, Sass",
     url: "https://pomodoro-with-catface.mkd.now.sh",
-    altText: "Pomodoro Timer with Cat Face"
+    altText: "Pomodoro Timer with Cat Face",
+    isVideo: true
   }
 };
 
