@@ -1,9 +1,13 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import { featured } from "../data/data";
-import { WorksListContainer, Label } from "../components/StyledComps";
+import {
+  WorksListContainer,
+  Label,
+  LabelWithLink
+} from "../components/StyledComps";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
@@ -31,7 +35,10 @@ const IndexPage = () => (
 
         <Hero />
 
-        <Label>Featured Work</Label>
+        <LabelWithLink>
+          <span> Featured Work</span>
+          <Link to="/work/">Show All</Link>
+        </LabelWithLink>
         <WorksListContainer>
           {Object.keys(featured).map(id => {
             return (

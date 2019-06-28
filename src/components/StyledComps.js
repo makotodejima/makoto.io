@@ -24,6 +24,13 @@ export const Label = styled.div`
   margin: 0 0 2rem;
 `;
 
+export const LabelWithLink = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin: 0 0 2rem;
+`;
+
 // Index and Work top
 export const WorksListContainer = styled.div`
   display: flex;
