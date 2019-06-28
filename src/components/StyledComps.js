@@ -22,13 +22,17 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 export const Label = styled.div`
   font-size: 1.25rem;
   margin: 0 0 2rem;
-`;
-
-export const LabelWithLink = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.25rem;
-  margin: 0 0 2rem;
+  a {
+    float: right;
+    padding-top: 5px;
+    text-align: right;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: dimgray;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 `;
 
 // Index and Work top

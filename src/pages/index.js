@@ -6,7 +6,7 @@ import { featured } from "../data/data";
 import {
   WorksListContainer,
   Label,
-  LabelWithLink
+  RightSideLink
 } from "../components/StyledComps";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -35,10 +35,10 @@ const IndexPage = () => (
 
         <Hero />
 
-        <LabelWithLink>
-          <span> Featured Work</span>
-          <Link to="/work/">Show All</Link>
-        </LabelWithLink>
+        <Label>
+          Featured Work <Link to="/work/">Show All</Link>
+        </Label>
+
         <WorksListContainer>
           {Object.keys(featured).map(id => {
             return (
@@ -65,7 +65,6 @@ const IndexPage = () => (
             );
           })}
         </WorksListContainer>
-
         <Label>Apps</Label>
         <Apps />
         <div style={{ marginBottom: `4rem` }}>
