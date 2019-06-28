@@ -24,11 +24,11 @@ export const Label = styled.div`
   margin: 0 0 2rem;
   a {
     float: right;
-    padding-top: 5px;
+    padding-top: 4px;
     text-align: right;
     font-size: 0.9rem;
-    text-decoration: none;
-    color: dimgray;
+    text-decoration: underline;
+    color: gray;
     &:hover {
       opacity: 0.7;
     }

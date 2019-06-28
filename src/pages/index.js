@@ -36,7 +36,7 @@ const IndexPage = () => (
         <Hero />
 
         <Label>
-          Featured Work <Link to="/work/">Show All</Link>
+          Featured Work <Link to="/work/">Show All Works</Link>
         </Label>
 
         <WorksListContainer>
