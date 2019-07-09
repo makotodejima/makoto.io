@@ -64,7 +64,7 @@ function Header({ color }) {
 }
 
 Header.propTypes = {
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
   siteTitle: PropTypes.string,
 };
 

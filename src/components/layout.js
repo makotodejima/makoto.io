@@ -37,7 +37,7 @@ const Layout = ({ children, headerColor }) => {
 export default Layout;
 
 Layout.propTypes = {
-  headerColor: PropTypes.string.isRequired,
+  headerColor: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 

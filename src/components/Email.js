@@ -43,13 +43,13 @@ const Email = () => {
 export default Email;
 
 const CopyEmail = styled.h4`
-  text-align: center;
+  text-align: left;
   position: relative;
   display: inline-block;
   .copyBtn {
     position: absolute;
     top: -2px;
-    right: -50px;
+    left: 203px;
     button {
       cursor: pointer;
       outline: none;
