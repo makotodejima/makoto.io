@@ -16,7 +16,6 @@ import {
   WorkPageWrapper,
   Caption,
 } from '../../components/StyledComps';
-
 import vid_1 from '../../images/naotatsu_v1.mp4';
 import vid_2 from '../../images/naotatsu_v2.mp4';
 

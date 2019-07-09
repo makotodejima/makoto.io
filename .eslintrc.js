@@ -1,16 +1,29 @@
 module.exports = {
   extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['react', 'prettier'],
+  plugins: ['react', 'prettier', 'import'],
   rules: {
     'react/require-default-props': 'off',
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: ['.js', 'jsx'],
+        extensions: ['.js', '.jsx'],
       },
     ],
-    'prettier/prettier': 'error',
-    'max-len': ['error', 80],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
+      },
+    ],
+    'import/named': 2,
   },
   env: {
     browser: true,

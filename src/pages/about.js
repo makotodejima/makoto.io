@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media } from '../components/StyledComps';
 
+import { media } from '../components/StyledComps';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import AboutImage from '../components/AboutImage';

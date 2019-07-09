@@ -1,7 +1,8 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+
 import { media } from './StyledComps';
 import Logo from './Logo';
 import News from './News';
