@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const SocialLinks = props => (
+const SocialLinks = () => (
   <SocialLinksContainer>
     <a
       href="https://dribbble.com/mak84sasami"
@@ -84,7 +84,7 @@ const SocialLinksContainer = styled.div`
     transform: scale(1.1);
   }
   a::before {
-    content: "";
+    content: '';
     position: absolute;
     visibility: hidden;
     width: 100%;

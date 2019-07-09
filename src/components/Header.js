@@ -1,10 +1,10 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import styled from "styled-components";
-import { media } from "../components/StyledComps";
-import Logo from "./Logo";
-import News from "../components/News";
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { media } from './StyledComps';
+import Logo from './Logo';
+import News from './News';
 
 /* 
 'color' props is passed down from Layout Comp
@@ -64,11 +64,12 @@ function Header({ color }) {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  color: PropTypes.string.isRequired,
+  siteTitle: PropTypes.string,
 };
 
 Header.defaultProps = {
-  siteTitle: `Makoto Dejima | Designer and Front-End Developer`
+  siteTitle: `Makoto Dejima | Designer and Front-End Developer`,
 };
 
 export default Header;
@@ -99,7 +100,7 @@ const Hamburger = styled.button`
   background-color: transparent;
   cursor: pointer;
   path {
-    stroke: ${props => props.color || "black"};
+    stroke: ${props => props.color || 'black'};
   }
 
   :focus {
@@ -119,7 +120,7 @@ const HeaderLinks = styled.div`
   a.link {
     display: inline-block;
     position: relative;
-    color: ${props => props.color || "black"};
+    color: ${props => props.color || 'black'};
     margin-left: 1.5rem;
     text-decoration: none;
     &::before {
@@ -128,7 +129,7 @@ const HeaderLinks = styled.div`
       visibility: hidden;
       width: 100%;
       height: 1.5px;
-      background-color: ${props => props.color || "black"};
+      background-color: ${props => props.color || 'black'};
       bottom: 0;
       left: 0;
       transform: scaleX(0);
@@ -160,7 +161,7 @@ const Overlay = styled.div`
   visibility: hidden;
   transition: opacity 0.5s;
   @media (max-width: 576px) {
-    visibility: ${props => (props.isExpanded ? "visible" : "hidden")};
+    visibility: ${props => (props.isExpanded ? 'visible' : 'hidden')};
     opacity: ${props => (props.isExpanded ? 0.98 : 0)};
   }
 

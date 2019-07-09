@@ -1,9 +1,9 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 import {
   TopCoverColor,
   TopImage,
@@ -11,8 +11,8 @@ import {
   WorkTitle,
   WorkCopy,
   WorkTag,
-  WorkPageWrapper
-} from "../../components/StyledComps";
+  WorkPageWrapper,
+} from '../../components/StyledComps';
 
 function Mera() {
   return (
@@ -28,7 +28,7 @@ function Mera() {
               `Design`,
               `React`,
               `Front-End Developer`,
-              `Graphic Design`
+              `Graphic Design`,
             ]}
           />
 

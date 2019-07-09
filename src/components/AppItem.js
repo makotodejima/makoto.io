@@ -1,21 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import { media } from "../components/StyledComps";
+import React from 'react';
+import styled from 'styled-components';
+import { media } from './StyledComps';
 
-const AppItem = props => {
+const AppItem = ({ url, type, title, keywords, children }) => {
   return (
     <Wrapper>
       <ImgWrapper>
-        <a href={props.url} target="_blank" rel="noopener noreferrer">
-          {props.children}
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {children}
         </a>
       </ImgWrapper>
       <Description>
-        <a href={props.url} target="_blank" rel="noopener noreferrer">
-          <h2 className="title">{props.title}</h2>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <h2 className="title">{title}</h2>
         </a>
-        <h4>{props.type}</h4>
-        <p>{props.keywords}</p>
+        <h4>{type}</h4>
+        <p>{keywords}</p>
       </Description>
     </Wrapper>
   );
@@ -86,7 +86,7 @@ const Description = styled.div`
         text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
       }
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: 0;

@@ -1,7 +1,7 @@
-import React from "react";
-import { Label } from "../components/StyledComps";
-import styled from "styled-components";
-import weq from "../images/weq.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import { Label } from './StyledComps';
+import weq from '../images/weq.jpg';
 
 export default () => (
   <>

@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -13,7 +13,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         return (
           <Helmet
             htmlAttributes={{
-              lang
+              lang,
             }}
             title={title}
             titleTemplate={
@@ -24,52 +24,52 @@ function SEO({ description, lang, meta, keywords, title }) {
             meta={[
               {
                 name: `description`,
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: `og:title`,
-                content: title
+                content: title,
               },
               {
                 property: `og:url`,
-                content: `https://madmak.me`
+                content: `https://madmak.me`,
               },
               {
                 property: `og:description`,
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: `og:image`,
-                content: `https://madmak.me${data.md.childImageSharp.fixed.src}`
+                content: `https://madmak.me${data.md.childImageSharp.fixed.src}`,
               },
               {
                 property: `og:type`,
-                content: `website`
+                content: `website`,
               },
               {
                 name: `twitter:card`,
-                content: `summary`
+                content: `summary`,
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author
+                content: data.site.siteMetadata.author,
               },
               {
                 name: `twitter:title`,
-                content: title
+                content: title,
               },
               {
                 name: `twitter:description`,
-                content: metaDescription
-              }
+                content: metaDescription,
+              },
             ]
               .concat(
                 keywords.length > 0
                   ? {
                       name: `keywords`,
-                      content: keywords.join(`, `)
+                      content: keywords.join(`, `),
                     }
-                  : []
+                  : [],
               )
               .concat(meta)}
           />
@@ -89,8 +89,8 @@ SEO.defaultProps = {
     `Design`,
     `Graphic Design`,
     `JavaScript`,
-    `React`
-  ]
+    `React`,
+  ],
 };
 
 SEO.propTypes = {
@@ -98,7 +98,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default SEO;

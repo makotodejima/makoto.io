@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import AppItem from "../components/AppItem";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-import { media } from "../components/StyledComps";
-import { apps } from "../data/data";
+import React from 'react';
+import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import AppItem from './AppItem';
+import { media } from './StyledComps';
+import { apps } from '../data/data';
 
 export default () => {
   return (

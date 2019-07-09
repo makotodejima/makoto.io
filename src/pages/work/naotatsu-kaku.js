@@ -1,9 +1,9 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 import {
   TopCoverColor,
   TopImage,
@@ -14,11 +14,11 @@ import {
   WorkTag,
   WorkDescription,
   WorkPageWrapper,
-  Caption
-} from "../../components/StyledComps";
+  Caption,
+} from '../../components/StyledComps';
 
-import vid_1 from "../../images/naotatsu_v1.mp4";
-import vid_2 from "../../images/naotatsu_v2.mp4";
+import vid_1 from '../../images/naotatsu_v1.mp4';
+import vid_2 from '../../images/naotatsu_v2.mp4';
 
 function ManhattanPortage() {
   return (
@@ -34,7 +34,7 @@ function ManhattanPortage() {
               `Design`,
               `React`,
               `Front-End Developer`,
-              `Graphic Design`
+              `Graphic Design`,
             ]}
           />
 

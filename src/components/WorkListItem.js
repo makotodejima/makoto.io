@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import { media } from "../components/StyledComps";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { media } from './StyledComps';
 
 const WorkListItem = props => {
   return (
@@ -27,7 +27,7 @@ const WorkListItem = props => {
         )}
 
         <h4>
-          {props.type} {props.client ? `| ${props.client}` : ""}
+          {props.type} {props.client ? `| ${props.client}` : ''}
         </h4>
         <p className="keywords" style={{ color: `dimgrey` }}>
           {props.keywords}
@@ -99,7 +99,7 @@ const Description = styled.div`
         text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
       }
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: 0;

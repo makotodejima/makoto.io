@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useSpring, animated } from "react-spring";
-import { useGesture } from "react-with-gesture";
-import styled from "styled-components";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-import { media } from "../components/StyledComps";
-import clamp from "lodash-es/clamp";
-import poco from "../images/poco.png";
+import React, { useState } from 'react';
+import { useSpring, animated } from 'react-spring';
+import { useGesture } from 'react-with-gesture';
+import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import clamp from 'lodash-es/clamp';
+import { media } from './StyledComps';
+import poco from '../images/poco.png';
 
 const AboutImage = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
@@ -14,7 +14,7 @@ const AboutImage = () => {
     velocity = clamp(velocity, 1, 8);
     set({
       xy: down ? delta : [0, 0],
-      config: { mass: velocity, tension: 500 * velocity, friction: 10 }
+      config: { mass: velocity, tension: 500 * velocity, friction: 10 },
     });
   });
   const [mouseOnImage, toggle] = useState(false);
@@ -32,12 +32,12 @@ const AboutImage = () => {
             {...bind()}
             style={{
               transform: xy.interpolate(
-                (x, y) => `translate3d(${x}px,${y}px,0)`
+                (x, y) => `translate3d(${x}px,${y}px,0)`,
               ),
-              position: "absolute",
-              left: "76px",
-              top: "64px",
-              width: "105px"
+              position: 'absolute',
+              left: '76px',
+              top: '64px',
+              width: '105px',
             }}
             draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
             src={poco}

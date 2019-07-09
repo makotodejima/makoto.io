@@ -1,18 +1,18 @@
-import React from "react";
-import SEO from "../components/seo";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import SEO from '../components/seo';
 
 import {
   WorksListContainer,
   PageTitle,
-  Label
-} from "../components/StyledComps";
-import Layout from "../components/layout";
-import Apps from "../components/Apps";
-import { work } from "../data/data";
-import WorkListItem from "../components/WorkListItem";
-import Writing from "../components/Writing";
+  Label,
+} from '../components/StyledComps';
+import Layout from '../components/layout';
+import Apps from '../components/Apps';
+import { work } from '../data/data';
+import WorkListItem from '../components/WorkListItem';
+import Writing from '../components/Writing';
 
 function WorkPage(props) {
   return (
@@ -28,7 +28,7 @@ function WorkPage(props) {
               `Design`,
               `React`,
               `Front-End Developer`,
-              `Graphic Design`
+              `Graphic Design`,
             ]}
           />
 

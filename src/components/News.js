@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
-import { news } from "../../src/data/data";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { news } from '../data/data';
 
 const News = () => {
   const [hover, toggleHover] = useState(false);
@@ -50,7 +50,7 @@ const Blinker = styled.div`
   border-radius: 100%;
   -webkit-animation: scaleOut 3s infinite ease-in-out;
   animation: scaleOut 3s infinite ease-in-out;
-  animation-delay: ${props => props.delay && "1500ms"};
+  animation-delay: ${props => props.delay && '1500ms'};
 `;
 
 const Balloon = styled.div`
@@ -61,8 +61,8 @@ const Balloon = styled.div`
   width: 245px;
   font-size: 0.9rem;
   opacity: ${props => (props.hover ? 1 : 0)};
-  visibility: ${props => (props.hover ? "visible" : "hidden")};
-  transform: ${props => (props.hover ? "translateY(0)" : "translateY(5px)")};
+  visibility: ${props => (props.hover ? 'visible' : 'hidden')};
+  transform: ${props => (props.hover ? 'translateY(0)' : 'translateY(5px)')};
   padding: 10px 20px;
   line-height: 1.8;
   background-color: white;
@@ -88,7 +88,7 @@ const Balloon = styled.div`
   }
 
   ::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     border-bottom: 10px solid white;

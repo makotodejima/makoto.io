@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import { PageTitle } from "../components/StyledComps";
-import Email from "../components/Email";
-import SocialLinks from "../components/SocialLinks";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { PageTitle } from '../components/StyledComps';
+import Email from '../components/Email';
+import SocialLinks from '../components/SocialLinks';
 
 const ContactPage = () => {
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [fname, setFname] = useState('');
+  const [lname, setLname] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const isDisabled = () => {
-    return fname === "" || lname === "" || email === "" || message === "";
+    return fname === '' || lname === '' || email === '' || message === '';
   };
 
   return (
@@ -26,7 +26,7 @@ const ContactPage = () => {
           `Design`,
           `React`,
           `Front-End Developer`,
-          `Graphic Design`
+          `Graphic Design`,
         ]}
       />
       <PageTitle>Contact</PageTitle>

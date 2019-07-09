@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react';
 
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-import { linkTo } from "@storybook/addon-links";
-import { withInfo } from "@storybook/addon-info";
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
+import { withInfo } from '@storybook/addon-info';
 
-import { Button, Welcome } from "@storybook/react/demo";
+import { Button, Welcome } from '@storybook/react/demo';
 
-import WorkListItem from "./WorkListItem";
-import Logo from "./Logo";
-import Header from "./Header";
-import SocialLinks from "./SocialLinks";
-import vid from "../images/nao300.mp4";
-import AboutImage from "./AboutImage";
-import AppItem from "./AppItem";
-import Email from "./Email";
-import Footer from "./Footer";
-import News from "./News";
+import WorkListItem from './WorkListItem';
+import Logo from './Logo';
+import Header from './Header';
+import SocialLinks from './SocialLinks';
+import vid from '../images/nao300.mp4';
+import AboutImage from './AboutImage';
+import AppItem from './AppItem';
+import Email from './Email';
+import Footer from './Footer';
+import News from './News';
 
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
+storiesOf('Welcome', module).add('to Storybook', () => (
+  <Welcome showApp={linkTo('Button')} />
 ));
 
-storiesOf("Button", module)
+storiesOf('Button', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
@@ -31,50 +31,50 @@ storiesOf("Button", module)
       styles: {
         header: {
           h1: {
-            color: "red" // and the headers of the sections are red.
-          }
-        }
-      }
-    }
+            color: 'red', // and the headers of the sections are red.
+          },
+        },
+      },
+    },
   })
   .add(
-    "with text",
-    () => <Button onClick={action("clicked")}>Hello Button</Button>,
+    'with text',
+    () => <Button onClick={action('clicked')}>Hello Button</Button>,
     {
-      notes: "A very simple example of addon notes"
-    }
+      notes: 'A very simple example of addon notes',
+    },
   )
-  .add("with some emoji", () => (
-    <Button onClick={action("clicked")}>
+  .add('with some emoji', () => (
+    <Button onClick={action('clicked')}>
       <span role="img" aria-label="so cool">
         😀 😎 👍 💯
       </span>
     </Button>
   ));
 
-storiesOf("Socail Link", module)
+storiesOf('Socail Link', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "This is social links used in ABOUT page",
+      text: 'This is social links used in ABOUT page',
 
       // Make a default for all stories in this book,
-      inline: true // where the components are inlined
-    }
+      inline: true, // where the components are inlined
+    },
   })
-  .add("Three of the,🥳", () => <SocialLinks />);
+  .add('Three of the,🥳', () => <SocialLinks />);
 
-storiesOf("WorkListItem", module)
+storiesOf('WorkListItem', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "Need to wrap image or video",
+      text: 'Need to wrap image or video',
 
       // Make a default for all stories in this book,
-      inline: true // where the components are inlined
-    }
+      inline: true, // where the components are inlined
+    },
   })
-  .add("standard", () => (
+  .add('standard', () => (
     <WorkListItem
       key="naotatsu_kaku"
       title="Naotatsu Kaku's Portfolio Website"
@@ -89,52 +89,52 @@ storiesOf("WorkListItem", module)
     </WorkListItem>
   ));
 
-storiesOf("Logo", module)
+storiesOf('Logo', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "Logo rendered with SVG file",
+      text: 'Logo rendered with SVG file',
 
       // Make a default for all stories in this book,
-      inline: true // where the components are inlined
-    }
+      inline: true, // where the components are inlined
+    },
   })
-  .add("original", () => <Logo />);
+  .add('original', () => <Logo />);
 
-storiesOf("Header", module)
+storiesOf('Header', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "Header",
+      text: 'Header',
 
       // Make a default for all stories in this book,
-      inline: true // where the components are inlined
-    }
+      inline: true, // where the components are inlined
+    },
   })
-  .add("Default Black", () => <Header />)
-  .add("Red", () => <Header color="red" />);
+  .add('Default Black', () => <Header />)
+  .add('Red', () => <Header color="red" />);
 
-storiesOf("About Image", module)
+storiesOf('About Image', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "About",
+      text: 'About',
       // Make a default for all stories in this book,
-      inline: true // where the components are inlined
-    }
+      inline: true, // where the components are inlined
+    },
   })
-  .add("About image", () => <AboutImage />);
+  .add('About image', () => <AboutImage />);
 
-storiesOf("App Item", module)
+storiesOf('App Item', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "App Item",
+      text: 'App Item',
       // Make a default for all stories in this book,
-      inline: true // where the components are inlined
-    }
+      inline: true, // where the components are inlined
+    },
   })
-  .add("App Item", () => (
+  .add('App Item', () => (
     <AppItem
       title="Here goes title"
       type="work type"
@@ -148,33 +148,33 @@ storiesOf("App Item", module)
     </AppItem>
   ));
 
-storiesOf("Email with copyBtn", module)
+storiesOf('Email with copyBtn', module)
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "Email address",
+      text: 'Email address',
       // Make a default for all stories in this book,
-      inline: true // where the components are inlined
-    }
+      inline: true, // where the components are inlined
+    },
   })
-  .add("Email", () => <Email />);
+  .add('Email', () => <Email />);
 
-storiesOf("Footer")
+storiesOf('Footer')
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "Footer",
-      inline: true
-    }
+      text: 'Footer',
+      inline: true,
+    },
   })
-  .add("Footer", () => <Footer />);
+  .add('Footer', () => <Footer />);
 
-storiesOf("News")
+storiesOf('News')
   .addDecorator(withInfo)
   .addParameters({
     info: {
-      text: "News",
-      inline: true
-    }
+      text: 'News',
+      inline: true,
+    },
   })
-  .add("News", () => <News />);
+  .add('News', () => <News />);

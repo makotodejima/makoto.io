@@ -1,8 +1,8 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
-import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import React from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 import {
   TopCoverColor,
   TopImage,
@@ -13,8 +13,8 @@ import {
   WorkTag,
   WorkDescription,
   WorkPageWrapper,
-  Caption
-} from "../../components/StyledComps";
+  Caption,
+} from '../../components/StyledComps';
 
 function Robotex({ data }) {
   return (
@@ -27,7 +27,7 @@ function Robotex({ data }) {
           `Design`,
           `React`,
           `Front-End Developer`,
-          `Graphic Design`
+          `Graphic Design`,
         ]}
       />
 

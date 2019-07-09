@@ -1,20 +1,20 @@
-import React from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { StaticQuery, graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 
-import { featured } from "../data/data";
+import { featured } from '../data/data';
 import {
   WorksListContainer,
   Label,
-  RightSideLink
-} from "../components/StyledComps";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Hero from "../components/hero";
-import WorkListItem from "../components/WorkListItem";
-import Email from "../components/Email";
-import SocialLinks from "../components/SocialLinks";
-import Apps from "../components/Apps";
+  RightSideLink,
+} from '../components/StyledComps';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Hero from '../components/hero';
+import WorkListItem from '../components/WorkListItem';
+import Email from '../components/Email';
+import SocialLinks from '../components/SocialLinks';
+import Apps from '../components/Apps';
 
 const IndexPage = () => (
   <StaticQuery
@@ -29,7 +29,7 @@ const IndexPage = () => (
             `Design`,
             `React`,
             `Front-End Developer`,
-            `Graphic Design`
+            `Graphic Design`,
           ]}
         />
 

@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components";
-import Img from "gatsby-image";
+import styled, { css } from 'styled-components';
+import Img from 'gatsby-image';
 
 // media template
 
 export const sizes = {
   desktop: 992,
   tablet: 768,
-  phone: 576
+  phone: 576,
 };
 
 export const media = Object.keys(sizes).reduce((acc, label) => {
@@ -85,15 +85,15 @@ export const ExtLink = styled.div`
     margin: 0 auto;
     font-size: 1.1rem;
     padding: 5px 40px;
-    border: 2px solid ${props => props.color || "darkcyan"};
+    border: 2px solid ${props => props.color || 'darkcyan'};
     border-radius: 30px;
     text-decoration: none;
     color: white;
-    background-color: ${props => props.color || "darkcyan"};
+    background-color: ${props => props.color || 'darkcyan'};
 
     transition: all 0.2s ease-in;
     &:hover {
-      color: ${props => props.color || "darkcyan"};
+      color: ${props => props.color || 'darkcyan'};
       background-color: #fff;
     }
   }

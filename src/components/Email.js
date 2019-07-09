@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import styled from "styled-components";
+import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
 
 const Email = () => {
   const [copySuccess, setCopySuccess] = useState();
@@ -7,9 +7,9 @@ const Email = () => {
 
   const copyToClick = e => {
     ref.current.select();
-    document.execCommand("copy");
+    document.execCommand('copy');
     e.target.focus();
-    setCopySuccess(" Nice! Copied to clipboard.");
+    setCopySuccess(' Nice! Copied to clipboard.');
   };
 
   if (typeof window !== `undefined`) {
@@ -18,10 +18,12 @@ const Email = () => {
         makotodejima@gmail.com
         {/* Logical shortcut for only displaying the 
           button if the copy command exists */
-        document.queryCommandSupported("copy") && (
+        document.queryCommandSupported('copy') && (
           <>
             <div className="copyBtn">
-              <button onClick={copyToClick}>Copy</button>
+              <button type="button" onClick={copyToClick}>
+                Copy
+              </button>
               <span>{copySuccess}</span>
             </div>
           </>
@@ -41,7 +43,7 @@ const Email = () => {
 export default Email;
 
 const CopyEmail = styled.h4`
-  text-align: "center";
+  text-align: center;
   position: relative;
   display: inline-block;
   .copyBtn {

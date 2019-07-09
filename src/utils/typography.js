@@ -1,30 +1,30 @@
-import Typography from "typography";
+import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: "15px",
+  baseFontSize: '15px',
   baseLineHeight: 1.5,
   headerFontFamily: [
-    "aller",
-    "Ubuntu",
-    "Helvetica",
-    "Helvetica Neue",
-    "Arial",
-    "sans-serif",
-    "游ゴシック",
-    "游ゴシック体",
-    "YuGothic"
+    'aller',
+    'Ubuntu',
+    'Helvetica',
+    'Helvetica Neue',
+    'Arial',
+    'sans-serif',
+    '游ゴシック',
+    '游ゴシック体',
+    'YuGothic',
   ],
   bodyFontFamily: [
-    "aller",
-    "Ubuntu",
-    "Helvetica",
-    "Helvetica Neue",
-    "游ゴシック",
-    "游ゴシック体",
-    "YuGothic"
+    'aller',
+    'Ubuntu',
+    'Helvetica',
+    'Helvetica Neue',
+    '游ゴシック',
+    '游ゴシック体',
+    'YuGothic',
   ],
-  headerWeight: "700",
-  bodyWeight: "400"
+  headerWeight: '700',
+  bodyWeight: '400',
 });
 
 // Export helper functions

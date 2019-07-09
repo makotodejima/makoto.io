@@ -1,9 +1,9 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import SEO from "../../components/seo";
-import Layout from "../../components/layout";
+import SEO from '../../components/seo';
+import Layout from '../../components/layout';
 import {
   TopCoverColor,
   TopImage,
@@ -13,8 +13,8 @@ import {
   WorkTag,
   WorkDescription,
   WorkPageWrapper,
-  Caption
-} from "../../components/StyledComps";
+  Caption,
+} from '../../components/StyledComps';
 
 function TheLightOfTokyo() {
   return (
@@ -30,7 +30,7 @@ function TheLightOfTokyo() {
               `Design`,
               `React`,
               `Front-End Developer`,
-              `Graphic Design`
+              `Graphic Design`,
             ]}
           />
 

@@ -1,13 +1,13 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import Header from "./Header";
-import Footer from "./Footer";
-import { media } from "../components/StyledComps";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Header from './Header';
+import Footer from './Footer';
+import { media } from './StyledComps';
 
 // GLOBAL CSS
-import "./layout.scss";
+import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {
   return (
@@ -38,7 +38,7 @@ const Layout = ({ children, headerColor }) => {
 export default Layout;
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 const StyledLayout = styled.div`

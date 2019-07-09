@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Logo = ({ color }) => (
   <SVG
@@ -32,7 +32,7 @@ const SVG = styled.svg`
     vertical-align: bottom;
     #outer {
       fill: none;
-      stroke: ${props => props.color || "black"};
+      stroke: ${props => props.color || 'black'};
       stroke-miterlimit: 10;
       stroke-width: 5px;
       stroke-dasharray: 483px;
@@ -42,7 +42,7 @@ const SVG = styled.svg`
     }
     #m,
     #d {
-      fill: ${props => props.color || "black"};
+      fill: ${props => props.color || 'black'};
     }
   }
 `;
