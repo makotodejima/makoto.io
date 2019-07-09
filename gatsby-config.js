@@ -2,15 +2,15 @@ module.exports = {
   siteMetadata: {
     title: `Makoto Dejima`,
     description: `Tokyo-born Graphic Designer and Front-End Developer based in Berlin.`,
-    url: "www.madmak.me",
-    author: `@mdejima`
+    url: 'www.madmak.me',
+    author: `@mdejima`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
@@ -29,35 +29,35 @@ module.exports = {
           {
             src: `/icons/icon-192x192.png`,
             sizes: `192x192`,
-            type: `image/svg`
+            type: `image/svg`,
           },
           {
             src: `/icons/icon-512x512.png`,
             sizes: `512x512`,
-            type: `image/svg`
-          }
-        ]
-      }
+            type: `image/svg`,
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-135555172-1",
+        trackingId: 'UA-135555172-1',
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
         anonymize: true,
-        respectDNT: true
-      }
-    }
-  ]
+        respectDNT: true,
+      },
+    },
+  ],
 };
