@@ -1,11 +1,11 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+
 import Header from './Header';
 import Footer from './Footer';
 import { media } from './StyledComps';
-
 import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {

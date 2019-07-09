@@ -1,17 +1,16 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withInfo } from '@storybook/addon-info';
-
 import { Button, Welcome } from '@storybook/react/demo';
+
+import vid from '../images/nao300.mp4';
 
 import WorkListItem from './WorkListItem';
 import Logo from './Logo';
 import Header from './Header';
 import SocialLinks from './SocialLinks';
-import vid from '../images/nao300.mp4';
 import AboutImage from './AboutImage';
 import AppItem from './AppItem';
 import Email from './Email';

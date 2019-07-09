@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Label } from './StyledComps';
+
 import weq from '../images/weq.jpg';
+
+import { Label } from './StyledComps';
 
 export default () => (
   <>

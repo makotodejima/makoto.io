@@ -1,8 +1,8 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import SEO from '../components/seo';
 
+import SEO from '../components/seo';
 import {
   WorksListContainer,
   PageTitle,
