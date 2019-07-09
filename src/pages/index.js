@@ -3,11 +3,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { featured } from '../data/data';
-import {
-  WorksListContainer,
-  Label,
-  RightSideLink,
-} from '../components/StyledComps';
+import { WorksListContainer, Label } from '../components/StyledComps';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/hero';
