@@ -6,7 +6,6 @@ import Header from './Header';
 import Footer from './Footer';
 import { media } from './StyledComps';
 
-// GLOBAL CSS
 import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {
@@ -38,6 +37,7 @@ const Layout = ({ children, headerColor }) => {
 export default Layout;
 
 Layout.propTypes = {
+  headerColor: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
