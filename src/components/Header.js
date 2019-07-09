@@ -98,9 +98,11 @@ const Hamburger = styled.button`
   -moz-appearance: none;
   border: none;
   background-color: transparent;
+  
   cursor: pointer;
   path {
-    stroke: ${props => props.color || 'black'};
+    /* stroke: ${props => props.color || 'black'}; */
+    stroke: ${props => props.theme.c};
   }
 
   :focus {
