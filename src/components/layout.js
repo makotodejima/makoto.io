@@ -18,6 +18,7 @@ const Layout = ({ children, headerColor }) => {
 
   useEffect(() => {
     toggleDarkMode(stored);
+    console.log('Here in UseEffect');
   });
 
   return (
