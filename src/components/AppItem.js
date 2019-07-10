@@ -45,7 +45,7 @@ const ImgWrapper = styled.div`
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.boxShadow};
   transition: box-shadow 0.2s ease-in;
   width: 220px;
 
@@ -59,7 +59,7 @@ const ImgWrapper = styled.div`
   `}
 
   &:hover {
-    box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: ${props => props.theme.boxShadowHover};
   }
 
   img,
@@ -79,7 +79,7 @@ const Description = styled.div`
   a {
     text-decoration: none;
     .title {
-      color: black;
+      color: ${props => props.theme.primary};
       position: relative;
       display: inline-block;
       transition: text-shadow 0.2s ease-in;
@@ -105,6 +105,6 @@ const Description = styled.div`
     }
   }
   p {
-    color: dimgrey;
+    color: ${props => props.theme.secondary};
   }
 `;

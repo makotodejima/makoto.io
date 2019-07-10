@@ -38,7 +38,7 @@ export default () => (
 const WritingLink = styled.p`
   line-height: 2;
   a {
-    color: darkcyan;
+    color: ${props => props.theme.link};
     img {
       height: 0.8rem;
       margin-left: 0.5rem;

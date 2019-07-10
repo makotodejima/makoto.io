@@ -73,8 +73,10 @@ const SocialLinksContainer = styled.div`
   font-size: 1.8rem;
   a {
     transition: all 0.25s ease-in-out;
-    color: #000;
+    color: ${props => props.theme.primary};
     margin: 0 1rem;
+    /* For svg's path fill color */
+    fill: ${props => props.theme.primary};
   }
   /* Remove Dribbble's margin-left */
   a:first-child {
@@ -89,7 +91,7 @@ const SocialLinksContainer = styled.div`
     visibility: hidden;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: ${props => props.theme.primary};
     bottom: 5px;
     left: 0;
     transform: scaleX(0);

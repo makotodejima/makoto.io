@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
@@ -30,9 +31,7 @@ const WorkListItem = props => {
         <h4>
           {props.type} {props.client ? `| ${props.client}` : ''}
         </h4>
-        <p className="keywords" style={{ color: `dimgrey` }}>
-          {props.keywords}
-        </p>
+        <p className="keywords">{props.keywords}</p>
       </Description>
     </Wrapper>
   );
@@ -57,11 +56,11 @@ const ImgWrapper = styled.div`
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   overflow: hidden;
-  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.boxShadow};
   transition: box-shadow 0.2s ease-in;
 
   &:hover {
-    box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: ${props => props.theme.boxShadowHover};
   }
 
   img,
@@ -85,6 +84,7 @@ const ImgWrapper = styled.div`
 const Description = styled.div`
   .keywords {
     margin-bottom: 0;
+    color: ${props => props.theme.secondary};
     ${media.phone`
     margin-bottom: 1.5rem;
     `}
@@ -92,7 +92,7 @@ const Description = styled.div`
   a {
     text-decoration: none;
     .title {
-      color: black;
+      color: ${props => props.theme.primary};
       position: relative;
       display: inline-block;
       transition: text-shadow 0.2s ease-in;

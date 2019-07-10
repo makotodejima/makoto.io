@@ -81,7 +81,7 @@ const Balloon = styled.div`
     margin-bottom: 0.6rem;
     a {
       text-decoration: none;
-      color: #0076ff;
+      color: ${props => props.theme.link};
       &:hover {
         opacity: 0.6;
       }

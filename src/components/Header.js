@@ -12,7 +12,7 @@ import News from './News';
 it defines header logo, text and hamburger color
 */
 
-function Header({ color }) {
+function Header({ color, toggleDarkMode }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
@@ -40,6 +40,9 @@ function Header({ color }) {
         <Link className="link" to="/contact/" activeStyle={{ opacity: 0.4 }}>
           Contact
         </Link>
+        <a onClick={toggleDarkMode} className="link" to="#">
+          mode
+        </a>
       </HeaderLinks>
 
       <Overlay isExpanded={isExpanded}>
@@ -84,7 +87,7 @@ const StyledNav = styled.nav`
   max-width: 50rem;
   margin: 0 auto;
   padding: 2rem;
-
+  z-index: 10;
   ${media.phone`
     padding: 1rem;
   `}
@@ -99,11 +102,10 @@ const Hamburger = styled.button`
   -moz-appearance: none;
   border: none;
   background-color: transparent;
-  
+
   cursor: pointer;
   path {
-    /* stroke: ${props => props.color || 'black'}; */
-    stroke: ${props => props.theme.c};
+    stroke: ${props => props.color || props.theme.primary};
   }
 
   :focus {
@@ -123,7 +125,7 @@ const HeaderLinks = styled.div`
   a.link {
     display: inline-block;
     position: relative;
-    color: ${props => props.color || 'black'};
+    color: ${props => props.color || props.theme.primary};
     margin-left: 1.5rem;
     text-decoration: none;
     &::before {
@@ -131,8 +133,8 @@ const HeaderLinks = styled.div`
       position: absolute;
       visibility: hidden;
       width: 100%;
-      height: 1.5px;
-      background-color: ${props => props.color || 'black'};
+      height: 1px;
+      background-color: ${props => props.color || props.theme.primary};
       bottom: 0;
       left: 0;
       transform: scaleX(0);
