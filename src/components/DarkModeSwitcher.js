@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-const DarkModeSwitcher = ({ color, toggleDarkMode }) => {
+import ThemeContext from '../theme/themeContext';
+
+const DarkModeSwitcher = ({ color }) => {
+  const { toggleDarkMode } = useContext(ThemeContext);
   return (
     <StyledLink color={color} onClick={toggleDarkMode}>
       <svg

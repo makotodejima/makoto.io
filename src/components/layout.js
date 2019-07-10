@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { light, dark } from '../utils/theme';
+import { light, dark } from '../theme/theme';
+import ThemeContext from '../theme/themeContext';
 
 import Footer from './Footer';
 import Header from './Header';
@@ -10,20 +11,11 @@ import { media } from './StyledComps';
 import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {
-  const stored =
-    typeof window !== 'undefined' && localStorage.getItem('isDarkMode');
-  const [isDarkMode, toggleDarkMode] = useState(stored === 'true');
-
+  const { isDarkMode } = useContext(ThemeContext);
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>
       <StyledLayout>
-        <Header
-          color={headerColor}
-          toggleDarkMode={() => {
-            toggleDarkMode(!isDarkMode);
-            localStorage.setItem('isDarkMode', !isDarkMode);
-          }}
-        />
+        <Header color={headerColor} />
         <Main>{children}</Main>
         <Footer />
       </StyledLayout>

@@ -13,7 +13,7 @@ import News from './News';
 it defines header logo, text and hamburger color
 */
 
-function Header({ color, toggleDarkMode }) {
+function Header({ color }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
@@ -41,7 +41,7 @@ function Header({ color, toggleDarkMode }) {
         <Link className="link" to="/contact/" activeStyle={{ opacity: 0.4 }}>
           Contact
         </Link>
-        <DarkModeSwitcher color={color} toggleDarkMode={toggleDarkMode} />
+        <DarkModeSwitcher color={color} />
       </HeaderLinks>
 
       <Overlay isExpanded={isExpanded}>
