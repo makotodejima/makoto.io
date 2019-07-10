@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -11,10 +11,10 @@ import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {
   let stored;
-  if (typeof window !== `undefined`) {
-    stored = localStorage.getItem('isDarkMode');
+  if (typeof window !== 'undefined') {
+    stored = JSON.parse(localStorage.getItem('isDarkMode'));
   }
-  const [isDarkMode, toggleDarkMode] = useState(stored === 'true');
+  const [isDarkMode, toggleDarkMode] = useState(stored);
 
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>
