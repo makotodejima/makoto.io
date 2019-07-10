@@ -14,12 +14,11 @@ const Layout = ({ children, headerColor }) => {
   if (typeof window !== 'undefined') {
     stored = JSON.parse(localStorage.getItem('isDarkMode'));
   }
+  const [isDarkMode, toggleDarkMode] = useState(stored);
 
   useEffect(() => {
-    stored = JSON.parse(localStorage.getItem('isDarkMode'));
+    toggleDarkMode(stored);
   });
-
-  const [isDarkMode, toggleDarkMode] = useState(stored);
 
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>
