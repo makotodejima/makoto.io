@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { light, dark } from './theme';
@@ -27,7 +27,7 @@ export const ThemeContextProvider = ({ children }) => {
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('isDarkMode'));
     setDarkMode(stored);
-  });
+  }, [isDarkMode]);
 
   return (
     <ThemeContext.Provider
