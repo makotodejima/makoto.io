@@ -1,8 +1,8 @@
-const React = require('react');
+import React from 'react';
 
-const { ThemeContextProvider } = require('./src/theme/themeContext');
+import { ThemeContextProvider } from './src/theme/themeContext';
 
 // eslint-disable-next-line react/prop-types
-exports.wrapRootElement = ({ element }) => {
+export const wrapRootElement = ({ element }) => {
   return <ThemeContextProvider>{element}</ThemeContextProvider>;
 };
