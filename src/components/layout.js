@@ -14,6 +14,11 @@ const Layout = ({ children, headerColor }) => {
   if (typeof window !== 'undefined') {
     stored = JSON.parse(localStorage.getItem('isDarkMode'));
   }
+
+  useEffect(() => {
+    stored = JSON.parse(localStorage.getItem('isDarkMode'));
+  });
+
   const [isDarkMode, toggleDarkMode] = useState(stored);
 
   return (
