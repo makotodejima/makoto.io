@@ -6,6 +6,7 @@ export const light = {
   link: '#0076ff',
   boxShadow: '3px 3px 20px 0px rgba(0, 0, 0, 0.1)',
   boxShadowHover: '3px 3px 25px 0px rgba(0, 0, 0, 0.3)',
+  workImgBoxShadow: '0px 0px 30px 0px rgba(0, 0, 0, 0.2)',
 };
 
 export const dark = {
@@ -17,4 +18,5 @@ export const dark = {
   link: 'hsl(206.7, 100%, 70%)',
   boxShadow: '3px 3px 20px 0px rgba(255, 255, 255, 0.1)',
   boxShadowHover: '3px 3px 25px 0px rgba(255, 255, 255, 0.3)',
+  workImgBoxShadow: '0px 0px 35px 0px rgba(255, 255, 255, 0.3)',
 };

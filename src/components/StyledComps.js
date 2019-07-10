@@ -76,7 +76,7 @@ export const TopSection = styled.div`
 export const TopImage = styled(Img)`
   width: ${props => props.width || `50%`};
   margin: 40px auto 5rem;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: ${props => props.theme.workImgBoxShadow};
 `;
 
 export const ExtLink = styled.div`
