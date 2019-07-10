@@ -63,8 +63,8 @@ const CopyEmail = styled.h4`
       font-size: 0.8rem;
       &:active {
         transform: scale(0.96);
-        background-color: black;
-        color: white;
+        background-color: ${props => props.theme.primary};
+        color: ${props => props.theme.bg};
       }
     }
   }
@@ -74,7 +74,7 @@ const CopyEmail = styled.h4`
     font-weight: lighter;
     width: 190px;
     margin-left: 6px;
-    color: dimgrey;
+    color: ${props => props.theme.secondary};
   }
   input {
     position: absolute;

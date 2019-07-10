@@ -106,11 +106,10 @@ const Description = styled.div`
         bottom: 0;
         height: 4px;
         width: 100%;
-        background-color: #000000;
+        background-color: ${props => props.theme.primary};
         transform: scaleY(0);
         transform-origin: left bottom;
         transition: transform 0.3s ease-in;
-        z-index: -1;
       }
       &:hover::before {
         transform: scaleY(1);

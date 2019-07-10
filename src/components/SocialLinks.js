@@ -72,6 +72,7 @@ const SocialLinksContainer = styled.div`
   display: flex;
   font-size: 1.8rem;
   a {
+    position: relative;
     transition: all 0.25s ease-in-out;
     color: ${props => props.theme.primary};
     margin: 0 1rem;
@@ -82,15 +83,11 @@ const SocialLinksContainer = styled.div`
   a:first-child {
     margin-left: 0;
   }
-  a:hover {
-    transform: scale(1.1);
-  }
   a::before {
     content: '';
     position: absolute;
-    visibility: hidden;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: ${props => props.theme.primary};
     bottom: 5px;
     left: 0;

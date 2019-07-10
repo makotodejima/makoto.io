@@ -31,6 +31,10 @@ const StyledLink = styled.a`
   margin-left: 1.4rem;
   height: 26px;
   cursor: pointer;
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.1);
+  }
   path {
     fill: ${props =>
       props.theme.isDarkMode ? props.theme.primary : props.color};
