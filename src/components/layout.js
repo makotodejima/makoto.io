@@ -10,8 +10,10 @@ import { media } from './StyledComps';
 import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {
-  const stored =
-    typeof window !== 'undefined' && localStorage.getItem('isDarkMode');
+  let stored;
+  if (typeof window !== `undefined`) {
+    stored = localStorage.getItem('isDarkMode');
+  }
   const [isDarkMode, toggleDarkMode] = useState(stored === 'true');
 
   return (
