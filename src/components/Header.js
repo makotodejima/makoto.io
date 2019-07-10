@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import DarkModeSwitcher from './DarkModeSwitcher';
 import { media } from './StyledComps';
 import Logo from './Logo';
 import News from './News';
@@ -40,9 +41,7 @@ function Header({ color, toggleDarkMode }) {
         <Link className="link" to="/contact/" activeStyle={{ opacity: 0.4 }}>
           Contact
         </Link>
-        <a onClick={toggleDarkMode} className="link" to="#">
-          mode
-        </a>
+        <DarkModeSwitcher color={color} toggleDarkMode={toggleDarkMode} />
       </HeaderLinks>
 
       <Overlay isExpanded={isExpanded}>
@@ -58,7 +57,6 @@ function Header({ color, toggleDarkMode }) {
         <Link to="/about/" activeStyle={{ color: `dimgrey` }}>
           <h1>About</h1>
         </Link>
-
         <Link to="/contact/" activeStyle={{ color: `dimgrey` }}>
           <h1>Contact</h1>
         </Link>
