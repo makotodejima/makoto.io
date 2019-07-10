@@ -7,6 +7,7 @@ export const light = {
   boxShadow: '3px 3px 20px 0px rgba(0, 0, 0, 0.1)',
   boxShadowHover: '3px 3px 25px 0px rgba(0, 0, 0, 0.3)',
   workImgBoxShadow: '0px 0px 30px 0px rgba(0, 0, 0, 0.2)',
+  modalColor: '#fff',
 };
 
 export const dark = {
@@ -19,4 +20,5 @@ export const dark = {
   boxShadow: '3px 3px 20px 0px rgba(255, 255, 255, 0.1)',
   boxShadowHover: '3px 3px 25px 0px rgba(255, 255, 255, 0.3)',
   workImgBoxShadow: '0px 0px 35px 0px rgba(255, 255, 255, 0.3)',
+  modalColor: '#333',
 };

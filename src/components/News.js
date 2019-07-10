@@ -66,7 +66,7 @@ const Balloon = styled.div`
   transform: ${props => (props.hover ? 'translateY(0)' : 'translateY(5px)')};
   padding: 10px 20px;
   line-height: 1.8;
-  background-color: ${props => props.theme.bg};
+  background-color: ${props => props.theme.modalColor};
   border-radius: 0.2rem;
   box-shadow: ${props => props.theme.boxShadow};
   transition: all 250ms ease-out;
@@ -92,7 +92,7 @@ const Balloon = styled.div`
     content: '';
     position: absolute;
     top: 0;
-    border-bottom: 10px solid ${props => props.theme.bg};
+    border-bottom: 10px solid ${props => props.theme.modalColor};
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     transform: translate(-50%, -100%);
