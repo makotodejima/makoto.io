@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ThemeProvider } from 'styled-components';
-
-import { light, dark } from './theme';
 
 const defaultState = {
   isDarkMode: false,
@@ -36,9 +33,7 @@ export const ThemeContextProvider = ({ children }) => {
         toggleDarkMode,
       }}
     >
-      <ThemeProvider theme={isDarkMode ? dark : light}>
-        {children}
-      </ThemeProvider>
+      {children}
     </ThemeContext.Provider>
   );
 };

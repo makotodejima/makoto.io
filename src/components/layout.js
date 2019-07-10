@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+
+import { light, dark } from '../theme/theme';
+import ThemeContext from '../theme/themeContext';
 
 import Footer from './Footer';
 import Header from './Header';
@@ -8,12 +11,15 @@ import { media } from './StyledComps';
 import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {
+  const { isDarkMode } = useContext(ThemeContext);
   return (
-    <StyledLayout>
-      <Header color={headerColor} />
-      <Main>{children}</Main>
-      <Footer />
-    </StyledLayout>
+    <ThemeProvider theme={isDarkMode ? dark : light}>
+      <StyledLayout>
+        <Header color={headerColor} />
+        <Main>{children}</Main>
+        <Footer />
+      </StyledLayout>
+    </ThemeProvider>
   );
 };
 
