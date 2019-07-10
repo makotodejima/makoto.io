@@ -52,12 +52,13 @@ const CopyEmail = styled.h4`
     left: 203px;
     button {
       cursor: pointer;
+      color: ${props => props.theme.primary};
       outline: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       padding: 2px 5px;
       border-radius: 15px;
-      border: black 2px solid;
+      border: ${props => props.theme.primary} 2px solid;
       background-color: transparent;
       font-size: 0.8rem;
       &:active {

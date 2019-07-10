@@ -28,7 +28,7 @@ export const Label = styled.div`
     text-align: right;
     font-size: 0.9rem;
     text-decoration: underline;
-    color: gray;
+    color: ${props => props.theme.secondary};
     &:hover {
       opacity: 0.7;
     }
@@ -55,10 +55,12 @@ export const TopCoverColor = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: ${props => props.color};
+  background-color: ${props => props.theme.isDarkMode || props.color};
+  transition: background-color 500ms;
   width: 100%;
   height: 400px;
-  z-index: -1;
+  z-index: 0;
+
   ${media.phone`
   height: 240px;
   `}
@@ -74,7 +76,7 @@ export const TopSection = styled.div`
 export const TopImage = styled(Img)`
   width: ${props => props.width || `50%`};
   margin: 40px auto 5rem;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: ${props => props.theme.workImgBoxShadow};
 `;
 
 export const ExtLink = styled.div`
@@ -85,16 +87,18 @@ export const ExtLink = styled.div`
     margin: 0 auto;
     font-size: 1.1rem;
     padding: 5px 40px;
-    border: 2px solid ${props => props.color || 'darkcyan'};
-    border-radius: 30px;
     text-decoration: none;
-    color: white;
-    background-color: ${props => props.color || 'darkcyan'};
-
+    color: ${props => props.theme.bg};
+    border: 2px solid
+      ${props => (props.theme.isDarkMode ? props.theme.primary : props.color)};
+    border-radius: 30px;
+    background-color: ${props =>
+      props.theme.isDarkMode ? props.theme.primary : props.color};
     transition: all 0.2s ease-in;
     &:hover {
-      color: ${props => props.color || 'darkcyan'};
-      background-color: #fff;
+      color: ${props =>
+        props.theme.isDarkMode ? props.theme.primary : props.color};
+      background-color: transparent;
     }
   }
 `;
@@ -118,11 +122,11 @@ export const WorkTag = styled.p`
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: lighter;
-  color: dimgrey;
+  color: ${props => props.theme.secondary};
 `;
+
 export const WorkDescription = styled.div`
   width: 32%;
-  /* text-align: justify; */
   margin: 0 auto 3rem;
   font-size: 0.9rem;
   ${media.phone`
@@ -149,7 +153,7 @@ export const WorkPageWrapper = styled.div`
 export const Caption = styled.div`
   margin: 1rem auto 7rem;
   text-align: center;
-  color: dimgrey;
+  color: ${props => props.theme.primary};
   ${media.phone`
       margin: 0.8rem auto 4.5rem;
       font-size: 0.85rem;

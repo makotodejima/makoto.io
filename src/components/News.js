@@ -66,9 +66,9 @@ const Balloon = styled.div`
   transform: ${props => (props.hover ? 'translateY(0)' : 'translateY(5px)')};
   padding: 10px 20px;
   line-height: 1.8;
-  background-color: white;
+  background-color: ${props => props.theme.modalColor};
   border-radius: 0.2rem;
-  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.boxShadow};
   transition: all 250ms ease-out;
 
   .heading {
@@ -81,7 +81,7 @@ const Balloon = styled.div`
     margin-bottom: 0.6rem;
     a {
       text-decoration: none;
-      color: #0076ff;
+      color: ${props => props.theme.link};
       &:hover {
         opacity: 0.6;
       }
@@ -92,7 +92,7 @@ const Balloon = styled.div`
     content: '';
     position: absolute;
     top: 0;
-    border-bottom: 10px solid white;
+    border-bottom: 10px solid ${props => props.theme.modalColor};
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     transform: translate(-50%, -100%);

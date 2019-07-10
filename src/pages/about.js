@@ -44,7 +44,7 @@ function AboutPage() {
             development. Also experienced in ad-tech, Japanese writing, editing
             and localization.
             <br />
-            <span style={{ color: `dimgrey` }}>
+            <span className="skills">
               Skills: React, Gatsby, Processing, Graphic and Motion Design
             </span>
           </p>
@@ -98,9 +98,12 @@ const AboutContainer = styled.div`
 
     .intro {
       line-height: 1.6;
-      border-left: 2px solid black;
+      border-left: 2px solid ${props => props.theme.primary};
       padding-left: 1rem;
       text-align: justify;
+      .skills {
+        color: ${props => props.theme.secondary};
+      }
       ${media.tablet`
         border: none;
         padding-left: 0;
