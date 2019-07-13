@@ -12,7 +12,8 @@ export const light = {
 
 export const dark = {
   isDarkMode: true,
-  bg: 'hsl(120, 2%, 9%)',
+  // bg: 'hsl(120, 2%, 9%)',
+  bg: '#001E32',
   secondarybg: 'hsl(203.6, 100%, 12%)',
   primary: '#FFF',
   secondary: '#999999',
