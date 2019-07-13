@@ -33,7 +33,7 @@ export default () => {
                   </video>
                 ) : (
                   <Img
-                    fluid={data.flashcards.childImageSharp.fluid}
+                    fluid={data[id].childImageSharp.fluid}
                     alt={apps[id].title}
                   />
                 )}
@@ -60,7 +60,14 @@ const AppsContainer = styled.div`
 
 const query = graphql`
   query {
-    flashcards: file(relativePath: { eq: "flashcards.png" }) {
+    flashcard: file(relativePath: { eq: "flashcard.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    pomodoro: file(relativePath: { eq: "pomodoro.png" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid

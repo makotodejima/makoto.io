@@ -102,7 +102,6 @@ export const apps = {
     keywords: 'React, Redux, Sass',
     url: 'https://pomodoro-with-catface.mkd.now.sh',
     altText: 'Pomodoro Timer with Cat Face',
-    isVideo: true,
   },
 };
 
