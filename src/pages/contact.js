@@ -44,47 +44,53 @@ const ContactPage = () => {
 
           <div className="name">
             <span className="fname">
-              <label htmlFor="fname">First Name</label>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your first name.."
-                required
-                onChange={e => setFname(e.target.value)}
-              />
+              <label htmlFor="fname">
+                First Name
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your first name.."
+                  required
+                  onChange={e => setFname(e.target.value)}
+                />
+              </label>
             </span>
             <span className="lname">
-              <label htmlFor="lname">Last Name</label>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-                required
-                onChange={e => setLname(e.target.value)}
-              />
+              <label htmlFor="lname">
+                Last Name
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Your last name.."
+                  required
+                  onChange={e => setLname(e.target.value)}
+                />
+              </label>
             </span>
           </div>
-          <label htmlFor="email">Your email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Your email.."
-            required
-            onChange={e => setEmail(e.target.value)}
-          />
-
-          <label htmlFor="message">Message</label>
-
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your message.."
-            required
-            onChange={e => setMessage(e.target.value)}
-          />
+          <label htmlFor="email">
+            Your email
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@madmak.com"
+              required
+              onChange={e => setEmail(e.target.value)}
+            />
+          </label>
+          <label htmlFor="message">
+            Message
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message.."
+              required
+              onChange={e => setMessage(e.target.value)}
+            />
+          </label>
           <button type="submit" disabled={isDisabled()}>
             Send
           </button>

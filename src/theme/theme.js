@@ -2,7 +2,7 @@ export const light = {
   isDarkMode: false,
   bg: 'rgb(255, 255, 250)',
   primary: '#000',
-  secondary: '#999999',
+  secondary: '#6D6D6D',
   link: '#0076ff',
   boxShadow: '3px 3px 20px 0px rgba(0, 0, 0, 0.1)',
   boxShadowHover: '3px 3px 25px 0px rgba(0, 0, 0, 0.3)',

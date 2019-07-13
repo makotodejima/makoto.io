@@ -55,7 +55,10 @@ const IndexPage = () => (
                     />
                   </video>
                 ) : (
-                  <Img fluid={data[id].childImageSharp.fluid} />
+                  <Img
+                    alt={featured[id].id}
+                    fluid={data[id].childImageSharp.fluid}
+                  />
                 )}
               </WorkListItem>
             );
