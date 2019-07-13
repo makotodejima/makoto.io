@@ -7,7 +7,7 @@ const AppItem = ({ url, type, title, keywords, children }) => {
   return (
     <Wrapper>
       <ImgWrapper>
-        <a href={url} target="_blank" rel="noopener noreferrer">
+        <a tabIndex="-1" href={url} target="_blank" rel="noopener noreferrer">
           {children}
         </a>
       </ImgWrapper>

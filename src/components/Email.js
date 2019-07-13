@@ -28,12 +28,15 @@ const Email = () => {
             </div>
           </>
         )}
-        <input
-          readOnly
-          style={{ opacity: 0 }}
-          ref={ref}
-          value="makotodejima@gmail.com"
-        />
+        <label htmlFor="email-to-copy">
+          <input
+            id="email-to-copy"
+            readOnly
+            style={{ opacity: 0 }}
+            ref={ref}
+            value="makotodejima@gmail.com"
+          />
+        </label>
       </CopyEmail>
     );
   }

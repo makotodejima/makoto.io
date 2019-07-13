@@ -10,9 +10,16 @@ const WorkListItem = props => {
     <Wrapper>
       <ImgWrapper>
         {props.path ? (
-          <Link to={`/work/${props.path}/`}>{props.children}</Link>
+          <Link tabIndex="-1" to={`/work/${props.path}/`}>
+            {props.children}
+          </Link>
         ) : (
-          <a href={props.url} target="_blank" rel="noopener noreferrer">
+          <a
+            tabIndex="-1"
+            href={props.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {props.children}
           </a>
         )}
