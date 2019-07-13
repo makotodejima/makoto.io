@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const SocialLinks = () => (
   <SocialLinksContainer>
     <a
+      aria-label="See works on Dribbble"
       href="https://dribbble.com/mak84sasami"
       target="_blank"
       rel="noopener noreferrer"
@@ -19,6 +20,7 @@ const SocialLinks = () => (
       </svg>
     </a>
     <a
+      aria-label="See works on GitHub"
       href="https://github.com/makotodejima"
       target="_blank"
       rel="noopener noreferrer"
@@ -34,6 +36,7 @@ const SocialLinks = () => (
       </svg>
     </a>
     <a
+      aria-label="See experience on LinkedIn"
       href="https://www.linkedin.com/in/makotodejima/"
       target="_blank"
       rel="noopener noreferrer"
@@ -49,6 +52,7 @@ const SocialLinks = () => (
       </svg>
     </a>
     <a
+      aria-label="See works on CodePen"
       href="https://codepen.io/makotodejima/"
       target="_blank"
       rel="noopener noreferrer"

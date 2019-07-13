@@ -18,7 +18,7 @@ function Header({ color }) {
 
   return (
     <StyledNav>
-      <Link to="/">
+      <Link to="/" aria-label="Home">
         <Logo color={color} />
       </Link>
       <Hamburger color={color} onClick={() => toggleExpansion(!isExpanded)}>

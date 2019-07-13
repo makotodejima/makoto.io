@@ -10,7 +10,11 @@ const WorkListItem = props => {
     <Wrapper>
       <ImgWrapper>
         {props.path ? (
-          <Link tabIndex="-1" to={`/work/${props.path}/`}>
+          <Link
+            aria-label={`Learn more about ${props.title}, ${props.type}`}
+            tabIndex="-1"
+            to={`/work/${props.path}/`}
+          >
             {props.children}
           </Link>
         ) : (
