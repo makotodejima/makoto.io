@@ -7,7 +7,13 @@ const AppItem = ({ url, type, title, keywords, children }) => {
   return (
     <Wrapper>
       <ImgWrapper>
-        <a tabIndex="-1" href={url} target="_blank" rel="noopener noreferrer">
+        <a
+          aria-label={`Learn more about ${title}, ${type}`}
+          tabIndex="-1"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {children}
         </a>
       </ImgWrapper>

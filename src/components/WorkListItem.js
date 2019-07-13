@@ -16,6 +16,7 @@ const WorkListItem = props => {
         ) : (
           <a
             tabIndex="-1"
+            aria-label={`Learn more about ${props.title}, ${props.type}`}
             href={props.url}
             target="_blank"
             rel="noopener noreferrer"
