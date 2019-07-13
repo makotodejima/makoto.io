@@ -14,9 +14,10 @@ import { work } from '../data/data';
 import WorkListItem from '../components/WorkListItem';
 import Writing from '../components/Writing';
 
-function WorkPage(props) {
+function WorkPage() {
   return (
     <StaticQuery
+      // eslint-disable-next-line no-use-before-define
       query={query}
       render={data => (
         <Layout>
@@ -47,10 +48,7 @@ function WorkPage(props) {
                 >
                   {work[id].isVideo ? (
                     <video autoPlay loop muted playsInline>
-                      <source
-                        src={require(`../images/${work[id].id}.mp4`)}
-                        type="video/mp4"
-                      />
+                      <source src={data[id].publicURL} type="video/mp4" />
                     </video>
                   ) : (
                     <Img
@@ -123,6 +121,12 @@ const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    sobasquare: file(relativePath: { eq: "sobasquare.mp4" }) {
+      publicURL
+    }
+    naotatsu_kaku: file(relativePath: { eq: "naotatsu_kaku.mp4" }) {
+      publicURL
     }
   }
 `;

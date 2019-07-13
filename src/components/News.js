@@ -21,8 +21,8 @@ const News = () => {
 
       <Balloon hover={hover}>
         <div className="heading">What's new</div>
-        {news.map((n, idx) => (
-          <div key={idx} className="item">
+        {news.map(n => (
+          <div key={n.text} className="item">
             <div className="date">{n.date}</div>
             {n.href && (
               <a href={n.href} target="_blank" rel="noopener noreferrer">

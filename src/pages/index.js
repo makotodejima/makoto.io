@@ -14,6 +14,7 @@ import Apps from '../components/Apps';
 
 const IndexPage = () => (
   <StaticQuery
+    // eslint-disable-next-line no-use-before-define
     query={query}
     render={data => (
       <Layout>
@@ -28,9 +29,7 @@ const IndexPage = () => (
             `Graphic Design`,
           ]}
         />
-
         <Hero />
-
         <Label>
           Featured Work <Link to="/work/">Show All Works</Link>
         </Label>
@@ -49,10 +48,7 @@ const IndexPage = () => (
               >
                 {featured[id].isVideo ? (
                   <video autoPlay loop muted playsInline>
-                    <source
-                      src={require(`../images/${featured[id].id}.mp4`)}
-                      type="video/mp4"
-                    />
+                    <source src={data[id].publicURL} type="video/mp4" />
                   </video>
                 ) : (
                   <Img
@@ -121,6 +117,12 @@ const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    sobasquare: file(relativePath: { eq: "sobasquare.mp4" }) {
+      publicURL
+    }
+    naotatsu_kaku: file(relativePath: { eq: "naotatsu_kaku.mp4" }) {
+      publicURL
     }
   }
 `;

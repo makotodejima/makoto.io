@@ -11,6 +11,7 @@ import { media } from './StyledComps';
 export default () => {
   return (
     <StaticQuery
+      // eslint-disable-next-line no-use-before-define
       query={query}
       render={data => (
         <AppsContainer>
@@ -26,10 +27,7 @@ export default () => {
               >
                 {apps[id].isVideo ? (
                   <video autoPlay loop muted playsInline>
-                    <source
-                      src={require(`../images/${id}.mp4`)}
-                      type="video/mp4"
-                    />
+                    <source src={data[id].publicURL} type="video/mp4" />
                   </video>
                 ) : (
                   <Img
@@ -73,6 +71,9 @@ const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    sobasquare: file(relativePath: { eq: "sobasquare.mp4" }) {
+      publicURL
     }
   }
 `;

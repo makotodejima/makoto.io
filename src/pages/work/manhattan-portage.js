@@ -19,6 +19,7 @@ import {
 function ManhattanPortage() {
   return (
     <StaticQuery
+      // eslint-disable-next-line no-use-before-define
       query={query}
       render={data => (
         <Layout headerColor="beige">

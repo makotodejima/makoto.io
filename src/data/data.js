@@ -127,11 +127,6 @@ export const news = [
     href: 'https://soba.madmak.me',
     text: 'New Instant Search feature on SOBASQUARE!!',
   },
-  // {
-  //   date: "Jun 2019",
-  //   to: "/work/robotex",
-  //   text: "🤖Robotex Japan corporate website released"
-  // },
   {
     date: 'Apr 2019 🗼🎊',
     to: '/work/the-light-of-tokyo',
