@@ -65,13 +65,13 @@ function Header({ color }) {
   );
 }
 
+Header.defaultProps = {
+  siteTitle: `Makoto Dejima | Designer and Front-End Developer`,
+};
+
 Header.propTypes = {
   color: PropTypes.string,
   siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: `Makoto Dejima | Designer and Front-End Developer`,
 };
 
 export default Header;

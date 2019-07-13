@@ -6,6 +6,7 @@ const Email = () => {
   const ref = useRef(null);
 
   const copyToClick = e => {
+    e.preventDefault();
     ref.current.select();
     document.execCommand('copy');
     e.target.focus();
@@ -21,7 +22,11 @@ const Email = () => {
         document.queryCommandSupported('copy') && (
           <>
             <div className="copyBtn">
-              <button type="button" onClick={copyToClick}>
+              <button
+                aria-label="Copy email address to clipboard"
+                type="button"
+                onClick={copyToClick}
+              >
                 Copy
               </button>
               <span>{copySuccess}</span>
@@ -29,8 +34,10 @@ const Email = () => {
           </>
         )}
         <label htmlFor="email-to-copy">
+          {` `}
           <input
             id="email-to-copy"
+            tabIndex="-1"
             readOnly
             style={{ opacity: 0 }}
             ref={ref}
@@ -64,8 +71,9 @@ const CopyEmail = styled.h4`
       border: ${props => props.theme.primary} 2px solid;
       background-color: transparent;
       font-size: 0.8rem;
-      &:active {
-        transform: scale(0.96);
+      &:active,
+      &:focus {
+        transform: scale(0.95);
         background-color: ${props => props.theme.primary};
         color: ${props => props.theme.bg};
       }
