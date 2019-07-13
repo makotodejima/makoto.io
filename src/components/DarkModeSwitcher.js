@@ -41,9 +41,11 @@ const StyledButton = styled.button`
   background-color: transparent;
   cursor: pointer;
   transition: transform 200ms;
-  &:hover,
-  &:focus {
+  &:hover {
     transform: scale(1.1);
+  }
+  &:focus {
+    transform: scale(1.3);
   }
 
   path {

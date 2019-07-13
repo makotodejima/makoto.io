@@ -9,6 +9,10 @@ const News = () => {
 
   return (
     <BlinkerContainer
+      ara-label="Latest news and announcement"
+      tabIndex="0"
+      onFocus={() => toggleHover(true)}
+      onBlur={() => toggleHover(false)}
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
@@ -41,6 +45,9 @@ const BlinkerContainer = styled.div`
   width: 22px;
   height: 22px;
   padding: 5px;
+  &:focus {
+    /* outline: none; */
+  }
 `;
 
 const Blinker = styled.div`
