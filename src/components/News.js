@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import { news } from '../data/data';
+import ThemeContext from '../theme/themeContext';
 
 const News = () => {
   const [hover, toggleHover] = useState(false);
+  const { toggleDarkMode } = useContext(ThemeContext);
 
   return (
     <BlinkerContainer
@@ -20,7 +22,28 @@ const News = () => {
       <Blinker delay />
 
       <Balloon hover={hover}>
-        <div className="heading">What's new</div>
+        <div className="heading">What&#39;s new</div>
+        <div className="item">
+          <div className="date">
+            Jul 2019{' '}
+            <span role="img" aria-label="Sun and Moon emojis">
+              🌤 ️🌘👀
+            </span>
+          </div>
+          <a
+            onKeyPress={e => {
+              if (e.key === 'Enter') {
+                toggleDarkMode();
+              }
+            }}
+            tabIndex={0}
+            aria-label="Switch dark and light mode"
+            onClick={toggleDarkMode}
+          >
+            Yes, I did it. Like everybody else. It's here. DARK MODE!!
+          </a>
+        </div>
+
         {news.map(n => (
           <div key={n.text} className="item">
             <div className="date">{n.date}</div>
@@ -40,14 +63,12 @@ const News = () => {
 export default News;
 
 const BlinkerContainer = styled.div`
+  outline: none;
   position: relative;
   display: inline-block;
   width: 22px;
   height: 22px;
   padding: 5px;
-  &:focus {
-    /* outline: none; */
-  }
 `;
 
 const Blinker = styled.div`
@@ -89,6 +110,7 @@ const Balloon = styled.div`
     a {
       text-decoration: none;
       color: ${props => props.theme.link};
+      cursor: pointer;
       &:hover {
         opacity: 0.6;
       }
@@ -103,6 +125,7 @@ const Balloon = styled.div`
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     transform: translate(-50%, -100%);
+    transition: all 250ms ease-out;
     @media (max-width: 768px) {
       visibility: hidden;
     }

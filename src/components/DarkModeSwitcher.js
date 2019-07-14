@@ -9,7 +9,7 @@ const DarkModeSwitcher = ({ color }) => {
     <StyledButton
       color={color}
       onClick={toggleDarkMode}
-      aria-label="Switch dark and ight mode"
+      aria-label="Switch dark and light mode"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
