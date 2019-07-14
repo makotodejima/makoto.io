@@ -172,24 +172,20 @@ const StyledForm = styled.div`
       margin-top: 20px;
       width: 120px;
       text-align: center;
-      background: black;
-      color: #ffffff;
+      background: ${props => props.theme.primary};
+      color: ${props => props.theme.bg};
       border: none;
       cursor: pointer;
       transition: 200ms ease-in-out, transform 120ms ease;
       -webkit-appearance: none;
       -moz-appearance: none;
       &:disabled {
-        background-color: rgba(200, 200, 200, 0.8);
+        opacity: 0.2;
         cursor: not-allowed;
-        :hover,
-        :focus {
-          background-color: rgba(200, 200, 200, 0.8);
-        }
       }
       &:hover,
       &:focus {
-        background: #0076ff;
+        background: ${props => props.theme.link};
       }
       &:active {
         transform: scale(0.9);
@@ -203,6 +199,9 @@ const StyledForm = styled.div`
         flex-direction: column;
         span {
           margin: 0.6rem 0;
+          &:nth-child(1) {
+            margin-right: 0;
+          }
         }
       }
     }
