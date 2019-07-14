@@ -26,8 +26,8 @@ const News = () => {
         <div className="item">
           <div className="date">
             Jul 2019{' '}
-            <span role="img" aria-label="Sun and Moon emojis">
-              🌤 ️🌘👀
+            <span role="img" aria-label="Sun and moon emojis">
+              🌤🌘👀
             </span>
           </div>
           <a
