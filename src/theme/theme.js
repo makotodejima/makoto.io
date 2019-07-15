@@ -16,7 +16,7 @@ export const dark = {
   bg: '#001E32',
   secondarybg: 'hsl(203.6, 100%, 12%)',
   primary: '#FFF',
-  secondary: '#999999',
+  secondary: '#BEBEBE',
   link: 'hsl(206.7, 100%, 70%)',
   boxShadow: '3px 3px 20px 0px rgba(255, 255, 255, 0.1)',
   boxShadowHover: '3px 3px 25px 0px rgba(255, 255, 255, 0.3)',
