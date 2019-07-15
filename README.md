@@ -1,6 +1,4 @@
-# Visit website
-
-## https://www.madmak.me
+# Visit website www.madmak.me
 
 ### Built with
 
