@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
+import { useSpring, animated } from 'react-spring';
 
 import { light, dark } from '../theme/theme';
 import ThemeContext from '../theme/themeContext';
@@ -12,11 +13,18 @@ import './layout.scss';
 
 const Layout = ({ children, headerColor }) => {
   const { isDarkMode } = useContext(ThemeContext);
+
+  const style = useSpring({
+    from: { opacity: 0 },
+    opacity: 1,
+    config: { mass: 1, tension: 150, friction: 30 },
+  });
+
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>
       <StyledLayout>
         <Header color={headerColor} />
-        <Main>{children}</Main>
+        <AnimatedMain style={style}>{children}</AnimatedMain>
         <Footer />
       </StyledLayout>
     </ThemeProvider>
@@ -43,7 +51,7 @@ const StyledLayout = styled.div`
   }
 `;
 
-const Main = styled.div`
+const AnimatedMain = styled(animated.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
