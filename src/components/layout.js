@@ -38,6 +38,9 @@ const StyledLayout = styled.div`
   align-items: stretch;
   min-height: 100vh;
   transition: background-color 500ms;
+  h4 {
+    font-size: 16px;
+  }
 `;
 
 const Main = styled.div`
