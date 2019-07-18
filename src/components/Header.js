@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { useTransition, config } from 'react-spring';
 
 import DarkModeSwitcher from './DarkModeSwitcher';
 import { media } from './StyledComps';
+import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import News from './News';
 
@@ -15,20 +17,27 @@ it defines header logo, text and hamburger color
 
 function Header({ color }) {
   const [isExpanded, toggleExpansion] = useState(false);
+  const transition = useTransition(isExpanded, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    // config: config.slow,
+  });
 
   return (
-    <StyledNav>
+    <StyledNav isExpanded={isExpanded}>
       <Link to="/" aria-label="Home">
         <Logo color={color} />
       </Link>
+
       <Hamburger color={color} onClick={() => toggleExpansion(!isExpanded)}>
         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
-          <path d="M0 3h20v1H0V3zm0 6h20v1H0V9zm0 6h20v1H0v-2z" />
+          <path d="M0 3h20v1H0V3zm0 6h20v1H0V9zm0 6h20v1H0v-1z" />
         </svg>
       </Hamburger>
 
-      <HeaderLinks color={color} isExpanded={isExpanded}>
+      <HeaderLinks color={color}>
         <News />
         <Link className="link" to="/work/" activeStyle={{ opacity: 0.4 }}>
           Work
@@ -44,23 +53,12 @@ function Header({ color }) {
         <DarkModeSwitcher color={color} />
       </HeaderLinks>
 
-      <Overlay isExpanded={isExpanded}>
-        <h1 className="close" onClick={() => toggleExpansion(!isExpanded)}>
-          CLOSE
-        </h1>
-        <Link to="/" activeStyle={{ color: `dimgrey` }}>
-          <h1>Home</h1>
-        </Link>
-        <Link to="/work/" activeStyle={{ color: `dimgrey` }}>
-          <h1>Work</h1>
-        </Link>
-        <Link to="/about/" activeStyle={{ color: `dimgrey` }}>
-          <h1>About</h1>
-        </Link>
-        <Link to="/contact/" activeStyle={{ color: `dimgrey` }}>
-          <h1>Contact</h1>
-        </Link>
-      </Overlay>
+      {transition.map(
+        ({ item, key, props }) =>
+          item && (
+            <MobileMenu key={key} style={props} isExpanded={isExpanded} />
+          ),
+      )}
     </StyledNav>
   );
 }
@@ -88,7 +86,7 @@ const StyledNav = styled.nav`
   z-index: 10;
   ${media.phone`
     padding: 1rem;
-  `}
+  `};
 `;
 
 const Hamburger = styled.button`
@@ -100,7 +98,7 @@ const Hamburger = styled.button`
   -moz-appearance: none;
   border: none;
   background-color: transparent;
-
+  /* z-index: 10; */
   cursor: pointer;
   path {
     stroke: ${props => props.color || props.theme.primary};
@@ -127,7 +125,7 @@ const HeaderLinks = styled.div`
     margin-left: 1.5rem;
     text-decoration: none;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       visibility: hidden;
       width: 100%;
@@ -148,48 +146,6 @@ const HeaderLinks = styled.div`
   }
 
   @media (max-width: 576px) {
-    text-align: center;
-    width: 100%;
-    /* display: ${props => (props.isExpanded ? `block` : `none`)}; */
     display: none;
-    a {
-      display: block;
-      margin-top: 1rem;
-      margin-left: 0;
-    }
-  }
-`;
-
-const Overlay = styled.div`
-  visibility: hidden;
-  transition: opacity 0.5s;
-  @media (max-width: 576px) {
-    visibility: ${props => (props.isExpanded ? 'visible' : 'hidden')};
-    opacity: ${props => (props.isExpanded ? 0.98 : 0)};
-  }
-
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgb(255, 255, 249);
-  overflow: auto;
-  padding: 2rem;
-
-  .close {
-    text-align: right;
-    margin-bottom: 6rem;
-    color: grey;
-    z-index: 999;
-  }
-
-  a {
-    color: black;
-    text-align: center;
-    h1 {
-      margin: 2rem 0;
-    }
   }
 `;
