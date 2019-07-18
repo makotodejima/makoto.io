@@ -37,7 +37,7 @@ const StyledButton = styled.button`
   -moz-appearance: none;
   display: inline-block;
   margin-left: 1.4rem;
-  height: 26px;
+  height: 28px;
   background-color: transparent;
   cursor: pointer;
   transition: transform 200ms;
