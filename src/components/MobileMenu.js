@@ -28,7 +28,7 @@ const MobileMenu = ({ style, isExpanded }) => {
     items.map((item, idx) => ({
       from: { opacity: 0, transform: `translateX(-100%)` },
       to: { opacity: 1, transform: `translateX(${idx * 10 - 20}%)` },
-      delay: idx * 50,
+      delay: idx * 30,
       ref: springsRef,
     })),
   );
