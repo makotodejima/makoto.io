@@ -13,8 +13,8 @@ import './layout.scss';
 
 interface Props {
   children: React.ReactNode;
-  headerTextColor: string;
-  headerBgColor: string;
+  headerTextColor?: string;
+  headerBgColor?: string;
 }
 
 const Layout = ({ children, headerTextColor, headerBgColor }: Props) => {

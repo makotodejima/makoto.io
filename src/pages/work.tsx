@@ -17,7 +17,6 @@ import Writing from '../components/Writing';
 function WorkPage() {
   return (
     <StaticQuery
-      // eslint-disable-next-line no-use-before-define
       query={query}
       render={data => (
         <Layout>
