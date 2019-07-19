@@ -1,5 +1,5 @@
-import React from 'react';
-import { useSpring, useSprings, animated } from 'react-spring';
+import React, { useRef } from 'react';
+import { useSpring, useSprings, useChain, animated } from 'react-spring';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
@@ -13,11 +13,14 @@ const items = [
 ];
 
 const MobileMenu = ({ style, isExpanded }) => {
-  const slide = useSpring({
-    from: { transform: 'translateX(0%)' },
-    to: { transform: 'translateX(-40%)' },
+  const fadeRef = useRef();
+  const fade = useSpring({
+    from: { opacity: 0, transform: `translateX(-100%)` },
+    to: { opacity: 1, transform: `translateX(0%)` },
+    ref: fadeRef,
   });
 
+  const springsRef = useRef();
   const springs = useSprings(
     items.length,
     items.map((item, idx) => ({
@@ -25,8 +28,11 @@ const MobileMenu = ({ style, isExpanded }) => {
       //   to: { transform: `translateX(${idx * 10 + 20})` },
       to: { opacity: 1, transform: `translateX(${idx * 10 - 20}%)` },
       delay: idx * 50,
+      ref: springsRef,
     })),
   );
+
+  useChain([springsRef, fadeRef], [0, 0.4]);
 
   return (
     <Overlay style={style}>
@@ -41,9 +47,9 @@ const MobileMenu = ({ style, isExpanded }) => {
         </Link>
       ))}
 
-      <div className="switchWrap">
+      <animated.div style={fade} className="switchWrap">
         <DarkModeSwitcher />
-      </div>
+      </animated.div>
     </Overlay>
   );
 };

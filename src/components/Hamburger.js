@@ -4,7 +4,6 @@ import { useGesture } from 'react-use-gesture';
 import { animated, useSpring } from 'react-spring';
 
 import { media } from './StyledComps';
-import DarkModeSwitcher from './DarkModeSwitcher';
 
 const Hamburger = ({ color, isExpanded, toggleExpansion }) => {
   const [{ xy }, set] = useSpring(() => ({
