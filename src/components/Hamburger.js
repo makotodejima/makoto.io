@@ -57,7 +57,7 @@ const Hamburger = ({ headerTextColor, isExpanded, toggleExpansion }) => {
 export default Hamburger;
 
 const HamburgerWrap = styled(animated.div)`
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   right: 35px;
   bottom: 35px;

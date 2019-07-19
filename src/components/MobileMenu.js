@@ -3,6 +3,7 @@ import { useSpring, useSprings, useChain, animated } from 'react-spring';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import Logo from './Logo';
 import DarkModeSwitcher from './DarkModeSwitcher';
 
 const items = [
@@ -10,6 +11,7 @@ const items = [
   { text: 'Work', to: '/work/' },
   { text: 'About', to: '/about/' },
   { text: 'Contact', to: '/contact/' },
+  <Logo />,
 ];
 
 const MobileMenu = ({ style, isExpanded }) => {
@@ -35,16 +37,25 @@ const MobileMenu = ({ style, isExpanded }) => {
 
   return (
     <Overlay style={style}>
-      {springs.map((props, i) => (
-        <Link
-          key={items[i].to}
-          className="item"
-          to={items[i].to}
-          activeClassName="active"
-        >
-          <animated.span style={props}>{items[i].text}</animated.span>
-        </Link>
-      ))}
+      {springs.map((props, i) => {
+        if (i === 4)
+          return (
+            <animated.span key="logo" style={props}>
+              {items[i]}
+            </animated.span>
+          );
+
+        return (
+          <Link
+            key={items[i].to}
+            className="item"
+            to={items[i].to}
+            activeClassName="active"
+          >
+            <animated.span style={props}>{items[i].text}</animated.span>
+          </Link>
+        );
+      })}
 
       <animated.div style={fade} className="switchWrap">
         <DarkModeSwitcher />
@@ -61,7 +72,7 @@ const Overlay = styled(animated.div)`
     visibility: visible;
   }
 
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   display: flex;
   flex-direction: column-reverse;
@@ -73,7 +84,7 @@ const Overlay = styled(animated.div)`
   width: 100%;
   background-color: ${({ theme }) => theme.bg};
   transition: background-color 500ms;
-  padding-bottom: 4rem;
+  padding-bottom: 5.5rem;
 
   a {
     /* border-top: 1px solid black; */
@@ -91,13 +102,20 @@ const Overlay = styled(animated.div)`
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin: 0.4rem;
+    margin: 0.45rem;
   }
+
+  /* logo position .logoWrap {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  } */
 
   /* DarkModeSwitcher style */
   .switchWrap {
     position: absolute;
-    bottom: 240px;
-    left: 40px;
+    bottom: 120px;
+    right: 49px;
   }
 `;

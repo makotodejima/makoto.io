@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { useTransition, config } from 'react-spring';
+import { useTransition } from 'react-spring';
 
 import Hamburger from './Hamburger';
 import DarkModeSwitcher from './DarkModeSwitcher';
@@ -22,14 +22,12 @@ function Header({ headerTextColor, headerBgColor }) {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    config: config.slow,
   });
 
   return (
     <StyledNav isExpanded={isExpanded}>
-      <Link style={{ zIndex: 1 }} to="/" aria-label="Home">
-        <Logo color={headerTextColor} />
-      </Link>
+      <Logo color={headerTextColor} />
+
       {headerBgColor && <TopCoverColor color={headerBgColor} />}
 
       <Hamburger
