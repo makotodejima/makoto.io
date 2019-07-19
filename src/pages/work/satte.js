@@ -21,7 +21,7 @@ function TheLightOfTokyo() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout headerColor="#FFFFE3">
+        <Layout headerTextColor="#FFFFFF" headerBgColor="#FFADC1">
           <SEO
             title="Satte City"
             keywords={[
@@ -35,7 +35,6 @@ function TheLightOfTokyo() {
           />
 
           <TopSection>
-            <TopCoverColor color="#f8bbd0" />
             <TopImage
               width="80%"
               className="top-image"

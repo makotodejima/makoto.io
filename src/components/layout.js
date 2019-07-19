@@ -11,20 +11,23 @@ import Header from './Header';
 import { media } from './StyledComps';
 import './layout.scss';
 
-const Layout = ({ children, headerColor }) => {
+const Layout = ({ children, headerTextColor, headerBgColor }) => {
   const { isDarkMode } = useContext(ThemeContext);
 
   const style = useSpring({
-    from: { opacity: 0, transform: 'translateY(18px)' },
+    from: { opacity: 0, transform: 'translateY(10px)' },
     opacity: 1,
     transform: 'translateY(0px)',
-    config: { mass: 1, tension: 150, friction: 40 },
+    config: { mass: 1, tension: 150, friction: 30 },
   });
 
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>
       <StyledLayout>
-        <Header color={headerColor} />
+        <Header
+          headerTextColor={headerTextColor}
+          headerBgColor={headerBgColor}
+        />
         <AnimatedMain style={style}>{children}</AnimatedMain>
         <Footer />
       </StyledLayout>

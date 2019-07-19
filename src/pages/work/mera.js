@@ -19,7 +19,7 @@ function Mera() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout headerColor="#FAF2CD">
+        <Layout headerTextColor="#FAF2CD" headerBgColor="#00646A">
           <SEO
             title="Farming System Logo Design"
             keywords={[
@@ -33,7 +33,6 @@ function Mera() {
           />
 
           <TopSection>
-            <TopCoverColor color="#00646A" />
             <TopImage
               width="80%"
               className="top-image"

@@ -21,7 +21,7 @@ function TheLightOfTokyo() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout headerColor="white">
+        <Layout headerTextColor="white" headerBgColor="#0a3d62">
           <SEO
             title="The Light of Tokyo"
             keywords={[
@@ -35,7 +35,6 @@ function TheLightOfTokyo() {
           />
 
           <TopSection>
-            <TopCoverColor color="#0a3d62" />
             <TopImage
               className="top-image"
               fluid={data.the_light_of_tokyo_00.childImageSharp.fluid}

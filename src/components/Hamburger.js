@@ -5,7 +5,7 @@ import { animated, useSpring } from 'react-spring';
 
 import { media } from './StyledComps';
 
-const Hamburger = ({ color, isExpanded, toggleExpansion }) => {
+const Hamburger = ({ headerTextColor, isExpanded, toggleExpansion }) => {
   const [{ xy }, set] = useSpring(() => ({
     xy: [0, 0],
   }));
@@ -22,7 +22,7 @@ const Hamburger = ({ color, isExpanded, toggleExpansion }) => {
       style={{
         transform: xy.interpolate((x, y) => `translate3d(${x}px, ${y}px, 0)`),
       }}
-      color={color}
+      color={headerTextColor}
       onClick={toggleExpansion}
       aria-label="Open and close menu"
     >
@@ -57,12 +57,13 @@ const Hamburger = ({ color, isExpanded, toggleExpansion }) => {
 export default Hamburger;
 
 const HamburgerWrap = styled(animated.div)`
+  z-index: 1;
   position: fixed;
   right: 35px;
   bottom: 35px;
   text-align: center;
   padding: 12px;
-  /* width: 50px; */
+
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 65px;

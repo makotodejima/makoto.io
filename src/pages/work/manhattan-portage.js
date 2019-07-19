@@ -22,7 +22,7 @@ function ManhattanPortage() {
       // eslint-disable-next-line no-use-before-define
       query={query}
       render={data => (
-        <Layout headerColor="beige">
+        <Layout headerTextColor="beige" headerBgColor="#D83038">
           <SEO
             title="Manhattan Portage"
             keywords={[
@@ -36,7 +36,6 @@ function ManhattanPortage() {
           />
 
           <TopSection>
-            <TopCoverColor color="#D83038" />
             <TopImage
               width="80%"
               className="top-image"

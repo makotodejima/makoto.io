@@ -31,6 +31,7 @@ const DarkModeSwitcher = ({ color }) => {
 };
 
 const StyledButton = styled.button`
+  z-index: 1;
   border: none;
   outline: 0;
   -webkit-appearance: none;

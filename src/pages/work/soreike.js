@@ -19,7 +19,7 @@ function Soreike() {
     <StaticQuery
       query={query}
       render={data => (
-        <Layout headerColor="#EFFFFF">
+        <Layout headerTextColor="#EFFFFF" headerBgColor="#65C6BA">
           <SEO
             title="Soreike SF Tee"
             keywords={[
@@ -32,7 +32,6 @@ function Soreike() {
             ]}
           />
           <TopSection>
-            <TopCoverColor color="#65C6BA" />
             <TopImage
               width="70%"
               className="top-image"

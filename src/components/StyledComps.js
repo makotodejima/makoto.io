@@ -53,13 +53,12 @@ export const PageTitle = styled.h2`
 
 export const TopCoverColor = styled.div`
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   background-color: ${props => props.theme.isDarkMode || props.color};
   transition: background-color 500ms;
   width: 100%;
   height: 400px;
-  z-index: 0;
 
   ${media.phone`
   height: 240px;
@@ -68,7 +67,7 @@ export const TopCoverColor = styled.div`
 
 export const TopSection = styled.div`
   margin-bottom: 3rem;
-  ${media.phone`   
+  ${media.phone`
   margin-bottom: 0;
   `}
 `;

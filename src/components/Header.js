@@ -6,19 +6,19 @@ import { useTransition, config } from 'react-spring';
 
 import Hamburger from './Hamburger';
 import DarkModeSwitcher from './DarkModeSwitcher';
-import { media } from './StyledComps';
+import { media, TopCoverColor } from './StyledComps';
 import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import News from './News';
 
 /* 
-'color' props is passed down from Layout Comp
+"color" props is passed down from Layout Comp
 it defines header logo, text and hamburger color
 */
 
-function Header({ color }) {
+function Header({ headerTextColor, headerBgColor }) {
   const [isExpanded, toggleExpansion] = useState(false);
-  const transition = useTransition(isExpanded, null, {
+  const mobileMenuTransition = useTransition(isExpanded, null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
@@ -27,17 +27,18 @@ function Header({ color }) {
 
   return (
     <StyledNav isExpanded={isExpanded}>
-      <Link to="/" aria-label="Home">
-        <Logo color={color} />
+      <Link style={{ zIndex: 1 }} to="/" aria-label="Home">
+        <Logo color={headerTextColor} />
       </Link>
+      {headerBgColor && <TopCoverColor color={headerBgColor} />}
 
       <Hamburger
-        color={color}
+        color={headerTextColor}
         isExpanded={isExpanded}
         toggleExpansion={() => toggleExpansion(!isExpanded)}
       />
 
-      <HeaderLinks color={color}>
+      <HeaderLinks color={headerTextColor}>
         <News />
         <Link className="link" to="/work/" activeStyle={{ opacity: 0.4 }}>
           Work
@@ -50,10 +51,10 @@ function Header({ color }) {
         <Link className="link" to="/contact/" activeStyle={{ opacity: 0.4 }}>
           Contact
         </Link>
-        <DarkModeSwitcher color={color} />
+        <DarkModeSwitcher color={headerTextColor} />
       </HeaderLinks>
 
-      {transition.map(
+      {mobileMenuTransition.map(
         ({ item, key, props }) =>
           item && (
             <MobileMenu key={key} style={props} isExpanded={isExpanded} />
@@ -83,7 +84,6 @@ const StyledNav = styled.nav`
   max-width: 50rem;
   margin: 0 auto;
   padding: 2rem;
-  z-index: 10;
   ${media.phone`
     padding: 1rem;
   `};

@@ -5,7 +5,6 @@ import Img from 'gatsby-image';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import {
-  TopCoverColor,
   TopImage,
   TopSection,
   ExtLink,
@@ -19,7 +18,7 @@ import {
 
 function Robotex({ data }) {
   return (
-    <Layout headerColor="rgb(255, 255, 249)">
+    <Layout headerTextColor="rgb(255, 255, 249)" headerBgColor="#CE1437">
       <SEO
         title="Robotex Japan"
         keywords={[
@@ -33,7 +32,6 @@ function Robotex({ data }) {
       />
 
       <TopSection>
-        <TopCoverColor color="#CE1437" />
         <TopImage
           width="70%"
           className="top-image"
