@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'gatsby';
 
-const Logo = ({ color }) => {
+interface LogoProps {
+  color?: string;
+}
+
+const Logo = ({ color }: LogoProps) => {
   const style = useSpring({
     from: { strokeDashoffset: '966px' },
     strokeDashoffset: '0px',

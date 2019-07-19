@@ -14,15 +14,20 @@ const items = [
   <Logo />,
 ];
 
-const MobileMenu = ({ style, isExpanded }) => {
-  const fadeRef = useRef();
+interface Props {
+  style: any;
+  isExpanded: boolean;
+}
+
+const MobileMenu = ({ style, isExpanded }: Props) => {
+  const fadeRef = useRef<HTMLElement>();
   const fade = useSpring({
     from: { opacity: 0, transform: `translateX(-80%)` },
     to: { opacity: 1, transform: `translateX(0%)` },
     ref: fadeRef,
   });
 
-  const springsRef = useRef();
+  const springsRef = useRef<HTMLElement>();
   const springs = useSprings(
     items.length,
     items.map((item, idx) => ({
@@ -87,7 +92,6 @@ const Overlay = styled(animated.div)`
   padding-bottom: 5.5rem;
 
   a {
-    /* border-top: 1px solid black; */
     text-decoration: none;
   }
 
@@ -104,13 +108,6 @@ const Overlay = styled(animated.div)`
     text-align: center;
     margin: 0.45rem;
   }
-
-  /* logo position .logoWrap {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  } */
 
   /* DarkModeSwitcher style */
   .switchWrap {

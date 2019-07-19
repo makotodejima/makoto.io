@@ -12,7 +12,7 @@ const News = () => {
   return (
     <BlinkerContainer
       ara-label="Latest news and announcement"
-      tabIndex="0"
+      tabIndex={0}
       onFocus={() => toggleHover(true)}
       onBlur={() => toggleHover(false)}
       onMouseEnter={() => toggleHover(true)}
@@ -71,7 +71,11 @@ const BlinkerContainer = styled.div`
   padding: 5px;
 `;
 
-const Blinker = styled.div`
+interface BlinkerProps {
+  readonly delay?: boolean;
+}
+
+const Blinker = styled.div<BlinkerProps>`
   position: absolute;
   width: 12px;
   height: 12px;
@@ -82,7 +86,11 @@ const Blinker = styled.div`
   animation-delay: ${props => props.delay && '1500ms'};
 `;
 
-const Balloon = styled.div`
+interface BaloonProps {
+  readonly hover: boolean;
+}
+
+const Balloon = styled.div<BaloonProps>`
   position: absolute;
   z-index: 999;
   top: 32px;

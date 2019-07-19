@@ -5,21 +5,34 @@ import styled from 'styled-components';
 
 import { media } from './StyledComps';
 
-const WorkListItem = props => {
+interface WorkListItemProps {
+  id: string;
+  title: string;
+  client: string;
+  type: string;
+  keywords: string;
+  path?: string;
+  url?: string;
+  altText: string;
+  children: React.ReactNode;
+  isVideo: boolean;
+}
+
+const WorkListItem = (props: WorkListItemProps) => {
   return (
     <Wrapper>
       <ImgWrapper>
         {props.path ? (
           <Link
             aria-label={`Learn more about ${props.title}, ${props.type}`}
-            tabIndex="-1"
+            tabIndex={-1}
             to={`/work/${props.path}/`}
           >
             {props.children}
           </Link>
         ) : (
           <a
-            tabIndex="-1"
+            tabIndex={-1}
             aria-label={`Learn more about ${props.title}, ${props.type}`}
             href={props.url}
             target="_blank"

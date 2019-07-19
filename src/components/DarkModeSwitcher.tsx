@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 import ThemeContext from '../theme/themeContext';
 
-const DarkModeSwitcher = ({ color }) => {
+interface Props {
+  color?: string;
+}
+
+const DarkModeSwitcher = ({ color }: Props) => {
   const { toggleDarkMode } = useContext(ThemeContext);
   return (
     <StyledButton

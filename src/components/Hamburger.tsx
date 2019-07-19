@@ -5,7 +5,13 @@ import { animated, useSpring } from 'react-spring';
 
 import { media } from './StyledComps';
 
-const Hamburger = ({ headerTextColor, isExpanded, toggleExpansion }) => {
+interface Props {
+  headerTextColor: string;
+  isExpanded: boolean;
+  toggleExpansion: any;
+}
+
+const Hamburger = ({ headerTextColor, isExpanded, toggleExpansion }: Props) => {
   const [{ xy }, set] = useSpring(() => ({
     xy: [0, 0],
   }));

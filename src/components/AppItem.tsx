@@ -3,13 +3,21 @@ import styled from 'styled-components';
 
 import { media } from './StyledComps';
 
-const AppItem = ({ url, type, title, keywords, children }) => {
+interface AppItemProps {
+  url: string;
+  type: string;
+  title: string;
+  keywords: string;
+  children: React.ReactNode;
+}
+
+const AppItem = ({ url, type, title, keywords, children }: AppItemProps) => {
   return (
     <Wrapper>
       <ImgWrapper>
         <a
           aria-label={`Learn more about ${title}, ${type}`}
-          tabIndex="-1"
+          tabIndex={-1}
           href={url}
           target="_blank"
           rel="noopener noreferrer"

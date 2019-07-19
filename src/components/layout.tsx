@@ -11,7 +11,13 @@ import Header from './Header';
 import { media } from './StyledComps';
 import './layout.scss';
 
-const Layout = ({ children, headerTextColor, headerBgColor }) => {
+interface Props {
+  children: React.ReactNode;
+  headerTextColor: string;
+  headerBgColor: string;
+}
+
+const Layout = ({ children, headerTextColor, headerBgColor }: Props) => {
   const { isDarkMode } = useContext(ThemeContext);
 
   const style = useSpring({

@@ -11,7 +11,6 @@ import { media } from './StyledComps';
 export default () => {
   return (
     <StaticQuery
-      // eslint-disable-next-line no-use-before-define
       query={query}
       render={data => (
         <AppsContainer>
@@ -23,7 +22,6 @@ export default () => {
                 type={apps[id].type}
                 keywords={apps[id].keywords}
                 url={apps[id].url}
-                altText={apps[id].altText}
               >
                 {apps[id].isVideo ? (
                   <video autoPlay loop muted playsInline>
@@ -32,7 +30,7 @@ export default () => {
                 ) : (
                   <Img
                     fluid={data[id].childImageSharp.fluid}
-                    alt={apps[id].title}
+                    alt={apps[id].altText}
                   />
                 )}
               </AppItem>

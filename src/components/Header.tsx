@@ -16,8 +16,14 @@ import News from './News';
 it defines header logo, text and hamburger color
 */
 
-function Header({ headerTextColor, headerBgColor }) {
-  const [isExpanded, toggleExpansion] = useState(false);
+interface HeaderProps {
+  headerTextColor: string;
+  headerBgColor: string;
+}
+
+function Header({ headerTextColor, headerBgColor }: HeaderProps) {
+  const [isExpanded, toggleExpansion] = useState<boolean>(false);
+
   const mobileMenuTransition = useTransition(isExpanded, null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },

@@ -1,6 +1,10 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['react', 'prettier', 'import'],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    // 'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
     'react/require-default-props': 'off',
     'react/jsx-filename-extension': [
@@ -9,21 +13,6 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        'newlines-between': 'always',
-      },
-    ],
-    'import/named': 2,
   },
   env: {
     browser: true,

@@ -1,4 +1,17 @@
-export const work = {
+interface IWorkObject {
+  [id: string]: {
+    id: string;
+    title: string;
+    client: string;
+    type: string;
+    keywords: string;
+    path: string;
+    altText: string;
+    isVideo: boolean;
+  };
+}
+
+export const work: IWorkObject = {
   robotex: {
     id: 'robotex',
     title: 'Robotex Japan Corporate Website',
@@ -8,6 +21,7 @@ export const work = {
       'React, Gatsby, GraphQL, Storybook, Netlify CMS, Styled-components, Illustrator',
     path: 'robotex',
     altText: 'Robotex Japan',
+    isVideo: false,
   },
   naotatsu_kaku: {
     id: 'naotatsu_kaku',
@@ -27,6 +41,7 @@ export const work = {
     keywords: 'Graphic design, Won the "Tokyo Postcard Award"',
     path: 'the-light-of-tokyo',
     altText: 'Postcard, The light of Tokyo',
+    isVideo: false,
   },
   manhattan_portage: {
     id: 'manhattan_portage',
@@ -36,6 +51,7 @@ export const work = {
     keywords: 'Graphic design, Manhattan Portage Art Award 2019',
     path: 'manhattan-portage',
     altText: 'Messenger Bag, Manhattan Portage',
+    isVideo: false,
   },
   satte: {
     id: 'satte',
@@ -45,6 +61,7 @@ export const work = {
     keywords: 'Logo, Branding, Public sector',
     path: 'satte',
     altText: 'Satte City Logo Design',
+    isVideo: false,
   },
   mera: {
     id: 'mera',
@@ -54,6 +71,7 @@ export const work = {
     keywords: 'Logo Design, Branding',
     path: 'mera',
     altText: 'Logo design for indoor faming system',
+    isVideo: false,
   },
   // jasms: {
   //   id: "jasms",
@@ -73,10 +91,23 @@ export const work = {
     keywords: 'Japanese, Typography, T-shirt',
     path: 'soreike',
     altText: 'Soreike San Francisco Tee',
+    isVideo: false,
   },
 };
 
-export const apps = {
+interface IAppsObject {
+  [id: string]: {
+    id: string;
+    title: string;
+    type: string;
+    keywords: string;
+    url: string;
+    altText: string;
+    isVideo: boolean;
+  };
+}
+
+export const apps: IAppsObject = {
   sobasquare: {
     id: 'sobasquare',
     title: 'SOBASQUARE',
@@ -94,6 +125,7 @@ export const apps = {
     keywords: 'React, Firebase, styled-components',
     url: 'http://clean-toothbrush.surge.sh',
     altText: 'Flashcard App, GER/ENG/JP',
+    isVideo: false,
   },
   pomodoro: {
     id: 'pomodoro',
@@ -102,6 +134,7 @@ export const apps = {
     keywords: 'React, Redux, Sass',
     url: 'https://pomodoro-with-catface.mkd.now.sh',
     altText: 'Pomodoro Timer with Cat Face',
+    isVideo: false,
   },
 };
 

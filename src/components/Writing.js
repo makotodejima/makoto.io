@@ -6,7 +6,7 @@ import weq from '../images/weq.jpg';
 import { Label } from './StyledComps';
 
 export default () => (
-  <>
+  <React.Fragment>
     <Label>Writing</Label>
     <WritingLink>
       <a
@@ -32,7 +32,7 @@ export default () => (
       Japanese market.
     </WritingLink>
     <div style={{ height: `3rem` }} />
-  </>
+  </React.Fragment>
 );
 
 const WritingLink = styled.p`
