@@ -22,7 +22,7 @@ const MobileMenu = ({ style }) => {
       from: { opacity: 0, transform: `translateX(-100%)` },
       //   to: { transform: `translateX(${idx * 10 + 20})` },
       to: { opacity: 1, transform: `translateX(${idx * 10 - 20}%)` },
-      delay: idx * 80,
+      delay: idx * 50,
     })),
   );
 

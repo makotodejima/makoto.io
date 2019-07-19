@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { useTransition, config } from 'react-spring';
 
+import Hamburger from './Hamburger';
 import DarkModeSwitcher from './DarkModeSwitcher';
 import { media } from './StyledComps';
 import MobileMenu from './MobileMenu';
@@ -30,12 +31,11 @@ function Header({ color }) {
         <Logo color={color} />
       </Link>
 
-      <Hamburger color={color} onClick={() => toggleExpansion(!isExpanded)}>
-        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v1H0V3zm0 6h20v1H0V9zm0 6h20v1H0v-1z" />
-        </svg>
-      </Hamburger>
+      <Hamburger
+        color={color}
+        isExpanded={isExpanded}
+        toggleExpansion={() => toggleExpansion(!isExpanded)}
+      />
 
       <HeaderLinks color={color}>
         <News />
@@ -87,30 +87,6 @@ const StyledNav = styled.nav`
   ${media.phone`
     padding: 1rem;
   `};
-`;
-
-const Hamburger = styled.button`
-  display: none;
-  align-items: center;
-  padding: 0.8rem 0.75rem 0.4rem;
-  width: 50px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: none;
-  background-color: transparent;
-  /* z-index: 10; */
-  cursor: pointer;
-  path {
-    stroke: ${props => props.color || props.theme.primary};
-  }
-
-  :focus {
-    outline: 0;
-  }
-
-  ${media.phone`
-    display: block;
-  `}
 `;
 
 const HeaderLinks = styled.div`
