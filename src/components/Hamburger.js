@@ -4,6 +4,7 @@ import { useGesture } from 'react-use-gesture';
 import { animated, useSpring } from 'react-spring';
 
 import { media } from './StyledComps';
+import DarkModeSwitcher from './DarkModeSwitcher';
 
 const Hamburger = ({ color, isExpanded, toggleExpansion }) => {
   const [{ xy }, set] = useSpring(() => ({
@@ -24,12 +25,13 @@ const Hamburger = ({ color, isExpanded, toggleExpansion }) => {
       }}
       color={color}
       onClick={toggleExpansion}
+      aria-label="Open and close menu"
     >
       {isExpanded ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="38"
-          height="38"
+          width="40"
+          height="40"
           viewBox="0 0 24 24"
           id="close"
         >
@@ -55,25 +57,21 @@ const Hamburger = ({ color, isExpanded, toggleExpansion }) => {
 
 export default Hamburger;
 
-const HamburgerWrap = styled(animated.button)`
+const HamburgerWrap = styled(animated.div)`
   position: fixed;
   right: 35px;
   bottom: 35px;
-  /* align-items: center; */
-  /* padding: 0.8rem 0.75rem 0.4rem; */
+  text-align: center;
+  padding: 12px;
   /* width: 50px; */
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 65px;
   height: 65px;
-  border: none;
   border-radius: 50%;
   background-color: ${props => props.theme.modalColor};
   box-shadow: ${props => props.theme.boxShadow};
   cursor: pointer;
-  #close {
-    transform: translateY(3px);
-  }
   path {
     fill: ${props => props.theme.primary};
   }

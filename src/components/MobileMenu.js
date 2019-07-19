@@ -3,6 +3,8 @@ import { useSpring, useSprings, animated } from 'react-spring';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import DarkModeSwitcher from './DarkModeSwitcher';
+
 const items = [
   { text: 'Home', to: '/' },
   { text: 'Work', to: '/work/' },
@@ -10,7 +12,7 @@ const items = [
   { text: 'Contact', to: '/contact/' },
 ];
 
-const MobileMenu = ({ style }) => {
+const MobileMenu = ({ style, isExpanded }) => {
   const slide = useSpring({
     from: { transform: 'translateX(0%)' },
     to: { transform: 'translateX(-40%)' },
@@ -38,6 +40,10 @@ const MobileMenu = ({ style }) => {
           <animated.span style={props}>{items[i].text}</animated.span>
         </Link>
       ))}
+
+      <div className="switchWrap">
+        <DarkModeSwitcher />
+      </div>
     </Overlay>
   );
 };
@@ -60,7 +66,8 @@ const Overlay = styled(animated.div)`
   left: 0;
   height: 100%;
   width: 100%;
-  background: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.bg};
+  transition: background-color 500ms;
   padding-bottom: 4rem;
 
   a {
@@ -80,5 +87,12 @@ const Overlay = styled(animated.div)`
     font-weight: bold;
     text-align: center;
     margin: 0.4rem;
+  }
+
+  /* DarkModeSwitcher style */
+  .switchWrap {
+    position: absolute;
+    bottom: 240px;
+    left: 40px;
   }
 `;
