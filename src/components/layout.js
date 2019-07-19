@@ -15,9 +15,10 @@ const Layout = ({ children, headerColor }) => {
   const { isDarkMode } = useContext(ThemeContext);
 
   const style = useSpring({
-    from: { opacity: 0 },
+    from: { opacity: 0, transform: 'translateY(18px)' },
     opacity: 1,
-    config: { mass: 1, tension: 150, friction: 30 },
+    transform: 'translateY(0px)',
+    config: { mass: 1, tension: 150, friction: 40 },
   });
 
   return (

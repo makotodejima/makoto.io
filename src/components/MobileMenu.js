@@ -15,7 +15,7 @@ const items = [
 const MobileMenu = ({ style, isExpanded }) => {
   const fadeRef = useRef();
   const fade = useSpring({
-    from: { opacity: 0, transform: `translateX(-100%)` },
+    from: { opacity: 0, transform: `translateX(-80%)` },
     to: { opacity: 1, transform: `translateX(0%)` },
     ref: fadeRef,
   });
@@ -25,7 +25,6 @@ const MobileMenu = ({ style, isExpanded }) => {
     items.length,
     items.map((item, idx) => ({
       from: { opacity: 0, transform: `translateX(-100%)` },
-      //   to: { transform: `translateX(${idx * 10 + 20})` },
       to: { opacity: 1, transform: `translateX(${idx * 10 - 20}%)` },
       delay: idx * 50,
       ref: springsRef,

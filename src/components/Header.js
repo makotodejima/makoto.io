@@ -22,7 +22,7 @@ function Header({ color }) {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    // config: config.slow,
+    config: config.slow,
   });
 
   return (
