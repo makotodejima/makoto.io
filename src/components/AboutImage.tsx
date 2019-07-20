@@ -19,6 +19,7 @@ const AboutImage = () => {
       config: { mass: velocity, tension: 500 * velocity, friction: 10 },
     });
   });
+
   const [mouseOnImage, toggle] = useState(false);
 
   return (
@@ -41,7 +42,7 @@ const AboutImage = () => {
               top: '64px',
               width: '105px',
             }}
-            draggable="false" // Prevent drag. without this, useGesture's 'down' is not captured correctly
+            draggable={false} // Prevent drag. without this, useGesture's 'down' is not captured correctly
             src={poco}
             className="poco"
             alt="Cute dog face"
@@ -79,7 +80,11 @@ const MeImageContainer = styled.div`
   `}
 `;
 
-const FadeOutText = styled.p`
+interface FadeOutTextProps {
+  mouseOnImage: boolean;
+}
+
+const FadeOutText = styled.p<FadeOutTextProps>`
   position: absolute;
   letter-spacing: normal;
   font-size: 0.75rem;

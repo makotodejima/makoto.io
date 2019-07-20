@@ -5,7 +5,7 @@ const Email = () => {
   const [copySuccess, setCopySuccess] = useState();
   const ref = useRef(null);
 
-  const copyToClick = e => {
+  const copyToClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     ref.current.select();
     document.execCommand('copy');
@@ -37,7 +37,7 @@ const Email = () => {
           {` `}
           <input
             id="email-to-copy"
-            tabIndex="-1"
+            tabIndex={-1}
             readOnly
             style={{ opacity: 0 }}
             ref={ref}
