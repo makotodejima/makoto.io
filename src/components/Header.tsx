@@ -30,29 +30,30 @@ function Header({ headerTextColor, headerBgColor }: HeaderProps) {
     leave: { opacity: 0 },
   });
 
+  const activeStyle = { opacity: 0.4, textDecoration: 'line-through' };
+
   return (
-    <StyledNav isExpanded={isExpanded}>
+    <StyledNav>
       <Logo color={headerTextColor} />
 
       {headerBgColor && <TopCoverColor color={headerBgColor} />}
 
       <Hamburger
-        color={headerTextColor}
         isExpanded={isExpanded}
         toggleExpansion={() => toggleExpansion(!isExpanded)}
       />
 
       <HeaderLinks color={headerTextColor}>
         <News />
-        <Link className="link" to="/work/" activeStyle={{ opacity: 0.4 }}>
+        <Link className="link" to="/work/" activeStyle={activeStyle}>
           Work
         </Link>
 
-        <Link className="link" to="/about/" activeStyle={{ opacity: 0.4 }}>
+        <Link className="link" to="/about/" activeStyle={activeStyle}>
           About
         </Link>
 
-        <Link className="link" to="/contact/" activeStyle={{ opacity: 0.4 }}>
+        <Link className="link" to="/contact/" activeStyle={activeStyle}>
           Contact
         </Link>
         <DarkModeSwitcher color={headerTextColor} />
@@ -93,7 +94,11 @@ const StyledNav = styled.nav`
   `};
 `;
 
-const HeaderLinks = styled.div`
+interface HeaderLinks {
+  readonly color: string;
+}
+
+const HeaderLinks = styled.div<HeaderLinks>`
   display: flex;
   align-items: center;
   font-size: 1rem;
