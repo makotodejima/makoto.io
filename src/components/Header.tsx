@@ -17,8 +17,8 @@ it defines header logo, text and hamburger color
 */
 
 interface HeaderProps {
-  headerTextColor: string;
-  headerBgColor: string;
+  headerTextColor?: string;
+  headerBgColor?: string;
 }
 
 function Header({ headerTextColor, headerBgColor }: HeaderProps) {
