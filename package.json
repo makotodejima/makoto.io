@@ -1,7 +1,6 @@
 {
   "description": "Makoto Dejima - Designer and Front-End Developer",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.8",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-google-analytics": "^2.1.1",
@@ -17,7 +16,6 @@
     "graphql": "^14.4.2",
     "lodash-es": "^4.17.11",
     "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
@@ -26,7 +24,6 @@
     "react-use-gesture": "^5.1.3",
     "react-with-gesture": "^4.0.8",
     "styled-components": "^4.3.2",
-    "typescript": "^3.5.3",
     "typography": "^0.16.19"
   },
   "scripts": {
@@ -35,6 +32,8 @@
     "start": "npm run develop"
   },
   "devDependencies": {
+    "prop-types": "^15.7.2",
+    "typescript": "^3.5.3",
     "@types/node": "^12.6.8",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
@@ -48,7 +47,8 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "babel-plugin-styled-components": "^1.10.6"
   },
   "browserslist": [
     ">0.2%",
