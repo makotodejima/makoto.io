@@ -12,14 +12,7 @@ function AboutPage() {
     <Layout>
       <SEO
         title="About"
-        keywords={[
-          `Makoto Dejima`,
-          `JavaScript`,
-          `Design`,
-          `React`,
-          `Front-End Developer`,
-          `Graphic Design`,
-        ]}
+        keywords={[`Makoto Dejima`, `Designer`, `Front-End Developer`]}
       />
 
       <NameWrapper>
@@ -37,21 +30,21 @@ function AboutPage() {
       <AboutContainer>
         <div className="wrapper">
           <p className="intro">
-            Tokyo-born Graphic Designer and Front-End Developer who loves and
-            cares about design. I used to cover tech industry as a journalist
-            with Japanese media, and ended up putting myself in the world of
-            tech as a software engineer due to strong interest in the web
+            Tokyo-born Front-End Developer and Graphic Designer who loves and
+            cares about design. After spending several years in Silicon Valley,
+            I became a software engineer due to strong interest in the web
             development. Also experienced in ad-tech, Japanese writing, editing
             and localization.
             <br />
+            <br />
             <span className="skills">
-              Skills: React, Gatsby, Processing, Graphic and Motion Design
+              Skills: React, Gatsby, Graphic and Motion Design
             </span>
           </p>
         </div>
-
         <AboutImage />
       </AboutContainer>
+
       <SocialLinks />
     </Layout>
   );

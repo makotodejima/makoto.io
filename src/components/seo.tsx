@@ -4,10 +4,10 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 interface SEOProps {
-  description: string;
+  description?: string;
   lang?: string;
   meta?: string;
-  keywords: string;
+  keywords: string[];
   title: string;
 }
 
