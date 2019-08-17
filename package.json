@@ -34,7 +34,7 @@
   "devDependencies": {
     "prop-types": "15.7.2",
     "typescript": "3.5.3",
-    "@types/node": "12.7.1",
+    "@types/node": "12.7.2",
     "@types/react": "16.9.1",
     "@types/react-dom": "16.8.5",
     "@types/react-helmet": "5.0.9",
