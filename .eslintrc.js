@@ -4,6 +4,13 @@ module.exports = {
     // 'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
     'react/require-default-props': 'off',
