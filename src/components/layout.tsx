@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 
 import { light, dark } from '../theme/theme';
@@ -17,6 +17,12 @@ interface Props {
   headerBgColor?: string;
 }
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${props => props.theme.bg}
+  }
+`;
+
 const Layout = ({ children, headerTextColor, headerBgColor }: Props) => {
   const { isDarkMode } = useContext(ThemeContext);
 
@@ -30,6 +36,7 @@ const Layout = ({ children, headerTextColor, headerBgColor }: Props) => {
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>
       <StyledLayout>
+        <GlobalStyle isDarkMode={isDarkMode} />
         <Header
           headerTextColor={headerTextColor}
           headerBgColor={headerBgColor}
