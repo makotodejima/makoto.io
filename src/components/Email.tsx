@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Email = () => {
   const [copySuccess, setCopySuccess] = useState();
-  const ref = useRef(null);
+  const ref = useRef<HTMLButtonElement>(null);
 
   const copyToClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();

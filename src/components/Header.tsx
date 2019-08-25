@@ -95,7 +95,7 @@ const StyledNav = styled.nav`
 `;
 
 interface HeaderLinks {
-  readonly color: string;
+  readonly color?: string;
 }
 
 const HeaderLinks = styled.div<HeaderLinks>`
