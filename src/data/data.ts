@@ -156,11 +156,6 @@ export const featured = {
 
 export const news = [
   {
-    date: 'Jun 2019 🔍✨',
-    href: 'https://soba.madmak.me',
-    text: 'New Instant Search feature on SOBASQUARE!!',
-  },
-  {
     date: 'Apr 2019 🗼🎊',
     to: '/work/the-light-of-tokyo',
     text: 'Awarded "Tokyo Post Card Award 2019"',
