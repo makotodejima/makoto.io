@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import weq from '../images/weq.jpg';
+// import weq from '../images/weq.jpg';
 
 import { Label } from './StyledComps';
 
@@ -19,7 +19,7 @@ export default () => (
       <br />
       Technology, startups, and politics.
     </WritingLink>
-    <WritingLink>
+    {/* <WritingLink>
       <a
         href="https://weq.com/category/%E6%97%A5%E6%9C%AC/"
         target="_blank"
@@ -30,7 +30,7 @@ export default () => (
       <br />
       Working with German global ad-tech company to accelerate their growth in
       Japanese market.
-    </WritingLink>
+    </WritingLink> */}
     <div style={{ height: `3rem` }} />
   </React.Fragment>
 );
