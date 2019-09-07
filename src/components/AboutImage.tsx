@@ -61,12 +61,9 @@ export default AboutImage;
 const MeImageContainer = styled.div`
   position: relative;
   margin: 0;
+  width: 250px;
   img {
     margin-bottom: 0;
-  }
-  .gatsby-image-wrapper {
-    margin-bottom: 0;
-    width: 250px;
   }
   .poco {
     cursor: grab;

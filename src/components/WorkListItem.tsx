@@ -74,6 +74,8 @@ const Wrapper = styled.div`
 
 const ImgWrapper = styled.div`
   min-width: 220px;
+  width: 220px;
+  height: 165px;
   margin-right: 2rem;
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
@@ -102,6 +104,7 @@ const ImgWrapper = styled.div`
 
   ${media.phone`
     width: 280px;
+    height: 210px;
     margin-bottom: 2rem;
   `}
 `;

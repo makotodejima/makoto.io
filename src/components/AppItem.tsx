@@ -54,6 +54,8 @@ const Wrapper = styled.div`
 
 const ImgWrapper = styled.div`
   min-width: 220px;
+  width: 220px;
+  height: 165px;
   margin-bottom: 1.5rem;
   border-radius: 5px;
   overflow: hidden;
@@ -61,7 +63,6 @@ const ImgWrapper = styled.div`
   -moz-transform: translate3d(0, 0, 0);
   box-shadow: ${props => props.theme.boxShadow};
   transition: box-shadow 0.2s ease-in;
-  width: 220px;
 
   ${media.tablet`
     margin-bottom: 0;
@@ -69,6 +70,7 @@ const ImgWrapper = styled.div`
   `}
   ${media.phone`
     width: 280px;
+    height: 210px;
     margin-bottom: 2rem;
   `}
 

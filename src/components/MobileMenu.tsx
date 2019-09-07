@@ -15,12 +15,11 @@ const items = [
 ];
 
 interface Props {
-  style: any;
-  isExpanded: boolean;
+  style?: any;
 }
 
-const MobileMenu = ({ style, isExpanded }: Props) => {
-  const fadeRef = useRef<HTMLElement>();
+const MobileMenu = ({ style }: Props) => {
+  const fadeRef = useRef<HTMLElement>(null);
   const fade = useSpring({
     from: { opacity: 0, transform: `translateX(-80%)` },
     to: { opacity: 1, transform: `translateX(0%)` },

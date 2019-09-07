@@ -61,9 +61,7 @@ function Header({ headerTextColor, headerBgColor }: HeaderProps) {
 
       {mobileMenuTransition.map(
         ({ item, key, props }) =>
-          item && (
-            <MobileMenu key={key} style={props} isExpanded={isExpanded} />
-          ),
+          item && <MobileMenu key={key} style={props} />,
       )}
     </StyledNav>
   );
