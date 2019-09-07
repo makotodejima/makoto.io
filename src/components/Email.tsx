@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 const Email = () => {
   const [copySuccess, setCopySuccess] = useState();
-  const ref = useRef<HTMLButtonElement>(null);
+  const ref = useRef<HTMLInputElement>(null);
 
   const copyToClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    ref.current.select();
+    if (ref.current) {
+      ref.current.select();
+    }
     document.execCommand('copy');
-    e.target.focus();
+    // e.target.focus();
     setCopySuccess(' Nice! Copied to clipboard.');
   };
 

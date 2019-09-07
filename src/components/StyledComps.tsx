@@ -3,20 +3,23 @@ import Img from 'gatsby-image';
 
 // media template
 
-export const sizes = {
+export const sizes: { [key: string]: number } = {
   desktop: 992,
   tablet: 768,
   phone: 576,
 };
 
-export const media: any = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (max-width: ${sizes[label] / 16}em) {
-      ${css(...args)}
-    }
-  `;
-  return acc;
-}, {});
+export const media: any = Object.keys(sizes).reduce(
+  (acc: { [key: string]: any }, label) => {
+    acc[label] = (...args: any[]) => css`
+      @media (max-width: ${sizes[label] / 16}em) {
+        ${css(...args)}
+      }
+    `;
+    return acc;
+  },
+  {},
+);
 
 // Index
 export const Label = styled.div`
@@ -72,7 +75,7 @@ export const TopSection = styled.div`
   `}
 `;
 
-export const TopImage = styled(Img)`
+export const TopImage = styled(Img)<{ width: string }>`
   width: ${props => props.width || `50%`};
   margin: 40px auto 5rem;
   box-shadow: ${props => props.theme.workImgBoxShadow};
