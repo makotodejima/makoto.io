@@ -80,7 +80,7 @@ const Blinker = styled.div<BlinkerProps>`
   width: 12px;
   height: 12px;
   background-color: rgba(79, 227, 218);
-  border-radius: 100%;
+  border-radius: 50%;
   -webkit-animation: scaleOut 3s infinite ease-in-out;
   animation: scaleOut 3s infinite ease-in-out;
   animation-delay: ${props => props.delay && '1500ms'};

@@ -1,3 +1,7 @@
+const shared = {
+  borderRadius: '4px',
+};
+
 export const light = {
   isDarkMode: false,
   bg: 'rgb(255, 255, 250)',
@@ -8,11 +12,11 @@ export const light = {
   boxShadowHover: '3px 3px 25px 0px rgba(0, 0, 0, 0.3)',
   workImgBoxShadow: '0px 0px 30px 0px rgba(0, 0, 0, 0.2)',
   modalColor: '#fff',
+  ...shared,
 };
 
 export const dark = {
   isDarkMode: true,
-  // bg: 'hsl(120, 2%, 9%)',
   bg: '#001E32',
   secondarybg: 'hsl(203.6, 100%, 12%)',
   primary: '#FFF',
@@ -22,4 +26,5 @@ export const dark = {
   boxShadowHover: '3px 3px 25px 0px rgba(255, 255, 255, 0.3)',
   workImgBoxShadow: '0px 0px 35px 0px rgba(255, 255, 255, 0.3)',
   modalColor: '#333',
+  ...shared,
 };

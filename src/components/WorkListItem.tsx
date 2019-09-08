@@ -77,7 +77,7 @@ const ImgWrapper = styled.div`
   width: 220px;
   height: 165px;
   margin-right: 2rem;
-  border-radius: 5px;
+  border-radius: ${props => props.theme.borderRadius};
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
