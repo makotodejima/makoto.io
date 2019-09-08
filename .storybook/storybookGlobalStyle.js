@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+const StorybookGlobalStyle = createGlobalStyle`
 
   /* Storybook's view body. Add a bit of white space */
   body {
@@ -9,4 +9,4 @@ const GlobalStyle = createGlobalStyle`
   
 `;
 
-export default GlobalStyle;
+export default StorybookGlobalStyle;

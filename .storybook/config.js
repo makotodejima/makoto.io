@@ -3,7 +3,7 @@ import { configure, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { ThemeProvider } from 'styled-components';
 import { light, dark } from '../src/theme/theme';
-import GlobalStyle from './GlobalStyle';
+import StorybookGlobalStyle from './storybookGlobalStyle';
 import '../src/components/layout.scss';
 
 // automatically import all files ending in *.stories.js
@@ -24,13 +24,14 @@ global.__PATH_PREFIX__ = '';
 window.___navigate = pathname => {
   action('NavigateTo:')(pathname);
 };
-configure(loadStories, module);
 
 addDecorator(story => (
   <ThemeProvider theme={light}>
-    <React.Fragment>
-      <GlobalStyle />
+    <>
+      <StorybookGlobalStyle />
       {story()}
-    </React.Fragment>
+    </>
   </ThemeProvider>
 ));
+
+configure(loadStories, module);

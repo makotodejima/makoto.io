@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { media } from './StyledComps';
+import PropTypes from 'prop-types';
 
 interface AppItemProps {
   url: string;
@@ -10,6 +11,10 @@ interface AppItemProps {
   keywords: string;
   children: React.ReactNode;
 }
+
+/**
+ * The `AppItem` component is where all your avatars come to play.
+ */
 
 const AppItem = ({ url, type, title, keywords, children }: AppItemProps) => {
   return (
@@ -123,3 +128,18 @@ const Description = styled.div`
     color: ${props => props.theme.secondary};
   }
 `;
+
+AppItem.propTypes = {
+  url: PropTypes.string,
+  /**
+   The name of the user (not the nicename)
+  */
+  type: PropTypes.string,
+  title: PropTypes.string,
+
+  /**
+   Specify size
+  */
+  keywords: PropTypes.string,
+  children: PropTypes.any,
+};
