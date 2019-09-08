@@ -154,7 +154,14 @@ export const featured = {
   },
 };
 
-export const news = [
+interface INews {
+  date: string;
+  to: string;
+  text: string;
+  href?: string;
+}
+
+export const news: INews[] = [
   {
     date: 'Apr 2019 🗼🎊',
     to: '/work/the-light-of-tokyo',
