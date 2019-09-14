@@ -7,7 +7,7 @@ import { light, dark } from '../theme/theme';
 import ThemeContext from '../theme/themeContext';
 
 import Footer from './Footer';
-import Header from './Header';
+import Header from './Header/Header';
 import { media } from './StyledComps';
 import './layout.scss';
 

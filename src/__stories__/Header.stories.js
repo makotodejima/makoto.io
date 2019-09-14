@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, color, number } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 
 const groupId = 'GROUP-ID1';
 
