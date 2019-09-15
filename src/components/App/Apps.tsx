@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { apps } from '../data/data';
+import { apps } from '../../data/data';
 
 import AppItem from './AppItem';
-import { media } from './StyledComps';
+import { media } from '../StyledComps';
 
 export default () => {
   return (

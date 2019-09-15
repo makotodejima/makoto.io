@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children, headerTextColor, headerBgColor }: Props) => {
   const { isDarkMode } = useContext(ThemeContext);
 
-  const style = useSpring({
+  const fadeIn = useSpring({
     from: { opacity: 0, transform: 'translateY(10px)' },
     opacity: 1,
     transform: 'translateY(0px)',
@@ -36,12 +36,12 @@ const Layout = ({ children, headerTextColor, headerBgColor }: Props) => {
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>
       <StyledLayout>
-        <GlobalStyle isDarkMode={isDarkMode} />
+        <GlobalStyle />
         <Header
           headerTextColor={headerTextColor}
           headerBgColor={headerBgColor}
         />
-        <AnimatedMain style={style}>{children}</AnimatedMain>
+        <AnimatedMain style={fadeIn}>{children}</AnimatedMain>
         <Footer />
       </StyledLayout>
     </ThemeProvider>

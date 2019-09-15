@@ -4,12 +4,12 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { useTransition } from 'react-spring';
 
-import Hamburger from '../Hamburger';
-import DarkModeSwitcher from '../DarkModeSwitcher';
+import Hamburger from './Hamburger';
+import DarkModeSwitcher from './DarkModeSwitcher';
 import { media, TopCoverColor } from '../StyledComps';
-import MobileMenu from '../MobileMenu';
-import Logo from '../Logo';
-import News from '../News';
+import MobileMenu from './MobileMenu';
+import Logo from './Logo';
+import News from './News';
 
 /* 
 "color" props is passed down from Layout Comp

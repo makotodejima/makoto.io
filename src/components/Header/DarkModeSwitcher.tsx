@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import ThemeContext from '../theme/themeContext';
+import ThemeContext from '../../theme/themeContext';
 
 interface Props {
   color?: string;

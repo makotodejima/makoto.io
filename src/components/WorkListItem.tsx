@@ -6,16 +6,13 @@ import styled from 'styled-components';
 import { media } from './StyledComps';
 
 interface WorkListItemProps {
-  id: string;
   title: string;
   client: string;
   type: string;
   keywords: string;
   path?: string;
   url?: string;
-  altText: string;
   children: React.ReactNode;
-  isVideo: boolean;
 }
 
 const WorkListItem = (props: WorkListItemProps) => {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useGesture } from 'react-use-gesture';
 import { animated, useSpring } from 'react-spring';
 
-import { media } from './StyledComps';
+import { media } from '../StyledComps';
 
 interface Props {
   isExpanded: boolean;

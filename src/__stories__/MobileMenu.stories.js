@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import MobileMenu from '../components/MobileMenu';
+import MobileMenu from '../components/Header/MobileMenu';
 
 storiesOf('MobileMenu', module).add('Default', () => (
   <>
