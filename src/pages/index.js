@@ -66,11 +66,11 @@ const IndexPage = () => (
           <h3 style={{ marginTop: 0 }}>
             Interested in working together? Get in touch.
           </h3>
-          <p>
+          {/* <p>
             I am always looking for interesting projects and people to
             collaborate with. Please feel free to get in touch with me. I would
             love to hear from you.
-          </p>
+          </p> */}
           <Email />
           <SocialLinks />
         </div>
