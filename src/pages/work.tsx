@@ -9,7 +9,7 @@ import {
   Label,
 } from '../components/StyledComps';
 import Layout from '../components/layout';
-import Apps from '../components/Apps';
+import Apps from '../components/App/Apps';
 import { work } from '../data/data';
 import WorkListItem from '../components/WorkListItem';
 import Writing from '../components/Writing';

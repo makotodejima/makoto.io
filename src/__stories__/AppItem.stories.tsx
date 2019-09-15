@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import testimg from '../images/pomodoro.png';
 
-import AppItem from '../components/AppItem';
+import AppItem from '../components/App/AppItem';
 import { apps } from '../data/data';
 
 const testId = 'pomodoro';
