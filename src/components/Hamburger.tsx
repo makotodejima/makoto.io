@@ -25,7 +25,9 @@ const Hamburger = ({ isExpanded, toggleExpansion }: Props) => {
     <HamburgerWrap
       {...bind()}
       style={{
-        transform: xy.interpolate((x, y) => `translate3d(${x}px, ${y}px, 0)`),
+        transform: xy.interpolate(
+          (x: number, y: number) => `translate3d(${x}px, ${y}px, 0)`,
+        ),
       }}
       onClick={toggleExpansion}
       aria-label="Open and close menu"
