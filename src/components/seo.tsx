@@ -6,12 +6,12 @@ import { StaticQuery, graphql } from 'gatsby';
 interface SEOProps {
   description?: string;
   lang?: string;
-  meta?: string;
+  // meta?: string;
   keywords: string[];
   title: string;
 }
 
-function SEO({ description, lang, meta, keywords, title }: SEOProps) {
+function SEO({ description, lang, keywords, title }: SEOProps) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -70,16 +70,14 @@ function SEO({ description, lang, meta, keywords, title }: SEOProps) {
                 name: `twitter:description`,
                 content: metaDescription,
               },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : [],
-              )
-              .concat(meta)}
+            ].concat(
+              keywords.length > 0
+                ? {
+                    name: `keywords`,
+                    content: keywords.join(`, `),
+                  }
+                : [],
+            )}
           >
             <link rel="stylesheet" href="https://use.typekit.net/str3lfu.css" />
           </Helmet>

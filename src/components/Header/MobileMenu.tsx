@@ -22,6 +22,7 @@ const MobileMenu = ({ style }: Props) => {
   const fadeRef = useRef<HTMLElement>(null);
   // @ts-ignore
   const fade = useSpring({
+    // @ts-ignore
     from: { opacity: 0, transform: `translateX(-80%)` },
     to: { opacity: 1, transform: `translateX(0%)` },
     ref: fadeRef,

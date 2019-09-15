@@ -35,6 +35,7 @@ const AboutImage = () => {
             {...bind()}
             style={{
               transform: xy.interpolate(
+                // @ts-ignore
                 (x, y) => `translate3d(${x}px,${y}px,0)`,
               ),
               position: 'absolute',
