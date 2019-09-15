@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import { news } from '../data/data';
-import ThemeContext from '../theme/themeContext';
+import { news } from '../../data/data';
+import ThemeContext from '../../theme/themeContext';
 
 const News = () => {
   const [hover, toggleHover] = useState(false);

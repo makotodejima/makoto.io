@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-/**
- * The `Avatar` component is where all your avatars come to play.
- */
 const Hero = () => {
   return (
     <Wrapper>

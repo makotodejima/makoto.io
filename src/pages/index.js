@@ -10,7 +10,7 @@ import Hero from '../components/hero';
 import WorkListItem from '../components/WorkListItem';
 import Email from '../components/Email';
 import SocialLinks from '../components/SocialLinks';
-import Apps from '../components/Apps';
+import Apps from '../components/App/Apps';
 
 const IndexPage = () => (
   <StaticQuery

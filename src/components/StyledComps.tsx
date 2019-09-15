@@ -13,6 +13,7 @@ export const media: any = Object.keys(sizes).reduce(
   (acc: { [key: string]: any }, label) => {
     acc[label] = (...args: any[]) => css`
       @media (max-width: ${sizes[label] / 16}em) {
+        // @ts-ignore
         ${css(...args)}
       }
     `;
@@ -58,7 +59,8 @@ export const TopCoverColor = styled.div`
   position: absolute;
   top: 0px;
   left: 0;
-  background-color: ${props => props.theme.isDarkMode || props.color};
+  background-color: ${props =>
+    props.theme.isDarkMode ? props.theme.bg : props.color};
   transition: background-color 500ms;
   width: 100%;
   height: 400px;

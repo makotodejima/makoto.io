@@ -6,7 +6,7 @@ import { useTransition } from 'react-spring';
 
 import Hamburger from './Hamburger';
 import DarkModeSwitcher from './DarkModeSwitcher';
-import { media, TopCoverColor } from './StyledComps';
+import { media, TopCoverColor } from '../StyledComps';
 import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 import News from './News';
