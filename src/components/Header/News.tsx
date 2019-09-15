@@ -17,6 +17,7 @@ const News = () => {
       onBlur={() => toggleHover(false)}
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
+      data-testid="news"
     >
       <Blinker />
       <Blinker delay />

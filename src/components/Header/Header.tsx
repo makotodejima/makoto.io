@@ -43,7 +43,7 @@ function Header({ headerTextColor, headerBgColor }: HeaderProps) {
         toggleExpansion={() => toggleExpansion(!isExpanded)}
       />
 
-      <HeaderLinks color={headerTextColor}>
+      <HeaderLinks color={headerTextColor} data-testid="header-links">
         <News />
         <Link className="link" to="/work/" activeStyle={activeStyle}>
           Work

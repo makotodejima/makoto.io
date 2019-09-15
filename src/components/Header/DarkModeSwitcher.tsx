@@ -14,6 +14,7 @@ const DarkModeSwitcher = ({ color }: Props) => {
       color={color}
       onClick={toggleDarkMode}
       aria-label="Switch dark and light mode"
+      data-testid="darkmode-switcher"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

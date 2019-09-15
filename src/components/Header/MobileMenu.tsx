@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import DarkModeSwitcher from './DarkModeSwitcher';
 
-const items = [
+const items: any[] = [
   { text: 'Home', to: '/' },
   { text: 'Work', to: '/work/' },
   { text: 'About', to: '/about/' },
@@ -20,6 +20,7 @@ interface Props {
 
 const MobileMenu = ({ style }: Props) => {
   const fadeRef = useRef<HTMLElement>(null);
+  // @ts-ignore
   const fade = useSpring({
     from: { opacity: 0, transform: `translateX(-80%)` },
     to: { opacity: 1, transform: `translateX(0%)` },
@@ -36,7 +37,7 @@ const MobileMenu = ({ style }: Props) => {
       ref: springsRef,
     })),
   );
-
+  // @ts-ignore
   useChain([springsRef, fadeRef], [0, 0.4]);
 
   return (
