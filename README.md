@@ -3,6 +3,7 @@
 ### Built with
 
 - [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org)
 - [Styled-components](https://www.styled-components.com)
 - [react-spring](https://www.react-spring.io)
 - [Gatsby](https://www.gatsbyjs.org/)
