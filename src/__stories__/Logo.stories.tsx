@@ -1,6 +1,17 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-
 import Logo from '../components/Header/Logo';
+import { withKnobs, text, color, number } from '@storybook/addon-knobs';
 
-storiesOf('Logo', module).add('Default', () => <Logo />);
+export default {
+  title: 'Assets/Logo',
+  component: Logo,
+  decorators: [withKnobs],
+  parameters: {
+    componentSubtitle: 'Logo animated ',
+  },
+};
+
+export const header = () => {
+  const cl = color('Color', '#000');
+  return <Logo color={cl} />;
+};

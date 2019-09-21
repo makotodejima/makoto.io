@@ -16,6 +16,7 @@ const Hamburger = ({ isExpanded, toggleExpansion }: Props) => {
   }));
 
   const bind = useGesture({
+    // @ts-ignore
     onDrag: ({ local }) => {
       set({ xy: local });
     },
