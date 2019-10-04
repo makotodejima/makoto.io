@@ -14,7 +14,6 @@ import Apps from '../components/App/Apps';
 
 const IndexPage = () => (
   <StaticQuery
-    // eslint-disable-next-line no-use-before-define
     query={query}
     render={data => (
       <Layout>
@@ -60,8 +59,8 @@ const IndexPage = () => (
             );
           })}
         </WorksListContainer>
-        <Label>Apps</Label>
-        <Apps />
+        {/* <Label>Apps</Label>
+        <Apps /> */}
         <div style={{ marginBottom: `4rem` }}>
           <h3 style={{ marginTop: 0 }}>
             Interested in working together? Get in touch.

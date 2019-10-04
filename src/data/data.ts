@@ -1,27 +1,26 @@
-interface IWorkObject {
-  [id: string]: {
-    id: string;
-    title: string;
-    client: string;
-    type: string;
-    keywords: string;
-    path: string;
-    altText: string;
-    isVideo: boolean;
-  };
+interface IWork {
+  altText: string;
+  client?: string;
+  id: string;
+  isVideo: boolean;
+  keywords: string;
+  path?: string;
+  title: string;
+  type: string;
+  url?: string;
 }
 
-export const work: IWorkObject = {
+export const work: { [key: string]: IWork } = {
   robotex: {
-    id: 'robotex',
-    title: 'Robotex Japan Corporate Website',
+    altText: 'Robotex Japan',
     client: 'Robotex International',
-    type: 'Design and Development',
+    id: 'robotex',
+    isVideo: false,
     keywords:
       'React, Gatsby, GraphQL, Storybook, Netlify CMS, Styled-components, Illustrator',
     path: 'robotex',
-    altText: 'Robotex Japan',
-    isVideo: false,
+    title: 'Robotex Japan Corporate Website',
+    type: 'Design and Development',
   },
   naotatsu_kaku: {
     id: 'naotatsu_kaku',
@@ -82,7 +81,6 @@ export const work: IWorkObject = {
   //   path: "jasms",
   //   altText: "Logo design, Japan Society of Mountain Research"
   // },
-
   soreike: {
     id: 'soreike',
     title: 'Soreike San Francisco Tee',
@@ -95,19 +93,7 @@ export const work: IWorkObject = {
   },
 };
 
-interface IAppsObject {
-  [id: string]: {
-    id: string;
-    title: string;
-    type: string;
-    keywords: string;
-    url: string;
-    altText: string;
-    isVideo: boolean;
-  };
-}
-
-export const apps: IAppsObject = {
+export const apps: { [key: string]: IWork } = {
   sobasquare: {
     id: 'sobasquare',
     title: 'SOBASQUARE',
@@ -138,20 +124,11 @@ export const apps: IAppsObject = {
   },
 };
 
-export const featured = {
-  sobasquare: {
-    ...apps.sobasquare,
-    isVideo: true,
-  },
-  robotex: {
-    ...work.robotex,
-  },
-  the_light_of_tokyo: {
-    ...work.the_light_of_tokyo,
-  },
-  naotatsu_kaku: {
-    ...work.naotatsu_kaku,
-  },
+export const featured: { [key: string]: IWork } = {
+  sobasquare: apps.sobasquare,
+  robotex: work.robotex,
+  the_light_of_tokyo: work.the_light_of_tokyo,
+  naotatsu_kaku: work.naotatsu_kaku,
 };
 
 interface INews {

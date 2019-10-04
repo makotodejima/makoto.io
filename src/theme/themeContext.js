@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const defaultState = {
-  isDarkMode: false,
+  isDarkMode: true,
   toggleDarkMode: () => {},
 };
 
@@ -14,7 +14,7 @@ const ThemeContext = React.createContext(defaultState);
 //   window.matchMedia('(prefers-color-scheme: dark)').matches === true;
 
 export const ThemeContextProvider = ({ children }) => {
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode(!isDarkMode);

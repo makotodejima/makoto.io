@@ -38,7 +38,7 @@ function AboutPage() {
             <br />
             <br />
             <span className="skills">
-              Skills: React, Gatsby, Graphic and Motion Design
+              Skills: Web Development, Graphic, and Motion Design
             </span>
           </p>
         </div>

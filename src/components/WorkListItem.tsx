@@ -7,7 +7,7 @@ import { media } from './StyledComps';
 
 interface WorkListItemProps {
   title: string;
-  client: string;
+  client?: string;
   type: string;
   keywords: string;
   path?: string;

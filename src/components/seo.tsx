@@ -94,7 +94,6 @@ SEO.defaultProps = {
     `Makoto Dejima`,
     `Designer`,
     `Front-End Developer`,
-    `Design`,
     `Graphic Design`,
     `JavaScript`,
     `React`,
