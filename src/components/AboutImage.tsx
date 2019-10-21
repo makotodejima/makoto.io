@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { useGesture } from 'react-with-gesture';
+import { useDrag } from 'react-use-gesture';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -12,10 +12,10 @@ import { media } from './StyledComps';
 
 const AboutImage = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
-  const bind = useGesture(({ down, delta, velocity }) => {
+  const bind = useDrag(({ down, movement, velocity }) => {
     velocity = clamp(velocity, 1, 8);
     set({
-      xy: down ? delta : [0, 0],
+      xy: down ? movement : [0, 0],
       config: { mass: velocity, tension: 500 * velocity, friction: 10 },
     });
   });

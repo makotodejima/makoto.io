@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useGesture } from 'react-use-gesture';
+import { useDrag, useGesture } from 'react-use-gesture';
 import { animated, useSpring } from 'react-spring';
-
 import { media } from '../StyledComps';
 
 interface Props {
@@ -15,11 +14,8 @@ const Hamburger = ({ isExpanded, toggleExpansion }: Props) => {
     xy: [0, 0],
   }));
 
-  const bind = useGesture({
-    // @ts-ignore
-    onDrag: ({ local }) => {
-      set({ xy: local });
-    },
+  const bind = useDrag(({ offset, event, args }) => {
+    set({ xy: offset });
   });
 
   return (
