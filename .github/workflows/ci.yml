@@ -1,17 +1,8 @@
-name: Run Lint
-on: [push]
-
+name: Lint
+on: [push, pull_request]
 jobs:
-  build:
-    name: ES lint
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: 'Mona the Octocat'
-        id: hello
-      - name: Echo the greeting's time
-        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
-      - name: ESLint checks
-        uses: gimenete/eslint-action@1.0
+      uses: gimenete/eslint-action@1.0
