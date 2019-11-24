@@ -62,13 +62,13 @@ const Hamburger = ({ isExpanded, toggleExpansion }: Props) => {
 export default Hamburger;
 
 const HamburgerWrap = styled(animated.div)`
+  touch-action: none;
   z-index: 2;
   position: fixed;
   right: 28px;
   bottom: 35px;
   text-align: center;
   padding: 12px;
-
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 65px;
