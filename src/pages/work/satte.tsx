@@ -1,18 +1,17 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-
+import React from 'react';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import {
+  Caption,
   TopImage,
   TopSection,
-  WorkTitle,
   WorkCopy,
-  WorkTag,
   WorkDescription,
   WorkPageWrapper,
-  Caption,
+  WorkTag,
+  WorkTitle,
 } from '../../components/StyledComps';
 
 function TheLightOfTokyo() {
@@ -21,18 +20,7 @@ function TheLightOfTokyo() {
       query={query}
       render={data => (
         <Layout headerTextColor="#FFFFFF" headerBgColor="#FFADC1">
-          <SEO
-            title="Satte City"
-            keywords={[
-              `Makoto Dejima`,
-              `JavaScript`,
-              `Design`,
-              `React`,
-              `Front-End Developer`,
-              `Graphic Design`,
-            ]}
-          />
-
+          <SEO title="Satte City" />
           <TopSection>
             <TopImage
               width="80%"

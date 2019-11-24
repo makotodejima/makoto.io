@@ -1,8 +1,6 @@
-/* eslint-disable react/destructuring-assignment */
-import React from 'react';
 import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
-
 import { media } from './StyledComps';
 
 interface WorkListItemProps {

@@ -72,15 +72,6 @@ export const work: { [key: string]: IWork } = {
     altText: 'Logo design for indoor faming system',
     isVideo: false,
   },
-  // jasms: {
-  //   id: "jasms",
-  //   title: "Japan Society of Mountain Research",
-  //   client: "Japan Society of Mountain Research",
-  //   type: "Logo Design",
-  //   keywords: "",
-  //   path: "jasms",
-  //   altText: "Logo design, Japan Society of Mountain Research"
-  // },
   soreike: {
     id: 'soreike',
     title: 'Soreike San Francisco Tee',
@@ -93,7 +84,17 @@ export const work: { [key: string]: IWork } = {
   },
 };
 
-export const apps: { [key: string]: IWork } = {
+interface IApp {
+  id: string;
+  title: string;
+  type: string;
+  keywords: string;
+  url: string;
+  altText: string;
+  isVideo: boolean;
+}
+
+export const apps: { [key: string]: IApp } = {
   sobasquare: {
     id: 'sobasquare',
     title: 'SOBASQUARE',

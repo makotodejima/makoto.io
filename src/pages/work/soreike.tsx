@@ -19,17 +19,7 @@ function Soreike() {
       query={query}
       render={data => (
         <Layout headerTextColor="#EFFFFF" headerBgColor="#65C6BA">
-          <SEO
-            title="Soreike SF Tee"
-            keywords={[
-              `Makoto Dejima`,
-              `JavaScript`,
-              `Design`,
-              `React`,
-              `Front-End Developer`,
-              `Graphic Design`,
-            ]}
-          />
+          <SEO title="Soreike SF Tee" />
           <TopSection>
             <TopImage
               width="70%"

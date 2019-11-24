@@ -77,7 +77,7 @@ export const TopSection = styled.div`
   `}
 `;
 
-export const TopImage = styled(Img)<{ width: string }>`
+export const TopImage = styled(Img)<{ width?: string }>`
   width: ${props => props.width || `50%`};
   margin: 40px auto 5rem;
   box-shadow: ${props => props.theme.workImgBoxShadow};

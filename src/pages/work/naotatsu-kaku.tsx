@@ -24,18 +24,7 @@ function ManhattanPortage() {
       query={query}
       render={data => (
         <Layout headerTextColor="white" headerBgColor="#000">
-          <SEO
-            title="Naotatsu Kaku"
-            keywords={[
-              `Makoto Dejima`,
-              `JavaScript`,
-              `Design`,
-              `React`,
-              `Front-End Developer`,
-              `Graphic Design`,
-            ]}
-          />
-
+          <SEO title="Naotatsu Kaku" />
           <TopSection>
             <TopImage
               width="80%"

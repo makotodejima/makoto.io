@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
-import { useDrag } from 'react-use-gesture';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import clamp from 'lodash-es/clamp';
-
+import React, { useState } from 'react';
+import { animated, useSpring } from 'react-spring';
+import { useDrag } from 'react-use-gesture';
+import styled from 'styled-components';
 import poco from '../images/poco.png';
-
 import { media } from './StyledComps';
 
 const AboutImage = () => {

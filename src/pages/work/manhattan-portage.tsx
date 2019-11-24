@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import {
@@ -18,22 +17,10 @@ import {
 function ManhattanPortage() {
   return (
     <StaticQuery
-      // eslint-disable-next-line no-use-before-define
       query={query}
       render={data => (
         <Layout headerTextColor="beige" headerBgColor="#D83038">
-          <SEO
-            title="Manhattan Portage"
-            keywords={[
-              `Makoto Dejima`,
-              `JavaScript`,
-              `Design`,
-              `React`,
-              `Front-End Developer`,
-              `Graphic Design`,
-            ]}
-          />
-
+          <SEO title="Manhattan Portage" />
           <TopSection>
             <TopImage
               width="80%"

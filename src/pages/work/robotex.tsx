@@ -1,36 +1,24 @@
-import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+import React from 'react';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import {
+  Caption,
+  ExtLink,
   TopImage,
   TopSection,
-  ExtLink,
-  WorkTitle,
   WorkCopy,
-  WorkTag,
   WorkDescription,
   WorkPageWrapper,
-  Caption,
+  WorkTag,
+  WorkTitle,
 } from '../../components/StyledComps';
 
-function Robotex({ data }) {
+const Robotex = ({ data }: any) => {
   return (
     <Layout headerTextColor="rgb(255, 255, 249)" headerBgColor="#CE1437">
-      <SEO
-        title="Robotex Japan"
-        keywords={[
-          `Makoto Dejima`,
-          `JavaScript`,
-          `Design`,
-          `React`,
-          `Front-End Developer`,
-          `Graphic Design`,
-        ]}
-      />
-
+      <SEO title="Robotex Japan" />
       <TopSection>
         <TopImage
           width="70%"
@@ -110,7 +98,7 @@ function Robotex({ data }) {
       </WorkPageWrapper>
     </Layout>
   );
-}
+};
 
 export default Robotex;
 

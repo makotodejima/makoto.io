@@ -1,17 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
+const defaultKeywords: string[] = [
+  `Makoto Dejima`,
+  `Designer`,
+  `Front-End Developer`,
+  `Graphic Design`,
+  `React`,
+];
+
 interface SEOProps {
+  title: string;
+  keywords?: string[];
   description?: string;
   lang?: string;
-  // meta?: string;
-  keywords: string[];
-  title: string;
 }
 
-function SEO({ description, lang, keywords, title }: SEOProps) {
+function SEO({
+  title,
+  keywords = defaultKeywords,
+  description,
+  lang = 'en',
+}: SEOProps) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -86,27 +97,6 @@ function SEO({ description, lang, keywords, title }: SEOProps) {
     />
   );
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [
-    `Makoto Dejima`,
-    `Designer`,
-    `Front-End Developer`,
-    `Graphic Design`,
-    `JavaScript`,
-    `React`,
-  ],
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-};
 
 export default SEO;
 

@@ -15,10 +15,12 @@ const Email = () => {
     setCopySuccess(' Nice! Copied to clipboard.');
   };
 
+  const email: string = 'makotodejima@gmail.com';
+
   if (typeof window !== `undefined`) {
     return (
       <CopyEmail>
-        makotodejima@gmail.com
+        {email}
         {/* Logical shortcut for only displaying the 
           button if the copy command exists */
         document.queryCommandSupported('copy') && (
