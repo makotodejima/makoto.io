@@ -5,4 +5,4 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      uses: gimenete/eslint-action@1.0
+      - uses: gimenete/eslint-action@1.0
