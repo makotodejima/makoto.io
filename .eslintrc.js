@@ -14,10 +14,11 @@ module.exports = {
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
     'react/require-default-props': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.tsx'],
       },
     ],
   },

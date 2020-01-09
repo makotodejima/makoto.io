@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <StyledFooter>
-      <div className="copyright">&copy; 2019 Makoto Dejima</div>
+      <div className="copyright">&copy; 2020 Makoto Dejima</div>
     </StyledFooter>
   );
 };
