@@ -1,36 +1,23 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+import React from 'react';
+import Apps from '../components/App/Apps';
+import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {
-  WorksListContainer,
-  PageTitle,
   Label,
+  PageTitle,
+  WorksListContainer,
 } from '../components/StyledComps';
-import Layout from '../components/layout';
-import Apps from '../components/App/Apps';
-import { work } from '../data/data';
 import WorkListItem from '../components/WorkListItem';
 import Writing from '../components/Writing';
+import { work } from '../data/data';
 
-function WorkPage({ data }) {
+function WorkPage({ data }: any) {
   return (
     <Layout>
-      <SEO
-        title="Work"
-        keywords={[
-          `Makoto Dejima`,
-          `JavaScript`,
-          `Design`,
-          `React`,
-          `Front-End Developer`,
-          `Graphic Design`,
-        ]}
-      />
-
+      <SEO title="Work" />
       <PageTitle>Work</PageTitle>
-
       <WorksListContainer>
         {Object.keys(work).map(id => {
           return (

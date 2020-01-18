@@ -9,23 +9,17 @@ import { media } from '../components/StyledComps';
 function AboutPage() {
   return (
     <Layout>
-      <SEO
-        title="About"
-        keywords={[`Makoto Dejima`, `Designer`, `Front-End Developer`]}
-      />
-
+      <SEO title="About" />
       <NameWrapper>
         <h3 className="name">
           <span className="en">Makoto Dejima</span>
           <span className="jp"> 出島 誠</span>
         </h3>
-
         <h3 className="title">
           <span className="en">Designer and Front-End Developer</span>
           <span className="jp"> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
         </h3>
       </NameWrapper>
-
       <AboutContainer>
         <div className="wrapper">
           <p className="intro">
@@ -43,7 +37,6 @@ function AboutPage() {
         </div>
         <AboutImage />
       </AboutContainer>
-
       <SocialLinks />
     </Layout>
   );

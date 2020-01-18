@@ -18,25 +18,13 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Contact"
-        keywords={[
-          `Makoto Dejima`,
-          `JavaScript`,
-          `Design`,
-          `React`,
-          `Front-End Developer`,
-          `Graphic Design`,
-        ]}
-      />
+      <SEO title="Contact" />
       <PageTitle>Contact</PageTitle>
       <Intro>
         <p>Please feel free to contact me via email or the form below.</p>
         <p>Eメール、または下記のフォームからお気軽にご連絡ください。</p>
       </Intro>
-
       <Email />
-
       <StyledForm className="form-container">
         <form name="contact" method="post" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />

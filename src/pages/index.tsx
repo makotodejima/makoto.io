@@ -10,19 +10,9 @@ import { Label, WorksListContainer } from '../components/StyledComps';
 import WorkListItem from '../components/WorkListItem';
 import { featured } from '../data/data';
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data }: any) => (
   <Layout>
-    <SEO
-      title="Makoto Dejima | Design and Development"
-      keywords={[
-        `Makoto Dejima`,
-        `JavaScript`,
-        `Design`,
-        `React`,
-        `Front-End Developer`,
-        `Graphic Design`,
-      ]}
-    />
+    <SEO title="Makoto Dejima | Design and Development" />
     <Hero />
     <Label>
       Featured Work <Link to="/work/">Show More Works</Link>
