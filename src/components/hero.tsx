@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <h3>MAKOTO DEJIMA</h3>
-      <h2>Front-End Developer / Designer</h2>
+      <h2>Developer / Designer</h2>
     </Wrapper>
   );
 };

@@ -15,6 +15,8 @@ module.exports = {
   rules: {
     'react/require-default-props': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/camelcase': 'off',
     'react/jsx-filename-extension': [
       1,
       {

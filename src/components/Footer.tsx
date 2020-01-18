@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <StyledFooter>
-      <div className="copyright">&copy; 2020 Makoto Dejima</div>
+      <div className="copyright">&copy; {year} Makoto Dejima</div>
     </StyledFooter>
   );
 };

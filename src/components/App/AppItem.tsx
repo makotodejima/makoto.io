@@ -29,7 +29,7 @@ const AppItem = ({ url, type, title, keywords, children }: AppItemProps) => {
           <h2 className="title">{title}</h2>
         </a>
         <h4>{type}</h4>
-        <p>{keywords}</p>
+        {/* <p>{keywords}</p> */}
       </Description>
     </Wrapper>
   );

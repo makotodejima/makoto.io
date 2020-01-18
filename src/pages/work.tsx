@@ -14,63 +14,58 @@ import { work } from '../data/data';
 import WorkListItem from '../components/WorkListItem';
 import Writing from '../components/Writing';
 
-function WorkPage() {
+function WorkPage({ data }) {
   return (
-    <StaticQuery
-      query={query}
-      render={data => (
-        <Layout>
-          <SEO
-            title="Work"
-            keywords={[
-              `Makoto Dejima`,
-              `JavaScript`,
-              `Design`,
-              `React`,
-              `Front-End Developer`,
-              `Graphic Design`,
-            ]}
-          />
+    <Layout>
+      <SEO
+        title="Work"
+        keywords={[
+          `Makoto Dejima`,
+          `JavaScript`,
+          `Design`,
+          `React`,
+          `Front-End Developer`,
+          `Graphic Design`,
+        ]}
+      />
 
-          <PageTitle>Work</PageTitle>
+      <PageTitle>Work</PageTitle>
 
-          <WorksListContainer>
-            {Object.keys(work).map(id => {
-              return (
-                <WorkListItem
-                  key={work[id].id}
-                  title={work[id].title}
-                  client={work[id].client}
-                  type={work[id].type}
-                  keywords={work[id].keywords}
-                  path={work[id].path}
-                >
-                  {work[id].isVideo ? (
-                    <video autoPlay loop muted playsInline>
-                      <source src={data[id].publicURL} type="video/mp4" />
-                    </video>
-                  ) : (
-                    <Img
-                      fluid={data[id].childImageSharp.fluid}
-                      alt={work[id].altText}
-                    />
-                  )}
-                </WorkListItem>
-              );
-            })}
-          </WorksListContainer>
-          <Label>Apps</Label>
-          <Apps />
-          <Writing />
-        </Layout>
-      )}
-    />
+      <WorksListContainer>
+        {Object.keys(work).map(id => {
+          return (
+            <WorkListItem
+              key={work[id].id}
+              title={work[id].title}
+              client={work[id].client}
+              type={work[id].type}
+              keywords={work[id].keywords}
+              path={work[id].path}
+            >
+              {work[id].isVideo ? (
+                <video autoPlay loop muted playsInline>
+                  <source src={data[id].publicURL} type="video/mp4" />
+                </video>
+              ) : (
+                <Img
+                  fluid={data[id].childImageSharp.fluid}
+                  alt={work[id].altText}
+                />
+              )}
+            </WorkListItem>
+          );
+        })}
+      </WorksListContainer>
+      <Label>Apps</Label>
+      <Apps />
+      <Writing />
+    </Layout>
   );
 }
 
 export default WorkPage;
 
-const query = graphql`
+export const query = graphql`
   query {
     the_light_of_tokyo: file(relativePath: { eq: "the_light_of_tokyo.jpg" }) {
       childImageSharp {

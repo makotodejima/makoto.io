@@ -1,86 +1,70 @@
-import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-
-import { featured } from '../data/data';
-import { WorksListContainer, Label } from '../components/StyledComps';
+import React from 'react';
+import Email from '../components/Email';
+import Hero from '../components/hero';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Hero from '../components/hero';
-import WorkListItem from '../components/WorkListItem';
-import Email from '../components/Email';
 import SocialLinks from '../components/SocialLinks';
-import Apps from '../components/App/Apps';
+import { Label, WorksListContainer } from '../components/StyledComps';
+import WorkListItem from '../components/WorkListItem';
+import { featured } from '../data/data';
 
-const IndexPage = () => (
-  <StaticQuery
-    query={query}
-    render={data => (
-      <Layout>
-        <SEO
-          title="Makoto Dejima | Design and Development"
-          keywords={[
-            `Makoto Dejima`,
-            `JavaScript`,
-            `Design`,
-            `React`,
-            `Front-End Developer`,
-            `Graphic Design`,
-          ]}
-        />
-        <Hero />
-        <Label>
-          Featured Work <Link to="/work/">Show All Works</Link>
-        </Label>
+const IndexPage = ({ data }) => (
+  <Layout>
+    <SEO
+      title="Makoto Dejima | Design and Development"
+      keywords={[
+        `Makoto Dejima`,
+        `JavaScript`,
+        `Design`,
+        `React`,
+        `Front-End Developer`,
+        `Graphic Design`,
+      ]}
+    />
+    <Hero />
+    <Label>
+      Featured Work <Link to="/work/">Show More Works</Link>
+    </Label>
 
-        <WorksListContainer>
-          {Object.keys(featured).map(id => {
-            return (
-              <WorkListItem
-                key={featured[id].id}
-                title={featured[id].title}
-                client={featured[id].client}
-                type={featured[id].type}
-                keywords={featured[id].keywords}
-                path={featured[id].path}
-                url={featured[id].url}
-              >
-                {featured[id].isVideo ? (
-                  <video autoPlay loop muted playsInline>
-                    <source src={data[id].publicURL} type="video/mp4" />
-                  </video>
-                ) : (
-                  <Img
-                    alt={featured[id].id}
-                    fluid={data[id].childImageSharp.fluid}
-                  />
-                )}
-              </WorkListItem>
-            );
-          })}
-        </WorksListContainer>
-        {/* <Label>Apps</Label>
-        <Apps /> */}
-        <div style={{ marginBottom: `4rem` }}>
-          <h3 style={{ marginTop: 0 }}>
-            Interested in working together? Get in touch.
-          </h3>
-          {/* <p>
-            I am always looking for interesting projects and people to
-            collaborate with. Please feel free to get in touch with me. I would
-            love to hear from you.
-          </p> */}
-          <Email />
-          <SocialLinks />
-        </div>
-      </Layout>
-    )}
-  />
+    <WorksListContainer>
+      {Object.keys(featured).map(id => {
+        return (
+          <WorkListItem
+            key={featured[id].id}
+            title={featured[id].title}
+            client={featured[id].client}
+            type={featured[id].type}
+            keywords={featured[id].keywords}
+            path={featured[id].path}
+            url={featured[id].url}
+          >
+            {featured[id].isVideo ? (
+              <video autoPlay loop muted playsInline>
+                <source src={data[id].publicURL} type="video/mp4" />
+              </video>
+            ) : (
+              <Img
+                alt={featured[id].id}
+                fluid={data[id].childImageSharp.fluid}
+              />
+            )}
+          </WorkListItem>
+        );
+      })}
+    </WorksListContainer>
+    <div style={{ marginBottom: `4rem` }}>
+      <h3 style={{ marginTop: 0 }}>Get in touch.</h3>
+      <Email />
+      <SocialLinks />
+    </div>
+  </Layout>
 );
 
 export default IndexPage;
 
-const query = graphql`
+export const query = graphql`
   query {
     the_light_of_tokyo: file(relativePath: { eq: "the_light_of_tokyo.jpg" }) {
       childImageSharp {

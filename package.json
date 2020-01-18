@@ -9,11 +9,6 @@
     "storybook": "start-storybook -p 3333",
     "test": "jest"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test"
-    }
-  },
   "browserslist": [
     ">0.2%",
     "not dead",

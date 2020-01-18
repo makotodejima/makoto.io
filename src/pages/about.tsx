@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import { media } from '../components/StyledComps';
+import AboutImage from '../components/AboutImage';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import AboutImage from '../components/AboutImage';
 import SocialLinks from '../components/SocialLinks';
+import { media } from '../components/StyledComps';
 
 function AboutPage() {
   return (
@@ -23,23 +22,23 @@ function AboutPage() {
 
         <h3 className="title">
           <span className="en">Designer and Front-End Developer</span>
-          <span className="jp"> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾌﾛﾝﾄｴﾝﾄﾞﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
+          <span className="jp"> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
         </h3>
       </NameWrapper>
 
       <AboutContainer>
         <div className="wrapper">
           <p className="intro">
-            Tokyo-born Front-End Developer and Graphic Designer who loves and
-            cares about design. After spending several years in Silicon Valley,
-            I became a software engineer due to strong interest in the web
-            development. Also experienced in ad-tech, Japanese writing, editing
-            and localization.
+            Tokyo-born Developer and Designer who loves and cares about design
+            and user experience. After spending several years in Silicon Valley,
+            became a software engineer due to strong interest in web
+            development. Currently lives in Berlin.
             <br />
             <br />
-            <span className="skills">
-              Skills: Web Development, Graphic, and Motion Design
-            </span>
+            <div className="skills">Web Development</div>
+            <div className="skills">Graphic Design</div>
+            <div className="skills">Motion Design</div>
+            <div className="skills">Love cats</div>
           </p>
         </div>
         <AboutImage />

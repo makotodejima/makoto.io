@@ -1,7 +1,6 @@
-import React, { useState, useContext } from 'react';
-import styled from 'styled-components';
 import { Link } from 'gatsby';
-
+import React, { useContext, useState } from 'react';
+import styled from 'styled-components';
 import { news } from '../../data/data';
 import ThemeContext from '../../theme/themeContext';
 

@@ -75,7 +75,7 @@ export const work: { [key: string]: IWork } = {
   soreike: {
     id: 'soreike',
     title: 'Soreike San Francisco Tee',
-    client: 'Nice neighbors',
+    client: 'Lovely neighbors',
     type: 'T-shirt Design',
     keywords: 'Japanese, Typography, T-shirt',
     path: 'soreike',
@@ -139,10 +139,4 @@ interface INews {
   href?: string;
 }
 
-export const news: INews[] = [
-  {
-    date: 'Apr 2019 🗼🎊',
-    to: '/work/the-light-of-tokyo',
-    text: 'Awarded "Tokyo Post Card Award 2019"',
-  },
-];
+export const news: INews[] = [];

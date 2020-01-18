@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
+import Email from '../components/Email';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { PageTitle } from '../components/StyledComps';
-import Email from '../components/Email';
 import SocialLinks from '../components/SocialLinks';
+import { PageTitle } from '../components/StyledComps';
 
 const ContactPage = () => {
   const [fname, setFname] = useState('');

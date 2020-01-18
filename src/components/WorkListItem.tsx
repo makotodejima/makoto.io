@@ -48,10 +48,8 @@ const WorkListItem = (props: WorkListItemProps) => {
           </a>
         )}
 
-        <h4>
-          {props.type} {props.client ? `| ${props.client}` : ''}
-        </h4>
-        <p className="keywords">{props.keywords}</p>
+        <h4>{props.type}</h4>
+        {props.client && <p className="client">{props.client}</p>}
       </Description>
     </Wrapper>
   );
@@ -105,7 +103,7 @@ const ImgWrapper = styled.div`
 `;
 
 const Description = styled.div`
-  .keywords {
+  .client {
     margin-bottom: 0;
     color: ${props => props.theme.secondary};
     ${media.phone`
