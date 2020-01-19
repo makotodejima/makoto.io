@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 const defaultKeywords: string[] = [
   `Makoto Dejima`,
-  `Designer`,
+  `Design`,
   `Front-End Developer`,
   `Graphic Design`,
   `React`,
