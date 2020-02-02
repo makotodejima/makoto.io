@@ -16,8 +16,7 @@ export const work: { [key: string]: IWork } = {
     client: 'Robotex International',
     id: 'robotex',
     isVideo: false,
-    keywords:
-      'React, Gatsby, GraphQL, Storybook, Netlify CMS, Styled-components, Illustrator',
+    keywords: 'React, Gatsby, Storybook, Adobe Illustrator',
     path: 'robotex',
     title: 'Robotex Japan Corporate Website',
     type: 'Design and Development',
@@ -37,7 +36,7 @@ export const work: { [key: string]: IWork } = {
     title: 'The Light of Tokyo',
     client: 'Hotel Ryumeikan Tokyo',
     type: 'Postcard Design',
-    keywords: 'Graphic design, Won the "Tokyo Postcard Award"',
+    keywords: 'Graphic design, "Tokyo Postcard Award"',
     path: 'the-light-of-tokyo',
     altText: 'Postcard, The light of Tokyo',
     isVideo: false,
@@ -98,9 +97,8 @@ export const apps: { [key: string]: IApp } = {
   sobasquare: {
     id: 'sobasquare',
     title: 'SOBASQUARE',
-    type: 'Soba (buckwheat noodle) Restaurant Exploring App',
-    keywords:
-      'React, Redux, Foursquare API, Google Maps API, FLIP Animation, SCSS, Styled-components',
+    type: 'Soba Noodle Restaurant Exploring App',
+    keywords: 'React, Redux, Foursquare API, Google Maps API, FLIP Animation',
     url: 'https://soba.madmak.me',
     altText: 'Never stop exploring soba place',
     isVideo: true,

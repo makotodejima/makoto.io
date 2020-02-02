@@ -47,7 +47,7 @@ const Robotex = ({ data }: any) => {
           on robotics (including AI and Drones) education and startup training.
           Established back in 2001, Robotex has expanded the network to over 18
           countries. In October 2019, Robotex Japan will hold first big
-          conference in Kyoto. Continuing to grow its presense in Japanese
+          conference in Kyoto. Continuing to grow its presence in Japanese
           education scene.
         </WorkDescription>
       </TopSection>
@@ -63,8 +63,7 @@ const Robotex = ({ data }: any) => {
           alt="Robotex Japan - 06"
         />
         <Caption>
-          Contents data (such as News and Blog articles) are created by the
-          editors through Netlify CMS.
+          Content are created by the editors through Netlify CMS.
         </Caption>
         <Img
           fluid={data.robotex_01.childImageSharp.fluid}
@@ -88,7 +87,7 @@ const Robotex = ({ data }: any) => {
           alt="Robotex Japan - 02"
         />
         <Caption>
-          Prototyping website mockup, grahic and brand visual identity.
+          Prototyping website mockup, graphic and brand visual identity.
         </Caption>
         <Img
           fluid={data.robotex_03.childImageSharp.fluid}

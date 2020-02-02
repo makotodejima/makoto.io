@@ -54,7 +54,7 @@ function TheLightOfTokyo() {
               fluid={data.the_light_of_tokyo_07.childImageSharp.fluid}
               alt="The Light of Tokyo - 07"
             />
-            <Caption>Printing went very well.</Caption>
+            <Caption>Printing</Caption>
             <Img
               fluid={data.the_light_of_tokyo_03.childImageSharp.fluid}
               alt="The Light of Tokyo - 03"
@@ -65,7 +65,7 @@ function TheLightOfTokyo() {
               alt="The Light of Tokyo - 01"
             />
             <Caption>
-              Study for the light coming out of diffrent buiildings.
+              Study for the light coming out of different buildings.
             </Caption>
             <Img
               fluid={data.the_light_of_tokyo_05.childImageSharp.fluid}
