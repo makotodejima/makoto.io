@@ -30,7 +30,7 @@ function Header({ headerTextColor, headerBgColor }: HeaderProps) {
     leave: { opacity: 0 },
   });
 
-  const activeStyle = { opacity: 0.4, textDecoration: 'line-through' };
+  const activeStyle = { opacity: 0.4 };
 
   return (
     <StyledNav>

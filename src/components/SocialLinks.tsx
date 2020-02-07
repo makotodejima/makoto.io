@@ -81,10 +81,8 @@ const SocialLinksContainer = styled.div`
     transition: all 0.25s ease-in-out;
     color: ${props => props.theme.primary};
     margin: 0 1rem;
-    /* For svg's path fill color */
     fill: ${props => props.theme.primary};
   }
-  /* Remove Dribbble's margin-left */
   a:first-child {
     margin-left: 0;
   }

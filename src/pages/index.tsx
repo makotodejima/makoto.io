@@ -45,7 +45,6 @@ const IndexPage = ({ data }: any) => (
       })}
     </WorksListContainer>
     <div style={{ marginBottom: `4rem` }}>
-      <h3 style={{ marginTop: 0 }}>Get in touch.</h3>
       <Email />
       <SocialLinks />
     </div>
