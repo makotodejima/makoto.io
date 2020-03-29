@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 const Email = () => {
-  const [copySuccess, setCopySuccess] = useState();
+  const [copySuccess, setCopySuccess] = useState<string>();
   const ref = useRef<HTMLInputElement>(null);
 
   const copyToClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -15,7 +15,7 @@ const Email = () => {
     setCopySuccess(' Nice! Copied to clipboard.');
   };
 
-  const email: string = 'makotodejima@gmail.com';
+  const email = 'makotodejima@gmail.com';
 
   if (typeof window !== `undefined`) {
     return (
@@ -66,20 +66,20 @@ const CopyEmail = styled.h4`
     left: 203px;
     button {
       cursor: pointer;
-      color: ${props => props.theme.primary};
+      color: ${(props) => props.theme.primary};
       outline: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       padding: 2px 5px;
       border-radius: 15px;
-      border: ${props => props.theme.primary} 2px solid;
+      border: ${(props) => props.theme.primary} 2px solid;
       background-color: transparent;
       font-size: 0.8rem;
       &:active,
       &:focus {
         transform: scale(0.95);
-        background-color: ${props => props.theme.primary};
-        color: ${props => props.theme.bg};
+        background-color: ${(props) => props.theme.primary};
+        color: ${(props) => props.theme.bg};
       }
     }
   }
@@ -89,7 +89,7 @@ const CopyEmail = styled.h4`
     font-weight: lighter;
     width: 190px;
     margin-left: 6px;
-    color: ${props => props.theme.secondary};
+    color: ${(props) => props.theme.secondary};
   }
   input {
     position: absolute;

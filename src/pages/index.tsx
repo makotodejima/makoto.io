@@ -6,7 +6,11 @@ import Hero from '../components/hero';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import SocialLinks from '../components/SocialLinks';
-import { Label, WorksListContainer } from '../components/StyledComps';
+import {
+  ContactWrapper,
+  Label,
+  WorksListContainer,
+} from '../components/StyledComps';
 import WorkListItem from '../components/WorkListItem';
 import { featured } from '../data/data';
 
@@ -19,7 +23,7 @@ const IndexPage = ({ data }: any) => (
     </Label>
 
     <WorksListContainer>
-      {Object.keys(featured).map(id => {
+      {Object.keys(featured).map((id) => {
         return (
           <WorkListItem
             key={featured[id].id}
@@ -44,10 +48,10 @@ const IndexPage = ({ data }: any) => (
         );
       })}
     </WorksListContainer>
-    <div style={{ marginBottom: `4rem` }}>
+    <ContactWrapper>
       <Email />
       <SocialLinks />
-    </div>
+    </ContactWrapper>
   </Layout>
 );
 

@@ -32,7 +32,7 @@ export const Label = styled.div`
     text-align: right;
     font-size: 0.9rem;
     text-decoration: underline;
-    color: ${props => props.theme.secondary};
+    color: ${(props) => props.theme.secondary};
     &:hover {
       opacity: 0.7;
     }
@@ -59,7 +59,7 @@ export const TopCoverColor = styled.div`
   position: absolute;
   top: 0px;
   left: 0;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.theme.isDarkMode ? props.theme.bg : props.color};
   transition: background-color 500ms;
   width: 100%;
@@ -78,9 +78,9 @@ export const TopSection = styled.div`
 `;
 
 export const TopImage = styled(Img)<{ width?: string }>`
-  width: ${props => props.width || `50%`};
+  width: ${(props) => props.width || `50%`};
   margin: 40px auto 5rem;
-  box-shadow: ${props => props.theme.workImgBoxShadow};
+  box-shadow: ${(props) => props.theme.workImgBoxShadow};
 `;
 
 export const ExtLink = styled.div`
@@ -92,15 +92,15 @@ export const ExtLink = styled.div`
     font-size: 1.1rem;
     padding: 5px 40px;
     text-decoration: none;
-    color: ${props => props.theme.bg};
+    color: ${(props) => props.theme.bg};
     border: 2px solid
-      ${props => (props.theme.isDarkMode ? props.theme.primary : props.color)};
+      ${(props) => (props.theme.isDarkMode ? props.theme.primary : props.color)};
     border-radius: 30px;
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.theme.isDarkMode ? props.theme.primary : props.color};
     transition: all 0.2s ease-in;
     &:hover {
-      color: ${props =>
+      color: ${(props) =>
         props.theme.isDarkMode ? props.theme.primary : props.color};
       background-color: transparent;
     }
@@ -126,7 +126,7 @@ export const WorkTag = styled.p`
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: lighter;
-  color: ${props => props.theme.secondary};
+  color: ${(props) => props.theme.secondary};
 `;
 
 export const WorkDescription = styled.div`
@@ -157,9 +157,17 @@ export const WorkPageWrapper = styled.div`
 export const Caption = styled.div`
   margin: 1rem auto 7rem;
   text-align: center;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   ${media.phone`
       margin: 0.8rem auto 4.5rem;
       font-size: 0.85rem;
     `}
+`;
+
+export const ContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+  margin-bottom: 4rem;
 `;
