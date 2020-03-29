@@ -23,7 +23,9 @@ export const ThemeContextProvider = ({ children }) => {
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('isDarkMode'));
-    setDarkMode(stored);
+    if (stored !== null) {
+      setDarkMode(stored);
+    }
   }, [isDarkMode]);
 
   return (
