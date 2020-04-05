@@ -1,10 +1,17 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: '15px',
-  baseLineHeight: 1.5,
+  baseFontSize: '16px',
+  baseLineHeight: 1.6,
+  googleFonts: [
+    {
+      name: 'Carme',
+      styles: ['400'],
+    },
+  ],
   headerFontFamily: [
-    'aller',
+    'Carme',
+
     'Ubuntu',
     'Helvetica',
     'Helvetica Neue',
@@ -15,7 +22,7 @@ const typography = new Typography({
     'YuGothic',
   ],
   bodyFontFamily: [
-    'aller',
+    'Carme',
     'Ubuntu',
     'Helvetica',
     'Helvetica Neue',
