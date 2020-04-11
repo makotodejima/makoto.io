@@ -10,7 +10,6 @@ import {
   WorksListContainer,
 } from '../components/StyledComps';
 import WorkListItem from '../components/WorkListItem';
-import Writing from '../components/Writing';
 import { work } from '../data/data';
 
 function WorkPage({ data }: any) {
@@ -45,7 +44,6 @@ function WorkPage({ data }: any) {
       </WorksListContainer>
       <Label>Apps</Label>
       <Apps />
-      {/* <Writing /> */}
     </Layout>
   );
 }
