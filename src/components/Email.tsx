@@ -24,8 +24,8 @@ const Email = () => {
         {/* Logical shortcut for only displaying the 
           button if the copy command exists */
         document.queryCommandSupported('copy') && (
-          <div style={{ position: 'relative' }}>
-            <div className="copyBtn">
+          <>
+            <div className="copyBtn-wrapper">
               <button
                 className="copyBtn-button"
                 aria-label="Copy email address to clipboard"
@@ -34,9 +34,9 @@ const Email = () => {
               >
                 Copy
               </button>
-              <span>{copySuccess}</span>
             </div>
-          </div>
+            <h4 className="copy-success">{copySuccess}</h4>
+          </>
         )}
         <label htmlFor="email-to-copy">
           <input
@@ -57,13 +57,13 @@ const Email = () => {
 export default Email;
 
 const CopyEmail = styled.div`
-  position: relative;
   display: flex;
-  .copyBtn {
-    position: absolute;
-    top: -4px;
-    left: 8px;
+  .copyBtn-wrapper {
+    position: relative;
     .copyBtn-button {
+      position: absolute;
+      top: -2px;
+      left: 8px;
       cursor: pointer;
       color: ${(props) => props.theme.primary};
       outline: none;
@@ -82,12 +82,9 @@ const CopyEmail = styled.div`
       }
     }
   }
-  span {
-    position: absolute;
-    top: 2px;
+  .copy-success {
     font-weight: lighter;
-    width: 190px;
-    margin-left: 6px;
+    margin-left: 60px;
     color: ${(props) => props.theme.secondary};
   }
   input {
