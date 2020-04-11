@@ -27,6 +27,7 @@ const Email = () => {
           <div style={{ position: 'relative' }}>
             <div className="copyBtn">
               <button
+                className="copyBtn-button"
                 aria-label="Copy email address to clipboard"
                 type="button"
                 onClick={copyToClick}
@@ -62,7 +63,7 @@ const CopyEmail = styled.div`
     position: absolute;
     top: -4px;
     left: 8px;
-    button {
+    .copyBtn-button {
       cursor: pointer;
       color: ${(props) => props.theme.primary};
       outline: none;
