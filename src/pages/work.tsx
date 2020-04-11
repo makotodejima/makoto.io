@@ -19,7 +19,7 @@ function WorkPage({ data }: any) {
       <SEO title="Work" />
       <PageTitle>Work</PageTitle>
       <WorksListContainer>
-        {Object.keys(work).map(id => {
+        {Object.keys(work).map((id) => {
           return (
             <WorkListItem
               key={work[id].id}
@@ -45,7 +45,7 @@ function WorkPage({ data }: any) {
       </WorksListContainer>
       <Label>Apps</Label>
       <Apps />
-      <Writing />
+      {/* <Writing /> */}
     </Layout>
   );
 }

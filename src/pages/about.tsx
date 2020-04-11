@@ -16,13 +16,13 @@ function AboutPage() {
           <span className="jp"> 出島 誠</span>
         </h3>
         <h3 className="title">
-          <span className="en">Designer and Front-End Developer</span>
-          <span className="jp"> ﾃﾞｻﾞｲﾅｰ ｱﾝﾄﾞ ﾃﾞｨﾍﾞﾛｯﾊﾟｰ</span>
+          <span className="en">Developer and Designer</span>
+          <span className="jp">ﾃﾞｨﾍﾞﾛｯﾊﾟｰ ｱﾝﾄﾞ ﾃﾞｻﾞｲﾅｰ</span>
         </h3>
       </NameWrapper>
       <AboutContainer>
         <div className="wrapper">
-          <p className="intro">
+          <div className="intro">
             Tokyo-born Developer and Designer who loves and cares about design
             and user experience. After spending several years in Silicon Valley,
             became a software engineer due to strong interest in web
@@ -33,7 +33,7 @@ function AboutPage() {
             <div className="skills">Graphic Design</div>
             <div className="skills">Motion Design</div>
             <div className="skills">Loves cats</div>
-          </p>
+          </div>
         </div>
         <AboutImage />
       </AboutContainer>

@@ -103,24 +103,24 @@ export const apps: { [key: string]: IApp } = {
     altText: 'Never stop exploring soba place',
     isVideo: true,
   },
-  flashcard: {
-    id: 'flashcard',
-    title: 'Flashcard',
-    type: 'Flashcard for EN/JP/GER words',
-    keywords: 'React, Firebase, styled-components',
-    url: 'http://clean-toothbrush.surge.sh',
-    altText: 'Flashcard App, GER/ENG/JP',
-    isVideo: false,
-  },
-  pomodoro: {
-    id: 'pomodoro',
-    title: 'Pomodoro Timer',
-    type: 'Productivity app with cat face',
-    keywords: 'React, Redux, Sass',
-    url: 'https://pomodoro-with-catface.mkd.now.sh',
-    altText: 'Pomodoro Timer with Cat Face',
-    isVideo: false,
-  },
+  // flashcard: {
+  //   id: 'flashcard',
+  //   title: 'Flashcard',
+  //   type: 'Flashcard for EN/JP/GER words',
+  //   keywords: 'React, Firebase, styled-components',
+  //   url: 'http://clean-toothbrush.surge.sh',
+  //   altText: 'Flashcard App, GER/ENG/JP',
+  //   isVideo: false,
+  // },
+  // pomodoro: {
+  //   id: 'pomodoro',
+  //   title: 'Pomodoro Timer',
+  //   type: 'Productivity app with cat face',
+  //   keywords: 'React, Redux, Sass',
+  //   url: 'https://pomodoro-with-catface.mkd.now.sh',
+  //   altText: 'Pomodoro Timer with Cat Face',
+  //   isVideo: false,
+  // },
 };
 
 export const featured: { [key: string]: IWork } = {
