@@ -70,17 +70,17 @@ const ImgWrapper = styled.div`
   width: 220px;
   height: 165px;
   margin-right: 2rem;
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: ${(props) => props.theme.borderRadius};
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   overflow: hidden;
-  box-shadow: ${props => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.boxShadow};
   transition: box-shadow 0.2s ease-in;
 
   &:hover {
-    box-shadow: ${props => props.theme.boxShadowHover};
+    box-shadow: ${(props) => props.theme.boxShadowHover};
   }
 
   img,
@@ -105,7 +105,7 @@ const ImgWrapper = styled.div`
 const Description = styled.div`
   .client {
     margin-bottom: 0;
-    color: ${props => props.theme.secondary};
+    color: ${(props) => props.theme.secondary};
     ${media.phone`
     margin-bottom: 1.5rem;
     `}
@@ -113,27 +113,12 @@ const Description = styled.div`
   a {
     text-decoration: none;
     .title {
-      color: ${props => props.theme.primary};
+      color: ${(props) => props.theme.primary};
       position: relative;
       display: inline-block;
-      transition: text-shadow 0.2s ease-in;
+      transition: opacity 0.1s ease-out;
       :hover {
-        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-      }
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 4px;
-        width: 100%;
-        background-color: ${props => props.theme.primary};
-        transform: scaleY(0);
-        transform-origin: left bottom;
-        transition: transform 0.3s ease-in;
-      }
-      &:hover::before {
-        transform: scaleY(1);
+        opacity: 0.6;
       }
     }
   }

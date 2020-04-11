@@ -79,9 +79,9 @@ const SocialLinksContainer = styled.div`
   a {
     position: relative;
     transition: all 0.25s ease-in-out;
-    color: ${props => props.theme.primary};
-    margin: 0 1rem;
-    fill: ${props => props.theme.primary};
+    color: ${({ theme }) => theme.primary};
+    margin: 0 0.8rem;
+    fill: ${({ theme }) => theme.primary};
   }
   a:first-child {
     margin-left: 0;
@@ -91,7 +91,7 @@ const SocialLinksContainer = styled.div`
     position: absolute;
     width: 100%;
     height: 1px;
-    background-color: ${props => props.theme.primary};
+    background-color: ${({ theme }) => theme.primary};
     bottom: 5px;
     left: 0;
     transform: scaleX(0);

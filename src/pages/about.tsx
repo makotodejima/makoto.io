@@ -32,7 +32,7 @@ function AboutPage() {
             <div className="skills">Web Development</div>
             <div className="skills">Graphic Design</div>
             <div className="skills">Motion Design</div>
-            <div className="skills">Love cats</div>
+            <div className="skills">Loves cats</div>
           </p>
         </div>
         <AboutImage />
@@ -83,11 +83,11 @@ const AboutContainer = styled.div`
 
     .intro {
       line-height: 1.6;
-      border-left: 2px solid ${props => props.theme.primary};
+      border-left: 2px solid ${(props) => props.theme.primary};
       padding-left: 1rem;
       text-align: justify;
       .skills {
-        color: ${props => props.theme.secondary};
+        color: ${(props) => props.theme.secondary};
       }
       ${media.tablet`
         border: none;

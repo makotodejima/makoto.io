@@ -20,11 +20,11 @@ const Email = () => {
   if (typeof window !== `undefined`) {
     return (
       <CopyEmail>
-        {email}
+        <h4>{email}</h4>
         {/* Logical shortcut for only displaying the 
           button if the copy command exists */
         document.queryCommandSupported('copy') && (
-          <>
+          <div style={{ position: 'relative' }}>
             <div className="copyBtn">
               <button
                 aria-label="Copy email address to clipboard"
@@ -35,17 +35,16 @@ const Email = () => {
               </button>
               <span>{copySuccess}</span>
             </div>
-          </>
+          </div>
         )}
         <label htmlFor="email-to-copy">
-          {` `}
           <input
             id="email-to-copy"
             tabIndex={-1}
             readOnly
             style={{ opacity: 0 }}
             ref={ref}
-            value="makotodejima@gmail.com"
+            value={email}
           />
         </label>
       </CopyEmail>
@@ -56,21 +55,20 @@ const Email = () => {
 
 export default Email;
 
-const CopyEmail = styled.h4`
-  text-align: left;
+const CopyEmail = styled.div`
   position: relative;
-  display: inline-block;
+  display: flex;
   .copyBtn {
     position: absolute;
-    top: -2px;
-    left: 203px;
+    top: -4px;
+    left: 8px;
     button {
       cursor: pointer;
       color: ${(props) => props.theme.primary};
       outline: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-      padding: 2px 5px;
+      padding: 0 5px;
       border-radius: 15px;
       border: ${(props) => props.theme.primary} 2px solid;
       background-color: transparent;
