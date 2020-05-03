@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const year = new Date().getFullYear();
+
 const Footer = () => {
-  const year = new Date().getFullYear();
   return (
     <StyledFooter>
       <div className="copyright">&copy; {year} Makoto Dejima</div>

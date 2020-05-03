@@ -82,9 +82,6 @@ const AboutContainer = styled.div`
     `}
 
     .intro {
-      line-height: 1.6;
-      border-left: 2px solid ${(props) => props.theme.primary};
-      padding-left: 1rem;
       text-align: justify;
       .skills {
         color: ${(props) => props.theme.secondary};
