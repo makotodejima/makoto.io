@@ -10,11 +10,6 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <PageTitle>Contact</PageTitle>
-      <Intro>
-        <p>Please feel free to contact me.</p>
-        <p>お気軽にご連絡ください。</p>
-      </Intro>
       <ContactWrapper>
         <Email />
         <SocialLinks />
