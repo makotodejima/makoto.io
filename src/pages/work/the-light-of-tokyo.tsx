@@ -18,7 +18,7 @@ function TheLightOfTokyo() {
   return (
     <StaticQuery
       query={query}
-      render={data => (
+      render={(data) => (
         <Layout headerTextColor="white" headerBgColor="#0a3d62">
           <SEO title="The Light of Tokyo" />
           <TopSection>

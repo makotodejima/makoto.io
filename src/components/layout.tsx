@@ -1,15 +1,13 @@
-import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
+import { animated, useSpring } from 'react-spring';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { useSpring, animated } from 'react-spring';
-
-import { light, dark } from '../theme/theme';
+import { dark, light } from '../theme/theme';
 import ThemeContext from '../theme/themeContext';
-
 import Footer from './Footer';
 import Header from './Header/Header';
-import { media } from './StyledComps';
 import './layout.scss';
+import { media } from './StyledComps';
 
 interface Props {
   children: React.ReactNode;
@@ -19,7 +17,7 @@ interface Props {
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${props => props.theme.bg}
+    background-color: ${(props) => props.theme.bg}
   }
 `;
 
@@ -56,8 +54,8 @@ Layout.propTypes = {
 };
 
 const StyledLayout = styled.div`
-  background-color: ${props => props.theme.bg};
-  color: ${props => props.theme.primary};
+  background-color: ${(props) => props.theme.bg};
+  color: ${(props) => props.theme.primary};
   display: flex;
   flex-direction: column;
   align-items: stretch;

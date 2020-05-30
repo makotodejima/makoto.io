@@ -1,23 +1,22 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-
+import React from 'react';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import {
   TopImage,
   TopSection,
-  WorkTitle,
   WorkCopy,
-  WorkTag,
   WorkPageWrapper,
+  WorkTag,
+  WorkTitle,
 } from '../../components/StyledComps';
 
 function Soreike() {
   return (
     <StaticQuery
       query={query}
-      render={data => (
+      render={(data) => (
         <Layout headerTextColor="#EFFFFF" headerBgColor="#65C6BA">
           <SEO title="Soreike SF Tee" />
           <TopSection>

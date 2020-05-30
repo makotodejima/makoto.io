@@ -1,6 +1,6 @@
+import { graphql, StaticQuery } from 'gatsby';
 import React from 'react';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const defaultKeywords: string[] = [
   `Makoto Dejima`,
@@ -26,7 +26,7 @@ function SEO({
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         const metaDescription =
           description || data.site.siteMetadata.description;
         return (
