@@ -59,7 +59,9 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    the_light_of_tokyo: file(relativePath: { eq: "the_light_of_tokyo.jpg" }) {
+    the_light_of_tokyo: file(
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -80,14 +82,16 @@ export const query = graphql`
         }
       }
     }
-    manhattan_portage: file(relativePath: { eq: "manhattan_portage.jpg" }) {
+    manhattan_portage: file(
+      relativePath: { eq: "manhattan_portage/manhattan_portage.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex: file(relativePath: { eq: "robotex.jpg" }) {
+    robotex: file(relativePath: { eq: "robotex/robotex.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid

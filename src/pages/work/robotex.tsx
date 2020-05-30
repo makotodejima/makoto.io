@@ -103,49 +103,49 @@ export default Robotex;
 
 export const query = graphql`
   query PageQuery {
-    robotex_00: file(relativePath: { eq: "robotex_cover.jpg" }) {
+    robotex_00: file(relativePath: { eq: "robotex/robotex_cover.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex_01: file(relativePath: { eq: "robotex_01.png" }) {
+    robotex_01: file(relativePath: { eq: "robotex/robotex_01.png" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex_02: file(relativePath: { eq: "robotex_02.png" }) {
+    robotex_02: file(relativePath: { eq: "robotex/robotex_02.png" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex_03: file(relativePath: { eq: "robotex_03.jpg" }) {
+    robotex_03: file(relativePath: { eq: "robotex/robotex_03.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex_04: file(relativePath: { eq: "robotex_04.png" }) {
+    robotex_04: file(relativePath: { eq: "robotex/robotex_04.png" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex_05: file(relativePath: { eq: "robotex_05.png" }) {
+    robotex_05: file(relativePath: { eq: "robotex/robotex_05.png" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex_06: file(relativePath: { eq: "robotex_06.png" }) {
+    robotex_06: file(relativePath: { eq: "robotex/robotex_06.png" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid

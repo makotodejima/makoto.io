@@ -1,16 +1,16 @@
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
-import Apps from '../components/App/Apps';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Apps from '../../components/App/Apps';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 import {
   Label,
   PageTitle,
   WorksListContainer,
-} from '../components/StyledComps';
-import WorkListItem from '../components/WorkListItem';
-import { work } from '../data/data';
+} from '../../components/StyledComps';
+import WorkListItem from '../../components/WorkListItem';
+import { work } from '../../data/data';
 
 function WorkPage({ data }: any) {
   return (
@@ -52,28 +52,32 @@ export default WorkPage;
 
 export const query = graphql`
   query {
-    the_light_of_tokyo: file(relativePath: { eq: "the_light_of_tokyo.jpg" }) {
+    the_light_of_tokyo: file(
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    manhattan_portage: file(relativePath: { eq: "manhattan_portage.jpg" }) {
+    manhattan_portage: file(
+      relativePath: { eq: "manhattan_portage/manhattan_portage.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    satte: file(relativePath: { eq: "satte.jpg" }) {
+    satte: file(relativePath: { eq: "satte/satte.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    mera: file(relativePath: { eq: "mera.jpg" }) {
+    mera: file(relativePath: { eq: "mera/mera.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -87,14 +91,14 @@ export const query = graphql`
         }
       }
     }
-    soreike: file(relativePath: { eq: "soreike.jpg" }) {
+    soreike: file(relativePath: { eq: "soreike/soreike.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    robotex: file(relativePath: { eq: "robotex.jpg" }) {
+    robotex: file(relativePath: { eq: "robotex/robotex.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid

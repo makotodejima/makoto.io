@@ -58,35 +58,35 @@ export default Soreike;
 
 const query = graphql`
   query {
-    soreike01: file(relativePath: { eq: "soreike01.jpg" }) {
+    soreike01: file(relativePath: { eq: "soreike/soreike01.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    soreike02: file(relativePath: { eq: "soreike02.jpg" }) {
+    soreike02: file(relativePath: { eq: "soreike/soreike02.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    soreike03: file(relativePath: { eq: "soreike03.jpg" }) {
+    soreike03: file(relativePath: { eq: "soreike/soreike03.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    soreike04: file(relativePath: { eq: "soreike04.jpg" }) {
+    soreike04: file(relativePath: { eq: "soreike/soreike04.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    soreike05: file(relativePath: { eq: "soreike05.jpg" }) {
+    soreike05: file(relativePath: { eq: "soreike/soreike05.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid

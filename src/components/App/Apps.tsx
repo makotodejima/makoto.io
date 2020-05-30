@@ -12,9 +12,9 @@ export default () => {
   return (
     <StaticQuery
       query={query}
-      render={data => (
+      render={(data) => (
         <AppsContainer>
-          {Object.keys(apps).map(id => {
+          {Object.keys(apps).map((id) => {
             return (
               <AppItem
                 key={id}

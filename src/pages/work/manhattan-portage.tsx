@@ -75,7 +75,7 @@ export default ManhattanPortage;
 export const query = graphql`
   query {
     manhattan_portage_00: file(
-      relativePath: { eq: "manhattan_portage_00.jpg" }
+      relativePath: { eq: "manhattan_portage/manhattan_portage_00.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -84,7 +84,7 @@ export const query = graphql`
       }
     }
     manhattan_portage_01: file(
-      relativePath: { eq: "manhattan_portage_01.jpg" }
+      relativePath: { eq: "manhattan_portage/manhattan_portage_01.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -93,7 +93,7 @@ export const query = graphql`
       }
     }
     manhattan_portage_02: file(
-      relativePath: { eq: "manhattan_portage_02.jpg" }
+      relativePath: { eq: "manhattan_portage/manhattan_portage_02.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -102,7 +102,7 @@ export const query = graphql`
       }
     }
     manhattan_portage_03: file(
-      relativePath: { eq: "manhattan_portage_03.jpg" }
+      relativePath: { eq: "manhattan_portage/manhattan_portage_03.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -111,7 +111,7 @@ export const query = graphql`
       }
     }
     manhattan_portage_04: file(
-      relativePath: { eq: "manhattan_portage_04.jpg" }
+      relativePath: { eq: "manhattan_portage/manhattan_portage_04.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {

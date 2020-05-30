@@ -139,6 +139,9 @@ export const WorkDescription = styled.div`
 `;
 
 export const WorkPageWrapper = styled.div`
+  .gatsby-image-wrapper {
+    margin-bottom: 1rem;
+  }
   img {
     margin-bottom: 1rem;
     ${media.phone`

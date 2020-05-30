@@ -4,7 +4,7 @@
   "scripts": {
     "build": "gatsby build",
     "build-storybook": "build-storybook",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "npm run develop",
     "storybook": "start-storybook -p 3333",
     "test": "jest",

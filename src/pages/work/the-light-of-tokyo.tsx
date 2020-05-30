@@ -97,7 +97,7 @@ export default TheLightOfTokyo;
 const query = graphql`
   query {
     the_light_of_tokyo_00: file(
-      relativePath: { eq: "the_light_of_tokyo_00.jpg" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_00.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 400, quality: 100) {
@@ -106,7 +106,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_01: file(
-      relativePath: { eq: "the_light_of_tokyo_01.jpg" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_01.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -115,7 +115,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_02: file(
-      relativePath: { eq: "the_light_of_tokyo_02.jpg" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_02.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -124,7 +124,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_03: file(
-      relativePath: { eq: "the_light_of_tokyo_03.png" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_03.png" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -133,7 +133,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_04: file(
-      relativePath: { eq: "the_light_of_tokyo_04.jpg" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_04.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -142,7 +142,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_05: file(
-      relativePath: { eq: "the_light_of_tokyo_05.jpg" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_05.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -151,7 +151,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_06: file(
-      relativePath: { eq: "the_light_of_tokyo_06.jpg" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_06.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
@@ -160,7 +160,7 @@ const query = graphql`
       }
     }
     the_light_of_tokyo_07: file(
-      relativePath: { eq: "the_light_of_tokyo_07.jpg" }
+      relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_07.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 1000, quality: 100) {

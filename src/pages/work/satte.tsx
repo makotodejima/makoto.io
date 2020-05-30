@@ -68,28 +68,28 @@ export default TheLightOfTokyo;
 
 const query = graphql`
   query {
-    satte01: file(relativePath: { eq: "satte01.jpg" }) {
+    satte01: file(relativePath: { eq: "satte/satte01.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    satte02: file(relativePath: { eq: "satte02.jpg" }) {
+    satte02: file(relativePath: { eq: "satte/satte02.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    satte03: file(relativePath: { eq: "satte03.jpg" }) {
+    satte03: file(relativePath: { eq: "satte/satte03.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    satte04: file(relativePath: { eq: "satte04.jpg" }) {
+    satte04: file(relativePath: { eq: "satte/satte04.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, quality: 100) {
           ...GatsbyImageSharpFluid
