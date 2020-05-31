@@ -100,7 +100,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_00.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 400, quality: 100) {
+        fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -109,7 +109,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_01.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -118,7 +118,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_02.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -127,7 +127,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_03.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -136,7 +136,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_04.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -145,7 +145,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_05.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -154,7 +154,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_06.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -163,7 +163,7 @@ const query = graphql`
       relativePath: { eq: "the_light_of_tokyo/the_light_of_tokyo_07.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1000, quality: 100) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }

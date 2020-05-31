@@ -58,14 +58,14 @@ const query = graphql`
   query {
     flashcard: file(relativePath: { eq: "flashcard.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300, quality: 100) {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     pomodoro: file(relativePath: { eq: "pomodoro.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300, quality: 100) {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }

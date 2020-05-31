@@ -56,11 +56,11 @@ const ImgWrapper = styled.div`
   width: 220px;
   height: 165px;
   margin-bottom: 1.5rem;
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: ${(props) => props.theme.borderRadius};
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  box-shadow: ${props => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.boxShadow};
   transition: box-shadow 0.2s ease-in;
 
   ${media.tablet`
@@ -74,7 +74,7 @@ const ImgWrapper = styled.div`
   `}
 
   &:hover {
-    box-shadow: ${props => props.theme.boxShadowHover};
+    box-shadow: ${(props) => props.theme.boxShadowHover};
   }
 
   img,
@@ -94,7 +94,7 @@ const Description = styled.div`
   a {
     text-decoration: none;
     .title {
-      color: ${props => props.theme.primary};
+      color: ${(props) => props.theme.primary};
       position: relative;
       display: inline-block;
       transition: text-shadow 0.2s ease-in;
@@ -108,7 +108,7 @@ const Description = styled.div`
         bottom: 0;
         height: 4px;
         width: 100%;
-        background-color: ${props => props.theme.primary};
+        background-color: ${(props) => props.theme.primary};
         transform: scaleY(0);
         transform-origin: bottom;
         transition: transform 0.3s ease-in;
@@ -119,6 +119,6 @@ const Description = styled.div`
     }
   }
   p {
-    color: ${props => props.theme.secondary};
+    color: ${(props) => props.theme.secondary};
   }
 `;

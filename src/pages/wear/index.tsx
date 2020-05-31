@@ -1,15 +1,19 @@
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import React, { useState } from 'react';
+import { animated, useTransition } from 'react-spring';
+import styled from 'styled-components';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
-import styled from 'styled-components';
-import { animated, useTransition } from 'react-spring';
+import { media } from '../../components/StyledComps';
 
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
   height: 800px;
+  ${media.phone`
+    height: 540px;
+  `}
 `;
 
 const items = [
@@ -29,6 +33,11 @@ const items = [
     desc: 'Berliner, Autumn 2019, €920,00',
   },
   {
+    id: 'masterclass',
+    label: 'Masterclass',
+    desc: 'Absolute Masterclass, Autumn 2019, €1980,00',
+  },
+  {
     id: 'soreike',
     label: 'Go! San Francisco',
     desc: 'Go! San Francisco (Gray), Spring 2017, $130.00 (Sold out)',
@@ -41,18 +50,22 @@ const items = [
 ];
 
 const Switcher = styled.div`
-  height: 42px;
-  & > a {
-    margin-right: 24px;
-    cursor: pointer;
-    :hover {
-      opacity: 0.4;
-    }
+  margin-bottom: 12px;
+`;
+
+const SwitcherLink = styled.a<{ current: boolean }>`
+  margin-right: 24px;
+  cursor: pointer;
+  text-decoration: ${({ current }) => (current ? 'underline' : '')};
+  opacity: ${({ current }) => (current ? '0.6' : 1)};
+  :hover {
+    opacity: 0.4;
   }
 `;
+
 const AnimatedImage = ({ style, fluid, item, alt }) => (
   <animated.div style={{ ...style, position: 'absolute', width: '100%' }}>
-    <Img loading="eager" fluid={fluid} alt={alt} />
+    <Img fluid={fluid} alt={alt} />
     <div>{item.desc}</div>
   </animated.div>
 );
@@ -71,15 +84,18 @@ const Wear = ({ data }: any) => {
     <Layout>
       <SEO title="Wear" />
       <Switcher>
-        {items.map((i, idx) => (
-          <a
-            style={{ textDecoration: index === idx ? 'underline' : '' }}
-            key={i.id}
-            onClick={() => setIndex(idx)}
-          >
-            {i.label}
-          </a>
-        ))}
+        {items.map((i, idx) => {
+          const current = index === idx;
+          return (
+            <SwitcherLink
+              current={current}
+              key={i.id}
+              onClick={() => setIndex(idx)}
+            >
+              {i.label}
+            </SwitcherLink>
+          );
+        })}
       </Switcher>
       <div style={{ position: 'relative' }}>
         <ImageContainer>
@@ -106,35 +122,42 @@ export const pageQuery = graphql`
   query {
     enjoy: file(relativePath: { eq: "wear/enjoy.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     greenery: file(relativePath: { eq: "wear/greenery.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     berliner: file(relativePath: { eq: "wear/berliner.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    masterclass: file(relativePath: { eq: "wear/masterclass.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     soreike: file(relativePath: { eq: "soreike/soreike02.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mean: file(relativePath: { eq: "wear/mean.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }

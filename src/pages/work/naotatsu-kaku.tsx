@@ -88,35 +88,35 @@ export const query = graphql`
   query {
     naotatsu_kaku_00: file(relativePath: { eq: "naotatsu_kaku_00.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     naotatsu_kaku_01: file(relativePath: { eq: "naotatsu_kaku_01.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     naotatsu_kaku_02: file(relativePath: { eq: "naotatsu_kaku_02.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mp03: file(relativePath: { eq: "mp03.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     mp04: file(relativePath: { eq: "mp04.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }

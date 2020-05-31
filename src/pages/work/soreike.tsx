@@ -60,35 +60,35 @@ const query = graphql`
   query {
     soreike01: file(relativePath: { eq: "soreike/soreike01.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     soreike02: file(relativePath: { eq: "soreike/soreike02.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     soreike03: file(relativePath: { eq: "soreike/soreike03.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     soreike04: file(relativePath: { eq: "soreike/soreike04.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     soreike05: file(relativePath: { eq: "soreike/soreike05.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }

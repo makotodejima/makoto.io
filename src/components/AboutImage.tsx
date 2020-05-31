@@ -23,7 +23,7 @@ const AboutImage = () => {
   return (
     <StaticQuery
       query={query}
-      render={data => (
+      render={(data) => (
         <MeImageContainer
           onMouseEnter={() => toggle(true)}
           onMouseLeave={() => toggle(false)}
@@ -89,7 +89,7 @@ const FadeOutText = styled.p<FadeOutTextProps>`
   left: 60px;
   top: 234px;
   transition: opacity 1500ms;
-  opacity: ${props => (props.mouseOnImage ? 0 : 1)};
+  opacity: ${(props) => (props.mouseOnImage ? 0 : 1)};
 
   @media (max-width: 576px) {
     letter-spacing: -0.05em;
@@ -102,7 +102,6 @@ const query = graphql`
       childImageSharp {
         fluid(
           maxWidth: 500
-          quality: 100
           traceSVG: { background: "black", color: "white" }
         ) {
           ...GatsbyImageSharpFluid_tracedSVG
