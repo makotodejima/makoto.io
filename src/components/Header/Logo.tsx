@@ -49,14 +49,14 @@ const SVG = styled.svg`
     vertical-align: bottom;
     #outer {
       fill: none;
-      stroke: ${props => props.color || props.theme.primary};
+      stroke: ${(props) => props.color || props.theme.primary};
       stroke-miterlimit: 10;
       stroke-width: 5px;
       stroke-dasharray: 483px;
     }
     #m,
     #d {
-      fill: ${props => props.color || props.theme.primary};
+      fill: ${(props) => props.color || props.theme.primary};
     }
   }
 `;

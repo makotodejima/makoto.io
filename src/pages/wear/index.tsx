@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import { media } from '../../components/StyledComps';
+import { wearItems } from '../../data/data';
 
 const ImageContainer = styled.div`
   position: relative;
@@ -15,39 +16,6 @@ const ImageContainer = styled.div`
     height: 540px;
   `}
 `;
-
-const items = [
-  {
-    id: 'enjoy',
-    label: 'Enjoy',
-    desc: 'Enjoy, Spring 2020, €22.000,00',
-  },
-  {
-    id: 'greenery',
-    label: 'GREENERY',
-    desc: 'GREENERY (Navy), Winter 2019, €860.000,00',
-  },
-  {
-    id: 'berliner',
-    label: 'ベルリナー',
-    desc: 'Berliner, Autumn 2019, €920,00',
-  },
-  {
-    id: 'masterclass',
-    label: 'Masterclass',
-    desc: 'Absolute Masterclass, Autumn 2019, €1980,00',
-  },
-  {
-    id: 'soreike',
-    label: 'Go! San Francisco',
-    desc: 'Go! San Francisco (Gray), Spring 2017, $130.00 (Sold out)',
-  },
-  {
-    id: 'mean',
-    label: 'Mean SF-TYO',
-    desc: 'Mean SF-TYO, Summer 2017, $58.99 (Sold out)',
-  },
-];
 
 const Switcher = styled.div`
   margin-bottom: 12px;
@@ -63,7 +31,7 @@ const SwitcherLink = styled.a<{ current: boolean }>`
   }
 `;
 
-const AnimatedImage = ({ style, fluid, item, alt }) => (
+const AnimatedImage = ({ style, fluid, item, alt }: any) => (
   <animated.div style={{ ...style, position: 'absolute', width: '100%' }}>
     <Img fluid={fluid} alt={alt} />
     <div>{item.desc}</div>
@@ -72,7 +40,7 @@ const AnimatedImage = ({ style, fluid, item, alt }) => (
 
 const Wear = ({ data }: any) => {
   const [index, setIndex] = useState(0);
-  const currentItem = items[index];
+  const currentItem = wearItems[index];
 
   const transitions = useTransition(currentItem, (p) => p.id, {
     from: { opacity: 0, transform: 'translate3d(-1%,0%,0)' },
@@ -84,7 +52,7 @@ const Wear = ({ data }: any) => {
     <Layout>
       <SEO title="Wear" />
       <Switcher>
-        {items.map((i, idx) => {
+        {wearItems.map((i, idx) => {
           const current = index === idx;
           return (
             <SwitcherLink

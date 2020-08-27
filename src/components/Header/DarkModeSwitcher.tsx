@@ -55,13 +55,13 @@ const StyledButton = styled.button`
   }
 
   path {
-    fill: ${props =>
+    fill: ${(props) =>
       props.theme.isDarkMode ? props.theme.primary : props.color};
     &#light {
-      opacity: ${props => (props.theme.isDarkMode ? 1 : 0)};
+      opacity: ${(props) => (props.theme.isDarkMode ? 1 : 0)};
     }
     &#dark {
-      opacity: ${props => (props.theme.isDarkMode ? 0 : 1)};
+      opacity: ${(props) => (props.theme.isDarkMode ? 0 : 1)};
     }
   }
 `;

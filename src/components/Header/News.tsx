@@ -31,7 +31,7 @@ const News = () => {
             </span>
           </div>
           <a
-            onKeyPress={e => {
+            onKeyPress={(e) => {
               if (e.key === 'Enter') {
                 toggleDarkMode();
               }
@@ -44,7 +44,7 @@ const News = () => {
           </a>
         </div>
 
-        {news.map(n => (
+        {news.map((n) => (
           <div key={n.text} className="item">
             <div className="date">{n.date}</div>
             {n.href && (
@@ -83,7 +83,7 @@ const Blinker = styled.div<BlinkerProps>`
   border-radius: 50%;
   -webkit-animation: scaleOut 3s infinite ease-in-out;
   animation: scaleOut 3s infinite ease-in-out;
-  animation-delay: ${props => props.delay && '1500ms'};
+  animation-delay: ${(props) => props.delay && '1500ms'};
 `;
 
 interface BaloonProps {
@@ -97,14 +97,14 @@ const Balloon = styled.div<BaloonProps>`
   left: -9px;
   width: 245px;
   font-size: 0.9rem;
-  opacity: ${props => (props.hover ? 1 : 0)};
-  visibility: ${props => (props.hover ? 'visible' : 'hidden')};
-  transform: ${props => (props.hover ? 'translateY(0)' : 'translateY(5px)')};
+  opacity: ${(props) => (props.hover ? 1 : 0)};
+  visibility: ${(props) => (props.hover ? 'visible' : 'hidden')};
+  transform: ${(props) => (props.hover ? 'translateY(0)' : 'translateY(5px)')};
   padding: 10px 20px;
   line-height: 1.8;
-  background-color: ${props => props.theme.modalColor};
+  background-color: ${(props) => props.theme.modalColor};
   border-radius: 0.2rem;
-  box-shadow: ${props => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.boxShadow};
   transition: all 250ms ease-out;
 
   .heading {
@@ -117,7 +117,7 @@ const Balloon = styled.div<BaloonProps>`
     margin-bottom: 0.6rem;
     a {
       text-decoration: none;
-      color: ${props => props.theme.link};
+      color: ${(props) => props.theme.link};
       cursor: pointer;
       &:hover {
         opacity: 0.6;
@@ -129,7 +129,7 @@ const Balloon = styled.div<BaloonProps>`
     content: '';
     position: absolute;
     top: 0;
-    border-bottom: 10px solid ${props => props.theme.modalColor};
+    border-bottom: 10px solid ${(props) => props.theme.modalColor};
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     transform: translate(-50%, -100%);

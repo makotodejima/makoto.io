@@ -138,3 +138,36 @@ interface INews {
 }
 
 export const news: INews[] = [];
+
+export const wearItems = [
+  {
+    id: 'enjoy',
+    label: 'Enjoy',
+    desc: 'Enjoy, Spring 2020, €22.000,00',
+  },
+  {
+    id: 'greenery',
+    label: 'GREENERY',
+    desc: 'GREENERY (Navy), Winter 2019, €860.000,00',
+  },
+  {
+    id: 'berliner',
+    label: 'ベルリナー',
+    desc: 'Berliner, Autumn 2019, €920,00',
+  },
+  {
+    id: 'masterclass',
+    label: 'Masterclass',
+    desc: 'Absolute Masterclass, Autumn 2019, €1980,00',
+  },
+  {
+    id: 'soreike',
+    label: 'Go! San Francisco',
+    desc: 'Go! San Francisco (Gray), Spring 2017, $130.00 (Sold out)',
+  },
+  {
+    id: 'mean',
+    label: 'Mean SF-TYO',
+    desc: 'Mean SF-TYO, Summer 2017, $58.99 (Sold out)',
+  },
+];
