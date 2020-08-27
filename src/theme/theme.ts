@@ -18,7 +18,6 @@ export const light = {
 export const dark = {
   isDarkMode: true,
   bg: '#001E32',
-  secondarybg: 'hsl(203.6, 100%, 12%)',
   primary: '#FFF',
   secondary: '#BEBEBE',
   link: 'hsl(206.7, 100%, 70%)',
