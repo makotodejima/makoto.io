@@ -1,16 +1,16 @@
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import Apps from '../../components/App/Apps';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Apps from "../../components/App/Apps";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 import {
   Label,
   PageTitle,
   WorksListContainer,
-} from '../../components/StyledComps';
-import WorkListItem from '../../components/WorkListItem';
-import { work } from '../../data/data';
+} from "../../components/StyledComps";
+import WorkListItem from "../../components/WorkListItem";
+import { work } from "../../data/data";
 
 function WorkPage({ data }: any) {
   return (

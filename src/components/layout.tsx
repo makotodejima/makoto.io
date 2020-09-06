@@ -1,13 +1,12 @@
-import PropTypes from 'prop-types';
-import React, { useContext } from 'react';
-import { animated, useSpring } from 'react-spring';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { dark, light } from '../theme/theme';
-import ThemeContext from '../theme/themeContext';
-import Footer from './Footer';
-import Header from './Header/Header';
-import './layout.scss';
-import { media } from './StyledComps';
+import PropTypes from "prop-types";
+import React, { useContext } from "react";
+import { animated, useSpring } from "react-spring";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { dark, light } from "../theme/theme";
+import ThemeContext from "../theme/themeContext";
+import Footer from "./Footer";
+import Header from "./Header/Header";
+import { media } from "./StyledComps";
 
 interface Props {
   children: React.ReactNode;
@@ -25,9 +24,9 @@ const Layout = ({ children, headerTextColor, headerBgColor }: Props) => {
   const { isDarkMode } = useContext(ThemeContext);
 
   const fadeIn = useSpring({
-    from: { opacity: 0, transform: 'translateY(10px)' },
+    from: { opacity: 0, transform: "translateY(10px)" },
     opacity: 1,
-    transform: 'translateY(0px)',
+    transform: "translateY(0px)",
     config: { mass: 1, tension: 150, friction: 30 },
   });
 

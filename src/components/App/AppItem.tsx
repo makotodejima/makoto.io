@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { media } from '../StyledComps';
+import React from "react";
+import styled from "styled-components";
+import { media } from "../StyledComps";
 
 interface AppItemProps {
   url: string;
@@ -10,7 +10,7 @@ interface AppItemProps {
   children: React.ReactNode;
 }
 
-const AppItem = ({ url, type, title, keywords, children }: AppItemProps) => {
+const AppItem = ({ url, type, title, children }: AppItemProps) => {
   return (
     <Wrapper>
       <ImgWrapper>
@@ -56,8 +56,8 @@ const ImgWrapper = styled.div`
   width: 220px;
   height: 165px;
   margin-bottom: 1.5rem;
-  border-radius: ${(props) => props.theme.borderRadius};
   overflow: hidden;
+  transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   box-shadow: ${(props) => props.theme.boxShadow};
@@ -102,7 +102,7 @@ const Description = styled.div`
         text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
       }
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;

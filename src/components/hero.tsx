@@ -1,11 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import RandomLetter from "./RandomLetter";
 
 const Hero = () => {
   return (
     <Wrapper>
-      <h3>{'Makoto Dejima'}</h3>
-      <h2>Developer / Designer</h2>
+      <h3>Makoto Dejima</h3>
+      <h2>
+        <RandomLetter>Developer</RandomLetter> / Designer
+      </h2>
     </Wrapper>
   );
 };

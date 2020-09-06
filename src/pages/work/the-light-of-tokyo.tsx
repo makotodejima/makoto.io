@@ -1,8 +1,8 @@
-import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 import {
   Caption,
   TopImage,
@@ -12,7 +12,7 @@ import {
   WorkPageWrapper,
   WorkTag,
   WorkTitle,
-} from '../../components/StyledComps';
+} from "../../components/StyledComps";
 
 function TheLightOfTokyo() {
   return (
@@ -64,9 +64,7 @@ function TheLightOfTokyo() {
               fluid={data.the_light_of_tokyo_01.childImageSharp.fluid}
               alt="The Light of Tokyo - 01"
             />
-            <Caption>
-              Study for the light coming out of different buildings.
-            </Caption>
+            <Caption>Buildings</Caption>
             <Img
               fluid={data.the_light_of_tokyo_05.childImageSharp.fluid}
               alt="The Light of Tokyo - 05"
@@ -76,15 +74,13 @@ function TheLightOfTokyo() {
               fluid={data.the_light_of_tokyo_04.childImageSharp.fluid}
               alt="The Light of Tokyo - 04"
             />
-            <Caption>Variation of color combiations. Sunset. Clouds.</Caption>
+            <Caption>Variations</Caption>
 
             <Img
               fluid={data.the_light_of_tokyo_06.childImageSharp.fluid}
               alt="The Light of Tokyo - 06"
             />
-            <Caption>
-              Everything comes together when you write down message.
-            </Caption>
+            <Caption>With/out messages</Caption>
           </WorkPageWrapper>
         </Layout>
       )}

@@ -1,12 +1,12 @@
-import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import clamp from 'lodash-es/clamp';
-import React, { useState } from 'react';
-import { animated, useSpring } from 'react-spring';
-import { useDrag } from 'react-use-gesture';
-import styled from 'styled-components';
-import poco from '../images/poco.png';
-import { media } from './StyledComps';
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import clamp from "lodash-es/clamp";
+import React, { useState } from "react";
+import { animated, useSpring } from "react-spring";
+import { useDrag } from "react-use-gesture";
+import styled from "styled-components";
+import poco from "../images/poco.png";
+import { media } from "./StyledComps";
 
 const AboutImage = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
@@ -36,10 +36,10 @@ const AboutImage = () => {
                 // @ts-ignore
                 (x, y) => `translate3d(${x}px,${y}px,0)`,
               ),
-              position: 'absolute',
-              left: '76px',
-              top: '64px',
-              width: '105px',
+              position: "absolute",
+              left: "76px",
+              top: "64px",
+              width: "105px",
             }}
             draggable={false} // Prevent drag. without this, useGesture's 'down' is not captured correctly
             src={poco}

@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
-
-import ThemeContext from '../../theme/themeContext';
+import React, { useContext } from "react";
+import styled from "styled-components";
+import ThemeContext from "../../theme/themeContext";
 
 interface Props {
   color?: string;
@@ -18,8 +17,8 @@ const DarkModeSwitcher = ({ color }: Props) => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="18"
+        height="18"
         viewBox="0 0 24 24"
       >
         <path
@@ -43,7 +42,7 @@ const StyledButton = styled.button`
   -moz-appearance: none;
   display: inline-block;
   margin-left: 1.4rem;
-  height: 28px;
+  height: 22px;
   background-color: transparent;
   cursor: pointer;
   transition: transform 200ms;
@@ -56,7 +55,9 @@ const StyledButton = styled.button`
 
   path {
     fill: ${(props) =>
-      props.theme.isDarkMode ? props.theme.primary : props.color};
+      props.theme.isDarkMode
+        ? props.theme.primary
+        : props.color || props.theme.primary};
     &#light {
       opacity: ${(props) => (props.theme.isDarkMode ? 1 : 0)};
     }

@@ -1,12 +1,12 @@
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import React, { useState } from 'react';
-import { animated, useTransition } from 'react-spring';
-import styled from 'styled-components';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
-import { media } from '../../components/StyledComps';
-import { wearItems } from '../../data/data';
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import React, { useState } from "react";
+import { animated, useTransition } from "react-spring";
+import styled from "styled-components";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
+import { media } from "../../components/StyledComps";
+import { wearItems } from "../../data/data";
 
 const ImageContainer = styled.div`
   position: relative;
@@ -24,15 +24,15 @@ const Switcher = styled.div`
 const SwitcherLink = styled.a<{ current: boolean }>`
   margin-right: 24px;
   cursor: pointer;
-  text-decoration: ${({ current }) => (current ? 'underline' : '')};
-  opacity: ${({ current }) => (current ? '0.6' : 1)};
+  text-decoration: ${({ current }) => (current ? "underline" : "")};
+  opacity: ${({ current }) => (current ? "0.6" : 1)};
   :hover {
     opacity: 0.4;
   }
 `;
 
 const AnimatedImage = ({ style, fluid, item, alt }: any) => (
-  <animated.div style={{ ...style, position: 'absolute', width: '100%' }}>
+  <animated.div style={{ ...style, position: "absolute", width: "100%" }}>
     <Img fluid={fluid} alt={alt} />
     <div>{item.desc}</div>
   </animated.div>
@@ -43,9 +43,9 @@ const Wear = ({ data }: any) => {
   const currentItem = wearItems[index];
 
   const transitions = useTransition(currentItem, (p) => p.id, {
-    from: { opacity: 0, transform: 'translate3d(-1%,0%,0)' },
-    enter: { opacity: 1, transform: 'translate3d(0,0%,0)' },
-    leave: { opacity: 0, transform: 'translate3d(2,0%,0)' },
+    from: { opacity: 0, transform: "translate3d(-1%,0%,0)" },
+    enter: { opacity: 1, transform: "translate3d(0,0%,0)" },
+    leave: { opacity: 0, transform: "translate3d(2,0%,0)" },
   });
 
   return (
@@ -65,7 +65,7 @@ const Wear = ({ data }: any) => {
           );
         })}
       </Switcher>
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: "relative" }}>
         <ImageContainer>
           {transitions.map(({ item, props, key }) => {
             return (

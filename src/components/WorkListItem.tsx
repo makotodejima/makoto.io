@@ -1,7 +1,7 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import styled from 'styled-components';
-import { media } from './StyledComps';
+import { Link } from "gatsby";
+import React from "react";
+import styled from "styled-components";
+import { media } from "./StyledComps";
 
 interface WorkListItemProps {
   title: string;
@@ -70,7 +70,6 @@ const ImgWrapper = styled.div`
   width: 220px;
   height: 165px;
   margin-right: 2rem;
-  border-radius: ${(props) => props.theme.borderRadius};
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);

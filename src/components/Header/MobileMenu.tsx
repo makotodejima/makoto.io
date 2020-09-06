@@ -1,15 +1,15 @@
-import { Link } from 'gatsby';
-import React, { useRef } from 'react';
-import { animated, useChain, useSpring, useSprings } from 'react-spring';
-import styled from 'styled-components';
-import DarkModeSwitcher from './DarkModeSwitcher';
-import Logo from './Logo';
+import { Link } from "gatsby";
+import React, { useRef } from "react";
+import { animated, useChain, useSpring, useSprings } from "react-spring";
+import styled from "styled-components";
+import DarkModeSwitcher from "./DarkModeSwitcher";
+import Logo from "./Logo";
 
 const items: any[] = [
-  { text: 'Home', to: '/' },
-  { text: 'Work', to: '/work/' },
-  { text: 'About', to: '/about/' },
-  { text: 'Contact', to: '/contact/' },
+  { text: "Home", to: "/" },
+  { text: "Work", to: "/work/" },
+  { text: "About", to: "/about/" },
+  { text: "Contact", to: "/contact/" },
   <Logo />,
 ];
 

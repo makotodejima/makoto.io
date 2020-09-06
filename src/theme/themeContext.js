@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const defaultState = {
   isDarkMode: true,
+  // eslint-disable-next-line
   toggleDarkMode: () => {},
 };
 
@@ -18,11 +19,11 @@ export const ThemeContextProvider = ({ children }) => {
 
   const toggleDarkMode = () => {
     setDarkMode(!isDarkMode);
-    localStorage.setItem('isDarkMode', !isDarkMode);
+    localStorage.setItem("isDarkMode", !isDarkMode);
   };
 
   useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem('isDarkMode'));
+    const stored = JSON.parse(localStorage.getItem("isDarkMode"));
     if (stored !== null) {
       setDarkMode(stored);
     }

@@ -1,8 +1,8 @@
-import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 import {
   TopImage,
   TopSection,
@@ -10,7 +10,7 @@ import {
   WorkPageWrapper,
   WorkTag,
   WorkTitle,
-} from '../../components/StyledComps';
+} from "../../components/StyledComps";
 
 function Soreike() {
   return (

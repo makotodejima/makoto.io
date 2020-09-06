@@ -1,7 +1,5 @@
-import styled, { css } from 'styled-components';
-import Img from 'gatsby-image';
-
-// media template
+import styled, { css, CSSObject, SimpleInterpolation } from "styled-components";
+import Img, { GatsbyImageFluidProps } from "gatsby-image";
 
 export const sizes: { [key: string]: number } = {
   desktop: 992,
@@ -11,10 +9,12 @@ export const sizes: { [key: string]: number } = {
 
 export const media: any = Object.keys(sizes).reduce(
   (acc: { [key: string]: any }, label) => {
-    acc[label] = (...args: any[]) => css`
+    acc[label] = (
+      first: TemplateStringsArray | CSSObject,
+      ...interpolations: SimpleInterpolation[]
+    ) => css`
       @media (max-width: ${sizes[label] / 16}em) {
-        // @ts-ignore
-        ${css(...args)}
+        ${css(first, ...interpolations)}
       }
     `;
     return acc;
@@ -77,7 +77,7 @@ export const TopSection = styled.div`
   `}
 `;
 
-export const TopImage = styled(Img)<{ width?: string }>`
+export const TopImage = styled(Img)<{ width?: string } & GatsbyImageFluidProps>`
   width: ${(props) => props.width || `50%`};
   margin: 40px auto 5rem;
   box-shadow: ${(props) => props.theme.workImgBoxShadow};

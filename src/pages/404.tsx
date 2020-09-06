@@ -1,8 +1,8 @@
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const NotFoundPage = ({ data }: any) => (
   <Layout>

@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
-import { useTransition } from 'react-spring';
-
-import Hamburger from './Hamburger';
-import DarkModeSwitcher from './DarkModeSwitcher';
-import { media, TopCoverColor } from '../StyledComps';
-import MobileMenu from './MobileMenu';
-import Logo from './Logo';
-import News from './News';
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
+import { useTransition } from "react-spring";
+import styled from "styled-components";
+import { media, TopCoverColor } from "../StyledComps";
+import DarkModeSwitcher from "./DarkModeSwitcher";
+import Hamburger from "./Hamburger";
+import Logo from "./Logo";
+import MobileMenu from "./MobileMenu";
+import News from "./News";
 
 /* 
 "color" props is passed down from Layout Comp
@@ -100,16 +99,16 @@ const HeaderLinks = styled.div<HeaderLinks>`
   a.link {
     display: inline-block;
     position: relative;
-    color: ${props => props.color || props.theme.primary};
+    color: ${(props) => props.color || props.theme.primary};
     margin-left: 1.5rem;
     text-decoration: none;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       visibility: hidden;
       width: 100%;
       height: 1px;
-      background-color: ${props => props.color || props.theme.primary};
+      background-color: ${(props) => props.color || props.theme.primary};
       bottom: 0;
       left: 0;
       transform: scaleX(0);

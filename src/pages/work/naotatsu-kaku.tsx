@@ -1,8 +1,8 @@
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 import {
   Caption,
   ExtLink,
@@ -11,11 +11,10 @@ import {
   WorkCopy,
   WorkDescription,
   WorkPageWrapper,
-  WorkTag,
   WorkTitle,
-} from '../../components/StyledComps';
-import vid_1 from '../../images/naotatsu_v1.mp4';
-import vid_2 from '../../images/naotatsu_v2.mp4';
+} from "../../components/StyledComps";
+import vid_1 from "../../images/naotatsu_v1.mp4";
+import vid_2 from "../../images/naotatsu_v2.mp4";
 
 const NaotatsuKaku = ({ data }: any) => {
   return (
@@ -30,9 +29,6 @@ const NaotatsuKaku = ({ data }: any) => {
         />
         <WorkTitle>Naotatsu Kaku's Portfolio Website</WorkTitle>
         <WorkCopy>Visual Artist, Naotatsu Kaku</WorkCopy>
-        <WorkTag>
-          React, Gatsby, Netlify CMS, Anime.js, SVG Animation, Sass
-        </WorkTag>
         <ExtLink color="black">
           <a
             href="http://naotatsukaku.com/"

@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring';
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
+import React from "react";
+import { animated, useSpring } from "react-spring";
+import styled from "styled-components";
 
 interface LogoProps {
   color?: string;
@@ -9,8 +9,8 @@ interface LogoProps {
 
 const Logo = ({ color }: LogoProps) => {
   const style = useSpring({
-    from: { strokeDashoffset: '966px' },
-    strokeDashoffset: '0px',
+    from: { strokeDashoffset: "966px" },
+    strokeDashoffset: "0px",
     config: { mass: 20, tension: 150, friction: 110 },
   });
 

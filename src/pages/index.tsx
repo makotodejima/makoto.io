@@ -1,18 +1,17 @@
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import Email from '../components/Email';
-import Hero from '../components/hero';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import SocialLinks from '../components/SocialLinks';
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Hero from "../components/hero";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import SocialLinks from "../components/SocialLinks";
 import {
   ContactWrapper,
   Label,
   WorksListContainer,
-} from '../components/StyledComps';
-import WorkListItem from '../components/WorkListItem';
-import { featured } from '../data/data';
+} from "../components/StyledComps";
+import WorkListItem from "../components/WorkListItem";
+import { featured } from "../data/data";
 
 const IndexPage = ({ data }: any) => (
   <Layout>
@@ -49,7 +48,6 @@ const IndexPage = ({ data }: any) => (
       })}
     </WorksListContainer>
     <ContactWrapper>
-      <Email />
       <SocialLinks />
     </ContactWrapper>
   </Layout>

@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
-import React, { useContext, useState } from 'react';
-import styled from 'styled-components';
-import { news } from '../../data/data';
-import ThemeContext from '../../theme/themeContext';
+import { Link } from "gatsby";
+import React, { useContext, useState } from "react";
+import styled, { keyframes } from "styled-components";
+import { news } from "../../data/data";
+import ThemeContext from "../../theme/themeContext";
 
 const News = () => {
   const [hover, toggleHover] = useState(false);
@@ -25,14 +25,14 @@ const News = () => {
         <div className="heading">What&#39;s new</div>
         <div className="item">
           <div className="date">
-            Jul 2019{' '}
+            Jul 2019{" "}
             <span role="img" aria-label="Sun and moon emojis">
               🌤🌘👀
             </span>
           </div>
           <a
             onKeyPress={(e) => {
-              if (e.key === 'Enter') {
+              if (e.key === "Enter") {
                 toggleDarkMode();
               }
             }}
@@ -75,15 +75,30 @@ interface BlinkerProps {
   readonly delay?: boolean;
 }
 
+const ScaleOut = keyframes`
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.2;
+  }
+`;
+
 const Blinker = styled.div<BlinkerProps>`
   position: absolute;
   width: 12px;
   height: 12px;
   background-color: rgba(79, 227, 218);
   border-radius: 50%;
-  -webkit-animation: scaleOut 3s infinite ease-in-out;
-  animation: scaleOut 3s infinite ease-in-out;
-  animation-delay: ${(props) => props.delay && '1500ms'};
+  animation: ${ScaleOut} 3s infinite ease-in-out;
+  animation-delay: ${(props) => props.delay && "1500ms"};
 `;
 
 interface BaloonProps {
@@ -98,8 +113,8 @@ const Balloon = styled.div<BaloonProps>`
   width: 245px;
   font-size: 0.9rem;
   opacity: ${(props) => (props.hover ? 1 : 0)};
-  visibility: ${(props) => (props.hover ? 'visible' : 'hidden')};
-  transform: ${(props) => (props.hover ? 'translateY(0)' : 'translateY(5px)')};
+  visibility: ${(props) => (props.hover ? "visible" : "hidden")};
+  transform: ${(props) => (props.hover ? "translateY(0)" : "translateY(5px)")};
   padding: 10px 20px;
   line-height: 1.8;
   background-color: ${(props) => props.theme.modalColor};
@@ -126,7 +141,7 @@ const Balloon = styled.div<BaloonProps>`
   }
 
   ::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     border-bottom: 10px solid ${(props) => props.theme.modalColor};

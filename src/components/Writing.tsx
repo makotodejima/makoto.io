@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 // import weq from '../images/weq.jpg';
 
-import { Label } from './StyledComps';
+import { Label } from "./StyledComps";
 
 export default () => (
   <React.Fragment>
@@ -38,7 +38,7 @@ export default () => (
 const WritingLink = styled.p`
   line-height: 2;
   a {
-    color: ${props => props.theme.link};
+    color: ${(props) => props.theme.link};
     img {
       height: 0.8rem;
       margin-left: 0.5rem;

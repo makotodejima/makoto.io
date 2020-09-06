@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Makoto Dejima`,
     description: `Tokyo-born developer and designer based in Berlin.`,
-    url: 'www.madmak.me',
+    url: "www.madmak.me",
     author: `@mdejima`,
   },
   plugins: [
@@ -12,7 +12,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -52,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-135555172-1',
+        trackingId: "UA-135555172-1",
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional

@@ -1,10 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import AboutImage from '../components/AboutImage';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import SocialLinks from '../components/SocialLinks';
-import { media } from '../components/StyledComps';
+import React from "react";
+import styled from "styled-components";
+import AboutImage from "../components/AboutImage";
+import Layout from "../components/layout";
+import RandomLetter from "../components/RandomLetter";
+import SEO from "../components/seo";
+import SocialLinks from "../components/SocialLinks";
+import { media } from "../components/StyledComps";
 
 function AboutPage() {
   return (
@@ -16,23 +17,26 @@ function AboutPage() {
           <span className="jp"> 出島 誠</span>
         </h3>
         <h3 className="title">
-          <span className="en">Developer and Designer</span>
+          <span className="en">
+            <RandomLetter>Developer</RandomLetter> and Designer
+          </span>
           <span className="jp">ﾃﾞｨﾍﾞﾛｯﾊﾟｰ ｱﾝﾄﾞ ﾃﾞｻﾞｲﾅｰ</span>
         </h3>
       </NameWrapper>
       <AboutContainer>
         <div className="wrapper">
           <div className="intro">
-            Tokyo-born Developer and Designer who loves and cares about design
-            and user experience. After spending several years in Silicon Valley,
-            became a software engineer due to strong interest in web
-            development. Currently lives in Berlin.
+            Tokyo-born developer and designer who loves and cares about design
+            and user experience. After spending a few years in San Francisco,
+            became a software engineer due to strong interest in the web.
+            <br />
+            <br />
+            Tokyo -&gt; San Francisco -&gt; Berlin 🈁
             <br />
             <br />
             <div className="skills">Web Development</div>
             <div className="skills">Graphic Design</div>
-            <div className="skills">Motion Design</div>
-            <div className="skills">Loves cats</div>
+            <div className="skills">Law & Cats　（訳: 法と猫）</div>
           </div>
         </div>
         <AboutImage />

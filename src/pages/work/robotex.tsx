@@ -1,11 +1,10 @@
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 import {
   Caption,
-  ExtLink,
   TopImage,
   TopSection,
   WorkCopy,
@@ -13,7 +12,7 @@ import {
   WorkPageWrapper,
   WorkTag,
   WorkTitle,
-} from '../../components/StyledComps';
+} from "../../components/StyledComps";
 
 const Robotex = ({ data }: any) => {
   return (
@@ -33,15 +32,6 @@ const Robotex = ({ data }: any) => {
         <WorkTag>
           Gatsby, React, GraphQL, Storybook, Netlify CMS, Styled-components
         </WorkTag>
-        <ExtLink color="#CE1437">
-          <a
-            href="https://robotex.or.jp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit website
-          </a>
-        </ExtLink>
         <WorkDescription>
           Robotex International is a global robotics education network, focusing
           on robotics (including AI and Drones) education and startup training.

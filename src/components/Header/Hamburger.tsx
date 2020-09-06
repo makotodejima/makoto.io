@@ -1,32 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useDrag, useGesture } from 'react-use-gesture';
-import { animated, useSpring } from 'react-spring';
-import { media } from '../StyledComps';
+import React from "react";
+import { animated, useSpring } from "react-spring";
+import { useDrag } from "react-use-gesture";
+import styled from "styled-components";
+import { media } from "../StyledComps";
 
 interface Props {
   isExpanded: boolean;
-  toggleExpansion: any;
+  toggleExpansion: () => void;
 }
 
 const Hamburger = ({ isExpanded, toggleExpansion }: Props) => {
-  const [{ xy }, set] = useSpring(() => ({
-    xy: [0, 0],
-  }));
-
-  const bind = useDrag(({ offset, event, args }) => {
-    set({ xy: offset });
+  const [{ x, y }, set] = useSpring(() => ({ x: 0, y: 0 }));
+  const bind = useDrag(({ down, movement: [mx, my] }) => {
+    set({ x: down ? mx : 0, y: down ? my : 0 });
   });
 
   return (
     <HamburgerWrap
       {...bind()}
-      style={{
-        transform: xy.interpolate(
-          // @ts-ignore
-          (x: number, y: number) => `translate3d(${x}px, ${y}px, 0)`,
-        ),
-      }}
+      // @ts-ignore
+      style={{ x, y }}
       onClick={toggleExpansion}
       aria-label="Open and close menu"
       data-testid="hamburger-menu"
@@ -74,11 +67,11 @@ const HamburgerWrap = styled(animated.div)`
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  background-color: ${props => props.theme.modalColor};
-  box-shadow: ${props => props.theme.boxShadow};
+  background-color: ${(props) => props.theme.modalColor};
+  box-shadow: ${(props) => props.theme.boxShadow};
   cursor: pointer;
   path {
-    fill: ${props => props.theme.primary};
+    fill: ${(props) => props.theme.primary};
   }
 
   :focus {
