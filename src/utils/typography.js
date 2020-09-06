@@ -5,32 +5,27 @@ const typography = new Typography({
   baseLineHeight: 1.6,
   googleFonts: [
     {
-      name: 'Carme',
+      name: 'Cousine',
       styles: ['400'],
     },
   ],
   headerFontFamily: [
-    'Carme',
-
-    'Ubuntu',
+    'Cousine',
     'Helvetica',
     'Helvetica Neue',
-    'Arial',
-    'sans-serif',
     '游ゴシック',
     '游ゴシック体',
     'YuGothic',
   ],
   bodyFontFamily: [
-    'Carme',
-    'Ubuntu',
+    'Cousine',
     'Helvetica',
     'Helvetica Neue',
     '游ゴシック',
     '游ゴシック体',
     'YuGothic',
   ],
-  headerWeight: '700',
+  headerWeight: '400',
   bodyWeight: '400',
 });
 

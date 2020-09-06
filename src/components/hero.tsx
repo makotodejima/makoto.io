@@ -18,13 +18,11 @@ const Wrapper = styled.div`
   justify-content: center;
 
   h3 {
-    letter-spacing: 0.1rem;
     margin-top: 5rem;
     margin-bottom: 0.3rem;
   }
 
   h2 {
-    letter-spacing: 0.05rem;
     margin-bottom: 8rem;
   }
 `;

@@ -82,7 +82,6 @@ interface FadeOutTextProps {
 
 const FadeOutText = styled.p<FadeOutTextProps>`
   position: absolute;
-  letter-spacing: normal;
   font-size: 0.75rem;
   color: lightgray;
   margin-bottom: 1rem;
