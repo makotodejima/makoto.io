@@ -6,10 +6,9 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Makoto Dejima | Development and Design</title>
+        <title>Makoto Dejima | Developer and designer</title>
         <link rel="icon" href="/mdfavicon.svg" />
       </Head>
-
       <main style={{ padding: "8px 16px" }}>
         <h1 className="home-heading-1">
           Makoto Dejima{"\n"}Developer / Designer
