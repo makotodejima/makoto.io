@@ -1,0 +1,9 @@
+name: npm check updates
+on: push
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm install
+      - uses: MeilCli/npm-update-check-action@v4.0.0
