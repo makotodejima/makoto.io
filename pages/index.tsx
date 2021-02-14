@@ -15,37 +15,38 @@ export default function Home() {
         </h1>
         <Link href="https://github.com/makotodejima/fi" passHref>
           <a className="home-a">
-            fi | <i>Command line tool for personal finance</i>
+            fi <Pipe /> <i>Command line tool for personal finance</i>
           </a>
         </Link>
         <Link href="https://soba.madmak.me" passHref>
           <a className="home-a">
-            Sobasquare | <i>Never stop exploring Soba restaurants</i>
+            Sobasquare <Pipe /> <i>Never stop exploring Soba restaurants</i>
           </a>
         </Link>
         <Link href="/robotex" passHref>
           <a className="home-a">
-            Robotex Japan | <i>Corporate website design and development</i>
+            Robotex Japan <Pipe />{" "}
+            <i>Corporate website design and development</i>
           </a>
         </Link>
         <Link href="https://naotatsukaku.com/" passHref>
           <a className="home-a">
-            Naotatsu Kaku | <i>Visual artist's portfolio website</i>
+            Naotatsu Kaku <Pipe /> <i>Visual artist's portfolio website</i>
           </a>
         </Link>
         <Link href="/the_light_of_tokyo" passHref>
           <a className="home-a">
-            The Light of Tokyo | <i>Tokyo Postcard Award 2019</i>
+            The Light of Tokyo <Pipe /> <i>Tokyo Postcard Award 2019</i>
           </a>
         </Link>
         <Link href="/manhattan_portage" passHref>
           <a className="home-a">
-            Manhattan Portage | <i>Manhattan Portage Art Award 2019</i>
+            Manhattan Portage <Pipe /> <i>Manhattan Portage Art Award 2019</i>
           </a>
         </Link>
         <Link href="/satte_city" passHref>
           <a className="home-a">
-            Satte City | <i>Municipal government logo design</i>
+            Satte City <Pipe /> <i>Municipal government logo design</i>
           </a>
         </Link>
         <Footer />
@@ -53,3 +54,5 @@ export default function Home() {
     </div>
   );
 }
+
+const Pipe = () => <span className="home-pipe">|</span>;

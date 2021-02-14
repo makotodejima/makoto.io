@@ -1,6 +1,5 @@
 html,
 body {
-  /* height: 100vh; */
   padding: 0;
   margin: 0;
   font-family: "Baskerville", "New York Medium", -apple-system,
@@ -49,6 +48,26 @@ a {
 .home-a i {
   font-size: 2rem;
   letter-spacing: 0.8px;
+}
+
+@media (max-width: 520px) {
+  .home-heading-1 {
+    font-size: 2rem;
+  }
+
+  .home-a {
+    font-size: 1.6rem;
+    margin: 24px 0;
+  }
+
+  .home-pipe {
+    display: none;
+  }
+
+  .home-a i {
+    display: block;
+    font-size: 1.2rem;
+  }
 }
 
 footer {
