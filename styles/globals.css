@@ -22,7 +22,12 @@ a {
   left: 800px;
   top: 24px;
   font-size: 2em;
+  color: grey;
+}
+
+.home-button:hover {
   text-decoration: underline;
+  color: initial;
 }
 
 .home-heading-1 {

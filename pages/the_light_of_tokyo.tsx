@@ -1,11 +1,13 @@
-import { NotionRenderer } from "../react-notion";
+import Footer from "../components/Footer";
 import HomeLink from "../components/HomeLink";
+import { NotionRenderer } from "../react-notion";
 
 const LightOfTokyo = ({ blockMap }) => {
   return (
     <main style={{ padding: "8px 16px" }}>
       <HomeLink />
       <NotionRenderer blockMap={blockMap} />
+      <Footer />
     </main>
   );
 };

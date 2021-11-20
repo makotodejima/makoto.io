@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import HomeLink from "../components/HomeLink";
 import { NotionRenderer } from "../react-notion";
 
@@ -6,6 +7,7 @@ const ManhattanPortage = ({ blockMap }) => {
     <main style={{ padding: "8px 16px" }}>
       <HomeLink />
       <NotionRenderer blockMap={blockMap} />
+      <Footer />
     </main>
   );
 };
