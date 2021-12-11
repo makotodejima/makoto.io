@@ -19,21 +19,19 @@ a {
 
 .home-button {
   position: fixed;
-  left: 800px;
-  top: 24px;
-  font-size: 2em;
-  color: grey;
+  left: 840px;
+  top: 30px;
+  font-size: 1.8em;
 }
 
 .home-button:hover {
   text-decoration: underline;
-  color: initial;
 }
 
 .home-heading-1 {
   font-size: 2.5rem;
   font-weight: 400;
-  margin: 8px 0 24px;
+  margin: 8px 0 46px;
   line-height: 1.4;
   white-space: pre;
 }
@@ -79,7 +77,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: white;
   margin-top: 64px;
 }
 
@@ -118,4 +115,19 @@ footer > * {
 
 .logo-char {
   fill: rgb(55, 53, 47);
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    background: #000e00;
+    color: #b2c1c2;
+  }
+
+  #logo-outer {
+    stroke: #b2c1c2;
+  }
+
+  .logo-char {
+    fill: #b2c1c2;
+  }
 }
