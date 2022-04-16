@@ -15,6 +15,7 @@ const Logo = () => {
         id="logo"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 198.3 91.46"
+        style={{ cursor: "pointer" }}
       >
         <title>Makoto Dejima</title>
         <animated.path
