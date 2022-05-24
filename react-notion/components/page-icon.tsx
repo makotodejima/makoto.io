@@ -19,6 +19,8 @@ interface AssetProps {
   mapImageUrl: MapImageUrl;
   big?: boolean;
   className?: string;
+
+  children?: React.ReactNode;
 }
 
 const PageIcon: React.FC<AssetProps> = ({

@@ -93,6 +93,8 @@ interface Block {
   hideHeader?: boolean;
   customBlockComponents?: CustomBlockComponents;
   customDecoratorComponents?: CustomDecoratorComponents;
+
+  children?: React.ReactNode;
 }
 
 export const Block: React.FC<Block> = (props) => {
