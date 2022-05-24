@@ -8,7 +8,7 @@
  *
  */
 
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 /**
  * Base properties that all blocks share.
@@ -347,6 +347,7 @@ export type BlockValueProp<T> = Extract<BlockValueType, { type: T }>;
 export interface CustomBlockComponentProps<T extends BlockValueTypeKeys> {
   renderComponent: () => JSX.Element | null;
   blockValue: T extends BlockValueType ? BlockValueProp<T> : BaseValueType;
+  children?: ReactNode;
 }
 
 export type CustomBlockComponents = {
@@ -361,13 +362,13 @@ type SubDecorationValue<T extends SubDecorationSymbol> = Extract<
 
 export type CustomDecoratorComponentProps<
   T extends SubDecorationSymbol
-> = (SubDecorationValue<T> extends never
-  ? {}
-  : {
+  > = (SubDecorationValue<T> extends never
+    ? {}
+    : {
       decoratorValue: SubDecorationValue<T>;
     }) & {
-  renderComponent: () => JSX.Element | null;
-};
+      renderComponent: () => JSX.Element | null;
+    };
 
 export type CustomDecoratorComponents = {
   [K in SubDecorationSymbol]?: FC<CustomDecoratorComponentProps<K>>;

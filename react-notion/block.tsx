@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import {
   DecorationType,
   BlockType,
@@ -62,8 +62,8 @@ export const createRenderChildText = (
       if (CustomComponent) {
         const props = (decorator[1]
           ? {
-              decoratorValue: decorator[1],
-            }
+            decoratorValue: decorator[1],
+          }
           : {}) as CustomDecoratorComponentProps<typeof decorator[0]>;
 
         return (
@@ -93,9 +93,11 @@ interface Block {
   hideHeader?: boolean;
   customBlockComponents?: CustomBlockComponents;
   customDecoratorComponents?: CustomDecoratorComponents;
+
+  children?: React.ReactNode;
 }
 
-export const Block: React.FC<Block> = (props) => {
+export const Block = (props: Block) => {
   const {
     block,
     children,
@@ -374,7 +376,7 @@ export const Block: React.FC<Block> = (props) => {
                               {
                                 renderChildText(
                                   row[
-                                    block.collection?.schema[gp.property]?.name!
+                                  block.collection?.schema[gp.property]?.name!
                                   ]
                                 )!
                               }

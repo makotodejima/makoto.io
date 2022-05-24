@@ -22,13 +22,13 @@ export interface NotionRendererProps {
   customDecoratorComponents?: CustomDecoratorComponents;
 }
 
-export const NotionRenderer: React.FC<NotionRendererProps> = ({
+export const NotionRenderer = ({
   level = 0,
   currentId,
   mapPageUrl = defaultMapPageUrl,
   mapImageUrl = defaultMapImageUrl,
   ...props
-}) => {
+}: NotionRendererProps) => {
   const { blockMap } = props;
   const id = currentId || Object.keys(blockMap)[0];
   const currentBlock = blockMap[id];

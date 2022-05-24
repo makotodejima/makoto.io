@@ -7,6 +7,7 @@ const types = ["video", "image", "embed", "figma"];
 const Asset: React.FC<{
   block: BlockType;
   mapImageUrl: MapImageUrl;
+  children?: React.ReactNode;
 }> = ({ block, mapImageUrl }) => {
   const value = block.value as ContentValueType;
   const type = block.value.type;

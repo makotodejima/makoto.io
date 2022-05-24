@@ -9,11 +9,11 @@ interface PageHeaderProps {
   mapImageUrl: MapImageUrl;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({
+const PageHeader = ({
   blockMap,
   mapPageUrl,
   mapImageUrl
-}) => {
+}: PageHeaderProps) => {
   const blockIds = Object.keys(blockMap);
   const activePageId = blockIds[0];
 
@@ -62,9 +62,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({
         {breadcrumbs.map((breadcrumb, index) => (
           <React.Fragment key={breadcrumb.pageId}>
             <a
-              className={`notion-nav-breadcrumb ${
-                breadcrumb.active ? "notion-nav-breadcrumb-active" : ""
-              }`}
+              className={`notion-nav-breadcrumb ${breadcrumb.active ? "notion-nav-breadcrumb-active" : ""
+                }`}
               href={
                 breadcrumb.active ? undefined : mapPageUrl(breadcrumb.pageId)
               }
