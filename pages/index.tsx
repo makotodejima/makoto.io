@@ -18,9 +18,9 @@ export default function Home() {
             fi <Pipe /> <i>Command line tool for personal finance</i>
           </a>
         </Link>
-        <Link href="https://soba.madmak.me" passHref>
+        <Link href="/the_light_of_tokyo" passHref>
           <a className="home-a">
-            Sobasquare <Pipe /> <i>Never stop exploring Soba restaurants</i>
+            The Light of Tokyo <Pipe /> <i>Tokyo Postcard Award 2019</i>
           </a>
         </Link>
         <Link href="/robotex" passHref>
@@ -29,14 +29,14 @@ export default function Home() {
             <i>Corporate website design and development</i>
           </a>
         </Link>
-        <Link href="https://naotatsukaku.com/" passHref>
+        <Link href="https://soba.madmak.me" passHref>
           <a className="home-a">
-            Naotatsu Kaku <Pipe /> <i>Visual artist's portfolio website</i>
+            Sobasquare <Pipe /> <i>Never stop exploring Soba restaurants</i>
           </a>
         </Link>
-        <Link href="/the_light_of_tokyo" passHref>
+        <Link href="/satte_city" passHref>
           <a className="home-a">
-            The Light of Tokyo <Pipe /> <i>Tokyo Postcard Award 2019</i>
+            Satte City <Pipe /> <i>Municipal government logo design</i>
           </a>
         </Link>
         <Link href="/manhattan_portage" passHref>
@@ -44,9 +44,9 @@ export default function Home() {
             Manhattan Portage <Pipe /> <i>Manhattan Portage Art Award 2019</i>
           </a>
         </Link>
-        <Link href="/satte_city" passHref>
+        <Link href="https://naotatsukaku.com/" passHref>
           <a className="home-a">
-            Satte City <Pipe /> <i>Municipal government logo design</i>
+            Naotatsu Kaku <Pipe /> <i>Visual artist's portfolio website</i>
           </a>
         </Link>
         <Footer />
