@@ -29,7 +29,7 @@ export default function Home() {
             <i>Corporate website design and development</i>
           </a>
         </Link>
-        <Link href="https://soba.madmak.me" passHref>
+        <Link href="https://soba.makoto.io" passHref>
           <a className="home-a">
             Sobasquare <Pipe /> <i>Never stop exploring Soba restaurants</i>
           </a>
