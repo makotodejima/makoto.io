@@ -9,11 +9,14 @@ const Footer = () => {
     <footer>
       <Logo />
       <span className="copyright">&copy; {year} MKD Inc.</span>
-      <Link href="https://github.com/makotodejima" passHref>
-        <a className="footer-a">GitHub</a>
+      <Link href="https://github.com/makotodejima" className="footer-a">
+        GitHub
       </Link>
-      <Link href="https://www.linkedin.com/in/makotodejima/" passHref>
-        <a className="footer-a">LinkedIn</a>
+      <Link
+        href="https://www.linkedin.com/in/makotodejima/"
+        className="footer-a"
+      >
+        LinkedIn
       </Link>
       <div>email: yo[at]makoto.io</div>
     </footer>

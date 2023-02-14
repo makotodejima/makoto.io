@@ -57,7 +57,7 @@ const Asset: React.FC<{
           }}
         >
           <Image
-            layout="fill"
+            fill
             className="notion-image-inset"
             alt={caption || "notion image"}
             src={src}
