@@ -115,7 +115,7 @@
 }
 
 .notion-h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin: 8px 0;
 }
 
@@ -302,7 +302,7 @@ img.notion-page-icon {
 
 .notion-asset-wrapper {
   padding: 0;
-  margin: 16px 0 52px;
+  margin: 16px 0 32px;
   max-width: 620px;
 }
 
@@ -465,7 +465,7 @@ img.notion-page-icon {
 
 .notion-image-caption {
   padding: 8px 0;
-  font-size: 20px;
+  font-size: 14px;
   white-space: pre-wrap;
   word-break: break-word;
   caret-color: rgb(55, 53, 47);
@@ -473,7 +473,7 @@ img.notion-page-icon {
 }
 
 .notion-callout {
-  font-size: 24px;
+  font-size: 16px;
   width: 580px;
   margin: 16px 0;
 }
