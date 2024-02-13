@@ -3,7 +3,7 @@ import {
   type TextRichTextItemResponse,
   type BlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const Blocks = ({ blocks }) => {
   return (

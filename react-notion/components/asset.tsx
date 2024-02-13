@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BlockType, ContentValueType, MapImageUrl } from "../types";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const types = ["video", "image", "embed", "figma"];
 
