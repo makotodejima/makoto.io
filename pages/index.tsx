@@ -2,8 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { getEntries } from "../lib/utils";
+import { Entry } from "../lib/types";
 
-export default function Home({ entries }) {
+export default function Home({ entries }: { entries: Entry[] }) {
   return (
     <div>
       <Head>

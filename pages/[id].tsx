@@ -22,9 +22,9 @@ export const getStaticPaths = (async () => {
 
 export async function getStaticProps({ params }) {
   const entries = getEntries();
-  const entry: any = entries.find((e: any) => e.id === params.id);
-  if (!entry) {
-    throw new Error("Entry not found");
+  const entry = entries.find((e: any) => e.id === params.id);
+  if (!entry?.notion_id) {
+    throw new Error("Entry not found or has no Notion ID");
   }
 
   const data = await fetch(

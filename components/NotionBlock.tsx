@@ -3,15 +3,15 @@ import {
   type TextRichTextItemResponse,
   type BlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export const Blocks = ({ blocks }) => {
   return (
-    <>
+    <div className="notion">
       {blocks.map((block) => (
         <Block key={block.id} block={block} />
       ))}
-    </>
+    </div>
   );
 };
 
@@ -19,7 +19,7 @@ const Block = ({ block }) => {
   if (!isFullBlock(block)) {
     throw new Error("Not a block");
   }
-  const { type, id, has_children, object } = block;
+  const { type, id } = block;
 
   if (type === "heading_1") {
     return (
@@ -43,28 +43,41 @@ const Block = ({ block }) => {
     if (block.image.type === "external") {
       throw new Error("Not implemented: external image");
     }
-    const width = 650;
+    const width = 620;
     const height = 600;
+
     return (
-      <div
+      <figure
+        key={id}
+        className="notion-asset-wrapper"
         style={{
           minWidth: `350px`,
           maxWidth: `${width}px`,
         }}
       >
         <Image
-          layout="responsive"
           width={width}
           height={height}
           src={block.image.file.url}
-          alt={JSON.stringify(block.image.caption)}
+          alt={block.image.caption.map((cap) => cap.plain_text).join(" ")}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
         />
-      </div>
+        {block.image.caption.map((cap, idx) => (
+          <figcaption key={idx} className="notion-image-caption">
+            {cap.plain_text}
+          </figcaption>
+        ))}
+      </figure>
     );
-    return <p>Not implemented: image </p>;
   }
 
   if (type === "paragraph") {
+    if (!block.paragraph.rich_text.length)
+      return <div key={id} className="notion-blank" />;
     return (
       <p key={id} className="notion-paragraph">
         {block.paragraph.rich_text.map((t) => t.plain_text)}
@@ -74,8 +87,10 @@ const Block = ({ block }) => {
 
   if (type === "callout") {
     return (
-      <div key={id} className="notion-callout-text">
-        {block.callout.rich_text.map((t) => t.plain_text)}
+      <div key={id} className="notion-callout">
+        <div className="notion-callout-text">
+          {block.callout.rich_text.map((t) => t.plain_text)}
+        </div>
       </div>
     );
   }
