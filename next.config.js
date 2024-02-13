@@ -1,7 +1,7 @@
 module.exports = {
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "www.notion.so", port: "" },
+      { protocol: "https", hostname: "**.amazonaws.com", port: "" },
     ],
   },
   async redirects() {
