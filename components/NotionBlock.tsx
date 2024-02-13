@@ -88,9 +88,7 @@ const Block = ({ block }) => {
   if (type === "callout") {
     return (
       <div key={id} className="notion-callout">
-        <div className="notion-callout-text">
-          {block.callout.rich_text.map((t) => t.plain_text)}
-        </div>
+        {block.callout.rich_text.map((t) => t.plain_text)}
       </div>
     );
   }
