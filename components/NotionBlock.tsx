@@ -1,8 +1,5 @@
 import { isFullBlock } from "@notionhq/client";
-import {
-  type TextRichTextItemResponse,
-  type BlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+import { type TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 import Image from "next/image";
 
 export const Blocks = ({ blocks }) => {

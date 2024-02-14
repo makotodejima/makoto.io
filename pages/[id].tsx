@@ -1,8 +1,8 @@
 import type { GetStaticPaths, InferGetStaticPropsType } from "next";
 import Footer from "../components/Footer";
 import HomeLink from "../components/HomeLink";
-import { getEntries } from "../lib/utils";
 import { Blocks } from "../components/NotionBlock";
+import { getEntries, overrideImages } from "../lib/utils";
 
 export const getStaticPaths = (async () => {
   const entries = getEntries();
@@ -36,6 +36,8 @@ export async function getStaticProps({ params }) {
       },
     },
   ).then((res) => res.json());
+
+  await overrideImages(data.results, entry.id);
 
   return {
     props: {
