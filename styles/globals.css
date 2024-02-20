@@ -100,7 +100,7 @@ footer {
   margin-top: 64px;
 }
 
-footer > * {
+footer > *:not(:first-child) {
   margin: 4px 16px 4px 0;
 }
 
@@ -115,7 +115,8 @@ footer > * {
 
 #logo {
   width: 52px;
-  margin-right: 16px;
+  margin-right: 32px;
+  margin-bottom: 2px;
 }
 
 @media (min-width: 520px) {
@@ -131,10 +132,6 @@ footer > * {
   stroke-miterlimit: 10;
   stroke-width: 5px;
   stroke-dasharray: 483px;
-}
-
-.logo-char {
-  fill: rgb(55, 53, 47);
 }
 
 #logo-outer {
