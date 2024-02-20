@@ -70,7 +70,6 @@ a {
   letter-spacing: 0.8px;
   font-style: normal;
   font-weight: 100;
-  margin-left: 8px;
 }
 
 @media (max-width: 520px) {
@@ -120,7 +119,10 @@ footer > *:not(:first-child) {
 }
 
 @media (min-width: 520px) {
-  footer {
+  .home-a i {
+    margin-left: 8px;
+  }
+  :not(:first-child) footer {
     flex-direction: row;
     align-items: flex-end;
   }
