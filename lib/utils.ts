@@ -48,7 +48,12 @@ export async function overrideImages(
   blocks: BlockObjectResponse[],
   slug: string,
 ) {
-  console.log("cwd: ", process.cwd());
+  const imgDir = path.join(process.cwd(), "public", "images");
+
+  if (!fs.existsSync(imgDir)) {
+    fs.mkdirSync(imgDir, { recursive: true });
+  }
+
   let idx = 0;
   for (let block of blocks) {
     if (block.type === "image") {
@@ -57,20 +62,16 @@ export async function overrideImages(
       }
 
       const file_name = `${slug}-${idx++}.jpg`;
-      const full_path = path.join(process.cwd(), "public", file_name);
 
-      if (fs.existsSync(full_path)) {
+      if (fs.existsSync(path.join(imgDir, file_name))) {
         console.info("Image exists, skipping: ", file_name);
-        block.image.file.url = "/" + file_name;
+        block.image.file.url = "/images/" + file_name;
         continue;
       }
-      console.log("downloading...", block.image.file.url);
-      await downloadImage(
-        block.image.file.url,
-        path.join(process.cwd(), "public", file_name),
-      );
+      console.log("downloading...");
+      await downloadImage(block.image.file.url, path.join(imgDir, file_name));
       // override the image URL in image block
-      block.image.file.url = "/" + file_name;
+      block.image.file.url = "/images/" + file_name;
 
       console.log("download successful", block.image.file.url);
       console.log("---------------");

@@ -12,12 +12,10 @@ export default function Home({ entries }: { entries: Entry[] }) {
         <link rel="icon" href="/mdfavicon.svg" />
       </Head>
       <main style={{ padding: "8px 16px" }}>
-        <h1 className="home-heading-1">
-          Makoto Dejima{"\n"}Software Engineer / Designer
-        </h1>
+        <h1 className="home-heading-1">Makoto Dejima{"\n"}Software Engineer</h1>
         {entries.map((e) => (
           <Link key={e.id} href={e.href ?? `/${e.id}`} className="home-a">
-            {e.title} <Pipe /> <i>{e.subtitle}</i>
+            {e.title} <i>{e.subtitle}</i>
           </Link>
         ))}
         <Footer />
