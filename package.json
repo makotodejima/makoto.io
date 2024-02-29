@@ -14,7 +14,7 @@
     "react-spring": "^9.7.3"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
+    "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "typescript": "^5.3.3"
   }
