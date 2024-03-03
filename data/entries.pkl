@@ -1,0 +1,65 @@
+class Entry {
+  id: String
+  title: String
+  subtitle: String
+  href: String | Null
+  notion_id: String | Null
+}
+
+/// Run `pkl` to update the json file after editing this file.
+
+fi: Entry = new {
+  id = "fi"
+  title = "fi"
+  subtitle = "Command line tool for personal finance"
+  href = "https://github.com/makotodejima/fi"
+  notion_id = null
+}
+
+the_light_of_tokyo: Entry = new {
+  id = "the-light-of-tokyo"
+  title = "The Light of Tokyo"
+  subtitle = "Tokyo Postcard Award 2019"
+  href = null
+  notion_id = "df808ccf4f97482f8f4c5ddd0b40c272"
+}
+
+robotex: Entry = new {
+  id = "robotex"
+  title = "Robotex Japan"
+  subtitle = "Corporate website design and development"
+  href = null
+  notion_id = "d52aff6df1c843b8bbcd75ed178f4a04"
+}
+
+sobasquare: Entry = new {
+  id = "sobasquare"
+  title = "Sobasquare"
+  subtitle = "Never stop exploring Soba restaurants"
+  href = "https://soba.makoto.io"
+  notion_id = null
+}
+
+satte_city: Entry = new {
+  id = "satte-city"
+  title = "Satte City"
+  subtitle = "Municipal government logo design"
+  href = null
+  notion_id = "e423e543b2f14b85a46f57e09a7cac20"
+}
+
+manhattan_portage: Entry = new {
+  id = "manhattan-portage"
+  title = "Manhattan Portage"
+  subtitle = "Manhattan Portage Art Award 2019"
+  href = null
+  notion_id = "1aca6eb6811848ceb66f5ea174270472"
+}
+
+naotatsu_kaku: Entry = new {
+  id = "naotatsu-kaku"
+  title = "Naotatsu Kaku"
+  subtitle = "Visual artist's portfolio website"
+  href = "https://naotatsukaku.com"
+  notion_id = null
+}

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pkl": "pkl eval --format json data/entries.pkl > data/entries.json"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -14,7 +15,8 @@
     "react-spring": "^9.7.3"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
+    "@notionhq/client": "^2.2.14",
+    "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "typescript": "^5.3.3"
   }
