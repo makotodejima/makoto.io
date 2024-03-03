@@ -43,7 +43,7 @@ a {
 }
 
 .home-heading-1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   margin: 8px 0 46px;
   line-height: 1.4;
@@ -74,7 +74,7 @@ a {
 
 @media (max-width: 520px) {
   .home-heading-1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .home-a {

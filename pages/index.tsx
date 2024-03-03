@@ -24,8 +24,6 @@ export default function Home({ entries }: { entries: Entry[] }) {
   );
 }
 
-const Pipe = () => <span className="home-pipe">|</span>;
-
 export async function getStaticProps() {
   return {
     props: {
