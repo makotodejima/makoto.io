@@ -17,7 +17,7 @@
   "devDependencies": {
     "@notionhq/client": "^2.2.14",
     "@types/node": "^20.11.24",
-    "@types/react": "^18.2.61",
+    "@types/react": "^18.2.63",
     "typescript": "^5.3.3"
   }
 }
