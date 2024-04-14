@@ -43,9 +43,9 @@ a {
 }
 
 .home-heading-1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  margin: 8px 0 46px;
+  margin: 8px 0 36px;
   line-height: 1.4;
   white-space: pre;
 }
@@ -54,10 +54,8 @@ a {
   display: block;
   font-size: 1.4rem;
   font-weight: 400;
-  line-height: 1.3;
-  margin: 16px 0;
+  line-height: 1.8;
   font-style: italic;
-  /* letter-spacing: 1px; */
 }
 
 .home-a:hover {
@@ -120,7 +118,7 @@ footer > *:not(:first-child) {
 
 @media (min-width: 520px) {
   .home-a i {
-    margin-left: 8px;
+    margin-left: 10px;
   }
   :not(:first-child) footer {
     flex-direction: row;
