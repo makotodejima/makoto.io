@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Blocks = ({ blocks }) => {
   return (
-    <div className="notion">
+    <div className="notion max-w-[520px]">
       {blocks.map((block) => (
         <Block key={block.id} block={block} />
       ))}
@@ -20,7 +20,7 @@ const Block = ({ block }) => {
 
   if (type === "heading_1") {
     return (
-      <h1 key={id} className="notion-h1">
+      <h1 key={id} className="text-xl">
         {block.heading_1.rich_text.map(
           (t) => (t as TextRichTextItemResponse).text.content,
         )}
@@ -30,7 +30,7 @@ const Block = ({ block }) => {
 
   if (type === "heading_3") {
     return (
-      <h3 key={id} className="notion-h3">
+      <h3 key={id} className="font-extralight">
         {block.heading_3.rich_text.map((t) => t.plain_text)}
       </h3>
     );
@@ -46,7 +46,7 @@ const Block = ({ block }) => {
     return (
       <figure
         key={id}
-        className="notion-asset-wrapper"
+        className="my-8"
         style={{
           minWidth: `350px`,
           maxWidth: `${width}px`,
@@ -64,7 +64,7 @@ const Block = ({ block }) => {
           }}
         />
         {block.image.caption.map((cap, idx) => (
-          <figcaption key={idx} className="notion-image-caption">
+          <figcaption key={idx} className="my-1 text-xs opacity-75">
             {cap.plain_text}
           </figcaption>
         ))}
@@ -74,7 +74,7 @@ const Block = ({ block }) => {
 
   if (type === "paragraph") {
     if (!block.paragraph.rich_text.length)
-      return <div key={id} className="notion-blank" />;
+      return <div key={id} className="min-h-4" />;
     return (
       <p key={id} className="notion-paragraph">
         {block.paragraph.rich_text.map((t) => t.plain_text)}
@@ -84,7 +84,7 @@ const Block = ({ block }) => {
 
   if (type === "callout") {
     return (
-      <div key={id} className="notion-callout">
+      <div key={id} className="text-sm">
         {block.callout.rich_text.map((t) => t.plain_text)}
       </div>
     );

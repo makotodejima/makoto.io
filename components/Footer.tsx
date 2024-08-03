@@ -6,15 +6,15 @@ const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="mt-12 flex flex-col gap-2 text-xs sm:flex-row sm:items-center sm:gap-4">
       <Logo />
-      <span className="copyright">&copy; {year} MKD Inc.</span>
-      <Link href="https://github.com/makotodejima" className="footer-a">
+      <div>&copy; {year} MKD Inc.</div>
+      <Link href="https://github.com/makotodejima" className="underline">
         GitHub
       </Link>
       <Link
         href="https://www.linkedin.com/in/makotodejima/"
-        className="footer-a"
+        className="underline"
       >
         LinkedIn
       </Link>

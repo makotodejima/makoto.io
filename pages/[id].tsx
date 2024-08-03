@@ -51,7 +51,7 @@ export default function Page({
   blocks,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <main style={{ padding: "8px 16px" }}>
+    <main className="container py-2">
       <HomeLink />
       {blocks && <Blocks blocks={blocks} />}
       <Footer />

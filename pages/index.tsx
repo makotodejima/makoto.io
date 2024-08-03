@@ -11,13 +11,22 @@ export default function Home({ entries }: { entries: Entry[] }) {
         <title>Makoto Dejima | Software engineer</title>
         <link rel="icon" href="/mdfavicon.svg" />
       </Head>
-      <main style={{ padding: "8px 16px" }}>
-        <h1 className="home-heading-1">Makoto Dejima{"\n"}Software Engineer</h1>
-        {entries.map((e) => (
-          <Link key={e.id} href={e.href ?? `/${e.id}`} className="home-a">
-            {e.title} <i>{e.subtitle}</i>
-          </Link>
-        ))}
+      <main className="container py-2">
+        <h1 className="text-lg">Makoto Dejima</h1>
+        <h2 className="mb-2 font-extralight">Software Engineer</h2>
+        <section className="my-6 space-y-2 sm:space-y-1">
+          {entries.map((e) => (
+            <div key={e.id}>
+              <Link
+                href={e.href ?? `/${e.id}`}
+                className="flex flex-col items-baseline sm:flex-row sm:gap-4"
+              >
+                <h3 className="">{e.title}</h3>
+                <span className="text-xs font-extralight">{e.subtitle}</span>
+              </Link>
+            </div>
+          ))}
+        </section>
         <Footer />
       </main>
     </div>
