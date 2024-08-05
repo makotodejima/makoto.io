@@ -24,6 +24,14 @@ fi: Entry = new {
   notion_id = null
 }
 
+naotatsu_kaku: Entry = new {
+  id = "naotatsu-kaku"
+  title = "Naotatsu Kaku"
+  subtitle = "Visual artist's portfolio website"
+  href = "https://naotatsukaku.com"
+  notion_id = null
+}
+
 the_light_of_tokyo: Entry = new {
   id = "the-light-of-tokyo"
   title = "The Light of Tokyo"
@@ -62,12 +70,4 @@ manhattan_portage: Entry = new {
   subtitle = "Manhattan Portage Art Award 2019"
   href = null
   notion_id = "1aca6eb6811848ceb66f5ea174270472"
-}
-
-naotatsu_kaku: Entry = new {
-  id = "naotatsu-kaku"
-  title = "Naotatsu Kaku"
-  subtitle = "Visual artist's portfolio website"
-  href = "https://naotatsukaku.com"
-  notion_id = null
 }

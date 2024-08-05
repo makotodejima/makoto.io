@@ -11,6 +11,12 @@
     "subtitle": "Command line tool for personal finance",
     "href": "https://github.com/makotodejima/fi"
   },
+  "naotatsu_kaku": {
+    "id": "naotatsu-kaku",
+    "title": "Naotatsu Kaku",
+    "subtitle": "Visual artist's portfolio website",
+    "href": "https://naotatsukaku.com"
+  },
   "the_light_of_tokyo": {
     "id": "the-light-of-tokyo",
     "title": "The Light of Tokyo",
@@ -40,11 +46,5 @@
     "title": "Manhattan Portage",
     "subtitle": "Manhattan Portage Art Award 2019",
     "notion_id": "1aca6eb6811848ceb66f5ea174270472"
-  },
-  "naotatsu_kaku": {
-    "id": "naotatsu-kaku",
-    "title": "Naotatsu Kaku",
-    "subtitle": "Visual artist's portfolio website",
-    "href": "https://naotatsukaku.com"
   }
 }

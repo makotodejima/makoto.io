@@ -14,9 +14,9 @@ export default function Home({ entries }: { entries: Entry[] }) {
       <main className="container py-2">
         <h1 className="text-lg">Makoto Dejima</h1>
         <h2 className="mb-2 font-extralight">Software Engineer</h2>
-        <section className="my-6 space-y-2 sm:space-y-1">
+        <section className="my-8 space-y-2 sm:space-y-1">
           {entries.map((e) => (
-            <div key={e.id}>
+            <div key={e.id} className="hover:underline">
               <Link
                 href={e.href ?? `/${e.id}`}
                 className="flex flex-col items-baseline sm:flex-row sm:gap-4"

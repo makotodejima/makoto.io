@@ -20,7 +20,7 @@ const Block = ({ block }) => {
 
   if (type === "heading_1") {
     return (
-      <h1 key={id} className="text-xl">
+      <h1 key={id} className="text-lg">
         {block.heading_1.rich_text.map(
           (t) => (t as TextRichTextItemResponse).text.content,
         )}
