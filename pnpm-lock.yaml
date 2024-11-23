@@ -43,8 +43,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.8
-        version: 0.6.8(prettier@3.3.3)
+        specifier: ^0.6.9
+        version: 0.6.9(prettier@3.3.3)
       tailwindcss:
         specifier: ^3.4.15
         version: 3.4.15
@@ -2533,8 +2533,8 @@ packages:
     resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prettier-plugin-tailwindcss@0.6.8:
-    resolution: {integrity: sha512-dGu3kdm7SXPkiW4nzeWKCl3uoImdd5CTZEJGxyypEPL37Wj0HT2pLqjrvSei1nTeuQfO4PUfjeW5cTUNRLZ4sA==}
+  prettier-plugin-tailwindcss@0.6.9:
+    resolution: {integrity: sha512-r0i3uhaZAXYP0At5xGfJH876W3HHGHDp+LCRUJrs57PBeQ6mYHMwr25KH8NPX44F2yGTvdnH7OqCshlQx183Eg==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -3240,7 +3240,7 @@ snapshots:
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.1.0
+      picocolors: 1.1.1
 
   '@babel/compat-data@7.24.9': {}
 
@@ -3428,7 +3428,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.1.0
+      picocolors: 1.1.1
 
   '@babel/parser@7.24.8':
     dependencies:
@@ -6145,7 +6145,7 @@ snapshots:
       picocolors: 1.1.0
       source-map-js: 1.2.1
 
-  prettier-plugin-tailwindcss@0.6.8(prettier@3.3.3):
+  prettier-plugin-tailwindcss@0.6.9(prettier@3.3.3):
     dependencies:
       prettier: 3.3.3
 
