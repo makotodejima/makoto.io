@@ -22,7 +22,7 @@ export default function Home({ entries }: { entries: Entry[] }) {
                 className="flex flex-col items-baseline sm:flex-row sm:gap-4"
               >
                 <h3 className="">{e.title}</h3>
-                <span className="text-xs font-extralight">{e.subtitle}</span>
+                <span className="text-sm font-light">{e.subtitle}</span>
               </Link>
             </div>
           ))}
