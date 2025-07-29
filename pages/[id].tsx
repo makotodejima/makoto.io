@@ -1,14 +1,14 @@
 import type { GetStaticPaths, InferGetStaticPropsType } from "next";
 import Footer from "../components/Footer";
 import HomeLink from "../components/HomeLink";
-import { Blocks } from "../components/NotionBlock";
-import { getEntries, overrideImages } from "../lib/utils";
+import { getEntries } from "../lib/utils";
+import { getMarkdownHtml } from "../lib/markdown";
 
 export const getStaticPaths = (async () => {
   const entries = getEntries();
   return {
-    paths: entries.flatMap((e: any) =>
-      e.notion_id
+    paths: entries.flatMap((e) =>
+      e.href === null
         ? [
             {
               params: { id: e.id },
@@ -22,39 +22,40 @@ export const getStaticPaths = (async () => {
 
 export async function getStaticProps({ params }) {
   const entries = getEntries();
-  const entry = entries.find((e: any) => e.id === params.id);
-  if (!entry?.notion_id) {
-    throw new Error("Entry not found or has no Notion ID");
+  const entry = entries.find((e) => e.id === params.id);
+  if (!entry || entry.href !== null) {
+    throw new Error("Entry not found or remote content");
   }
 
-  const data = await fetch(
-    `https://api.notion.com/v1/blocks/${entry.notion_id}/children`,
-    {
-      headers: {
-        "Notion-Version": "2022-06-28",
-        Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
-      },
-    },
-  ).then((res) => res.json());
-
-  await overrideImages(data.results, entry.id);
+  const markdownData = await getMarkdownHtml(entry.id);
+  if (!markdownData) {
+    throw new Error("Markdown content not found");
+  }
 
   return {
     props: {
       id: entry.id,
-      blocks: data.results,
+      title: markdownData.frontmatter.title || entry.title,
+      subtitle: markdownData.frontmatter.subtitle || entry.subtitle,
+      contentHtml: markdownData.contentHtml,
     },
   };
 }
 
 export default function Page({
-  blocks,
+  title,
+  subtitle,
+  contentHtml,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <main className="container py-2">
+    <div className="container py-2">
       <HomeLink />
-      {blocks && <Blocks blocks={blocks} />}
+      <h1 className="text-lg">{title}</h1>
+      <h2 className="text-md font-extralight">{subtitle}</h2>
+      <div className="markdown-content max-w-[520px]">
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      </div>
       <Footer />
-    </main>
+    </div>
   );
 }

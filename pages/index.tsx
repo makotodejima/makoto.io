@@ -6,12 +6,12 @@ import { Entry } from "../lib/types";
 
 export default function Home({ entries }: { entries: Entry[] }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Makoto Dejima | Software engineer</title>
         <link rel="icon" href="/mdfavicon.svg" />
       </Head>
-      <main className="container py-2">
+      <div className="container py-2">
         <h1 className="text-lg">Makoto Dejima</h1>
         <h2 className="mb-2 font-extralight">Software Engineer</h2>
         <section className="my-8 space-y-2 sm:space-y-1">
@@ -28,8 +28,8 @@ export default function Home({ entries }: { entries: Entry[] }) {
           ))}
         </section>
         <Footer />
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
 
