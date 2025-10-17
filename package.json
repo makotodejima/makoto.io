@@ -11,7 +11,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "geist": "^1.5.1",
     "gray-matter": "^4.0.3",
-    "next": "15.5.5",
+    "next": "15.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-spring": "^10.0.3",
