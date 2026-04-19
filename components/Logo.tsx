@@ -1,16 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import React from "react";
-import { animated, useSpring } from "react-spring";
 
 const Logo = () => {
-  const style = useSpring({
-    from: { strokeDashoffset: "966px" },
-    strokeDashoffset: "0px",
-    config: { mass: 20, tension: 150, friction: 110 },
-  });
-
   return (
     <Link href="/" aria-label="Home">
       <svg
@@ -20,8 +10,7 @@ const Logo = () => {
         style={{ cursor: "pointer" }}
       >
         <title>Makoto Dejima</title>
-        <animated.path
-          style={style}
+        <path
           id="logo-outer"
           d="M154.41,3c22.84.37,41.05,19.81,40.69,43.42-.35,23.08-18.36,41.7-40.69,42.06H43.89C21.05,88.1,2.84,68.66,3.2,45.06,3.55,22,21.56,3.36,43.89,3H154.41"
         />
