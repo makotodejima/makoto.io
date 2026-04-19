@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import HomeLink from "../components/HomeLink.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("entries");
+  return entries
+    .filter((e) => !e.data.href)
+    .map((e) => ({ params: { id: e.id }, props: { entry: e } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title}>
+  <div class="container py-2">
+    <HomeLink />
+    <h1 class="text-lg">{entry.data.title}</h1>
+    <h2 class="text-md font-extralight">{entry.data.subtitle}</h2>
+    <div class="markdown-content max-w-[520px]">
+      <Content />
+    </div>
+    <Footer />
+  </div>
+</BaseLayout>

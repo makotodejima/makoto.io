@@ -3,33 +3,27 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start"
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.19",
-    "geist": "^1.5.1",
-    "gray-matter": "^4.0.3",
-    "next": "16.2.4",
-    "react": "19.2.5",
-    "react-dom": "19.2.5",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.8",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.17",
+    "@astrojs/check": "^0.9.8",
     "@types/node": "^24.7.2",
-    "@types/react": "19.2.14",
-    "postcss": "^8.5.6",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   },
   "pnpm": {
-    "overrides": {
-      "@types/react": "19.2.14"
-    }
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }

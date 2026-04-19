@@ -1,0 +1,31 @@
+---
+import { Font } from "astro:assets";
+import "../styles/globals.css";
+
+interface Props {
+  title?: string;
+}
+
+const {
+  title = "Makoto Dejima | Software engineer",
+} = Astro.props;
+
+const description =
+  "Software engineer with a blend of design background and technical expertise. Skilled at handling tasks across the entire stack, merging aesthetics and functionality to craft impactful, user-centric products.";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/mdfavicon.svg" type="image/svg+xml" />
+    <Font cssVariable="--font-geist" />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

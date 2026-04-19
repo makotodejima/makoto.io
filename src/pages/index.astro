@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
+const entries = (await getCollection("entries")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<BaseLayout>
+  <div class="container py-2">
+    <h1 class="text-lg">Makoto Dejima</h1>
+    <h2 class="mb-2 font-extralight">Software Engineer</h2>
+    <section class="my-8 space-y-2 sm:space-y-1">
+      {
+        entries.map((e) => (
+          <div class="hover:underline">
+            <a
+              href={e.data.href ?? `/${e.id}`}
+              class="flex flex-col items-baseline sm:flex-row sm:gap-4"
+            >
+              <h3>{e.data.title}</h3>
+              <span class="text-sm font-light">{e.data.subtitle}</span>
+            </a>
+          </div>
+        ))
+      }
+    </section>
+    <Footer />
+  </div>
+</BaseLayout>
