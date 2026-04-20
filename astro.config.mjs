@@ -9,8 +9,8 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.google(),
-      name: "Geist",
-      cssVariable: "--font-geist",
+      name: "IBM Plex Sans",
+      cssVariable: "--font-ibm-plex-sans",
     },
   ],
   redirects: {

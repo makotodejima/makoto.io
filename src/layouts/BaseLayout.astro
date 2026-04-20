@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
 import "../styles/globals.css";
 
@@ -21,7 +22,8 @@ const description =
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" href="/mdfavicon.svg" type="image/svg+xml" />
-    <Font cssVariable="--font-geist" />
+    <Font cssVariable="--font-ibm-plex-sans" />
+    <ClientRouter />
   </head>
   <body>
     <main>
