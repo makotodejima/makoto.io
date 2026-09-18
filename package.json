@@ -2,6 +2,7 @@
   "name": "makoto.io",
   "version": "0.1.1",
   "private": true,
+  "packageManager": "pnpm@12.4.2",
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
